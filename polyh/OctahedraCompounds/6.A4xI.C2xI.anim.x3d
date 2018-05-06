@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile="IMMERSIVE"
+     xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance'
+     xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content="Animation of 6 Cubes of Group A4 x I / C2 x I"
+          name="title"/>
+  </head>
+  <Scene>
+    <WorldInfo title="Animation of 6 Cubes of Group A4 x I / C2 x I"/>
+    <NavigationInfo headlight='true'
+                    type="EXAMINE"/>
+    <Background skyColor='0.2 0.5 1.0'/>
+    <Viewpoint jump='false'
+               position='0.000 0.000 2.800'
+               description="Order 2 Axis"
+               DEF="O2Axis"/>
+    <Viewpoint jump='false'
+               position='1.617 1.617 1.617'
+               description="Order 3 Axis"
+               DEF="O3Axis"
+               orientation='-1.000 1.000 0.000 0.955'/>
+    <ProtoDeclare name="ObjModel">
+      <ProtoInterface>
+        <field accessType="initializeOnly"
+               type="SFRotation"
+               name="position"
+               value='0.000 0.000 1.000 0.000'/>
+        <field accessType="initializeOnly"
+               type="SFColor"
+               name="color"
+               value='1.000 1.000 1.000'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Transform>
+          <IS>
+            <connect nodeField="rotation"
+                     protoField="position"/>
+          </IS>
+          <Shape>
+            <IndexedFaceSet creaseAngle='0.500000'
+                            solid='false'
+                            ccw='false'
+                            normalPerVertex='false'
+                            coordIndex='0 4 5 -1 2 4 0 -1 3 4 2 -1 5 4 3 -1 5 1 0 -1 0 1 2 -1 2 1 3 -1 3 1 5 -1'
+                            DEF="objFaces">
+              <Coordinate point='-0.450 -0.217 -0.500, 0.307 -0.637 -0.000, -0.450 -0.217 0.500, 0.450 0.217 0.500, -0.307 0.637 0.000, 0.450 0.217 -0.500'/>
+            </IndexedFaceSet>
+            <Appearance>
+              <Material>
+                <IS>
+                  <connect nodeField="diffuseColor"
+                           protoField="color"/>
+                </IS>
+              </Material>
+            </Appearance>
+          </Shape>
+          <Shape>
+            <IndexedLineSet DEF="objEdges"
+                            coordIndex='4 0 -1 4 2 -1 4 3 -1 4 5 -1 0 2 -1 2 3 -1 3 5 -1 5 0 -1 1 0 -1 1 2 -1 1 3 -1 1 5 -1'>
+              <Coordinate point='-0.450 -0.217 -0.500, 0.307 -0.637 -0.000, -0.450 -0.217 0.500, 0.450 0.217 0.500, -0.307 0.637 0.000, 0.450 0.217 -0.500'/>
+            </IndexedLineSet>
+            <Appearance>
+              <Material diffuseColor='0.000 0.000 0.000'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+      </ProtoBody>
+    </ProtoDeclare>
+    <Group>
+      <Transform DEF="C0">
+        <ProtoInstance name="ObjModel">
+          <fieldValue name="position"
+                      value='0.000 0.000 0.000 0.000'/>
+          <fieldValue name="color"
+                      value='0.200 0.200 0.900'/>
+        </ProtoInstance>
+      </Transform>
+      <Transform DEF="C1">
+        <ProtoInstance name="ObjModel">
+          <fieldValue name="position"
+                      value='0.000 1.000 0.000 3.142'/>
+          <fieldValue name="color"
+                      value='0.200 0.200 0.900'/>
+        </ProtoInstance>
+      </Transform>
+      <Transform DEF="C2">
+        <ProtoInstance name="ObjModel">
+          <fieldValue name="position"
+                      value='0.577 0.577 -0.577 2.094'/>
+          <fieldValue name="color"
+                      value='0.900 0.900 0.000'/>
+        </ProtoInstance>
+      </Transform>
+      <Transform DEF="C3">
+        <ProtoInstance name="ObjModel">
+          <fieldValue name="position"
+                      value='-0.577 -0.577 -0.577 2.094'/>
+          <fieldValue name="color"
+                      value='0.900 0.900 0.000'/>
+        </ProtoInstance>
+      </Transform>
+      <Transform DEF="C4">
+        <ProtoInstance name="ObjModel">
+          <fieldValue name="position"
+                      value='-0.577 0.577 -0.577 2.094'/>
+          <fieldValue name="color"
+                      value='0.900 0.200 0.200'/>
+        </ProtoInstance>
+      </Transform>
+      <Transform DEF="C5">
+        <ProtoInstance name="ObjModel">
+          <fieldValue name="position"
+                      value='0.577 -0.577 -0.577 2.094'/>
+          <fieldValue name="color"
+                      value='0.900 0.200 0.200'/>
+        </ProtoInstance>
+      </Transform>
+    </Group>
+    <TimeSensor stopTime='-1'
+                cycleInterval='90'
+                loop='true'
+                DEF="MyClk"/>
+    <OrientationInterpolator keyValue='-0.000 0.000 -1.000 0.449, -0.000 0.000 1.000 0.167, -0.000 0.000 1.000 0.167, 0.000 0.000 1.000 0.337, 0.000 0.000 1.000 0.337, -0.000 0.000 1.000 0.507, -0.000 0.000 1.000 0.507, 0.000 -0.000 1.000 1.122, 0.000 -0.000 1.000 1.122, -0.000 0.000 1.000 1.737, -0.000 0.000 1.000 1.737, -0.000 -0.000 1.000 1.907, -0.000 -0.000 1.000 1.907, -0.000 -0.000 1.000 2.077, -0.000 -0.000 1.000 2.077, -0.000 -0.000 1.000 2.693, -0.000 -0.000 1.000 2.693'
+                             key='0 0.062526 0.147632 0.164894 0.250000 0.267262 0.352368 0.414894 0.500000 0.562526 0.647632 0.664894 0.750000 0.767262 0.852368 0.914894 1.000000'
+                             DEF="Ri0"/>
+    <ROUTE fromNode="MyClk"
+           toNode="Ri0"
+           toField="set_fraction"
+           fromField="fraction_changed"/>
+    <ROUTE fromNode="Ri0"
+           toNode="C0"
+           toField="set_rotation"
+           fromField="value_changed"/>
+    <OrientationInterpolator keyValue='-0.000 0.000 1.000 0.449, 0.000 0.000 -1.000 0.167, 0.000 0.000 -1.000 0.167, 0.000 0.000 -1.000 0.337, 0.000 0.000 -1.000 0.337, 0.000 0.000 -1.000 0.507, 0.000 0.000 -1.000 0.507, 0.000 -0.000 -1.000 1.122, 0.000 -0.000 -1.000 1.122, 0.000 0.000 -1.000 1.737, 0.000 0.000 -1.000 1.737, 0.000 -0.000 -1.000 1.907, 0.000 -0.000 -1.000 1.907, 0.000 -0.000 -1.000 2.077, 0.000 -0.000 -1.000 2.077, 0.000 -0.000 -1.000 2.693, 0.000 -0.000 -1.000 2.693'
+                             key='0 0.062526 0.147632 0.164894 0.250000 0.267262 0.352368 0.414894 0.500000 0.562526 0.647632 0.664894 0.750000 0.767262 0.852368 0.914894 1.000000'
+                             DEF="Ri1"/>
+    <ROUTE fromNode="MyClk"
+           toNode="Ri1"
+           toField="set_fraction"
+           fromField="fraction_changed"/>
+    <ROUTE fromNode="Ri1"
+           toNode="C1"
+           toField="set_rotation"
+           fromField="value_changed"/>
+    <OrientationInterpolator keyValue='-0.000 1.000 -0.000 0.449, 0.000 -1.000 0.000 0.167, 0.000 -1.000 0.000 0.167, 0.000 -1.000 0.000 0.337, 0.000 -1.000 0.000 0.337, 0.000 -1.000 0.000 0.507, 0.000 -1.000 0.000 0.507, 0.000 -1.000 0.000 1.122, 0.000 -1.000 0.000 1.122, 0.000 -1.000 0.000 1.737, 0.000 -1.000 0.000 1.737, 0.000 -1.000 0.000 1.907, 0.000 -1.000 0.000 1.907, 0.000 -1.000 0.000 2.077, 0.000 -1.000 0.000 2.077, 0.000 -1.000 0.000 2.693, 0.000 -1.000 0.000 2.693'
+                             key='0 0.062526 0.147632 0.164894 0.250000 0.267262 0.352368 0.414894 0.500000 0.562526 0.647632 0.664894 0.750000 0.767262 0.852368 0.914894 1.000000'
+                             DEF="Ri2"/>
+    <ROUTE fromNode="MyClk"
+           toNode="Ri2"
+           toField="set_fraction"
+           fromField="fraction_changed"/>
+    <ROUTE fromNode="Ri2"
+           toNode="C2"
+           toField="set_rotation"
+           fromField="value_changed"/>
+    <OrientationInterpolator keyValue='0.000 -1.000 -0.000 0.449, -0.000 1.000 0.000 0.167, -0.000 1.000 0.000 0.167, -0.000 1.000 0.000 0.337, -0.000 1.000 0.000 0.337, -0.000 1.000 0.000 0.507, -0.000 1.000 0.000 0.507, -0.000 1.000 0.000 1.122, -0.000 1.000 0.000 1.122, -0.000 1.000 0.000 1.737, -0.000 1.000 0.000 1.737, -0.000 1.000 0.000 1.907, -0.000 1.000 0.000 1.907, -0.000 1.000 0.000 2.077, -0.000 1.000 0.000 2.077, -0.000 1.000 0.000 2.693, -0.000 1.000 0.000 2.693'
+                             key='0 0.062526 0.147632 0.164894 0.250000 0.267262 0.352368 0.414894 0.500000 0.562526 0.647632 0.664894 0.750000 0.767262 0.852368 0.914894 1.000000'
+                             DEF="Ri3"/>
+    <ROUTE fromNode="MyClk"
+           toNode="Ri3"
+           toField="set_fraction"
+           fromField="fraction_changed"/>
+    <ROUTE fromNode="Ri3"
+           toNode="C3"
+           toField="set_rotation"
+           fromField="value_changed"/>
+    <OrientationInterpolator keyValue='-1.000 -0.000 -0.000 0.449, 1.000 0.000 0.000 0.167, 1.000 0.000 0.000 0.167, 1.000 0.000 0.000 0.337, 1.000 0.000 0.000 0.337, 1.000 0.000 0.000 0.507, 1.000 0.000 0.000 0.507, 1.000 0.000 0.000 1.122, 1.000 0.000 0.000 1.122, 1.000 0.000 0.000 1.737, 1.000 0.000 0.000 1.737, 1.000 0.000 0.000 1.907, 1.000 0.000 0.000 1.907, 1.000 0.000 0.000 2.077, 1.000 0.000 0.000 2.077, 1.000 0.000 0.000 2.693, 1.000 0.000 0.000 2.693'
+                             key='0 0.062526 0.147632 0.164894 0.250000 0.267262 0.352368 0.414894 0.500000 0.562526 0.647632 0.664894 0.750000 0.767262 0.852368 0.914894 1.000000'
+                             DEF="Ri4"/>
+    <ROUTE fromNode="MyClk"
+           toNode="Ri4"
+           toField="set_fraction"
+           fromField="fraction_changed"/>
+    <ROUTE fromNode="Ri4"
+           toNode="C4"
+           toField="set_rotation"
+           fromField="value_changed"/>
+    <OrientationInterpolator keyValue='1.000 0.000 -0.000 0.449, -1.000 -0.000 0.000 0.167, -1.000 -0.000 0.000 0.167, -1.000 -0.000 0.000 0.337, -1.000 -0.000 0.000 0.337, -1.000 -0.000 0.000 0.507, -1.000 -0.000 0.000 0.507, -1.000 -0.000 0.000 1.122, -1.000 -0.000 0.000 1.122, -1.000 -0.000 0.000 1.737, -1.000 -0.000 0.000 1.737, -1.000 -0.000 0.000 1.907, -1.000 -0.000 0.000 1.907, -1.000 -0.000 0.000 2.077, -1.000 -0.000 0.000 2.077, -1.000 -0.000 0.000 2.693, -1.000 -0.000 0.000 2.693'
+                             key='0 0.062526 0.147632 0.164894 0.250000 0.267262 0.352368 0.414894 0.500000 0.562526 0.647632 0.664894 0.750000 0.767262 0.852368 0.914894 1.000000'
+                             DEF="Ri5"/>
+    <ROUTE fromNode="MyClk"
+           toNode="Ri5"
+           toField="set_fraction"
+           fromField="fraction_changed"/>
+    <ROUTE fromNode="Ri5"
+           toNode="C5"
+           toField="set_rotation"
+           fromField="value_changed"/>
+  </Scene>
+</X3D>

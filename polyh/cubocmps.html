@@ -1,0 +1,1427 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type"/>
+    <meta content="Marcel Tuennissen" name="author"/>
+    <style type="text/css">@import "./teunpoly.css";</style>
+    <title>Compounds of Cuboctahedra</title>
+  </head>
+  <body>
+    <div id="pagebody">
+      <center>
+        <h1>Compounds of Cuboctahedra</h1>
+      </center>
+      <p>
+        Click 
+        <a href="./cubocmps.vrml.html">here</a> if you want to watch the models with a VRML player instead of a X3D player.
+      </p>
+      <h2>Contents</h2>
+      <ul>
+        <li>
+          <a href="#introduction">Introduction</a>
+        </li>
+        <li>
+          <a href="#notes">Notes</a>
+        </li>
+        <li>
+          <a href="#centralFreedom">Compounds of Cuboctahedra with Central Freedom</a>
+        </li>
+        <li>
+          <a href="#rotationalFreedom">Compounds of Cuboctahedra with Rotational Freedom</a>
+        </li>
+        <li>
+          <a href="#rigid">Rigid Compounds of Cuboctahedra</a>
+        </li>
+        <li>
+          <a href="#references">References</a>
+        </li>
+        <li>
+          <a href="#links">Links</a>
+        </li>
+        <li>
+          <a href="#lastUpdated">Last Updated</a>
+        </li>
+      </ul>
+      <h2><a name="introduction">Introduction</a></h2>
+      <p>
+        In the book <a href="#HVerh01">Symmetry Orbits</a> Mr. Verheyen derives all
+        possible groups of cube compounds. This page is based on his book.
+        A rough description of a method to obtain a certain cuboctahedron compound can be as
+        follows:
+        Choose one of the finite groups of isometries, define an orientation for this
+        group and define a position of a cuboctahedron (refered to as the descriptive).
+        Then by using the operators of the isometry group on this cuboctahedron, a
+        compound of cuboctahedra belonging to that group is obtained.
+      </p>
+      <p>
+        For example one can obtain a compound of cuboctahedra belonging to the symmetry group
+        S<sub>4</sub> x I (the symmetry group of the cube and the octahedron).
+        Choose the orientation of the S<sub>4</sub> in such a way that the
+        order 4 symmetry axes are formed by the Euclidean coordinate axes.
+        Now position the descriptive in a random position but with its centre in
+        the origin of the Euclidean space.
+        Finally use all the symmetries in S<sub>4</sub>, i.e.
+      </p>
+      <ul>
+        <li>E,</li>
+        <li>3 rotations for each of the 3 order 4 symmetry axes,</li>
+        <li>2 rotations for each of the 4 order 3 symmetry axes,</li>
+        <li>and 1 half turn for each of the 6 order 2 axes.</li>
+      </ul>
+      <p>
+        to obtain 1 + 3*3 + 2*4 + 6 = 24 cuboctahedra. Since the central inversion leaves all
+        these cuboctahedra invariant, the compound of these cuboctahedra will belong to the symmetry
+        group S<sub>4</sub> x I.
+        It is however possible that some of the cuboctahedra end up in the same position,
+        leading to a compound of less than 24 cuboctahedra. For instance if the descriptive
+        would have been positioned in such a way that the order 4 symmetry axes of
+        the cuboctahedron would have been formed by the axes of the coordinate system, then all
+        the isometries leave the cuboctahedron invariant, thus leading to the trivial compound of
+        1 cuboctahedron.
+      </p>
+      <p>
+        To be able to view and investigate the 3D models you need a X3D player. See 
+        note<a href="#note2"><sup>2</sup></a>.
+      </p>
+      <h2><a name="centralFreedom">Compounds of Cuboctahedra with Central Freedom</a></h2>
+      <p>
+        Using the above method for the finite groups of isometries one can get a first
+        list of possible compounds of cuboctahedra, as shown in the following table.
+      </p>
+      <table>
+        <tr class="header">
+          <td class="header_r">Compound<a href="#note1"><sup>1</sup></a>
+          </td>
+          <td class="header">X3D<a href="#note2"><sup>2</sup></a> image
+          </td>
+          <td class="header_last">X3D<a href="#note2"><sup>2</sup></a> animation
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a name="n.CnxI.ExI">n | C<sub>n</sub> x I / E x I
+              <br/>n &ge; 2</a>
+          </td>
+          <td><a href="CuboctahedraCompounds/3.C3xI.ExI.x3d">for n=3</a>
+          </td>
+          <td><a href="CuboctahedraCompounds/3.C3xI.ExI.anim.x3d">for n=3</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a name="2n.DnxI.ExI">2n | D<sub>n</sub> x I / E x I
+              <br/>n &ge; 1</a>
+          </td>
+          <td><a href="CuboctahedraCompounds/6.D3xI.ExI.x3d">for n=3</a>
+          </td>
+          <td><a href="CuboctahedraCompounds/4.D2xI.ExI.anim.x3d">for n=2</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a name="12.A4xI.ExI">12 | A<sub>4</sub> x I / E x I</a>
+          </td>
+          <td><a href="CuboctahedraCompounds/12.A4xI.ExI.x3d">Image</a>
+          </td>
+          <td><a href="CuboctahedraCompounds/12.A4xI.ExI.anim.x3d">Animation</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a name="24.S4xI.ExI">24 | S<sub>4</sub> x I / E x I</a>
+          </td>
+          <td><a href="CuboctahedraCompounds/24.S4xI.ExI.x3d">Image</a>
+          </td>
+          <td><a href="CuboctahedraCompounds/24.S4xI.ExI.anim.x3d">Animation</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a name="60.A5xI.ExI">60 | A<sub>5</sub> x I / E x I</a>
+          </td>
+          <td><a href="CuboctahedraCompounds/60.A5xI.ExI.x3d">Image</a>
+          </td>
+          <td><a href="CuboctahedraCompounds/60.A5xI.ExI.anim.x3d">Animation</a>
+          </td>
+        </tr>
+      </table>
+      <p>
+        This basic list of cuboctahedron compounds is the list of compounds with central
+        freedom; i.e. after having specified the centre of the descriptive, its
+        position can be chosen freely, except for some special cases. In the animations
+        in the table above the descriptive is rotated around 2 distinct axes in a
+        linear way.
+      </p>
+      <h2><a name="rotationalFreedom">Compounds of Cuboctahedra with Rotational Freedom</a></h2>
+      <p>
+        The list in the previous section is far from complete, but all the remaining
+        compounds can be derived from the compounds in the above list, by using special
+        positions for the descriptive. For instance special compounds occur when one or
+        more symmetry axes of the descriptive are shared with one or more symmetry axes
+        of the whole compound. If one axis is shared then the descriptive can be
+        rotated freely around this axis, without changing that property. This leads to
+        a group of compounds with rotational freedom.
+      </p>
+      <p>
+        In the table below these are summarised. The animations stop at the special
+        angles as mentioned in <a href="#HVerh01">Symmetry Orbits</a>.
+      </p>
+      <table>
+        <tr class="header">
+          <td class="header_r">Compound<a href="#note1"><sup>1</sup></a>
+          </td>
+          <td class="header">X3D<a href="#note2"><sup>2</sup></a> model
+          </td>
+          <td class="header_descr">Description
+          </td>
+        </tr>
+        <tr>
+          <td class="mainRow_r"><a name="nA.DnxI.C2xI">nA | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;</a>
+            <br/>n &ge; 3
+            <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[ &cup; ]&mu;<sub>1</sub>, &mu;<sub>2</sub>[
+          </td>
+          <td class="mainRow">
+            Images:
+            <br/><a href="CuboctahedraCompounds/3A.D3xI.C2xI.x3d">for n=3</a>
+            <br/><a href="CuboctahedraCompounds/4A.D4xI.C2xI.x3d">for n=4</a>
+            <br/><a href="CuboctahedraCompounds/6A.D6xI.C2xI.x3d">for n=6</a>
+            <br/>Animations:
+            <br/><a href="CuboctahedraCompounds/3A.D3xI.C2xI.anim.x3d">for n=3</a>
+            <br/><a href="CuboctahedraCompounds/4A.D4xI.C2xI.anim.x3d">for n=4</a>
+            <br/><a href="CuboctahedraCompounds/6A.D6xI.C2xI.anim.x3d">for n=6</a>
+          </td>
+          <td class="mainRow_descr">n | C<sub>n</sub> x I / E x I, for which the descriptive shares a mirror with a mirror in D<sub>n</sub>. The mirror contains 2 opposite edges of the descriptive.
+            <br/>The special angles are:
+            <br/>&mu;<sub>0</sub> = 0
+            <br/>&mu;<sub>1</sub> = acos(<sup>1</sup>/<sub>&radic;3</sub>)
+            <br/>&mu;<sub>2</sub> = <sup>&pi;</sup>/<sub>2</sub>
+            <br/>&mu;<sub>3</sub> = <sup>&pi;</sup>/<sub>4</sub>
+            <br/>&mu;<sub>4</sub> = asin(<sup>1</sup>/<sub>&radic;3</sub>)
+            <br/>&mu;<sub>5</sub> = asin(<sup>2&radic;2</sup>/<sub>3</sub>)
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+            <br/>and n is odd
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/3.D12xI.D4xI.x3d">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">n | D<sub>4n</sub> x I / D<sub>4</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+            <br/>and n=2m, m is odd
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/3.D12xI.D4xI.x3d">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">m | D<sub>4m</sub> x I / D<sub>4</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+            <br/>and n=4m
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/3.D12xI.D4xI.x3d">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">m | D<sub>4m</sub> x I / D<sub>4</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
+            <br/>and n is coprime with 3
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/3.D9xI.D3xI.x3d">3 | D<sub>9</sub> x I / D<sub>3</sub> x I</a>
+          </td>
+          <td class="subRow_descr">n | D<sub>3n</sub> x I / D<sub>3</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
+            <br/>and n=3m
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/3.D9xI.D3xI.x3d">3 | D<sub>9</sub> x I / D<sub>3</sub> x I</a>
+          </td>
+          <td class="subRow_descr">m | D<sub>3m</sub> x I / D<sub>3</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
+            <br/>and n is odd
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/2.D4xI.D2xI.x3d">2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
+            <br/> <a href="CuboctahedraCompounds/3.D6xI.D2xI.x3d">3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+          </td>
+          <td class="subRow_descr">n | D<sub>2n</sub> x I / D<sub>2</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
+            <br/>and n=2m
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/2.D4xI.D2xI.x3d">2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
+            <br/> <a href="CuboctahedraCompounds/3.D6xI.D2xI.x3d">3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+          </td>
+          <td class="subRow_descr">m | D<sub>2m</sub> x I / D<sub>2</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
+            <br/>and n=2m
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/4A.D4xI.C2xI.mu3.x3d">for n = 4</a>
+            <br/> <a href="CuboctahedraCompounds/6A.D6xI.C2xI.mu3.x3d">for n = 6</a> (<a href="CuboctahedraCompounds/6A.D6xI.C2xI.mu3.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="subRow_descr">m x 2 | D<sub>4</sub> x I / D<sub>2</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>4</sub><a href="#note3"><sup>3</sup></a>
+            <br/>and n=2m
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/4A.D4xI.C2xI.mu4.x3d">for n = 4</a>
+            <br/> <a href="CuboctahedraCompounds/6A.D6xI.C2xI.mu4.x3d">for n = 6</a>
+          </td>
+          <td class="subRow_descr">m x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>5</sub><a href="#note3"><sup>3</sup></a>
+            <br/>and n=4m
+          </td>
+          <td class="lastSubRow"> <a href="CuboctahedraCompounds/4A.D4xI.C2xI.mu5.x3d">for n = 4</a>
+            <br/> <a href="CuboctahedraCompounds/8A.D8xI.C2xI.mu5.x3d">for n = 8</a>
+            <br/> <a href="CuboctahedraCompounds/12A.D12xI.C2xI.mu5.x3d">for n = 12</a> (<a href="CuboctahedraCompounds/12A.D12xI.C2xI.mu5.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="lastSubRow_descr">m x 4 | S<sub>4</sub> x I / D<sub>3</sub> x I
+          </td>
+        </tr>
+        <tr>
+          <td class="mainRow_r"><a name="nB.DnxI.C2xI">nB | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;</a>
+            <br/>n &ge; 3
+            <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
+          </td>
+          <td class="mainRow">
+            Images:
+            <br/><a href="CuboctahedraCompounds/3B.D3xI.C2xI.x3d">for n=3</a>
+            <br/><a href="CuboctahedraCompounds/4B.D4xI.C2xI.x3d">for n=4</a>
+            <br/><a href="CuboctahedraCompounds/6B.D6xI.C2xI.x3d">for n=6</a>
+            <br/>Animations:
+            <br/><a href="CuboctahedraCompounds/3B.D3xI.C2xI.anim.x3d">for n=3</a>
+            <br/><a href="CuboctahedraCompounds/4B.D4xI.C2xI.anim.x3d">for n=4</a>
+            <br/><a href="CuboctahedraCompounds/6B.D6xI.C2xI.anim.x3d">for n=6</a>
+          </td>
+          <td class="mainRow_descr">n | C<sub>n</sub> x I / E x I, for which the descriptive shares a mirror with a mirror in D<sub>n</sub>. The mirror contains a ring of four face centres of the descriptive.
+            <br/>The special angles are:
+            <br/>&mu;<sub>0</sub> = 0
+            <br/>&mu;<sub>1</sub> = <sup>&pi;</sup>/<sub>4</sub>
+            <br/>&mu;<sub>2</sub> = <sup>&pi;</sup>/<sub>8</sub>
+            <br/>&mu;<sub>3</sub> = asin(<sup>1</sup>/<sub>&radic;3</sub>)
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+            <br/>and n is odd
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/3.D12xI.D4xI.x3d">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">n | D<sub>4n</sub> x I / D<sub>4</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+            <br/>and n=2m, m is odd
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/3.D12xI.D4xI.x3d">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">m | D<sub>4m</sub> x I / D<sub>4</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+            <br/>and n=4m
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/3.D12xI.D4xI.x3d">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">m | D<sub>4m</sub> x I / D<sub>4</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
+            <br/>and n is odd
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/2.D4xI.D2xI.x3d">2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
+            <br/> <a href="CuboctahedraCompounds/3.D6xI.D2xI.x3d">3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+          </td>
+          <td class="subRow_descr">n | D<sub>2n</sub> x I / D<sub>2</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
+            <br/>and n=2m
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/2.D4xI.D2xI.x3d">2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
+            <br/> <a href="CuboctahedraCompounds/3.D6xI.D2xI.x3d">3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+          </td>
+          <td class="subRow_descr">m | D<sub>2m</sub> x I / D<sub>2</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
+            <br/>and n=2m
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/4B.D4xI.C2xI.mu2.x3d">for n = 4</a>
+            <br/> <a href="CuboctahedraCompounds/6B.D6xI.C2xI.mu2.x3d">for n = 6</a>
+          </td>
+          <td class="subRow_descr">m x 2 | D<sub>8</sub> x I / D<sub>4</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>3</sub><a href="#note3"><sup>3</sup></a>
+            <br/>and n=3m
+          </td>
+          <td class="lastSubRow"> <a href="CuboctahedraCompounds/3B.D3xI.C2xI.mu3.x3d">for n = 3</a>
+            <br/> <a href="CuboctahedraCompounds/6B.D6xI.C2xI.mu3.x3d">for n = 6</a>
+            <br/> <a href="CuboctahedraCompounds/9B.D9xI.C2xI.mu3.x3d">for n = 9</a> (<a href="CuboctahedraCompounds/9B.D9xI.C2xI.mu3.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="lastSubRow_descr">m x 3 | S<sub>4</sub> x I / D<sub>4</sub> x I
+          </td>
+        </tr>
+        <tr>
+          <td class="mainRow_r"><a name="2n.D2nxI.D1xI">2n | D<sub>2n</sub> x I / D<sub>1</sub> x I | &mu;</a>
+            <br/>n &ge; 1
+            <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[ &cup; ]&mu;<sub>1</sub>, &mu;<sub>2</sub>[, for n = 1
+            <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[, for n &ge; 2
+          </td>
+          <td class="mainRow">
+            Images:
+            <br/><a href="CuboctahedraCompounds/4.D4xI.D1xI.x3d">for n=2</a>
+            <br/><a href="CuboctahedraCompounds/6.D6xI.D1xI.x3d">for n=3</a>
+            <br/>Animations:
+            <br/><a href="CuboctahedraCompounds/4.D4xI.D1xI.anim.x3d">for n=2</a>
+            <br/><a href="CuboctahedraCompounds/6.D6xI.D1xI.anim.x3d">for n=3</a>
+          </td>
+          <td class="mainRow_descr">2n | D<sub>n</sub> x I / E x I, for which the descriptive shares an order 2 symmetry axis with the n-fold axis of D<sub>n</sub>. The compound consists of pairs of n | D<sub>2n</sub> x I / D<sub>2</sub> x I, which rotate in opposite directions. See for instance <a href="CuboctahedraCompounds/4.D4xI.D1xI.anim.1.x3d">for n=2</a> or <a href="CuboctahedraCompounds/6.D6xI.D1xI.anim.1.x3d">for n=3</a>
+            <br/>The special angles are:
+            <br/>&mu;<sub>0</sub> = 0
+            <br/>&mu;<sub>1</sub> = asin(<sup>1</sup>/<sub>&radic;3</sub>)
+            <br/>&mu;<sub>2</sub> = <sup>&pi;</sup>/<sub>4n</sub>
+            <br/>&mu;<sub>3</sub> = |asin(<sup>1</sup>/<sub>&radic;3</sub>) - <sup>k&pi;</sup>/<sub>2n</sub>| for k &isin; &#8469;
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+            <br/>and n = 1
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/1.S4xI.S4xI.x3d">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+            <br/>and n &ge; 2
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/2.D4xI.D2xI.x3d">2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          </td>
+          <td class="subRow_descr">n | D<sub>2n</sub> x I / D<sub>2</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
+            <br/>and n = 1
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/2.D6xI.D3xI.x3d">2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          </td>
+          <td class="subRow_descr">2 | D<sub>6</sub> x I / D<sub>3</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
+            <br/>and m = 2n
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/2.D4xI.D2xI.x3d">2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
+            <br/> <a href="CuboctahedraCompounds/4.D8xI.D2xI.x3d">4 | D<sub>8</sub> x I / D<sub>2</sub> x I</a>
+          </td>
+          <td class="subRow_descr">m | D<sub>2m</sub> x I / D<sub>2</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>3</sub><a href="#note3"><sup>3</sup></a>
+            <br/>and n &ge; 2
+          </td>
+          <td class="lastSubRow"> <a href="CuboctahedraCompounds/4.D4xI.D1xI.mu3.x3d">for n = 2</a>
+            <br/> <a href="CuboctahedraCompounds/6.D6xI.D1xI.mu3.x3d">for n = 3</a>
+          </td>
+          <td class="lastSubRow_descr">n x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I
+          </td>
+        </tr>
+        <tr>
+          <td class="mainRow_r"><a name="2n.D3nxI.C3xI">2n | D<sub>3n</sub> x I / C<sub>3</sub> x I | &mu;</a>
+            <br/>n &ge; 1
+            <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
+          </td>
+          <td class="mainRow">
+            Images:
+            <br/><a href="CuboctahedraCompounds/2.D3xI.C3xI.x3d">for n=1</a>
+            <br/><a href="CuboctahedraCompounds/4.D6xI.C3xI.x3d">for n=2</a>
+            <br/>Animations:
+            <br/><a href="CuboctahedraCompounds/2.D3xI.C3xI.anim.x3d">for n=1</a>
+            <br/><a href="CuboctahedraCompounds/4.D6xI.C3xI.anim.x3d">for n=2</a>
+            <br/><a href="CuboctahedraCompounds/6.D9xI.C3xI.anim.x3d">for n=3</a>
+          </td>
+          <td class="mainRow_descr">2n | D<sub>n</sub> x I / E x I, for which the descriptive shares an order 3 symmetry axis with the n-fold axis of D<sub>n</sub>. The compound consists of pairs of n | D<sub>3n</sub> x I / D<sub>3</sub> x I, which rotate in opposite directions. See for instance <a href="CuboctahedraCompounds/4.D6xI.C3xI.anim.1.x3d">for n=2</a> or <a href="CuboctahedraCompounds/6.D9xI.C3xI.anim.1.x3d">for n=3</a>
+            <br/>The special angles are:
+            <br/>&mu;<sub>0</sub> = 0
+            <br/>&mu;<sub>1</sub> = <sup>&pi;</sup>/<sub>6n</sub>
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+            <br/>and n = 1
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/1.S4xI.S4xI.x3d">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+            <br/>and n &ge; 2
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/3.D9xI.D3xI.x3d">3 | D<sub>9</sub> x I / D<sub>3</sub> x I</a>
+          </td>
+          <td class="subRow_descr">n | D<sub>3n</sub> x I / D<sub>3</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>1</sub>
+            <br/>and m = 2n
+          </td>
+          <td class="lastSubRow"> <a href="CuboctahedraCompounds/2.D6xI.D3xI.x3d">2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          </td>
+          <td class="lastSubRow_descr">m | D<sub>3m</sub> x I / D<sub>3</sub> x I
+          </td>
+        </tr>
+        <tr>
+          <td class="mainRow_r"><a name="2n.D4nxI.C4xI">2n | D<sub>4n</sub> x I / C<sub>4</sub> x I | &mu;</a>
+            <br/>n &ge; 1
+            <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
+          </td>
+          <td class="mainRow">
+            Images:
+            <br/><a href="CuboctahedraCompounds/4.D8xI.C4xI.x3d">for n=2</a>
+            <br/><a href="CuboctahedraCompounds/6.D12xI.C4xI.x3d">for n=3</a>
+            <br/>Animations:
+            <br/><a href="CuboctahedraCompounds/4.D8xI.C4xI.anim.x3d">for n=2</a>
+            <br/><a href="CuboctahedraCompounds/6.D12xI.C4xI.anim.x3d">for n=3</a>
+          </td>
+          <td class="mainRow_descr">2n | D<sub>n</sub> x I / E x I, for which the descriptive shares an order 4 symmetry axis with the n-fold axis of D<sub>n</sub>. The compound consists of pairs of n | D<sub>4n</sub> x I / D<sub>4</sub> x I, which rotate in opposite directions. See for instance <a href="CuboctahedraCompounds/4.D8xI.C4xI.anim.1.x3d">for n=2</a>
+            <br/>The special angles are:
+            <br/>&mu;<sub>0</sub> = 0
+            <br/>&mu;<sub>1</sub> = <sup>&pi;</sup>/<sub>8n</sub>
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+            <br/>and n = 1
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/1.S4xI.S4xI.x3d">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+            <br/>and n &ge; 2
+          </td>
+          <td class="subRow"> <a href="CuboctahedraCompounds/3.D12xI.D4xI.x3d">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">n | D<sub>4n</sub> x I / D<sub>4</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>1</sub>
+            <br/>and m = 2n
+          </td>
+          <td class="lastSubRow"> <a href="CuboctahedraCompounds/4.D16xI.D4xI.x3d">4 | D<sub>16</sub> x I / D<sub>4</sub> x I</a>
+          </td>
+          <td class="lastSubRow_descr">m | D<sub>4m</sub> x I / D<sub>4</sub> x I
+          </td>
+        </tr>
+        <tr>
+          <td class="mainRow_r"><a name="6.A4xI.C2xI">6 | A<sub>4</sub> x I / C<sub>2</sub> x I | &mu;</a>
+            <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
+          </td>
+          <td class="mainRow"><a href="CuboctahedraCompounds/6.A4xI.C2xI.x3d">Image</a>
+            <br/><a href="CuboctahedraCompounds/6.A4xI.C2xI.anim.x3d">Animation</a>
+          </td>
+          <td class="mainRow_descr">12 | A<sub>4</sub> x I / E x I, for which the descriptive shares an order 2 symmetry axis with a 2-fold axis of A<sub>4</sub>. 
+            <br/>The special angles are:
+            <br/>&mu;<sub>0</sub> = 0
+            <br/>&mu;<sub>1</sub> = <sup>&pi;</sup>/<sub>4</sub>
+            <br/>&mu;<sub>2</sub> = asin(<sup>1</sup>/<sub>&radic;3</sub>)
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/3.S4xI.D4xI.x3d">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/6.S4xI.D2xI.x3d">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>2</sub>
+          </td>
+          <td class="lastSubRow"><a href="CuboctahedraCompounds/6.A4xI.C2xI.mu2.x3d">3 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          </td>
+          <td class="lastSubRow_descr">-
+          </td>
+        </tr>
+        <tr>
+          <td class="mainRow_r"><a name="4.A4xI.C3xI">4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;</a>
+            <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
+          </td>
+          <td class="mainRow"><a href="CuboctahedraCompounds/4.A4xI.C3xI.x3d">Image</a>
+            <br/><a href="CuboctahedraCompounds/4.A4xI.C3xI.anim.x3d">Animation</a>
+          </td>
+          <td class="mainRow_descr">12 | A<sub>4</sub> x I / E x I, for which the descriptive shares an order 3 symmetry axis with a 3-fold axis of A<sub>4</sub>. 
+            <br/>The special angles are:
+            <br/>&mu;<sub>0</sub> = 0
+            <br/>&mu;<sub>1</sub> = <sup>&pi;</sup>/<sub>3</sub>
+            <br/>&mu;<sub>2</sub> = acos(<sup>-1 + 3&radic;5</sup>/<sub>8</sub>)
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/1.S4xI.S4xI.x3d">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/4.S4xI.D3xI.x3d">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>2</sub>
+          </td>
+          <td class="lastSubRow"><a href="CuboctahedraCompounds/4.A4xI.C3xI.mu2.x3d">2 x 2 | D<sub>3</sub> x I / C<sub>3</sub> x I | &frac12;&mu;<sub>2</sub></a>
+          </td>
+          <td class="lastSubRow_descr">-
+          </td>
+        </tr>
+        <tr>
+          <td class="mainRow_r"><a name="12A.S4xI.C2xI">12A | S<sub>4</sub> x I / C<sub>2</sub> x I | &mu;</a>
+            <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[ &cup; ]&mu;<sub>1</sub>, &mu;<sub>2</sub>[
+          </td>
+          <td class="mainRow"><a href="CuboctahedraCompounds/12A.S4xI.C2xI.x3d">Image</a>
+            <br/><a href="CuboctahedraCompounds/12A.S4xI.C2xI.anim.x3d">Animation</a>
+          </td>
+          <td class="mainRow_descr">24 | S<sub>4</sub> x I / E x I, for which the descriptive shares an order 2 symmetry axis with a 2-fold axis of S<sub>4</sub>. 
+            <br/>The special angles are:
+            <br/>&mu;<sub>0</sub> = 0
+            <br/>&mu;<sub>1</sub> = asin(<sup>2&radic;2</sup>/<sub>3</sub>)
+            <br/>&mu;<sub>2</sub> = <sup>&pi;</sup>/<sub>2</sub>
+            <br/>&mu;<sub>3</sub> = asin(<sup>1</sup>/<sub>&radic;3</sub>)
+            <br/>&mu;<sub>4</sub> = acos(<sup>1</sup>/<sub>&radic;3</sub>)
+            <br/>&mu;<sub>5</sub> = <sup>&pi;</sup>/<sub>4</sub>
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/1.S4xI.S4xI.x3d">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/4.S4xI.D3xI.x3d">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/6.S4xI.D2xI.x3d">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/12A.S4xI.C2xI.mu3.1.x3d">4 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a> or
+            <br/>
+            <a href="CuboctahedraCompounds/12A.S4xI.C2xI.mu3.2.x3d">6 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>4</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/12A.S4xI.C2xI.mu4.1.x3d">3 x 4 | D<sub>12</sub> x I / D<sub>3</sub> x I</a> or
+            <br/>
+            <a href="CuboctahedraCompounds/12A.S4xI.C2xI.mu4.2.x3d">4 x 3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>5</sub>
+          </td>
+          <td class="lastSubRow"><a href="CuboctahedraCompounds/12A.S4xI.C2xI.mu5.x3d">6 x 2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          </td>
+          <td class="lastSubRow_descr">-
+          </td>
+        </tr>
+        <tr>
+          <td class="mainRow_r"><a name="12B.S4xI.C2xI">12B | S<sub>4</sub> x I / C<sub>2</sub> x I | &mu;</a>
+            <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
+          </td>
+          <td class="mainRow"><a href="CuboctahedraCompounds/12B.S4xI.C2xI.x3d">Image</a>
+            <br/><a href="CuboctahedraCompounds/12B.S4xI.C2xI.anim.x3d">Animation</a>
+          </td>
+          <td class="mainRow_descr">24 | S<sub>4</sub> x I / E x I, for which the descriptive shares an order 4 symmetry axis with a 2-fold axis of S<sub>4</sub>. 
+            <br/>The special angles are:
+            <br/>&mu;<sub>0</sub> = 0
+            <br/>&mu;<sub>1</sub> = <sup>&pi;</sup>/<sub>4</sub>
+            <br/>&mu;<sub>2</sub> = acos(<sup>1</sup>/<sub>&radic;3</sub>) - <sup>&pi;</sup>/<sub>4</sub>
+            <br/>&mu;<sub>3</sub> = asin(<sup>1</sup>/<sub>&radic;3</sub>)
+            <br/>&mu;<sub>4</sub> = <sup>&pi;</sup>/<sub>8</sub>
+            <br/>&mu;<sub>5</sub> = &#189; atan(<sup>4&radic;2</sup>/<sub>7</sub>)
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/3.S4xI.D4xI.x3d">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/6.S4xI.D2xI.x3d">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/12B.S4xI.C2xI.mu2.x3d">4 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/12B.S4xI.C2xI.mu3.x3d">4 x 3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>4</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/12B.S4xI.C2xI.mu4.x3d">6 x 2 | D<sub>8</sub> x I / D<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>5</sub><a href="#note3"><sup>3</sup></a>
+          </td>
+          <td class="lastSubRow"><a href="CuboctahedraCompounds/12B.S4xI.C2xI.mu5.x3d">4 x 3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
+            <br/>
+            (<a href="CuboctahedraCompounds/12B.S4xI.C2xI.mu5.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="lastSubRow_descr">-
+          </td>
+        </tr>
+        <tr>
+          <td class="mainRow_r"><a name="12.S4xI.D1xI">12 | S<sub>4</sub> x I / D<sub>1</sub> x I | &mu;</a>
+            <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
+          </td>
+          <td class="mainRow"><a href="CuboctahedraCompounds/12.S4xI.D1xI.x3d">Image</a>
+            <br/><a href="CuboctahedraCompounds/12.S4xI.D1xI.anim.x3d">Animation</a>
+          </td>
+          <td class="mainRow_descr">24 | S<sub>4</sub> x I / E x I, for which the descriptive shares an order 2 symmetry axis with a 4-fold axis of S<sub>4</sub>. One order 4 axis of the compound is shared with the 2-fold axis of 4 elements. Hence there are 2 different ways to make pairs of these. By its colour arrangement the animation emphasises the case where the 4 elements consist of a pair of 2 | D<sub>2</sub> x I / D<sub>1</sub> x I | &mu;. There is an alternative way, for which the compound consists of pairs of 2 | D<sub>4</sub> x I / D<sub>2</sub> x I, which rotate in opposite directions. See for instance <a href="CuboctahedraCompounds/12.S4xI.D1xI.anim.1.x3d">this animation</a>
+            <br/>The special angles are:
+            <br/>&mu;<sub>0</sub> = 0
+            <br/>&mu;<sub>1</sub> = <sup>&pi;</sup>/<sub>4</sub>
+            <br/>&mu;<sub>2</sub> = acos(<sup>1</sup>/<sub>&radic;3</sub>) - <sup>&pi;</sup>/<sub>4</sub>
+            <br/>&mu;<sub>3</sub> = asin(<sup>1</sup>/<sub>&radic;3</sub>)
+            <br/>&mu;<sub>4</sub> = <sup>&pi;</sup>/<sub>8</sub>
+            <br/>&mu;<sub>5</sub> = &#189; atan(<sup>4&radic;2</sup>/<sub>7</sub>)
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/3.S4xI.D4xI.x3d">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/6.S4xI.D2xI.x3d">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/12.S4xI.D1xI.mu2.x3d">6 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/12.S4xI.D1xI.mu3.x3d">3 x 4 | D<sub>12</sub> x I / D<sub>3</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>4</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/12.S4xI.D1xI.mu4.x3d">3 x 4 | D<sub>8</sub> x I / D<sub>2</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>5</sub><a href="#note3"><sup>3</sup></a>
+          </td>
+          <td class="lastSubRow"><a href="CuboctahedraCompounds/12.S4xI.D1xI.mu5.x3d">3 x 4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
+            <br/>
+            (<a href="CuboctahedraCompounds/12.S4xI.D1xI.mu5.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="lastSubRow_descr">-
+          </td>
+        </tr>
+        <tr>
+          <td class="mainRow_r"><a name="8.S4xI.C3xI">8 | S<sub>4</sub> x I / C<sub>3</sub> x I | &mu;</a>
+            <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
+          </td>
+          <td class="mainRow"><a href="CuboctahedraCompounds/8.S4xI.C3xI.x3d">Image</a>
+            <br/><a href="CuboctahedraCompounds/8.S4xI.C3xI.anim.x3d">Animation</a>
+          </td>
+          <td class="mainRow_descr">24 | S<sub>4</sub> x I / E x I, for which the descriptive shares an order 3 symmetry axis with a 3-fold axis of S<sub>4</sub>. 
+            <br/>The special angles are:
+            <br/>&mu;<sub>0</sub> = 0
+            <br/>&mu;<sub>1</sub> = <sup>&pi;</sup>/<sub>3</sub>
+            <br/>&mu;<sub>2</sub> = acos(<sup>-1 + 3&radic;5</sup>/<sub>8</sub>)
+            <br/>&mu;<sub>3</sub> = <sup>&pi;</sup>/<sub>6</sub>
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/1.S4xI.S4xI.x3d">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/4.S4xI.D3xI.x3d">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/8.S4xI.C3xI.mu2.x3d">2 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>2</sub></a>
+            <br/>
+            (<a href="CuboctahedraCompounds/8.S4xI.C3xI.mu2.alt1.x3d">alternative colour arrangement</a>,
+            <br/>
+            <a href="CuboctahedraCompounds/8.S4xI.C3xI.mu2.alt2.x3d">alternative colour arrangement</a>,
+            <br/>
+            <a href="CuboctahedraCompounds/8.S4xI.C3xI.mu2.alt3.x3d">alternative colour arrangement</a>)
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>3</sub>
+          </td>
+          <td class="lastSubRow"><a href="CuboctahedraCompounds/8.S4xI.C3xI.mu3.x3d">4 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          </td>
+          <td class="lastSubRow_descr">-
+          </td>
+        </tr>
+        <tr>
+          <td class="mainRow_r"><a name="6.S4xI.C4xI">6 | S<sub>4</sub> x I / C<sub>4</sub> x I | &mu;</a>
+            <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
+          </td>
+          <td class="mainRow"><a href="CuboctahedraCompounds/6.S4xI.C4xI.x3d">Image</a>
+            <br/><a href="CuboctahedraCompounds/6.S4xI.C4xI.anim.x3d">Animation</a>
+          </td>
+          <td class="mainRow_descr">24 | S<sub>4</sub> x I / E x I, for which the descriptive shares an order 4 symmetry axis with a 4-fold axis of S<sub>4</sub>. 
+            <br/>The special angles are:
+            <br/>&mu;<sub>0</sub> = 0
+            <br/>&mu;<sub>1</sub> = <sup>&pi;</sup>/<sub>4</sub>
+            <br/>&mu;<sub>2</sub> = <sup>&pi;</sup>/<sub>8</sub>
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/1.S4xI.S4xI.x3d">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/3.S4xI.D4xI.x3d">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>2</sub>
+          </td>
+          <td class="lastSubRow"><a href="CuboctahedraCompounds/6.S4xI.C4xI.mu2.x3d">3 x 2 | D<sub>8</sub> x I / D<sub>4</sub> x I</a>
+          </td>
+          <td class="lastSubRow_descr">-
+          </td>
+        </tr>
+        <tr>
+          <td class="mainRow_r"><a name="30A.A5xI.C2xI">30A | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;</a>
+            <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[ &cup; ]&mu;<sub>1</sub>, &mu;<sub>2</sub>[ &cup; ]&mu;<sub>2</sub>, &mu;<sub>3</sub>[
+          </td>
+          <td class="mainRow"><a href="CuboctahedraCompounds/30A.A5xI.C2xI.x3d">Image</a>
+            <br/><a href="CuboctahedraCompounds/30A.A5xI.C2xI.anim.x3d">Animation</a>
+          </td>
+          <td class="mainRow_descr">60 | A<sub>5</sub> x I / E x I, for which the descriptive shares an order 2 symmetry axis with a 2-fold axis of A<sub>5</sub>. 
+            <br/>The special angles are:
+            <br/>&mu;<sub>0</sub> = 0
+            <br/>&mu;<sub>1</sub> = acos(<sup>(&radic;2+1)&radic;5 + &radic;2-1</sup>/<sub>6</sub>)
+            <br/>&mu;<sub>2</sub> = acos(<sup>(&radic;2-1)&radic;5 + &radic;2+1</sup>/<sub>6</sub>)
+            <br/>&mu;<sub>3</sub> = <sup>&pi;</sup>/<sub>2</sub>
+            <br/>&mu;<sub>4</sub> = asin(<sup>1</sup>/<sub>&radic;3</sub>)
+            <br/>&mu;<sub>5</sub> = acos(<sup>1</sup>/<sub>&radic;3</sub>)
+            <br/>&mu;<sub>6</sub> = acos(<sup>&radic;5+1</sup>/<sub>2&radic;3</sub>)
+            <br/>&mu;<sub>7</sub> = acos(<sup>&radic;(5+&radic;5)</sup>/<sub>&radic;10</sub>)
+            <br/>&mu;<sub>8</sub> = acos(<sup>&radic;(5-&radic;5)</sup>/<sub>&radic;10</sub>)
+            <br/>&mu;<sub>9</sub> = acos(<sup>&radic;5-1</sup>/<sub>2&radic;3</sub>)
+            <br/>&mu;<sub>10</sub> = <sup>&pi;</sup>/<sub>4</sub>
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/15.A5xI.D2xI.x3d">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/10A.A5xI.D3xI.x3d">10A | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/10B.A5xI.D3xI.x3d">10B | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/15.A5xI.D2xI.x3d">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>4</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/30A.A5xI.C2xI.mu4.x3d">15 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+            <br/>
+            (<a href="CuboctahedraCompounds/30A.A5xI.C2xI.mu4.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>5</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/30A.A5xI.C2xI.mu5.x3d">15 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+            <br/>
+            (<a href="CuboctahedraCompounds/30A.A5xI.C2xI.mu5.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>6</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/30A.A5xI.C2xI.mu6.x3d">10 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+            <br/>
+            (<a href="CuboctahedraCompounds/30A.A5xI.C2xI.mu6.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>7</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/30A.A5xI.C2xI.mu7.x3d">6 x 5 | D<sub>20</sub> x I / D<sub>4</sub> x I</a>
+            <br/>
+            (<a href="CuboctahedraCompounds/30A.A5xI.C2xI.mu7.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>8</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/30A.A5xI.C2xI.mu8.x3d">6 x 5 | D<sub>10</sub> x I / D<sub>2</sub> x I</a>
+            <br/>
+            (<a href="CuboctahedraCompounds/30A.A5xI.C2xI.mu8.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>9</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/30A.A5xI.C2xI.mu9.x3d">10 x 3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+            <br/>
+            (<a href="CuboctahedraCompounds/30A.A5xI.C2xI.mu9.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>10</sub>
+          </td>
+          <td class="lastSubRow"><a href="CuboctahedraCompounds/30A.A5xI.C2xI.mu10.x3d">15 x 2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
+            <br/>
+            (<a href="CuboctahedraCompounds/30A.A5xI.C2xI.mu10.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="lastSubRow_descr">-
+          </td>
+        </tr>
+        <tr>
+          <td class="mainRow_r"><a name="30B.A5xI.C2xI">30B | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;</a>
+            <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
+          </td>
+          <td class="mainRow"><a href="CuboctahedraCompounds/30B.A5xI.C2xI.x3d">Image</a>
+            <br/><a href="CuboctahedraCompounds/30B.A5xI.C2xI.anim.x3d">Animation</a>
+          </td>
+          <td class="mainRow_descr">60 | A<sub>5</sub> x I / E x I, for which the descriptive shares an order 4 symmetry axis with a 2-fold axis of A<sub>5</sub>. 
+            <br/>The special angles are:
+            <br/>&mu;<sub>0</sub> = 0
+            <br/>&mu;<sub>1</sub> = <sup>&pi;</sup>/<sub>4</sub>
+            <br/>&mu;<sub>2</sub> = acos(<sup>&radic;(5+2&radic;5)</sup>/<sub>&radic;10</sub>)
+            <br/>&mu;<sub>3</sub> = acos(<sup>&radic;5+1</sup>/<sub>2&radic;3</sub>)
+            <br/>&mu;<sub>4</sub> = acos(<sup>&radic;5</sup>/<sub>&radic;6</sub>)
+            <br/>&mu;<sub>5</sub> = acos(<sup>&radic;(5+&radic;5)</sup>/<sub>&radic;10</sub>)
+            <br/>&mu;<sub>6</sub> = <sup>&pi;</sup>/<sub>8</sub>
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/5.A5xI.A4xI.x3d">5 | A<sub>5</sub> x I / A<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/15.A5xI.D2xI.x3d">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/30B.A5xI.C2xI.mu2.x3d">6 x 5 | D<sub>10</sub> x I / D<sub>2</sub> x I</a>
+            <br/>
+            (<a href="CuboctahedraCompounds/30B.A5xI.C2xI.mu2.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/30B.A5xI.C2xI.mu3.x3d">10 x 3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+            <br/>
+            (<a href="CuboctahedraCompounds/30B.A5xI.C2xI.mu3.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>4</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/30B.A5xI.C2xI.mu4.x3d">10 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+            <br/>
+            (<a href="CuboctahedraCompounds/30B.A5xI.C2xI.mu4.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>5</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/30B.A5xI.C2xI.mu5.x3d">6 x 5 | D<sub>20</sub> x I / D<sub>4</sub> x I</a>
+            <br/>
+            (<a href="CuboctahedraCompounds/30B.A5xI.C2xI.mu5.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>6</sub>
+          </td>
+          <td class="lastSubRow"><a href="CuboctahedraCompounds/30B.A5xI.C2xI.mu6.x3d">15 x 2 | D<sub>8</sub> x I / D<sub>4</sub> x I</a>
+            <br/>
+            (<a href="CuboctahedraCompounds/30B.A5xI.C2xI.mu6.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="lastSubRow_descr">-
+          </td>
+        </tr>
+        <tr>
+          <td class="mainRow_r"><a name="20.A5xI.C3xI">20 | A<sub>5</sub> x I / C<sub>3</sub> x I | &mu;</a>
+            <br/>&mu; &isin; ]&mu;<sub>2</sub>, &mu;<sub>0</sub>[ &cup; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
+          </td>
+          <td class="mainRow"><a href="CuboctahedraCompounds/20.A5xI.C3xI.x3d">Image</a>
+            <br/><a href="CuboctahedraCompounds/20.A5xI.C3xI.anim.x3d">Animation</a>
+          </td>
+          <td class="mainRow_descr">60 | A<sub>5</sub> x I / E x I, for which the descriptive shares an order 3 symmetry axis with a 3-fold axis of A<sub>5</sub>. 
+            <br/>The special angles are:
+            <br/>&mu;<sub>0</sub> = 0
+            <br/>&mu;<sub>1</sub> = acos(<sup>&radic;10</sup>/<sub>4</sub>)
+            <br/>&mu;<sub>2</sub> = -acos(<sup>&radic;2(3+&radic;5)</sup>/<sub>8</sub>)
+            <br/>&mu;<sub>3</sub> = acos(<sup>7+3&radic;5</sup>/<sub>16</sub>)
+            <br/>&mu;<sub>4</sub> = acos(<sup>-7 + 3&radic;5 + 3&radic;(2+2&radic;5)</sup>/<sub>8</sub>)
+            <br/>&mu;<sub>5</sub> = acos(<sup>1+3&radic;5</sup>/<sub>8</sub>)
+            <br/>&mu;<sub>6</sub> = &frac12;acos(<sup>1+3&radic;5</sup>/<sub>8</sub>)
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/5.A5xI.A4xI.x3d">5 | A<sub>5</sub> x I / A<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/10A.A5xI.D3xI.x3d">10A | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/10B.A5xI.D3xI.x3d">10B | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/20.A5xI.C3xI.mu3.1.x3d">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>3</sub></a>
+            <br/>
+            (<a href="CuboctahedraCompounds/20.A5xI.C3xI.mu3.1.1col.x3d">only one emphasised</a>) or
+            <br/>
+            <a href="CuboctahedraCompounds/20.A5xI.C3xI.mu3.2.x3d">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | 2&mu;<sub>1</sub> - &mu;<sub>3</sub></a>
+            <br/>
+            (<a href="CuboctahedraCompounds/20.A5xI.C3xI.mu3.2.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>4</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/20.A5xI.C3xI.mu4.1.x3d">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>4</sub></a>
+            <br/>
+            (<a href="CuboctahedraCompounds/20.A5xI.C3xI.mu4.1.1col.x3d">only one emphasised</a>) or
+            <br/>
+            <a href="CuboctahedraCompounds/20.A5xI.C3xI.mu4.2.x3d">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | 2&mu;<sub>1</sub> - &mu;<sub>4</sub></a>
+            <br/>
+            (<a href="CuboctahedraCompounds/20.A5xI.C3xI.mu4.2.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>5</sub>
+          </td>
+          <td class="subRow"><a href="CuboctahedraCompounds/20.A5xI.C3xI.mu5.1.x3d">5 x 4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
+            <br/>
+            (<a href="CuboctahedraCompounds/20.A5xI.C3xI.mu5.1.1col.x3d">only one emphasised</a>) or
+            <br/>
+            <a href="CuboctahedraCompounds/20.A5xI.C3xI.mu5.2.x3d">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>5</sub></a>
+            <br/>
+            (<a href="CuboctahedraCompounds/20.A5xI.C3xI.mu5.2.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>6</sub>
+          </td>
+          <td class="lastSubRow"><a href="CuboctahedraCompounds/20.A5xI.C3xI.mu6.x3d">10 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+            <br/>
+            (<a href="CuboctahedraCompounds/20.A5xI.C3xI.mu6.1col.x3d">only one emphasised</a>)
+          </td>
+          <td class="lastSubRow_descr">-
+          </td>
+        </tr>
+      </table>
+      <h2><a name="rigid">Rigid Compounds of Cuboctahedra</a></h2>
+      <p>
+        For some angles the cube compounds with rotational freedom obtain a higher
+        order symmetry. These are refered to as rigid compounds of cubes. The table
+        below summarises these and specifies from which compounds with rotational
+        freedom they can be obtained.
+      </p>
+      <table>
+        <tr class="header">
+          <td class="header_r">Compound<a href="#note1"><sup>1</sup></a>
+          </td>
+          <td class="header_last">Special Case of
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a name="n.D4nxI.D4xI">n | D<sub>4n</sub> x I / D<sub>4</sub> x I, e.g.</a>
+            <br/>
+            <a href="CuboctahedraCompounds/3.D12xI.D4xI.x3d">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          </td>
+          <td>nA | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;<sub>0</sub>
+            <br/>
+            nB | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;<sub>0</sub>
+            <br/>
+            2n | D<sub>4n</sub> x I / C<sub>4</sub> x I | &mu;<sub>0</sub>
+            <br/>
+            2n | D<sub>4n</sub> x I / C<sub>4</sub> x I | &mu;<sub>1</sub>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a name="n.D3nxI.D3xI">n | D<sub>3n</sub> x I / D<sub>3</sub> x I, e.g.</a>
+            <br/>
+            <a href="CuboctahedraCompounds/2.D6xI.D3xI.x3d">2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+            <br/>
+            <a href="CuboctahedraCompounds/3.D9xI.D3xI.x3d">3 | D<sub>9</sub> x I / D<sub>3</sub> x I</a>
+          </td>
+          <td>nA | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;<sub>1</sub>
+            <br/>
+            2 | D<sub>2</sub> x I / D<sub>1</sub> x I | &mu;<sub>1</sub>
+            <br/>
+            2n | D<sub>3n</sub> x I / C<sub>3</sub> x I | &mu;<sub>0</sub>
+            <br/>
+            2n | D<sub>3n</sub> x I / C<sub>3</sub> x I | &mu;<sub>1</sub>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a name="n.D2nxI.D2xI">n | D<sub>2n</sub> x I / D<sub>2</sub> x I, e.g.</a>
+            <br/>
+            <a href="CuboctahedraCompounds/2.D4xI.D2xI.x3d">2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
+            <br/>
+            <a href="CuboctahedraCompounds/3.D6xI.D2xI.x3d">3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+          </td>
+          <td>nA | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;<sub>2</sub>
+            <br/>
+            nB | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;<sub>1</sub>
+            <br/>
+            2n | D<sub>2n</sub> x I / D<sub>1</sub> x I | &mu;<sub>0</sub>
+            <br/>
+            2n | D<sub>2n</sub> x I / D<sub>1</sub> x I | &mu;<sub>2</sub>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a name="1.S4xI.S4xI"><a href="CuboctahedraCompounds/1.S4xI.S4xI.x3d">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a></a>
+          </td>
+          <td>2 | D<sub>2</sub> x I / D<sub>1</sub> x I | &mu;<sub>0</sub>
+            <br/>
+            4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>0</sub>
+            <br/>
+            12A | S<sub>4</sub> x I / C<sub>2</sub> x I | &mu;<sub>0</sub>
+            <br/>
+            8 | S<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>0</sub>
+            <br/>
+            6 | S<sub>4</sub> x I / C<sub>4</sub> x I | &mu;<sub>0</sub>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a name="3.S4xI.D4xI"><a href="CuboctahedraCompounds/3.S4xI.D4xI.x3d">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a></a>
+            <br/>
+            Classical Compound of 3 Cuboctahedra
+          </td>
+          <td>6 | A<sub>4</sub> x I / C<sub>2</sub> x I | &mu;<sub>0</sub>
+            <br/>
+            12B | S<sub>4</sub> x I / C<sub>2</sub> x I | &mu;<sub>0</sub>
+            <br/>
+            12 | S<sub>4</sub> x I / D<sub>1</sub> x I | &mu;<sub>0</sub>
+            <br/>
+            6 | S<sub>4</sub> x I / C<sub>4</sub> x I | &mu;<sub>1</sub>
+            <br/>
+            3B | D<sub>3</sub> x I / C<sub>2</sub> x I | &mu;<sub>3</sub>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a name="4.S4xI.D3xI"><a href="CuboctahedraCompounds/4.S4xI.D3xI.x3d">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a></a>
+            <br/>
+            Bakos' Compound of 4 Cuboctahedra
+          </td>
+          <td>4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>1</sub>
+            <br/>
+            12A | S<sub>4</sub> x I / C<sub>2</sub> x I | &mu;<sub>1</sub>
+            <br/>
+            8 | S<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>1</sub>
+            <br/>
+            4A | D<sub>4</sub> x I / C<sub>2</sub> x I | &mu;<sub>5</sub>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a name="6.S4xI.D2xI"><a href="CuboctahedraCompounds/6.S4xI.D2xI.x3d">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a></a>
+          </td>
+          <td>6 | A<sub>4</sub> x I / C<sub>2</sub> x I | &mu;<sub>1</sub>
+            <br/>
+            12A | S<sub>4</sub> x I / C<sub>2</sub> x I | &mu;<sub>2</sub>
+            <br/>
+            12B | S<sub>4</sub> x I / C<sub>2</sub> x I | &mu;<sub>1</sub>
+            <br/>
+            12 | S<sub>4</sub> x I / D<sub>1</sub> x I | &mu;<sub>1</sub>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a name="5.A5xI.A4xI"><a href="CuboctahedraCompounds/5.A5xI.A4xI.x3d">5 | A<sub>5</sub> x I / A<sub>4</sub> x I</a></a>
+            <br/>
+            Classical Compound of 5 Cuboctahedra
+          </td>
+          <td>30B | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;<sub>0</sub>
+            <br/>
+            20 | A<sub>5</sub> x I / C<sub>3</sub> x I | &mu;<sub>0</sub>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a name="10A.A5xI.D3xI"><a href="CuboctahedraCompounds/10A.A5xI.D3xI.x3d">10A | A<sub>5</sub> x I / D<sub>3</sub> x I</a></a>
+          </td>
+          <td>30A | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;<sub>1</sub>
+            <br/>
+            20 | A<sub>5</sub> x I / C<sub>3</sub> x I | &mu;<sub>1</sub>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a name="10B.A5xI.D3xI"><a href="CuboctahedraCompounds/10B.A5xI.D3xI.x3d">10B | A<sub>5</sub> x I / D<sub>3</sub> x I</a></a>
+          </td>
+          <td>30A | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;<sub>2</sub>
+            <br/>
+            20 | A<sub>5</sub> x I / C<sub>3</sub> x I | &mu;<sub>2</sub>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a name="15.A5xI.D2xI"><a href="CuboctahedraCompounds/15.A5xI.D2xI.x3d">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</a></a>
+          </td>
+          <td>30A | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;<sub>0</sub>
+            <br/>
+            30A | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;<sub>3</sub>
+            <br/>
+            30B | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;<sub>1</sub>
+          </td>
+        </tr>
+      </table>
+      <h2><a name="notes">Notes</a></h2>
+      <a name="note1"><sup>1</sup></a>The table uses the notation as used in <a href="#HVerh01">Symmetry Orbits</a>, in which the first
+      part states the amount of cubes the the middle part to which symmetry cube the
+      compound belongs.
+      <br/>
+      <a name="note2"><sup>2</sup></a>For available X3D / VRML plugins for your browser and OS check <a href="http://cic.nist.gov/vrml/vbdetect.html">here</a>.
+      <br/>
+      <a name="note3"><sup>3</sup></a>This special case I found myself and is not mentioned in <a href="#HVerh01">Symmetry Orbits</a>. These special cases are:
+      <ul>
+        <li><a href="#nA.DnxI.C2xI">nA | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;<sub>4</sub></a> = m x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I
+          <i> with n=2m
+          </i>
+        </li>
+        <li><a href="#nA.DnxI.C2xI">nA | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;<sub>5</sub></a> = m x 4 | S<sub>4</sub> x I / D<sub>3</sub> x I
+          <i> with n=4m
+          </i>
+        </li>
+        <li><a href="#nB.DnxI.C2xI">nB | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;<sub>3</sub></a> = m x 3 | S<sub>4</sub> x I / D<sub>4</sub> x I
+          <i> with n=3m
+          </i>
+        </li>
+        <li><a href="#2n.D2nxI.D1xI">2n | D<sub>2n</sub> x I / D<sub>1</sub> x I | &mu;<sub>3</sub></a> = n x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I
+          <i> with n &ge; 2
+          </i>
+        </li>
+        <li><a href="#12B.S4xI.C2xI">12B | S<sub>4</sub> x I / C<sub>2</sub> x I | &mu;<sub>5</sub></a> = 4 x 3 | S<sub>4</sub> x I / D<sub>4</sub> x I
+        </li>
+        <li><a href="#12.S4xI.D1xI">12 | S<sub>4</sub> x I / D<sub>1</sub> x I | &mu;<sub>5</sub></a> = 3 x 4 | S<sub>4</sub> x I / D<sub>3</sub> x I
+        </li>
+      </ul>
+      <h2><a name="references">References</a></h2>
+      <a name="HVerh01">Verheyen, Hugo F: <b>Symmetry Orbits</b>, Birkhauser; 1 edition (January 26, 1996)
+      </a>
+      <h2><a name="links">Links</a></h2>
+      <ul>
+        <li>
+          <a href="../index.htm">Home</a>
+        </li>
+        <li>
+          <a href="./index.htm">My models</a>
+        </li>
+        <li>
+          <a href="http://users.skynet.be/polyhedra.fleurent/Compounds/Text/Page_00_1.htm" target="new">Webpage about compounds by M. Fleurent and H. Verheyen</a>
+        </li>
+        <li>
+          <a href="./CuboctahedraCompounds.Off.zip">ZIP archive</a> with .off files
+        </li>
+      </ul>
+      <h2><a name="lastUpdated">Last Updated</a></h2>
+      <p>2008-02-27, 07:47
+      </p>
+    </div>
+  </body>
+</html>

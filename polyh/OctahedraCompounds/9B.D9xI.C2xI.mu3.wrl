@@ -1,0 +1,175 @@
+#VRML V2.0 utf8
+WorldInfo {
+  title "Cube compound: 9B | D9 x I / C2 x I | mu3"
+}
+NavigationInfo {
+  headlight TRUE
+  type "EXAMINE"
+}
+Background {
+  skyColor 0.2 0.5 1.0
+}
+DEF DnAxis Viewpoint {
+  jump FALSE
+  position 0.000 0.000 2.800
+  description "Order 9 Axis"
+}
+DEF O2AxisI Viewpoint {
+  jump FALSE
+  position 0.000 2.800 0.000
+  description "Order 2 Axis"
+  orientation 1.000 0.000 0.000 -1.571
+}
+PROTO ObjModel [
+  field SFRotation position 0.000 0.000 1.000 0.000
+  field SFColor color 1.000 1.000 1.000
+]
+{
+  Transform {
+    rotation IS position
+    children [
+      Shape {
+        geometry DEF objFaces IndexedFaceSet {
+          creaseAngle 0.500000
+          solid FALSE
+          ccw FALSE
+          coord Coordinate {
+            point [
+              -0.408 0.000 -0.577,
+              0.000 -0.707 0.000,
+              -0.577 0.000 0.408,
+              0.408 0.000 0.577,
+              0.000 0.707 0.000,
+              0.577 0.000 -0.408
+            ]
+          }
+          normalPerVertex FALSE
+          coordIndex [
+            0 4 5 -1
+            2 4 0 -1
+            3 4 2 -1
+            5 4 3 -1
+            5 1 0 -1
+            0 1 2 -1
+            2 1 3 -1
+            3 1 5 -1
+          ]
+        }
+        appearance Appearance {
+          material Material {
+            diffuseColor IS color
+          }
+        }
+      }
+      Shape {
+        geometry DEF objEdges IndexedLineSet {
+          coord Coordinate {
+            point [
+              -0.408 0.000 -0.577,
+              0.000 -0.707 0.000,
+              -0.577 0.000 0.408,
+              0.408 0.000 0.577,
+              0.000 0.707 0.000,
+              0.577 0.000 -0.408
+            ]
+          }
+          coordIndex [
+            4 0 -1
+            4 2 -1
+            4 3 -1
+            4 5 -1
+            0 2 -1
+            2 3 -1
+            3 5 -1
+            5 0 -1
+            1 0 -1
+            1 2 -1
+            1 3 -1
+            1 5 -1
+          ]
+        }
+        appearance Appearance {
+          material Material {
+            diffuseColor 0.000 0.000 0.000
+          }
+        }
+      }
+    ]
+  }
+}
+Group {
+  children [
+    DEF C0 Transform {
+      children [
+        ObjModel {
+          position 0.000 0.000 0.000 0.000
+          color 0.900 0.900 0.000
+        }
+      ]
+    }
+    DEF C1 Transform {
+      children [
+        ObjModel {
+          position 0.000 0.000 1.000 0.698
+          color 0.200 0.900 0.200
+        }
+      ]
+    }
+    DEF C2 Transform {
+      children [
+        ObjModel {
+          position 0.000 0.000 1.000 1.396
+          color 0.200 0.900 0.900
+        }
+      ]
+    }
+    DEF C3 Transform {
+      children [
+        ObjModel {
+          position 0.000 0.000 1.000 2.094
+          color 0.900 0.900 0.000
+        }
+      ]
+    }
+    DEF C4 Transform {
+      children [
+        ObjModel {
+          position 0.000 0.000 1.000 2.793
+          color 0.200 0.900 0.200
+        }
+      ]
+    }
+    DEF C5 Transform {
+      children [
+        ObjModel {
+          position 0.000 0.000 1.000 3.491
+          color 0.200 0.900 0.900
+        }
+      ]
+    }
+    DEF C6 Transform {
+      children [
+        ObjModel {
+          position 0.000 0.000 1.000 4.189
+          color 0.900 0.900 0.000
+        }
+      ]
+    }
+    DEF C7 Transform {
+      children [
+        ObjModel {
+          position 0.000 0.000 1.000 4.887
+          color 0.200 0.900 0.200
+        }
+      ]
+    }
+    DEF C8 Transform {
+      children [
+        ObjModel {
+          position 0.000 0.000 1.000 5.585
+          color 0.200 0.900 0.900
+        }
+      ]
+    }
+  ]
+}

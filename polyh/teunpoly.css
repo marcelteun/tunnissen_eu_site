@@ -1,0 +1,146 @@
+body {
+  background-image: url(../backs/p6b.jpg);
+  background-color: #FFFFFF;
+  color: #500000;
+  width: 80ch;
+}
+div#pagebody {width: 50em;}
+a:link {
+  color: #000CC0;
+}
+a:visited {
+  color: #C00000;
+}
+table {
+  border-spacing: 0px
+  /* padding: 2px 4px 2px 4px; */
+}
+td {
+  vertical-align: top;
+  border-bottom: 1px solid #660000;
+  border-top: 1px none #660000;
+  border-left: 1px none #660000;
+  border-right: 1px solid #660000;
+}
+td.fc {
+  border-bottom: 1px solid #660000;
+  border-top: 1px none #660000;
+  border-left: 1px solid #660000;
+  border-right: 1px solid #660000;
+}
+td.r {
+  border-bottom: 1px solid #660000;
+  border-top: 1px none #660000;
+  border-left: 1px solid #660000;
+  border-right: 1px solid #660000;
+  text-align: right;
+}
+td.descr {
+  border-bottom: 1px solid #660000;
+  border-top: 1px none #660000;
+  border-left: 1px none #660000;
+  border-right: 1px solid #660000;
+  width: 20em;
+}
+
+tr.header {
+  font-weight: bold
+}
+td.header {
+  border-bottom: 1px solid #660000;
+  border-top: 1px solid #660000;
+  border-left: 1px none #660000;
+  border-right: 1px solid #660000;
+}
+td.header_fc {
+  border-bottom: 1px solid #660000;
+  border-top: 1px solid #660000;
+  border-left: 1px solid #660000;
+  border-right: 1px solid #660000;
+}
+td.header_r {
+  border-bottom: 1px solid #660000;
+  border-top: 1px solid #660000;
+  border-left: 1px solid #660000;
+  border-right: 1px solid #660000;
+  text-align: right;
+}
+td.header_last {
+  border-bottom: 1px solid #660000;
+  border-top: 1px solid #660000;
+  border-left: 1px none #660000;
+  border-right: 1px solid #660000;
+}
+td.header_descr {
+  border-bottom: 1px solid #660000;
+  border-top: 1px solid #660000;
+  border-left: 1px none #660000;
+  border-right: 1px solid #660000;
+  width: 20em;
+}
+
+tr.mainRow {
+}
+td.mainRow {
+  border-bottom: 1px none #660000;
+  border-top: 1px none #660000;
+  border-left: 1px none #660000;
+  border-right: 1px solid #660000;
+}
+td.mainRow_r {
+  border-bottom: 1px none #660000;
+  border-top: 1px none #660000;
+  border-left: 1px solid #660000;
+  border-right: 1px solid #660000;
+  text-align: right;
+}
+td.mainRow_descr {
+  border-bottom: 1px none #660000;
+  border-top: 1px none #660000;
+  border-left: 1px none #660000;
+  border-right: 1px solid #660000;
+  width: 20em;
+}
+
+tr.subRow {
+}
+td.subRow {
+  border-bottom: 1px none #660000;
+  border-top: 1px none #660000;
+  border-left: 1px none #660000;
+  border-right: 1px solid #660000;
+}
+td.subRow_r {
+  border-bottom: 1px none #660000;
+  border-top: 1px none #660000;
+  border-left: 1px solid #660000;
+  border-right: 1px solid #660000;
+  text-align: right;
+}
+td.subRow_descr {
+  border-bottom: 1px none #660000;
+  border-top: 1px none #660000;
+  border-left: 1px none #660000;
+  border-right: 1px solid #660000;
+  width: 20em;
+}
+td.lastSubRow {
+  border-bottom: 1px solid #660000;
+  border-top: 1px none #660000;
+  border-left: 1px none #660000;
+  border-right: 1px solid #660000;
+}
+td.lastSubRow_r {
+  border-bottom: 1px solid #660000;
+  border-top: 1px none #660000;
+  border-left: 1px solid #660000;
+  border-right: 1px solid #660000;
+  text-align: right;
+}
+td.lastSubRow_descr {
+  border-bottom: 1px solid #660000;
+  border-top: 1px none #660000;
+  border-left: 1px none #660000;
+  border-right: 1px solid #660000;
+  width: 20em;
+}

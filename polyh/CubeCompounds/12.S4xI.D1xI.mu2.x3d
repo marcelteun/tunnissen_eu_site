@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile="IMMERSIVE"
+     xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance'
+     xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content="12 Cubes of Group S4 x I / D1 x I"
+          name="title"/>
+  </head>
+  <Scene>
+    <WorldInfo title="12 Cubes of Group S4 x I / D1 x I"/>
+    <NavigationInfo headlight='true'
+                    type="EXAMINE"/>
+    <Background skyColor='0.2 0.5 1.0'/>
+    <Viewpoint jump='false'
+               position='0.000 0.000 7.000'
+               description="Order 4 Axis"
+               DEF="O4Axis"/>
+    <Viewpoint jump='false'
+               position='4.041 4.041 4.041'
+               description="Order 3 Axis"
+               DEF="O3Axis"
+               orientation='-1.000 1.000 0.000 0.955'/>
+    <Viewpoint jump='false'
+               position='4.950 0.000 4.950'
+               description="Order 2 Axis"
+               DEF="O2Axis"
+               orientation='0.000 1.000 0.000 0.785'/>
+    <ProtoDeclare name="ObjModel">
+      <ProtoInterface>
+        <field accessType="initializeOnly"
+               type="SFRotation"
+               name="position"
+               value='0.000 0.000 1.000 0.000'/>
+        <field accessType="initializeOnly"
+               type="SFColor"
+               name="color"
+               value='1.000 1.000 1.000'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Transform>
+          <IS>
+            <connect nodeField="rotation"
+                     protoField="position"/>
+          </IS>
+          <Shape>
+            <IndexedFaceSet creaseAngle='0.500000'
+                            solid='false'
+                            ccw='false'
+                            normalPerVertex='false'
+                            coordIndex='5 7 3 1 -1 5 4 6 7 -1 7 6 2 3 -1 3 2 0 1 -1 1 0 4 5 -1 6 4 0 2 -1'
+                            DEF="objFaces">
+              <Coordinate point='-1.225 -1.225 0.000, 0.169 -0.986 1.414, -1.563 0.746 0.000, -0.169 0.986 1.414, 0.169 -0.986 -1.414, 1.563 -0.746 0.000, -0.169 0.986 -1.414, 1.225 1.225 0.000'/>
+            </IndexedFaceSet>
+            <Appearance>
+              <Material>
+                <IS>
+                  <connect nodeField="diffuseColor"
+                           protoField="color"/>
+                </IS>
+              </Material>
+            </Appearance>
+          </Shape>
+          <Shape>
+            <IndexedLineSet DEF="objEdges"
+                            coordIndex='7 3 -1 7 5 -1 7 6 -1 3 1 -1 3 2 -1 1 5 -1 1 0 -1 5 4 -1 4 6 -1 4 0 -1 6 2 -1 2 0 -1'>
+              <Coordinate point='-1.225 -1.225 0.000, 0.169 -0.986 1.414, -1.563 0.746 0.000, -0.169 0.986 1.414, 0.169 -0.986 -1.414, 1.563 -0.746 0.000, -0.169 0.986 -1.414, 1.225 1.225 0.000'/>
+            </IndexedLineSet>
+            <Appearance>
+              <Material diffuseColor='0.000 0.000 0.000'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+      </ProtoBody>
+    </ProtoDeclare>
+    <Group>
+      <Transform DEF="C0">
+        <ProtoInstance name="ObjModel">
+          <fieldValue name="position"
+                      value='0.000 0.000 0.000 0.000'/>
+          <fieldValue name="color"
+                      value='0.200 0.200 0.900'/>
+        </ProtoInstance>
+      </Transform>
+      <Transform DEF="C1">
+        <ProtoInstance name="ObjModel">
+          <fieldValue name="position"
+                      value='1.000 0.000 0.000 1.571'/>
+          <fieldValue name="color"
+                      value='0.900 0.900 0.000'/>
+        </ProtoInstance>
+      </Transform>
+      <Transform DEF="C2">
+        <ProtoInstance name="ObjModel">
+          <fieldValue name="position"
+                      value='1.000 0.000 0.000 3.142'/>
+          <fieldValue name="color"
+                      value='0.900 0.200 0.200'/>
+        </ProtoInstance>
+      </Transform>
+      <Transform DEF="C3">
+        <ProtoInstance name="ObjModel">
+          <fieldValue name="position"
+                      value='1.000 0.000 0.000 4.712'/>
+          <fieldValue name="color"
+                      value='0.200 0.900 0.200'/>
+        </ProtoInstance>
+      </Transform>
+      <Transform DEF="C4">
+        <ProtoInstance name="ObjModel">
+          <fieldValue name="position"
+                      value='0.000 1.000 0.000 4.712'/>
+          <fieldValue name="color"
+                      value='0.200 0.900 0.900'/>
+        </ProtoInstance>
+      </Transform>
+      <Transform DEF="C5">
+        <ProtoInstance name="ObjModel">
+          <fieldValue name="position"
+                      value='0.000 0.000 1.000 1.571'/>
+          <fieldValue name="color"
+                      value='0.900 0.200 0.200'/>
+        </ProtoInstance>
+      </Transform>
+      <Transform DEF="C6">
+        <ProtoInstance name="ObjModel">
+          <fieldValue name="position"
+                      value='0.707 0.000 0.707 3.142'/>
+          <fieldValue name="color"
+                      value='0.600 0.600 0.900'/>
+        </ProtoInstance>
+      </Transform>
+      <Transform DEF="C7">
+        <ProtoInstance name="ObjModel">
+          <fieldValue name="position"
+                      value='0.707 -0.707 0.000 3.142'/>
+          <fieldValue name="color"
+                      value='0.200 0.200 0.900'/>
+        </ProtoInstance>
+      </Transform>
+      <Transform DEF="C8">
+        <ProtoInstance name="ObjModel">
+          <fieldValue name="position"
+                      value='-0.577 -0.577 0.577 2.094'/>
+          <fieldValue name="color"
+                      value='0.600 0.600 0.900'/>
+        </ProtoInstance>
+      </Transform>
+      <Transform DEF="C9">
+        <ProtoInstance name="ObjModel">
+          <fieldValue name="position"
+                      value='-0.577 -0.577 -0.577 2.094'/>
+          <fieldValue name="color"
+                      value='0.900 0.900 0.000'/>
+        </ProtoInstance>
+      </Transform>
+      <Transform DEF="C10">
+        <ProtoInstance name="ObjModel">
+          <fieldValue name="position"
+                      value='0.577 0.577 0.577 2.094'/>
+          <fieldValue name="color"
+                      value='0.200 0.900 0.900'/>
+        </ProtoInstance>
+      </Transform>
+      <Transform DEF="C11">
+        <ProtoInstance name="ObjModel">
+          <fieldValue name="position"
+                      value='0.577 -0.577 0.577 2.094'/>
+          <fieldValue name="color"
+                      value='0.200 0.900 0.200'/>
+        </ProtoInstance>
+      </Transform>
+    </Group>
+  </Scene>
+</X3D>

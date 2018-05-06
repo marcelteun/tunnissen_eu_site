@@ -1,0 +1,157 @@
+#VRML V2.0 utf8
+WorldInfo {
+  title "Cube compound: 3B | D3 x I / C2 x I | mu3"
+}
+NavigationInfo {
+  headlight TRUE
+  type "EXAMINE"
+}
+Background {
+  skyColor 0.2 0.5 1.0
+}
+DEF DnAxis Viewpoint {
+  jump FALSE
+  position 0.000 0.000 8.000
+  description "Order 3 Axis"
+}
+DEF O2AxisI Viewpoint {
+  jump FALSE
+  position 0.000 8.000 0.000
+  description "Order 2 Axis"
+  orientation 1.000 0.000 0.000 -1.571
+}
+PROTO ObjModel [
+  field SFRotation position 0.000 0.000 1.000 0.000
+  field SFColor color 1.000 1.000 1.000
+]
+{
+  Transform {
+    rotation IS position
+    children [
+      Shape {
+        geometry DEF objFaces IndexedFaceSet {
+          creaseAngle 0.500000
+          solid FALSE
+          ccw FALSE
+          coord Coordinate {
+            point [
+              -0.816 1.414 -1.155,
+              0.338 0.000 -1.971,
+              -0.816 -1.414 -1.155,
+              -1.971 0.000 -0.338,
+              1.155 1.414 -0.816,
+              1.155 -1.414 -0.816,
+              -1.155 -1.414 0.816,
+              -1.155 1.414 0.816,
+              0.816 1.414 1.155,
+              1.971 0.000 0.338,
+              0.816 -1.414 1.155,
+              -0.338 0.000 1.971
+            ]
+          }
+          normalPerVertex FALSE
+          coordIndex [
+            0 4 1 -1
+            1 5 2 -1
+            2 6 3 -1
+            3 7 0 -1
+            8 9 4 -1
+            9 10 5 -1
+            10 11 6 -1
+            11 8 7 -1
+            0 1 2 3 -1
+            0 7 8 4 -1
+            1 4 9 5 -1
+            2 5 10 6 -1
+            3 6 11 7 -1
+            11 10 9 8 -1
+          ]
+        }
+        appearance Appearance {
+          material Material {
+            diffuseColor IS color
+          }
+        }
+      }
+      Shape {
+        geometry DEF objEdges IndexedLineSet {
+          coord Coordinate {
+            point [
+              -0.816 1.414 -1.155,
+              0.338 0.000 -1.971,
+              -0.816 -1.414 -1.155,
+              -1.971 0.000 -0.338,
+              1.155 1.414 -0.816,
+              1.155 -1.414 -0.816,
+              -1.155 -1.414 0.816,
+              -1.155 1.414 0.816,
+              0.816 1.414 1.155,
+              1.971 0.000 0.338,
+              0.816 -1.414 1.155,
+              -0.338 0.000 1.971
+            ]
+          }
+          coordIndex [
+            0 1 -1
+            1 2 -1
+            2 3 -1
+            3 0 -1
+            0 7 -1
+            7 8 -1
+            8 4 -1
+            4 0 -1
+            1 4 -1
+            4 9 -1
+            9 5 -1
+            5 1 -1
+            2 5 -1
+            5 10 -1
+            10 6 -1
+            6 2 -1
+            3 6 -1
+            6 11 -1
+            11 7 -1
+            7 3 -1
+            11 10 -1
+            10 9 -1
+            9 8 -1
+            8 11 -1
+          ]
+        }
+        appearance Appearance {
+          material Material {
+            diffuseColor 0.000 0.000 0.000
+          }
+        }
+      }
+    ]
+  }
+}
+Group {
+  children [
+    DEF C0 Transform {
+      children [
+        ObjModel {
+          position 0.000 0.000 0.000 0.000
+          color 0.900 0.900 0.000
+        }
+      ]
+    }
+    DEF C1 Transform {
+      children [
+        ObjModel {
+          position 0.000 0.000 1.000 2.094
+          color 0.200 0.900 0.200
+        }
+      ]
+    }
+    DEF C2 Transform {
+      children [
+        ObjModel {
+          position 0.000 0.000 1.000 4.189
+          color 0.200 0.900 0.900
+        }
+      ]
+    }
+  ]
+}
