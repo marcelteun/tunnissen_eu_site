@@ -1,0 +1,37 @@
+h1 {
+	text-align: center;
+}
+body {
+	background-image: url(../backs/web.gif);
+	background-color: #FFFFFF;
+	color: #500000;
+}
+img {
+	border: 0;
+}
+#content {
+	width: 120ch;
+	border: 0px solid black;
+}
+#descr {
+	width: 80ch;
+	overflow: visible;
+	float: left;
+	border: 0px solid green;
+	z-index: 1;
+}
+#model {
+	float: right;
+	border: 0px solid red;
+	z-index: 2;
+}
+#model_canvas {
+	width: 39ch;
+	height: 39ch;
+}
+a:link {
+	color: #000CC0;
+}
+a:visited {
+	color: #C00000;
+}

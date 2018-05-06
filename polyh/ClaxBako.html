@@ -1,79 +1,108 @@
-<html><head><title>12 | S4xI / D1xI | &mu;5</title></head>
-<body background="../backs/web.gif" width=80ch bgcolor="#ffffff" text="#500000" link="#000cc0" vlink="#c00000">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>12 | S4xI / D1xI | &mu;5</title>
+
+  <link rel="stylesheet" href="built_models.css">
+  <script src="js/show-off.js"></script>
+  <script src="js/gl-matrix-2.2.1.js"></script>
+  <script src="js/webgl-utils.js"></script>
+</head>
+
+<body onload="draw_shape('off/12.S4xI.D1xI.mu5.off', 'model_canvas', 4);">
+<div id="content">
 <h1>
-  <center>
-    12 | S<sub>4</sub> x I / D<sub>1</sub> x I | &mu;<sub>5</sub>
-  </center>
+  12 | S<sub>4</sub> x I / D<sub>1</sub> x I | &mu;<sub>5</sub>
 </h1>
-<p>
+<div id="descr">
 <p><b>
-<a href="Hist1.htm"><img align="top" border="0" src="pics/ClaxBako.jpg"></a>
+<a href="Hist1.htm">
+  <img style="vertical-align:top;" src="pics/ClaxBako.jpg" alt="picture">
+</a>
 </b></p>
 <p><b>
-  If you have a VRML plugin
-  you can see and investigate the complete polyhedron
-  <a href="./CubeCompounds/12.S4xI.D1xI.mu5.wrl">here</a>.
-  (You can <a target="new" href="http://cic.nist.gov/vrml/vbdetect.html">check here</a> and
-  find available plugins for your browser/OS.)
   The polyhedron is a compound of 12 cubes and belongs to the symmetry group
-  12|<i>S</i><sub>4</sub>x<i>I|D</i><sub>1</sub>x<i>I</i>&#0956;,
-  as described in H.F.Verheyen's Symmetry Orbits.
-  The angle &#0956; uniquely identifies one compound in the group and may
+  12|<i>S</i><sub>4</sub>x<i>I|D</i><sub>1</sub>x<i>I</i>|&#0956;,
+  using the notation from H.F.Verheyen's book Symmetry Orbits.
+  The angle '&#0956;' uniquely identifies one compound in the group and may
   vary between 0 and 45 degrees (with 0 and 45 not included).
-  For some angles &#0956; the compound has some special properties.
+  For some angles &#0956; the compound has some special properties and the book
+  summarises the special angles.
+</b></p>
+<p><b>
+  However the special position for this model isn't mentioned in the book,
+  though it is clear that something special happens.
   For this compound the angle &#956;=(1/2)atan((4/7)&#8730;2)
   and for that angle the compound can be divided into three
   <a href="./Bakos.htm">Bakos compound</a>s
-  (4|<i>S</i><sub>4</sub>x<i>I|D</i><sub>3</sub>x<i>I</i>)
+  (4|<i>S</i><sub>4</sub>x<i>I|D</i><sub>3</sub>x<i>I</i>).
   For each Bakos compound holds that one of the fourfold axes is shared with a
   fourfold axis of the compound; the other two axes share a twofold axis with the
   compound.
 </b></p>
 <p><b>
-  This compound can be seen as a twin of
-  <a href="./BakoxCla.htm">this compound</a>,
-  since it can be interpreted as a multiplication between
+  I built this model in 2005 and I used three colours: each Bakos' compound has
+  one colour.
+</b></p>
+<p><b>
+  This compound can be seen as a multiplication between
   <a href="./Bakos.htm">Bakos' compound</a>
-  and 
-  <a HREF="./ClassiC.htm">the classic compounds of 3 cubes</a>, where 
-  <a href="./BakoxCla.htm">the twin compound</a>
-  can be seen as a multiplication between the Classic compound and Bakos.
+  and
+  <a HREF="./ClassiC.htm">the classic compounds of 3 cubes</a>.
+  This multiplication isn't commutative, which means that you won't get the
+  same result if you switch the operands of the multiplication.
+  If you do and you take the multiplication of the classic compound
+  and Bakos' compound you'll get
+  <a href="./BakoxCla.htm">this compound</a>,
+  which can be interpreted as the twin of this one.
 </b></p>
 <p><b>
   Here are some more pictures of the model:
+</b></p>
   <ul>
     <li>
       <a href="pics/ClaxBako.2.jpg">
-        <img align=middle border=0 src="thumbs/ClaxBako.2.jpg"/></a>
+        <img style="vertical-align:middle;" src="thumbs/ClaxBako.2.jpg" alt="picture"/></a>
       Taken into an order 2 symmetry axis.
     </li>
     <li>
       <a href="pics/ClaxBako.3.jpg">
-        <img align=middle border=0 src="thumbs/ClaxBako.3.jpg"/></a>
+        <img style="vertical-align:middle;" src="thumbs/ClaxBako.3.jpg" alt="picture"/></a>
       Taken into an order 3 symmetry axis.
     </li>
   </ul>
-</b></p>
 <p><b>
   A complete table about cube compounds can be found here
   <a href="./cubecmps.html">here</a>.
 </b></p>
 <p><b>
-  If you are interested,
+  All calculations for this model were done algebraically and the summary of the
+  calculation you can see
   <a href="./templates/c12s4.pdf">here</a>
-  is a document that describes how the templates were calculated.
   It also contains the templates and the adjusted templates that I am using, since
   some faces became so tiny that is was not very practical to build an exact
-  model.
-  <a href="./pics/ClaxBako.history.jpg">Here</a> you can see how I built the model.
+  model or I should have built a bigger model.
+  <a href="./pics/ClaxBako.history.jpg">Here</a> you can see several stages of
+  the construction of the model.
 </b></p>
+
 <p><b>
   <a href="http://www.tum.dds.nl/polyh/ccmodels.html">Thumbnails</a>
 </b></p>
 <p>
   <b><a href="http://www.tum.dds.nl/index.htm">Home</a>
 </b></p>
-<h2><a name="lastUpdated">Last Updated</a></h2>
-<p>2009-04-28, 20:45
+<h2><a id="lastUpdated">Last Updated</a></h2>
+<p>2018-05-06
 </p>
-</body></html>
+
+</div>
+
+<div id="model">
+  <canvas id="model_canvas"></canvas>
+</div>
+
+</div>
+</body>
+</html>
