@@ -1,1 +1,1 @@
-../../../webGL/show-off.js
+../../../show-off/show-off.js

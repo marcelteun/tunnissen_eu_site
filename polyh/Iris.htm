@@ -1,39 +1,61 @@
-<HTML>
-<HEAD>
-  <TITLE>
-    Classic Compound of 3 Cubes plus One According Symmetry
-  </TITLE>
-</HEAD>
-<BODY BACKGROUND="../backs/web.gif" 
-      BGCOLOR="#FFFFFF"
-      TEXT="#500000"
-      LINK="#000CC0"
-      VLINK="#C00000"
->
-<H1>
-  <CENTER>
-    Classic Compound of 3 Cubes plus One According Symmetry
-  </CENTER>
-</H1>
-<B>
-<P>
-<IMG ALIGN=top BORDER=0 SRC="pics/Iris.jpg">
-</P>
-<P>
-I have no idea what the name of this model is. I got the idea to add to 4th cube myself, though I was of course not the first. This model is one of my favourites. It is simple, though it has some peculiar properties: 
-<UL>
-  <LI>
-  It contains 4 cubes, but only 3 colours. 
-  <LI>
-  Adding the fourth cube results in a model with less separate faces (24 less), and as a result it is easier to build.
-</UL>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Classic Compound of 3 Cubes Plus 1</title>
 
-</P>
-<P>
-<A HREF="index.htm">Thumbnails</A>
-</P>
-<P>
-<A HREF="../index.htm">Home</A>
-</P>
-</BODY>
-</HTML>
+  <link rel="stylesheet" href="built_models.css">
+  <script src="js/show-off-bundle.js"></script>
+</head>
+
+<body onload="draw_shape('off/Iris.off', 'model_canvas', 10);">
+<div id="content">
+<h1>
+  Classic Compound of 3 Cubes Plus 1
+</h1>
+<div id="descr">
+
+<p>
+<img style="vertical-align:top;" src="pics/Iris.jpg" alt="picture">
+</p>
+<p><b>
+I have no idea what the name of this model is. I got the idea to add to 4th cube
+myself, though this is quite a trivial step. This result is pretty surprising.
+It has some peculiar properties:
+</b></p>
+<ul>
+  <li>
+  <b>
+  You can make a model with 4 cubes, and use 3 colours in a regular way.
+  </b>
+  <li>
+  <b>
+  Adding the fourth cube results in a model with less separate faces (24 less)
+  </b>
+  <li>
+  <b>
+  The resulting model is easier to build and more stable than the classical
+  compound of three cubes.
+  </b>
+</ul>
+
+<p><b>
+  <a href="http://www.tum.dds.nl/polyh/ccmodels.html">Thumbnails</a>
+</b></p>
+<p>
+  <b><a href="http://www.tum.dds.nl/index.htm">Home</a>
+</b></p>
+<h2><a id="lastUpdated">Last Updated</a></h2>
+<p>2018-05-19
+</p>
+
+</div>
+
+<div id="model">
+  <canvas id="model_canvas"></canvas>
+</div>
+
+</div>
+</body>
+</html>
+

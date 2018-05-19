@@ -1,37 +1,78 @@
-<html>
-<head><title>Rigid Compound of 6 Cubes</title></head>
-<body background="../backs/web.gif"
-  bgcolor="#ffffff"
-  link="#000cc0"
-  text="#500000"
-  vlink="#c00000">
-<h1>
-  <center>
-    Rigid Compound of 6 Cubes
-  </center>
-</h1>
-<b>
-</b><p>
-<b><img src="pics/6cS4_0.jpg" align="top" border="0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rigid Compound of 6 Cubes</title>
+  <link rel="stylesheet" href="built_models.css">
+  <script src="js/show-off-bundle.js"></script>
+</head>
+
+<body onload="draw_shape('off/6.S4xI.D2xI.off', 'model_canvas', 10);">
+<div id="content">
+<h1>Rigid Compound of 6 Cubes</h1>
+<div id="descr">
+<p><b>
+<img style="vertical-align:top;" src="pics/6cS4_0.jpg" alt="picture">
 </b></p>
-<p>
-<b>This is the rigid compound of 6 cubes with cube symmetry.
+<p><b>
+This is the rigid compound of 6 cubes with cube symmetry.
+In H.F. Verheyen's book Symmetry Orbits it is identified by
+12 | S<sub>4</sub> x I / D<sub>2</sub> x I.
+</b></p>
+<p><b>
 After finishing a compound of 12 cubes I needed a small project that I could
-finish quickly before my wife was due. That became this small model (to get an
-idea about the size I put a pair of tweezers in the front).
+finish quickly before my wife was due in 2005. That became this small model (to
+get an idea about the size I put a pair of tweezers in the front).
 On the picture above you look more or less into an order 4-axis.
+</b></p>
+<p><b>
+For the colouring I use three shades of blue. Each colour forms the same
+kind of compound of 2 cubes:
+2 | D<sub>4</sub> x I / D<sub>2</sub> x I.
+Each shares an order 4 symmetry axis with an order 4
+symmetry axis of the whole compound.
+Below the image on the right you can choose to investigate this sub-compound by
+selecting in the drop down list.
+</b></p>
+<p><b>
 Follow the links to
 <a href="pics/6cS4_1.jpg">look into an order 2-axis</a>
 or to
 <a href="pics/6cS4_2.jpg">look into an order 3-axis</a>
-</b>
-</p>
+</b></p>
 <p></p>
-<p>
-<b><a href="http://www.tum.dds.nl/polyh/index.htm">Thumbnails</a>
+<p><b>
+  <a href="http://www.tum.dds.nl/polyh/ccmodels.html">Thumbnails</a>
 </b></p>
-<p>
-<b><a href="http://www.tum.dds.nl/index.htm">Home</a>
+<p><b>
+  <a href="http://www.tum.dds.nl/index.htm">Home</a>
 </b></p>
-</body></html>
+<h2><a id="lastUpdated">Last Updated</a></h2>
+<p>2018-05-14
+</p>
+</div>
+
+<div id="model">
+  <p>
+  <canvas id="model_canvas"></canvas>
+  </p>
+  <p>
+  <select id="mySelect" onchange="on_select()">
+    <option value="off/6.S4xI.D2xI.off">Whole Compound
+    <option value="off/2.D4xI.D2xI.off">Sub-Compound
+  </select>
+  <script>
+    function on_select() {
+      var x = document.getElementById("mySelect").value;
+      var pars = x.split(":");
+      draw_shape(pars[0], 'model_canvas', 10);
+    }
+  </script>
+  </p>
+</div>
+
+
+</div>
+</body>
+</html>
 
