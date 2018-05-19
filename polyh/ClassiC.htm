@@ -1,41 +1,55 @@
-<HTML>
-<HEAD>
-  <TITLE>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
     Classic Compound of Three Cubes
-  </TITLE>
-</HEAD>
-<BODY BACKGROUND="../backs/web.gif" 
-      BGCOLOR="#FFFFFF"
-      TEXT="#500000"
-      LINK="#000CC0"
-      VLINK="#C00000"
->
-<H1>
-  <CENTER>
-    Classic Compound of Three Cubes
-  </CENTER>
-</H1>
-<B>
-<P>
-<IMG ALIGN=top BORDER=0 SRC="pics/ClassiC.jpg"></IMG>
+  </title>
 
-</P><P>
-The classic compound of three cubes is a well known model which can for
-instance be found on M.C. Escher's Waterfall. It is a beautiful model with
-cube symmetry. It looks like a simple model, but it is not easy to build; it
+  <link rel="stylesheet" href="built_models.css">
+  <script src="js/show-off-bundle.js"></script>
+</head>
+
+<body onload="draw_shape('off/ClassicC.off', 'model_canvas', 10);">
+<div id="content">
+<h1>
+  Classic Compound of Three Cubes
+</h1>
+<div id="descr">
+<p>
+<img style="vertical-align:top;" src="pics/ClassiC.jpg" alt="picture">
+</p>
+<p><b>
+The classic compound of three cubes is a well known model which can be found on
+M.C. Escher's Waterfall for instance. It is a beautiful model with
+cube symmetry. It looks like a simple model, but it is not that easy to build; it
 is in fact rather difficult to get the lines straight.
+</b></p>
+<p><b>
+If you add one cube
+according to the symmetry, you will get
+<a href="./Iris.htm">this</a>
+model, which is easier to build and less
+work, since you will only have to cut and paste 96 pieces instead of 120.
 
-</P><P>
-It is easier to add one extra cube according the cube symmetry. By doing
-this one get less pieces (96 instead of 120) and it is easier to get the
-lines straight.
-This compound of 4 cubes can be found <A HREF="./Iris.htm">here</A>.
+</b></p>
 
-</P><P>
-<A HREF="index.htm">Thumbnails</A>
-</P>
-<P>
-<A HREF="../index.htm">Home</A>
-</P>
-</BODY>
-</HTML>
+<p><b>
+  <a href="http://www.tum.dds.nl/polyh/ccmodels.html">Thumbnails</a>
+</b></p>
+<p>
+  <b><a href="http://www.tum.dds.nl/index.htm">Home</a>
+</b></p>
+<h2><a id="lastUpdated">Last Updated</a></h2>
+<p>2018-05-19
+</p>
+
+</div>
+
+<div id="model">
+  <canvas id="model_canvas"></canvas>
+</div>
+
+</div>
+</body>
+</html>
