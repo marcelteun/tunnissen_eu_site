@@ -20,6 +20,10 @@ img {
 	border: 0px solid green;
 	z-index: 1;
 }
+#mod_img {
+	vertical-align: top;
+	max-width:79ch;
+}
 #model {
 	float: right;
 	border: 0px solid red;
