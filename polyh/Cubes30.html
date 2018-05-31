@@ -1,77 +1,101 @@
-<html><head><title>30A | A5xI / C2xI | &mu;7</title></head>
-<body background="../backs/web.gif" bgcolor="#ffffff" text="#500000" link="#000cc0" vlink="#c00000">
-<h1>
-  <center>
-    30A | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;<sub>7</sub>
-  </center>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Compound of 30 Cubes: 30A | A5xI / C2xI | &mu;7
+  </title>
 
+  <link rel="stylesheet" href="built_models.css">
+  <script src="js/show-off-bundle.js"></script>
+</head>
+
+<body onload="draw_shape('off/30cubes.off', 'model_canvas', 10);">
+<div id="content">
+<h1>
+    Compound of 30 Cubes: 30A | A5xI / C2xI | &mu;7
 </h1>
+<div id="descr">
 <p>
+<img id="mod_img" src="pics/Cubes30Pen.jpg" alt="picture">
+</p>
+
 <p><b>
-<img align="top" border="0" src="pics/Cubes30Pen.jpg">
-</b></p>
-<p><b>
-  If you have a VRML plugin
-  you can see and investigate the complete polyhedron
-  <a href="./CubeCompounds/30A.A5xI.C2xI.mu7.wrl">here</a>.
-  (You can <a target="new" href="http://cic.nist.gov/vrml/vbdetect.html">check here</a> and
-  find available plugins for your browser/OS.)
-  The polyhedron is a compound of 30 cubes and belongs to the symmetry group
+  This is a compound of 30 cubes belonging to the symmetry group
   30 | <i>A</i><sub>5</sub> x <i>I</i> / <i>C</i><sub>2</sub> x <i>I</i> / &mu;,
   as described in H.F.Verheyen's Symmetry Orbits.
   The angle &mu; uniquely identifies one compound in the group and may
-  vary between 0 and 45 degrees (with 0 and 45 not included).
-  For some angles &mu; the compound has some special properties.
+  vary between 0 and 45 degrees (excluding 0 and 45 degrees).
+  For some angles '&mu;' the compound has some special properties.
   For this compound the angle &mu; = acos(<sup>&radic;(5+&radic;5)</sup>/<sub>&radic;10</sub>)
   and for that angle the compound can be divided into six base elements:
   5 | <i>D</i><sub>20</sub> x <i>I</i> / <i>D</i><sub>4</sub> x <i>I</i>,
   for which each order 20 symmetry axis shares an order 5 symmetry axis with the compound.
-  (In the
-  <a href="./CubeCompounds/30A.A5xI.C2xI.mu7.wrl">wrl model</a> the base
-  elements have different colours.)
-  Also holds that each order 2 symmetry axis of the compound is shared by two
+  The "C<sub>2</sub>" in the symmetry group means that each order 2 symmetry axis of the compound is shared by two
   order 2 symmetry axes of two base elements.
 </b></p>
+
 <p><b>
   The model itself is built with 250 gr/m<sup>2</sup>
-  <a target="new" href="http://www.chromolux.de/en/carton_specs.php">chromolux paper</a>
-  using the colour pearl. This colour was chosen, because the model was a
+  Chromolux paper
+  using the colour "pearl". This colour was chosen, because the model was a
   wedding present for two friends of mine. I thought it was not fitting to use
   another colour and I am pretty satisfied with the result. Since the model is
   quite small for 30 cubes it was difficult to get all the edges straight,
-  though I don't think that my friends will complain... ;)
+  though I don't think that my friends will complain... though ;)
 </b></p>
+
 <p><b>
-  Here are some more pictures of the model:
-  <ul>
-    <li>
-      <a href="pics/Cubes30.O2.jpg">
-        <img align=middle border=0 src="thumbs/Cubes30.O2.jpg"/></a>
-      Taken into an order 2 symmetry axis.
-    </li>
-    <li>
-      <a href="pics/Cubes30.O3.jpg">
-        <img align=middle border=0 src="thumbs/Cubes30.O3.jpg"/></a>
-      Taken into an order 3 symmetry axis.
-    </li>
-    <li>
-      <a href="pics/Cubes30.O5.jpg">
-        <img align=middle border=0 src="thumbs/Cubes30.O5.jpg"/></a>
-      Taken into an order 5 symmetry axis.
-    </li>
-  </ul>
+  Here are some more pictures of the model (click on the images for a bigger
+  picture):
 </b></p>
+
+<ul>
+  <li>
+    <a href="pics/Cubes30.O2.jpg">
+      <img align=middle border=0 src="thumbs/Cubes30.O2.jpg"/></a>
+    <p><b>
+        Taken into an order 2 symmetry axis.
+    </b></p>
+  </li>
+  <li>
+    <a href="pics/Cubes30.O3.jpg">
+      <img align=middle border=0 src="thumbs/Cubes30.O3.jpg"/></a>
+    <p><b>
+        Taken into an order 3 symmetry axis.
+    </b></p>
+  </li>
+  <li>
+    <a href="pics/Cubes30.O5.jpg">
+      <img align=middle border=0 src="thumbs/Cubes30.O5.jpg"/></a>
+    <p><b>
+      Taken into an order 5 symmetry axis.
+    </b></p>
+  </li>
+</ul>
+
 <p><b>
   A complete table about cube compounds can be found here
   <a href="./cubecmps.html">here</a>.
 </b></p>
+
 <p><b>
-  <a href="http://www.tum.dds.nl/polyh/ccmodels.html">Thumbnails</a>
+  <a href="./ccmodels.html">Thumbnails</a>
 </b></p>
-<p>
-  <b><a href="http://www.tum.dds.nl/index.htm">Home</a>
+
+<p><b>
+  <a href="../index.htm">Home</a>
 </b></p>
-<h2><a name="lastUpdated">Last Updated</a></h2>
-<p>2009-04-28, 20:45
-</p>
-</body></html>
+
+<h2><a id="lastUpdated">Last Updated</a></h2>
+<p>2018-05-31
+
+</div>
+
+<div id="model">
+  <canvas id="model_canvas"></canvas>
+</div>
+
+</div>
+</body>
+</html>
