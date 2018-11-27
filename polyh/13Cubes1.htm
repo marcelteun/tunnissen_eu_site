@@ -1,41 +1,59 @@
-<HTML>
-<HEAD>
-  <TITLE>
-    Compound of 13 Cubes
-  </TITLE>
-</HEAD>
-<BODY BACKGROUND="../backs/web.gif" 
-      BGCOLOR="#FFFFFF"
-      TEXT="#500000"
-      LINK="#000CC0"
-      VLINK="#C00000"
->
-<H1>
-  <CENTER>
-    Compound of 13 Cubes
-  </CENTER>
-</H1>
-<B>
-<P>
-<IMG ALIGN=top BORDER=0 SRC="pics/13Cubes1.jpg">
-</P>
-<P>
-I don't remember when I built this one. The design for this model is easy. I
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    A Compound of 13 Cubes
+  </title>
+
+  <link rel="stylesheet" href="built_models.css">
+  <script src="js/show-off-bundle.js"></script>
+</head>
+
+<body onload="draw_shape('off/13Cubes1.off', 'model_canvas', 10);">
+<div id="content">
+<h1>
+    A Compound of 13 Cubes
+</h1>
+<div id="descr">
+<p>
+<img id="mod_img" src="pics/13Cubes1.jpg" alt="picture">
+</p>
+
+<p><b>
+I don't remember when I built this one exactly, but it was some time during the
+90s. The design for this model is easy. I
 just took the compound of 12 cubes as shown <A HREF="./12Cubes1.htm">here</A>
 and added one cube according to the symmetry. Easier said or thought than
-done. After that I needed to caculate and to start building again. That
-takes several months alltogether (I don't remember how much exactly). Anyway
-I was very satisfied with the result.
+done. At that time I had to calculate pieces algebraically by hand. And building
+the models takes time too.
+All that took several months alltogether (I don't remember how much exactly).
+Anyway I was very satisfied with the result. Even though the model isn't that
+special.
+</b></p>
 
-</P>
-<P>
-A picture from another angle can be found <A HREF="./13Cubes2.htm">here</A>.
-</P>
-<P>
-<A HREF="index.htm">Thumbnails</A>
-</P>
-<P>
-<A HREF="../index.htm">Home</A>
-</P>
-</BODY>
-</HTML>
+<p><b>
+Here is a picture more or less taken into an order 4 symmetry axis:
+<img src="pics/13Cubes2.jpg" alt="picture">
+</b></p>
+
+<p><b>
+  <a href="./ccmodels.html">Thumbnails</a>
+</b></p>
+
+<p><b>
+  <a href="../index.htm">Home</a>
+</b></p>
+
+<h2><a id="lastUpdated">Last Updated</a></h2>
+<p>2018-06-12
+
+</div>
+
+<div id="model">
+  <canvas id="model_canvas"></canvas>
+</div>
+
+</div>
+</body>
+</html>

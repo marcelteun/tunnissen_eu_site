@@ -1,46 +1,74 @@
-<HTML>
-<HEAD>
-  <TITLE>
-    Compound of 12 Cubes
-  </TITLE>
-</HEAD>
-<BODY BACKGROUND="../backs/web.gif" 
-      BGCOLOR="#FFFFFF"
-      TEXT="#500000"
-      LINK="#000CC0"
-      VLINK="#C00000"
->
-<H1>
-  <CENTER>
-    Compound of 12 Cubes
-  </CENTER>
-</H1>
-<B>
-<P>
-<IMG ALIGN=top BORDER=0 SRC="pics/12Cubes1.jpg">
-</P>
-<P>
-I guess it was somewhere around 1995 that I derived this model from the
-Trapezoidal Icositretrahedron, which is the dual of a Rhombicubocatahedron. 
-I calculated the model by hand, including the pieces I needed to build
-a model of it.
-I built two models. I was not so satisfied with the material I used for the
-first one, so I built this one afterwards. The first one I gave away.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Compound of 12 Cubes: 12B | S<sub>4</sub>xI / C<sub>2</sub>xI | &mu;3
+  </title>
 
-</P>
-<P>
+  <link rel="stylesheet" href="built_models.css">
+  <script src="js/show-off-bundle.js"></script>
+</head>
+
+<body onload="draw_shape('off/12Cubes1.off', 'model_canvas', 10);">
+<div id="content">
+<h1>
+    Compound of 12 Cubes: 12B | S<sub>4</sub>xI / C<sub>2</sub>xI | &mu;3
+</h1>
+<div id="descr">
+<p>
+<img id="mod_img" src="pics/12Cubes1.jpg" alt="picture">
+</p>
+
+<p><b>
+I guess it was somewhere around 1995 that I derived this model from a
+Trapezoidal Icositretrahedron.
+I calculated the whole model algebraically  by hand, including the pieces I
+needed to build a model of it. When I was done I had no clue what the model
+looked like, but I was pretty sure my calculations were right.
+It was quite an exciting experience to see the model slowly take shape while
+building. Quite different from modelling with the help of a PC.
+</b></p>
+
+<p><b>
+I built two models. I was not so satisfied with the material I used for the
+first one, so I built this one afterwards. The first one I gave away to my
+friend Frits G&ouml;bel.
+</b></p>
+
+<p><b>
 The whole model is a compound of 12 cubes with cube symmetry. I used four
 colours to indicate that the model consists of four of the same compounds of
 3 cubes. It is a special form of
 12<I>B</I>|<I>S</I><SUB>4</SUB>x<I>I|C</I><SUB>2</SUB>x<I>I</I>, where the
 model consists of 4x3|<I>D</I><SUB>12</SUB> as described in H.F.Verheyen's
 Symmetry Orbits.
-</P>
-<P>
-<A HREF="index.htm">Thumbnails</A>
-</P>
-<P>
-<A HREF="../index.htm">Home</A>
-</P>
-</BODY>
-</HTML>
+</b></p>
+
+<p><b>
+The 3D model on the right flickers while it is being rotated. This is because
+two faces with different colours end up in one plane and due to small
+differences after rounding the floating point numbers in the depth buffer, the
+flickering occurs.
+</b></p>
+
+<p><b>
+  <a href="./ccmodels.html">Thumbnails</a>
+</b></p>
+
+<p><b>
+  <a href="../index.htm">Home</a>
+</b></p>
+
+<h2><a id="lastUpdated">Last Updated</a></h2>
+<p>2018-06-12
+
+</div>
+
+<div id="model">
+  <canvas id="model_canvas"></canvas>
+</div>
+
+</div>
+</body>
+</html>
