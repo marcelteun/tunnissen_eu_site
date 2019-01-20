@@ -1,20 +1,16 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type"/>
-    <meta content="Marcel Tuennissen" name="author"/>
-    <style type="text/css">@import "/css/teunpoly.css";</style>
+    <meta charset="UTF-8"/>
     <title>Compounds of Cubes</title>
+    <link href="/css/interactive_models.css" rel="stylesheet"/>
   </head>
   <body>
     <div id="pagebody">
-      <center>
-        <h1>Compounds of Cubes</h1>
-      </center>
+      <h1>Compounds of Cubes</h1>
       <p>
         Click 
-        <a href="./cubecmps.html">here</a> if you want to watch the models with a X3D player instead of a VRML player.
+        <a href="./cubecmps.html">here</a> if you want to watch the models with JavaScript instead of a VRML player.
       </p>
       <h2>Contents</h2>
       <ul>
@@ -43,14 +39,14 @@
           <a href="#lastUpdated">Last Updated</a>
         </li>
       </ul>
-      <h2><a name="introduction">Introduction</a></h2>
+      <h2><a id="introduction">Introduction</a></h2>
       <p>
         In the book <a href="#HVerh01">Symmetry Orbits</a> Mr. Verheyen derives all
         possible groups of cube compounds. This page is based on his book.
         A rough description of a method to obtain a certain cube compound can be as
         follows:
         Choose one of the finite groups of isometries, define an orientation for this
-        group and define a position of a cube (refered to as the descriptive).
+        group and define a position of a cube (referred to as the descriptive).
         Then by using the operators of the isometry group on this cube, a
         compound of cubes belonging to that group is obtained.
       </p>
@@ -81,10 +77,16 @@
         1 cube.
       </p>
       <p>
-        To be able to view and investigate the 3D models you need a VRML player. See 
-        note<a href="#note2"><sup>2</sup></a>.
+        The set symmetry operations of the final symmetry that map the descriptive on
+        itself form a group, and it is a sub-group of the final symmetery. This
+        sub-group is part of the right part of the compound notation, the one starting
+        with a '/'. Algebra can be used to obtain which operations are needed to map
+        the descriptive onto a cube that isn't the descriptive.
       </p>
-      <h2><a name="centralFreedom">Compounds of Cubes with Central Freedom</a></h2>
+      <p>
+        To be able to view and investigate the 3D models you need a VRML player.
+      </p>
+      <h2><a id="centralFreedom">Compounds of Cubes with Central Freedom</a></h2>
       <p>
         Using the above method for the finite groups of isometries one can get a first
         list of possible compounds of cubes, as shown in the following table.
@@ -93,62 +95,62 @@
         <tr class="header">
           <td class="header_r">Compound<a href="#note1"><sup>1</sup></a>
           </td>
-          <td class="header">VRML<a href="#note2"><sup>2</sup></a> image
+          <td class="header">VRML image
           </td>
-          <td class="header_last">VRML<a href="#note2"><sup>2</sup></a> animation
+          <td class="header_last">VRML animation
           </td>
         </tr>
         <tr>
-          <td class="r"><a name="n.CnxI.ExI">n | C<sub>n</sub> x I / E x I
+          <td class="r"><a id="n.CnxI.ExI">n | C<sub>n</sub> x I / E x I
               <br/>n &ge; 2</a>
           </td>
-          <td><a href="CubeCompounds/3.C3xI.ExI.wrl">for n=3</a>
+          <td><a href="CubeCompounds.wrl/3.C3xI.ExI.wrl">for n=3</a>
           </td>
-          <td><a href="CubeCompounds/3.C3xI.ExI.anim.wrl">for n=3</a>
+          <td><a href="CubeCompounds.wrl/3.C3xI.ExI.anim.wrl">for n=3</a>
           </td>
         </tr>
         <tr>
-          <td class="r"><a name="2n.DnxI.ExI">2n | D<sub>n</sub> x I / E x I
+          <td class="r"><a id="2n.DnxI.ExI">2n | D<sub>n</sub> x I / E x I
               <br/>n &ge; 1</a>
           </td>
-          <td><a href="CubeCompounds/6.D3xI.ExI.wrl">for n=3</a>
+          <td><a href="CubeCompounds.wrl/6.D3xI.ExI.wrl">for n=3</a>
           </td>
-          <td><a href="CubeCompounds/4.D2xI.ExI.anim.wrl">for n=2</a>
-          </td>
-        </tr>
-        <tr>
-          <td class="r"><a name="12.A4xI.ExI">12 | A<sub>4</sub> x I / E x I</a>
-          </td>
-          <td><a href="CubeCompounds/12.A4xI.ExI.wrl">Image</a>
-          </td>
-          <td><a href="CubeCompounds/12.A4xI.ExI.anim.wrl">Animation</a>
+          <td><a href="CubeCompounds.wrl/4.D2xI.ExI.anim.wrl">for n=2</a>
           </td>
         </tr>
         <tr>
-          <td class="r"><a name="24.S4xI.ExI">24 | S<sub>4</sub> x I / E x I</a>
+          <td class="r"><a id="12.A4xI.ExI">12 | A<sub>4</sub> x I / E x I</a>
           </td>
-          <td><a href="CubeCompounds/24.S4xI.ExI.wrl">Image</a>
+          <td><a href="CubeCompounds.wrl/12.A4xI.ExI.wrl">Image</a>
           </td>
-          <td><a href="CubeCompounds/24.S4xI.ExI.anim.wrl">Animation</a>
+          <td><a href="CubeCompounds.wrl/12.A4xI.ExI.anim.wrl">Animation</a>
           </td>
         </tr>
         <tr>
-          <td class="r"><a name="60.A5xI.ExI">60 | A<sub>5</sub> x I / E x I</a>
+          <td class="r"><a id="24.S4xI.ExI">24 | S<sub>4</sub> x I / E x I</a>
           </td>
-          <td><a href="CubeCompounds/60.A5xI.ExI.wrl">Image</a>
+          <td><a href="CubeCompounds.wrl/24.S4xI.ExI.wrl">Image</a>
           </td>
-          <td><a href="CubeCompounds/60.A5xI.ExI.anim.wrl">Animation</a>
+          <td><a href="CubeCompounds.wrl/24.S4xI.ExI.anim.wrl">Animation</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a id="60.A5xI.ExI">60 | A<sub>5</sub> x I / E x I</a>
+          </td>
+          <td><a href="CubeCompounds.wrl/60.A5xI.ExI.wrl">Image</a>
+          </td>
+          <td><a href="CubeCompounds.wrl/60.A5xI.ExI.anim.wrl">Animation</a>
           </td>
         </tr>
       </table>
       <p>
         This basic list of cube compounds is the list of compounds with central
         freedom; i.e. after having specified the centre of the descriptive, its
-        position can be chosen freely, except for some special cases. In the animations
-        in the table above the descriptive is rotated around 2 distinct axes in a
-        linear way.
+        position can be chosen freely, except for some special cases.
+        In the animations in the table above the descriptive is rotated around 2
+        distinct axes in a linear way.
       </p>
-      <h2><a name="rotationalFreedom">Compounds of Cubes with Rotational Freedom</a></h2>
+      <h2><a id="rotationalFreedom">Compounds of Cubes with Rotational Freedom</a></h2>
       <p>
         The list in the previous section is far from complete, but all the remaining
         compounds can be derived from the compounds in the above list, by using special
@@ -158,33 +160,32 @@
         rotated freely around this axis, without changing that property. This leads to
         a group of compounds with rotational freedom.
       </p>
-      <p>
-        In the table below these are summarised. The animations stop at the special
-        angles as mentioned in <a href="#HVerh01">Symmetry Orbits</a>.
+      <p>In the table below these are summarised.
+        The animations stop at the special angles as mentioned in <a href="#HVerh01">Symmetry Orbits</a>.
       </p>
       <table>
         <tr class="header">
           <td class="header_r">Compound<a href="#note1"><sup>1</sup></a>
           </td>
-          <td class="header">VRML<a href="#note2"><sup>2</sup></a> model
+          <td class="header">VRML model
           </td>
           <td class="header_descr">Description
           </td>
         </tr>
         <tr>
-          <td class="mainRow_r"><a name="nA.DnxI.C2xI">nA | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;</a>
+          <td class="mainRow_r"><a id="nA.DnxI.C2xI">nA | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;</a>
             <br/>n &ge; 3
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[ &cup; ]&mu;<sub>1</sub>, &mu;<sub>2</sub>[
           </td>
           <td class="mainRow">
-            Images:
-            <br/><a href="CubeCompounds/3A.D3xI.C2xI.wrl">for n=3</a>
-            <br/><a href="CubeCompounds/4A.D4xI.C2xI.wrl">for n=4</a>
-            <br/><a href="CubeCompounds/6A.D6xI.C2xI.wrl">for n=6</a>
+            Examples:
+            <br/><a href="CubeCompounds.wrl/3A.D3xI.C2xI.wrl">for n=3</a>
+            <br/><a href="CubeCompounds.wrl/4A.D4xI.C2xI.wrl">for n=4</a>
+            <br/><a href="CubeCompounds.wrl/6A.D6xI.C2xI.wrl">for n=6</a>
             <br/>Animations:
-            <br/><a href="CubeCompounds/3A.D3xI.C2xI.anim.wrl">for n=3</a>
-            <br/><a href="CubeCompounds/4A.D4xI.C2xI.anim.wrl">for n=4</a>
-            <br/><a href="CubeCompounds/6A.D6xI.C2xI.anim.wrl">for n=6</a>
+            <br/><a href="CubeCompounds.wrl/3A.D3xI.C2xI.anim.wrl">for n=3</a>
+            <br/><a href="CubeCompounds.wrl/4A.D4xI.C2xI.anim.wrl">for n=4</a>
+            <br/><a href="CubeCompounds.wrl/6A.D6xI.C2xI.anim.wrl">for n=6</a>
           </td>
           <td class="mainRow_descr">n | C<sub>n</sub> x I / E x I, for which the descriptive shares a mirror with a mirror in D<sub>n</sub>. The mirror contains 2 opposite edges of the descriptive.
             <br/>The special angles are:
@@ -200,7 +201,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n is odd
           </td>
-          <td class="subRow"> <a href="CubeCompounds/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"> <a href="CubeCompounds.wrl/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I (n=3)</a>
           </td>
           <td class="subRow_descr">n | D<sub>4n</sub> x I / D<sub>4</sub> x I
           </td>
@@ -209,7 +210,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n=2m, m is odd
           </td>
-          <td class="subRow"> <a href="CubeCompounds/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"> <a href="CubeCompounds.wrl/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I (n=6)</a>
           </td>
           <td class="subRow_descr">m | D<sub>4m</sub> x I / D<sub>4</sub> x I
           </td>
@@ -218,25 +219,34 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n=4m
           </td>
-          <td class="subRow"> <a href="CubeCompounds/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"> <a href="CubeCompounds.wrl/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I (n=12)</a>
           </td>
           <td class="subRow_descr">m | D<sub>4m</sub> x I / D<sub>4</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>1</sub><a href="#note2"><sup>2</sup></a>
+            <br/>and n=3
+          </td>
+          <td class="subRow"><a href="CubeCompounds.wrl/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
           </td>
         </tr>
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
             <br/>and n is coprime with 3
           </td>
-          <td class="subRow"> <a href="CubeCompounds/3.D9xI.D3xI.wrl">3 | D<sub>9</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"> <a href="CubeCompounds.wrl/2.D6xI.D3xI.wrl">2 | D<sub>6</sub> x I / D<sub>3</sub> x I (n=2)</a>
           </td>
           <td class="subRow_descr">n | D<sub>3n</sub> x I / D<sub>3</sub> x I
           </td>
         </tr>
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
-            <br/>and n=3m
+            <br/>and n=3m (m>1)
           </td>
-          <td class="subRow"> <a href="CubeCompounds/3.D9xI.D3xI.wrl">3 | D<sub>9</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"> <a href="CubeCompounds.wrl/3.D9xI.D3xI.wrl">3 | D<sub>9</sub> x I / D<sub>3</sub> x I (n=9)</a>
           </td>
           <td class="subRow_descr">m | D<sub>3m</sub> x I / D<sub>3</sub> x I
           </td>
@@ -245,8 +255,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
             <br/>and n is odd
           </td>
-          <td class="subRow"> <a href="CubeCompounds/2.D4xI.D2xI.wrl">2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
-            <br/> <a href="CubeCompounds/3.D6xI.D2xI.wrl">3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"> <a href="CubeCompounds.wrl/3.D6xI.D2xI.wrl">3 | D<sub>6</sub> x I / D<sub>2</sub> x I (n=3)</a>
           </td>
           <td class="subRow_descr">n | D<sub>2n</sub> x I / D<sub>2</sub> x I
           </td>
@@ -255,8 +264,8 @@
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
             <br/>and n=2m
           </td>
-          <td class="subRow"> <a href="CubeCompounds/2.D4xI.D2xI.wrl">2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
-            <br/> <a href="CubeCompounds/3.D6xI.D2xI.wrl">3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"> <a href="CubeCompounds.wrl/2.D4xI.D2xI.wrl">2 | D<sub>4</sub> x I / D<sub>2</sub> x I (n=4)</a>
+            <br/> <a href="CubeCompounds.wrl/3.D6xI.D2xI.wrl">3 | D<sub>6</sub> x I / D<sub>2</sub> x I (n=6)</a>
           </td>
           <td class="subRow_descr">m | D<sub>2m</sub> x I / D<sub>2</sub> x I
           </td>
@@ -265,47 +274,47 @@
           <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
             <br/>and n=2m
           </td>
-          <td class="subRow"> <a href="CubeCompounds/4A.D4xI.C2xI.mu3.wrl">for n = 4</a>
-            <br/> <a href="CubeCompounds/6A.D6xI.C2xI.mu3.wrl">for n = 6</a> (<a href="CubeCompounds/6A.D6xI.C2xI.mu3.1col.wrl">only one emphasised</a>)
+          <td class="subRow"> <a href="CubeCompounds.wrl/4A.D4xI.C2xI.mu3.wrl">for n = 4</a>
+            <br/> <a href="CubeCompounds.wrl/6A.D6xI.C2xI.mu3.wrl">for n = 6</a> (<a href="CubeCompounds.wrl/6A.D6xI.C2xI.mu3.1col.wrl">only one emphasised</a>)
           </td>
           <td class="subRow_descr">m x 2 | D<sub>4</sub> x I / D<sub>2</sub> x I
           </td>
         </tr>
         <tr class="subRow">
-          <td class="subRow_r">with &mu; = &mu;<sub>4</sub><a href="#note3"><sup>3</sup></a>
+          <td class="subRow_r">with &mu; = &mu;<sub>4</sub><a href="#note2"><sup>2</sup></a>
             <br/>and n=2m
           </td>
-          <td class="subRow"> <a href="CubeCompounds/4A.D4xI.C2xI.mu4.wrl">for n = 4</a>
-            <br/> <a href="CubeCompounds/6A.D6xI.C2xI.mu4.wrl">for n = 6</a>
+          <td class="subRow"> <a href="CubeCompounds.wrl/4A.D4xI.C2xI.mu4.wrl">for n = 4</a>
+            <br/> <a href="CubeCompounds.wrl/6A.D6xI.C2xI.mu4.wrl">for n = 6</a>
           </td>
           <td class="subRow_descr">m x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I
           </td>
         </tr>
         <tr class="subRow">
-          <td class="lastSubRow_r">with &mu; = &mu;<sub>5</sub><a href="#note3"><sup>3</sup></a>
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>5</sub><a href="#note2"><sup>2</sup></a>
             <br/>and n=4m
           </td>
-          <td class="lastSubRow"> <a href="CubeCompounds/4A.D4xI.C2xI.mu5.wrl">for n = 4</a>
-            <br/> <a href="CubeCompounds/8A.D8xI.C2xI.mu5.wrl">for n = 8</a>
-            <br/> <a href="CubeCompounds/12A.D12xI.C2xI.mu5.wrl">for n = 12</a> (<a href="CubeCompounds/12A.D12xI.C2xI.mu5.1col.wrl">only one emphasised</a>)
+          <td class="lastSubRow"> <a href="CubeCompounds.wrl/4A.D4xI.C2xI.mu5.wrl">for n = 4</a>
+            <br/> <a href="CubeCompounds.wrl/8A.D8xI.C2xI.mu5.wrl">for n = 8</a>
+            <br/> <a href="CubeCompounds.wrl/12A.D12xI.C2xI.mu5.wrl">for n = 12</a> (<a href="CubeCompounds.wrl/12A.D12xI.C2xI.mu5.1col.wrl">only one emphasised</a>)
           </td>
           <td class="lastSubRow_descr">m x 4 | S<sub>4</sub> x I / D<sub>3</sub> x I
           </td>
         </tr>
         <tr>
-          <td class="mainRow_r"><a name="nB.DnxI.C2xI">nB | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;</a>
+          <td class="mainRow_r"><a id="nB.DnxI.C2xI">nB | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;</a>
             <br/>n &ge; 3
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
           </td>
           <td class="mainRow">
-            Images:
-            <br/><a href="CubeCompounds/3B.D3xI.C2xI.wrl">for n=3</a>
-            <br/><a href="CubeCompounds/4B.D4xI.C2xI.wrl">for n=4</a>
-            <br/><a href="CubeCompounds/6B.D6xI.C2xI.wrl">for n=6</a>
+            Examples:
+            <br/><a href="CubeCompounds.wrl/3B.D3xI.C2xI.wrl">for n=3</a>
+            <br/><a href="CubeCompounds.wrl/4B.D4xI.C2xI.wrl">for n=4</a>
+            <br/><a href="CubeCompounds.wrl/6B.D6xI.C2xI.wrl">for n=6</a>
             <br/>Animations:
-            <br/><a href="CubeCompounds/3B.D3xI.C2xI.anim.wrl">for n=3</a>
-            <br/><a href="CubeCompounds/4B.D4xI.C2xI.anim.wrl">for n=4</a>
-            <br/><a href="CubeCompounds/6B.D6xI.C2xI.anim.wrl">for n=6</a>
+            <br/><a href="CubeCompounds.wrl/3B.D3xI.C2xI.anim.wrl">for n=3</a>
+            <br/><a href="CubeCompounds.wrl/4B.D4xI.C2xI.anim.wrl">for n=4</a>
+            <br/><a href="CubeCompounds.wrl/6B.D6xI.C2xI.anim.wrl">for n=6</a>
           </td>
           <td class="mainRow_descr">n | C<sub>n</sub> x I / E x I, for which the descriptive shares a mirror with a mirror in D<sub>n</sub>. The mirror contains a ring of four face centres of the descriptive.
             <br/>The special angles are:
@@ -313,13 +322,17 @@
             <br/>&mu;<sub>1</sub> = <sup>&pi;</sup>/<sub>4</sub>
             <br/>&mu;<sub>2</sub> = <sup>&pi;</sup>/<sub>8</sub>
             <br/>&mu;<sub>3</sub> = asin(<sup>1</sup>/<sub>&radic;3</sub>)
+            <br/>&mu;<sub>4</sub> = &alpha;, 
+            <i>with
+            </i>
+            <br/>cos(&alpha;) - sin(&alpha;) = <sup>cos(<sup>2&pi;</sup>/<sub>5</sub>)</sup>/<sub>sin(<sup>2&pi;</sup>/<sub>5</sub>)</sub>
           </td>
         </tr>
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n is odd
           </td>
-          <td class="subRow"> <a href="CubeCompounds/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"> <a href="CubeCompounds.wrl/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I (n=3)</a>
           </td>
           <td class="subRow_descr">n | D<sub>4n</sub> x I / D<sub>4</sub> x I
           </td>
@@ -328,7 +341,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n=2m, m is odd
           </td>
-          <td class="subRow"> <a href="CubeCompounds/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"> <a href="CubeCompounds.wrl/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I (n=6)</a>
           </td>
           <td class="subRow_descr">m | D<sub>4m</sub> x I / D<sub>4</sub> x I
           </td>
@@ -337,7 +350,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n=4m
           </td>
-          <td class="subRow"> <a href="CubeCompounds/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"> <a href="CubeCompounds.wrl/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I (n=12)</a>
           </td>
           <td class="subRow_descr">m | D<sub>4m</sub> x I / D<sub>4</sub> x I
           </td>
@@ -346,18 +359,26 @@
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
             <br/>and n is odd
           </td>
-          <td class="subRow"> <a href="CubeCompounds/2.D4xI.D2xI.wrl">2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
-            <br/> <a href="CubeCompounds/3.D6xI.D2xI.wrl">3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"> <a href="CubeCompounds.wrl/3.D6xI.D2xI.wrl">3 | D<sub>6</sub> x I / D<sub>2</sub> x I (n=3)</a>
           </td>
           <td class="subRow_descr">n | D<sub>2n</sub> x I / D<sub>2</sub> x I
           </td>
         </tr>
         <tr class="subRow">
-          <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
-            <br/>and n=2m
+          <td class="subRow_r">with &mu; = &mu;<sub>1</sub><a href="#note2"><sup>2</sup></a>
+            <br/>and n=2
           </td>
-          <td class="subRow"> <a href="CubeCompounds/2.D4xI.D2xI.wrl">2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
-            <br/> <a href="CubeCompounds/3.D6xI.D2xI.wrl">3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          </td>
+          <td class="subRow_descr">-
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
+            <br/>and n=2m (m>1)
+          </td>
+          <td class="subRow"> <a href="CubeCompounds.wrl/2.D4xI.D2xI.wrl">2 | D<sub>4</sub> x I / D<sub>2</sub> x I (n=4)</a>
+            <br/> <a href="CubeCompounds.wrl/3.D6xI.D2xI.wrl">3 | D<sub>6</sub> x I / D<sub>2</sub> x I (n=6)</a>
           </td>
           <td class="subRow_descr">m | D<sub>2m</sub> x I / D<sub>2</sub> x I
           </td>
@@ -366,38 +387,48 @@
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
             <br/>and n=2m
           </td>
-          <td class="subRow"> <a href="CubeCompounds/4B.D4xI.C2xI.mu2.wrl">for n = 4</a>
-            <br/> <a href="CubeCompounds/6B.D6xI.C2xI.mu2.wrl">for n = 6</a>
+          <td class="subRow"> <a href="CubeCompounds.wrl/4B.D4xI.C2xI.mu2.wrl">for n = 4</a>
+            <br/> <a href="CubeCompounds.wrl/6B.D6xI.C2xI.mu2.wrl">for n = 6</a>
           </td>
           <td class="subRow_descr">m x 2 | D<sub>8</sub> x I / D<sub>4</sub> x I
           </td>
         </tr>
         <tr class="subRow">
-          <td class="lastSubRow_r">with &mu; = &mu;<sub>3</sub><a href="#note3"><sup>3</sup></a>
+          <td class="subRow_r">with &mu; = &mu;<sub>3</sub><a href="#note2"><sup>2</sup></a>
             <br/>and n=3m
           </td>
-          <td class="lastSubRow"> <a href="CubeCompounds/3B.D3xI.C2xI.mu3.wrl">for n = 3</a>
-            <br/> <a href="CubeCompounds/6B.D6xI.C2xI.mu3.wrl">for n = 6</a>
-            <br/> <a href="CubeCompounds/9B.D9xI.C2xI.mu3.wrl">for n = 9</a> (<a href="CubeCompounds/9B.D9xI.C2xI.mu3.1col.wrl">only one emphasised</a>)
+          <td class="subRow"> <a href="CubeCompounds.wrl/3B.D3xI.C2xI.mu3.wrl">for n = 3</a>
+            <br/> <a href="CubeCompounds.wrl/6B.D6xI.C2xI.mu3.wrl">for n = 6</a>
+            <br/> <a href="CubeCompounds.wrl/9B.D9xI.C2xI.mu3.wrl">for n = 9</a> (<a href="CubeCompounds.wrl/9B.D9xI.C2xI.mu3.1col.wrl">only one emphasised</a>)
           </td>
-          <td class="lastSubRow_descr">m x 3 | S<sub>4</sub> x I / D<sub>4</sub> x I
+          <td class="subRow_descr">m x 3 | S<sub>4</sub> x I / D<sub>4</sub> x I
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>4</sub><a href="#note2"><sup>2</sup></a>
+            <br/>and n=5m
+          </td>
+          <td class="lastSubRow"> <a href="CubeCompounds.wrl/5B.D5xI.C2xI.mu4.wrl">for n = 5</a>
+            <br/> <a href="CubeCompounds.wrl/10B.D10xI.C2xI.mu4.wrl">for n = 10</a>
+          </td>
+          <td class="lastSubRow_descr">m x 5 | A<sub>5</sub> x I / A<sub>4</sub> x I
           </td>
         </tr>
         <tr>
-          <td class="mainRow_r"><a name="2n.D2nxI.D1xI">2n | D<sub>2n</sub> x I / D<sub>1</sub> x I | &mu;</a>
+          <td class="mainRow_r"><a id="2n.D2nxI.D1xI">2n | D<sub>2n</sub> x I / D<sub>1</sub> x I | &mu;</a>
             <br/>n &ge; 1
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[ &cup; ]&mu;<sub>1</sub>, &mu;<sub>2</sub>[, for n = 1
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[, for n &ge; 2
           </td>
           <td class="mainRow">
-            Images:
-            <br/><a href="CubeCompounds/4.D4xI.D1xI.wrl">for n=2</a>
-            <br/><a href="CubeCompounds/6.D6xI.D1xI.wrl">for n=3</a>
+            Examples:
+            <br/><a href="CubeCompounds.wrl/4.D4xI.D1xI.wrl">for n=2</a>
+            <br/><a href="CubeCompounds.wrl/6.D6xI.D1xI.wrl">for n=3</a>
             <br/>Animations:
-            <br/><a href="CubeCompounds/4.D4xI.D1xI.anim.wrl">for n=2</a>
-            <br/><a href="CubeCompounds/6.D6xI.D1xI.anim.wrl">for n=3</a>
+            <br/><a href="CubeCompounds.wrl/4.D4xI.D1xI.anim.wrl">for n=2</a>
+            <br/><a href="CubeCompounds.wrl/6.D6xI.D1xI.anim.wrl">for n=3</a>
           </td>
-          <td class="mainRow_descr">2n | D<sub>n</sub> x I / E x I, for which the descriptive shares an order 2 symmetry axis with the n-fold axis of D<sub>n</sub>. The compound consists of pairs of n | D<sub>2n</sub> x I / D<sub>2</sub> x I, which rotate in opposite directions. See for instance <a href="CubeCompounds/4.D4xI.D1xI.anim.1.wrl">for n=2</a> or <a href="CubeCompounds/6.D6xI.D1xI.anim.1.wrl">for n=3</a>
+          <td class="mainRow_descr">2n | D<sub>n</sub> x I / E x I, for which the descriptive shares an order 2 symmetry axis with the n-fold axis of D<sub>n</sub>. The compound consists of pairs of n | D<sub>2n</sub> x I / D<sub>2</sub> x I, which rotate in opposite directions. See for instance <a href="CubeCompounds.wrl/4.D4xI.D1xI.anim.1.wrl">for n=2</a> or <a href="CubeCompounds.wrl/6.D6xI.D1xI.anim.1.wrl">for n=3</a>s
             <br/>The special angles are:
             <br/>&mu;<sub>0</sub> = 0
             <br/>&mu;<sub>1</sub> = asin(<sup>1</sup>/<sub>&radic;3</sub>)
@@ -409,7 +440,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n = 1
           </td>
-          <td class="subRow"><a href="CubeCompounds/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -418,7 +449,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n &ge; 2
           </td>
-          <td class="subRow"> <a href="CubeCompounds/2.D4xI.D2xI.wrl">2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"> <a href="CubeCompounds.wrl/2.D4xI.D2xI.wrl">2 | D<sub>4</sub> x I / D<sub>2</sub> x I (n=2)</a>
           </td>
           <td class="subRow_descr">n | D<sub>2n</sub> x I / D<sub>2</sub> x I
           </td>
@@ -427,7 +458,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
             <br/>and n = 1
           </td>
-          <td class="subRow"> <a href="CubeCompounds/2.D6xI.D3xI.wrl">2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"> <a href="CubeCompounds.wrl/2.D6xI.D3xI.wrl">2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td class="subRow_descr">2 | D<sub>6</sub> x I / D<sub>3</sub> x I
           </td>
@@ -436,37 +467,37 @@
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
             <br/>and m = 2n
           </td>
-          <td class="subRow"> <a href="CubeCompounds/2.D4xI.D2xI.wrl">2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
-            <br/> <a href="CubeCompounds/4.D8xI.D2xI.wrl">4 | D<sub>8</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"> <a href="CubeCompounds.wrl/2.D4xI.D2xI.wrl">2 | D<sub>4</sub> x I / D<sub>2</sub> x I (n=1)</a>
+            <br/> <a href="CubeCompounds.wrl/4.D8xI.D2xI.wrl">4 | D<sub>8</sub> x I / D<sub>2</sub> x I (n=2)</a>
           </td>
           <td class="subRow_descr">m | D<sub>2m</sub> x I / D<sub>2</sub> x I
           </td>
         </tr>
         <tr class="subRow">
-          <td class="lastSubRow_r">with &mu; = &mu;<sub>3</sub><a href="#note3"><sup>3</sup></a>
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>3</sub><a href="#note2"><sup>2</sup></a>
             <br/>and n &ge; 2
           </td>
-          <td class="lastSubRow"> <a href="CubeCompounds/4.D4xI.D1xI.mu3.wrl">for n = 2</a>
-            <br/> <a href="CubeCompounds/6.D6xI.D1xI.mu3.wrl">for n = 3</a>
+          <td class="lastSubRow"> <a href="CubeCompounds.wrl/4.D4xI.D1xI.mu3.wrl">for n = 2</a>
+            <br/> <a href="CubeCompounds.wrl/6.D6xI.D1xI.mu3.wrl">for n = 3</a>
           </td>
           <td class="lastSubRow_descr">n x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I
           </td>
         </tr>
         <tr>
-          <td class="mainRow_r"><a name="2n.D3nxI.C3xI">2n | D<sub>3n</sub> x I / C<sub>3</sub> x I | &mu;</a>
+          <td class="mainRow_r"><a id="2n.D3nxI.C3xI">2n | D<sub>3n</sub> x I / C<sub>3</sub> x I | &mu;</a>
             <br/>n &ge; 1
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
           </td>
           <td class="mainRow">
-            Images:
-            <br/><a href="CubeCompounds/2.D3xI.C3xI.wrl">for n=1</a>
-            <br/><a href="CubeCompounds/4.D6xI.C3xI.wrl">for n=2</a>
+            Examples:
+            <br/><a href="CubeCompounds.wrl/2.D3xI.C3xI.wrl">for n=1</a>
+            <br/><a href="CubeCompounds.wrl/4.D6xI.C3xI.wrl">for n=2</a>
             <br/>Animations:
-            <br/><a href="CubeCompounds/2.D3xI.C3xI.anim.wrl">for n=1</a>
-            <br/><a href="CubeCompounds/4.D6xI.C3xI.anim.wrl">for n=2</a>
-            <br/><a href="CubeCompounds/6.D9xI.C3xI.anim.wrl">for n=3</a>
+            <br/><a href="CubeCompounds.wrl/2.D3xI.C3xI.anim.wrl">for n=1</a>
+            <br/><a href="CubeCompounds.wrl/4.D6xI.C3xI.anim.wrl">for n=2</a>
+            <br/><a href="CubeCompounds.wrl/6.D9xI.C3xI.anim.wrl">for n=3</a>
           </td>
-          <td class="mainRow_descr">2n | D<sub>n</sub> x I / E x I, for which the descriptive shares an order 3 symmetry axis with the n-fold axis of D<sub>n</sub>. The compound consists of pairs of n | D<sub>3n</sub> x I / D<sub>3</sub> x I, which rotate in opposite directions. See for instance <a href="CubeCompounds/4.D6xI.C3xI.anim.1.wrl">for n=2</a> or <a href="CubeCompounds/6.D9xI.C3xI.anim.1.wrl">for n=3</a>
+          <td class="mainRow_descr">2n | D<sub>n</sub> x I / E x I, for which the descriptive shares an order 3 symmetry axis with the n-fold axis of D<sub>n</sub>. The compound consists of pairs of n | D<sub>3n</sub> x I / D<sub>3</sub> x I, which rotate in opposite directions. See for instance <a href="CubeCompounds.wrl/4.D6xI.C3xI.anim.1.wrl">for n=2</a> or <a href="CubeCompounds.wrl/6.D9xI.C3xI.anim.1.wrl">for n=3</a>s
             <br/>The special angles are:
             <br/>&mu;<sub>0</sub> = 0
             <br/>&mu;<sub>1</sub> = <sup>&pi;</sup>/<sub>6n</sub>
@@ -476,7 +507,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n = 1
           </td>
-          <td class="subRow"><a href="CubeCompounds/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -485,7 +516,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n &ge; 2
           </td>
-          <td class="subRow"> <a href="CubeCompounds/3.D9xI.D3xI.wrl">3 | D<sub>9</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"> <a href="CubeCompounds.wrl/3.D9xI.D3xI.wrl">3 | D<sub>9</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td class="subRow_descr">n | D<sub>3n</sub> x I / D<sub>3</sub> x I
           </td>
@@ -494,25 +525,25 @@
           <td class="lastSubRow_r">with &mu; = &mu;<sub>1</sub>
             <br/>and m = 2n
           </td>
-          <td class="lastSubRow"> <a href="CubeCompounds/2.D6xI.D3xI.wrl">2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          <td class="lastSubRow"> <a href="CubeCompounds.wrl/2.D6xI.D3xI.wrl">2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td class="lastSubRow_descr">m | D<sub>3m</sub> x I / D<sub>3</sub> x I
           </td>
         </tr>
         <tr>
-          <td class="mainRow_r"><a name="2n.D4nxI.C4xI">2n | D<sub>4n</sub> x I / C<sub>4</sub> x I | &mu;</a>
+          <td class="mainRow_r"><a id="2n.D4nxI.C4xI">2n | D<sub>4n</sub> x I / C<sub>4</sub> x I | &mu;</a>
             <br/>n &ge; 1
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
           </td>
           <td class="mainRow">
-            Images:
-            <br/><a href="CubeCompounds/4.D8xI.C4xI.wrl">for n=2</a>
-            <br/><a href="CubeCompounds/6.D12xI.C4xI.wrl">for n=3</a>
+            Examples:
+            <br/><a href="CubeCompounds.wrl/4.D8xI.C4xI.wrl">for n=2</a>
+            <br/><a href="CubeCompounds.wrl/6.D12xI.C4xI.wrl">for n=3</a>
             <br/>Animations:
-            <br/><a href="CubeCompounds/4.D8xI.C4xI.anim.wrl">for n=2</a>
-            <br/><a href="CubeCompounds/6.D12xI.C4xI.anim.wrl">for n=3</a>
+            <br/><a href="CubeCompounds.wrl/4.D8xI.C4xI.anim.wrl">for n=2</a>
+            <br/><a href="CubeCompounds.wrl/6.D12xI.C4xI.anim.wrl">for n=3</a>
           </td>
-          <td class="mainRow_descr">2n | D<sub>n</sub> x I / E x I, for which the descriptive shares an order 4 symmetry axis with the n-fold axis of D<sub>n</sub>. The compound consists of pairs of n | D<sub>4n</sub> x I / D<sub>4</sub> x I, which rotate in opposite directions. See for instance <a href="CubeCompounds/4.D8xI.C4xI.anim.1.wrl">for n=2</a>
+          <td class="mainRow_descr">2n | D<sub>n</sub> x I / E x I, for which the descriptive shares an order 4 symmetry axis with the n-fold axis of D<sub>n</sub>. The compound consists of pairs of n | D<sub>4n</sub> x I / D<sub>4</sub> x I, which rotate in opposite directions. See for instance <a href="CubeCompounds.wrl/4.D8xI.C4xI.anim.1.wrl">for n=2</a>s
             <br/>The special angles are:
             <br/>&mu;<sub>0</sub> = 0
             <br/>&mu;<sub>1</sub> = <sup>&pi;</sup>/<sub>8n</sub>
@@ -522,7 +553,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n = 1
           </td>
-          <td class="subRow"><a href="CubeCompounds/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -531,7 +562,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n &ge; 2
           </td>
-          <td class="subRow"> <a href="CubeCompounds/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"> <a href="CubeCompounds.wrl/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
           </td>
           <td class="subRow_descr">n | D<sub>4n</sub> x I / D<sub>4</sub> x I
           </td>
@@ -540,17 +571,17 @@
           <td class="lastSubRow_r">with &mu; = &mu;<sub>1</sub>
             <br/>and m = 2n
           </td>
-          <td class="lastSubRow"> <a href="CubeCompounds/4.D16xI.D4xI.wrl">4 | D<sub>16</sub> x I / D<sub>4</sub> x I</a>
+          <td class="lastSubRow"> <a href="CubeCompounds.wrl/4.D16xI.D4xI.wrl">4 | D<sub>16</sub> x I / D<sub>4</sub> x I</a>
           </td>
           <td class="lastSubRow_descr">m | D<sub>4m</sub> x I / D<sub>4</sub> x I
           </td>
         </tr>
         <tr>
-          <td class="mainRow_r"><a name="6.A4xI.C2xI">6 | A<sub>4</sub> x I / C<sub>2</sub> x I | &mu;</a>
+          <td class="mainRow_r"><a id="6.A4xI.C2xI">6 | A<sub>4</sub> x I / C<sub>2</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
           </td>
-          <td class="mainRow"><a href="CubeCompounds/6.A4xI.C2xI.wrl">Image</a>
-            <br/><a href="CubeCompounds/6.A4xI.C2xI.anim.wrl">Animation</a>
+          <td class="mainRow"><a href="CubeCompounds.wrl/6.A4xI.C2xI.wrl">Example</a>
+            <br/><a href="CubeCompounds.wrl/6.A4xI.C2xI.anim.wrl">Animation</a>
           </td>
           <td class="mainRow_descr">12 | A<sub>4</sub> x I / E x I, for which the descriptive shares an order 2 symmetry axis with a 2-fold axis of A<sub>4</sub>. 
             <br/>The special angles are:
@@ -562,7 +593,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/3.S4xI.D4xI.wrl">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/3.S4xI.D4xI.wrl">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -570,7 +601,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/6.S4xI.D2xI.wrl">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/6.S4xI.D2xI.wrl">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -578,17 +609,17 @@
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="lastSubRow"><a href="CubeCompounds/6.A4xI.C2xI.mu2.wrl">3 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          <td class="lastSubRow"><a href="CubeCompounds.wrl/6.A4xI.C2xI.mu2.wrl">3 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td class="lastSubRow_descr">-
           </td>
         </tr>
         <tr>
-          <td class="mainRow_r"><a name="4.A4xI.C3xI">4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;</a>
+          <td class="mainRow_r"><a id="4.A4xI.C3xI">4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
           </td>
-          <td class="mainRow"><a href="CubeCompounds/4.A4xI.C3xI.wrl">Image</a>
-            <br/><a href="CubeCompounds/4.A4xI.C3xI.anim.wrl">Animation</a>
+          <td class="mainRow"><a href="CubeCompounds.wrl/4.A4xI.C3xI.wrl">Example</a>
+            <br/><a href="CubeCompounds.wrl/4.A4xI.C3xI.anim.wrl">Animation</a>
           </td>
           <td class="mainRow_descr">12 | A<sub>4</sub> x I / E x I, for which the descriptive shares an order 3 symmetry axis with a 3-fold axis of A<sub>4</sub>. 
             <br/>The special angles are:
@@ -600,7 +631,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -608,7 +639,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/4.S4xI.D3xI.wrl">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/4.S4xI.D3xI.wrl">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -616,17 +647,17 @@
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="lastSubRow"><a href="CubeCompounds/4.A4xI.C3xI.mu2.wrl">2 x 2 | D<sub>3</sub> x I / C<sub>3</sub> x I | &frac12;&mu;<sub>2</sub></a>
+          <td class="lastSubRow"><a href="CubeCompounds.wrl/4.A4xI.C3xI.mu2.wrl">2 x 2 | D<sub>3</sub> x I / C<sub>3</sub> x I | &frac12;&mu;<sub>2</sub></a>
           </td>
           <td class="lastSubRow_descr">-
           </td>
         </tr>
         <tr>
-          <td class="mainRow_r"><a name="12A.S4xI.C2xI">12A | S<sub>4</sub> x I / C<sub>2</sub> x I | &mu;</a>
+          <td class="mainRow_r"><a id="12A.S4xI.C2xI">12A | S<sub>4</sub> x I / C<sub>2</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[ &cup; ]&mu;<sub>1</sub>, &mu;<sub>2</sub>[
           </td>
-          <td class="mainRow"><a href="CubeCompounds/12A.S4xI.C2xI.wrl">Image</a>
-            <br/><a href="CubeCompounds/12A.S4xI.C2xI.anim.wrl">Animation</a>
+          <td class="mainRow"><a href="CubeCompounds.wrl/12A.S4xI.C2xI.wrl">Example</a>
+            <br/><a href="CubeCompounds.wrl/12A.S4xI.C2xI.anim.wrl">Animation</a>
           </td>
           <td class="mainRow_descr">24 | S<sub>4</sub> x I / E x I, for which the descriptive shares an order 2 symmetry axis with a 2-fold axis of S<sub>4</sub>. 
             <br/>The special angles are:
@@ -641,7 +672,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -649,7 +680,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/4.S4xI.D3xI.wrl">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/4.S4xI.D3xI.wrl">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -657,7 +688,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/6.S4xI.D2xI.wrl">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/6.S4xI.D2xI.wrl">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -665,9 +696,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/12A.S4xI.C2xI.mu3.1.wrl">4 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a> or
+          <td class="subRow"><a href="CubeCompounds.wrl/12A.S4xI.C2xI.mu3.1.wrl">4 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a> or
             <br/>
-            <a href="CubeCompounds/12A.S4xI.C2xI.mu3.2.wrl">6 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+            <a href="CubeCompounds.wrl/12A.S4xI.C2xI.mu3.2.wrl">6 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -675,9 +706,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>4</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/12A.S4xI.C2xI.mu4.1.wrl">3 x 4 | D<sub>12</sub> x I / D<sub>3</sub> x I</a> or
+          <td class="subRow"><a href="CubeCompounds.wrl/12A.S4xI.C2xI.mu4.1.wrl">3 x 4 | D<sub>12</sub> x I / D<sub>3</sub> x I</a> or
             <br/>
-            <a href="CubeCompounds/12A.S4xI.C2xI.mu4.2.wrl">4 x 3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+            <a href="CubeCompounds.wrl/12A.S4xI.C2xI.mu4.2.wrl">4 x 3 | D<sub>9</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -685,17 +716,17 @@
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>5</sub>
           </td>
-          <td class="lastSubRow"><a href="CubeCompounds/12A.S4xI.C2xI.mu5.wrl">6 x 2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          <td class="lastSubRow"><a href="CubeCompounds.wrl/12A.S4xI.C2xI.mu5.wrl">6 x 2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
           </td>
           <td class="lastSubRow_descr">-
           </td>
         </tr>
         <tr>
-          <td class="mainRow_r"><a name="12B.S4xI.C2xI">12B | S<sub>4</sub> x I / C<sub>2</sub> x I | &mu;</a>
+          <td class="mainRow_r"><a id="12B.S4xI.C2xI">12B | S<sub>4</sub> x I / C<sub>2</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
           </td>
-          <td class="mainRow"><a href="CubeCompounds/12B.S4xI.C2xI.wrl">Image</a>
-            <br/><a href="CubeCompounds/12B.S4xI.C2xI.anim.wrl">Animation</a>
+          <td class="mainRow"><a href="CubeCompounds.wrl/12B.S4xI.C2xI.wrl">Example</a>
+            <br/><a href="CubeCompounds.wrl/12B.S4xI.C2xI.anim.wrl">Animation</a>
           </td>
           <td class="mainRow_descr">24 | S<sub>4</sub> x I / E x I, for which the descriptive shares an order 4 symmetry axis with a 2-fold axis of S<sub>4</sub>. 
             <br/>The special angles are:
@@ -710,7 +741,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/3.S4xI.D4xI.wrl">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/3.S4xI.D4xI.wrl">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -718,7 +749,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/6.S4xI.D2xI.wrl">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/6.S4xI.D2xI.wrl">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -726,7 +757,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/12B.S4xI.C2xI.mu2.wrl">4 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/12B.S4xI.C2xI.mu2.wrl">4 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -734,7 +765,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/12B.S4xI.C2xI.mu3.wrl">4 x 3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/12B.S4xI.C2xI.mu3.wrl">4 x 3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -742,29 +773,32 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>4</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/12B.S4xI.C2xI.mu4.wrl">6 x 2 | D<sub>8</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/12B.S4xI.C2xI.mu4.wrl">6 x 2 | D<sub>8</sub> x I / D<sub>4</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
         </tr>
         <tr class="subRow">
-          <td class="lastSubRow_r">with &mu; = &mu;<sub>5</sub><a href="#note3"><sup>3</sup></a>
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>5</sub><a href="#note2"><sup>2</sup></a>
           </td>
-          <td class="lastSubRow"><a href="CubeCompounds/12B.S4xI.C2xI.mu5.wrl">4 x 3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
+          <td class="lastSubRow"><a href="CubeCompounds.wrl/12B.S4xI.C2xI.mu5.wrl">4 x 3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
             <br/>
-            (<a href="CubeCompounds/12B.S4xI.C2xI.mu5.1col.wrl">only one emphasised</a>)
+            (<a href="CubeCompounds.wrl/12B.S4xI.C2xI.mu5.1col.wrl">only one emphasised</a>)
           </td>
           <td class="lastSubRow_descr">-
           </td>
         </tr>
         <tr>
-          <td class="mainRow_r"><a name="12.S4xI.D1xI">12 | S<sub>4</sub> x I / D<sub>1</sub> x I | &mu;</a>
+          <td class="mainRow_r"><a id="12.S4xI.D1xI">12 | S<sub>4</sub> x I / D<sub>1</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
           </td>
-          <td class="mainRow"><a href="CubeCompounds/12.S4xI.D1xI.wrl">Image</a>
-            <br/><a href="CubeCompounds/12.S4xI.D1xI.anim.wrl">Animation</a>
+          <td class="mainRow"><a href="CubeCompounds.wrl/12.S4xI.D1xI.wrl">Example</a>
+            <br/><a href="CubeCompounds.wrl/12.S4xI.D1xI.anim.wrl">Animation</a>
           </td>
-          <td class="mainRow_descr">24 | S<sub>4</sub> x I / E x I, for which the descriptive shares an order 2 symmetry axis with a 4-fold axis of S<sub>4</sub>. One order 4 axis of the compound is shared with the 2-fold axis of 4 elements. Hence there are 2 different ways to make pairs of these. By its colour arrangement the animation emphasises the case where the 4 elements consist of a pair of 2 | D<sub>2</sub> x I / D<sub>1</sub> x I | &mu;. There is an alternative way, for which the compound consists of pairs of 2 | D<sub>4</sub> x I / D<sub>2</sub> x I, which rotate in opposite directions. See for instance <a href="CubeCompounds/12.S4xI.D1xI.anim.1.wrl">this animation</a>
+          <td class="mainRow_descr">24 | S<sub>4</sub> x I / E x I, for which the descriptive shares an order 2 symmetry axis with a 4-fold axis of S<sub>4</sub>. One order 4 axis of the compound is shared with the 2-fold axis of 4 elements. Hence there are 2 different ways to make pairs of these.
+            By its colour arrangement the animation emphasises the case where the 4
+            elements consist of a pair of 2 | D<sub>2</sub> x I / D<sub>1</sub> x I | &mu;. There is an alternative way, for which
+            the compound consists of pairs of 2 | D<sub>4</sub> x I / D<sub>2</sub> x I, which rotate in opposite directions. See for instance <a href="CubeCompounds.wrl/12.S4xI.D1xI.anim.1.wrl">this animation</a>s
             <br/>The special angles are:
             <br/>&mu;<sub>0</sub> = 0
             <br/>&mu;<sub>1</sub> = <sup>&pi;</sup>/<sub>4</sub>
@@ -777,7 +811,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/3.S4xI.D4xI.wrl">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/3.S4xI.D4xI.wrl">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -785,7 +819,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/6.S4xI.D2xI.wrl">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/6.S4xI.D2xI.wrl">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -793,7 +827,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/12.S4xI.D1xI.mu2.wrl">6 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/12.S4xI.D1xI.mu2.wrl">6 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -801,7 +835,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/12.S4xI.D1xI.mu3.wrl">3 x 4 | D<sub>12</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/12.S4xI.D1xI.mu3.wrl">3 x 4 | D<sub>12</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -809,27 +843,27 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>4</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/12.S4xI.D1xI.mu4.wrl">3 x 4 | D<sub>8</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/12.S4xI.D1xI.mu4.wrl">3 x 4 | D<sub>8</sub> x I / D<sub>2</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
         </tr>
         <tr class="subRow">
-          <td class="lastSubRow_r">with &mu; = &mu;<sub>5</sub><a href="#note3"><sup>3</sup></a>
+          <td class="lastSubRow_r">with &mu; = &mu;<sub>5</sub><a href="#note2"><sup>2</sup></a>
           </td>
-          <td class="lastSubRow"><a href="CubeCompounds/12.S4xI.D1xI.mu5.wrl">3 x 4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
+          <td class="lastSubRow"><a href="CubeCompounds.wrl/12.S4xI.D1xI.mu5.wrl">3 x 4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
             <br/>
-            (<a href="CubeCompounds/12.S4xI.D1xI.mu5.1col.wrl">only one emphasised</a>)
+            (<a href="CubeCompounds.wrl/12.S4xI.D1xI.mu5.1col.wrl">only one emphasised</a>)
           </td>
           <td class="lastSubRow_descr">-
           </td>
         </tr>
         <tr>
-          <td class="mainRow_r"><a name="8.S4xI.C3xI">8 | S<sub>4</sub> x I / C<sub>3</sub> x I | &mu;</a>
+          <td class="mainRow_r"><a id="8.S4xI.C3xI">8 | S<sub>4</sub> x I / C<sub>3</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
           </td>
-          <td class="mainRow"><a href="CubeCompounds/8.S4xI.C3xI.wrl">Image</a>
-            <br/><a href="CubeCompounds/8.S4xI.C3xI.anim.wrl">Animation</a>
+          <td class="mainRow"><a href="CubeCompounds.wrl/8.S4xI.C3xI.wrl">Example</a>
+            <br/><a href="CubeCompounds.wrl/8.S4xI.C3xI.anim.wrl">Animation</a>
           </td>
           <td class="mainRow_descr">24 | S<sub>4</sub> x I / E x I, for which the descriptive shares an order 3 symmetry axis with a 3-fold axis of S<sub>4</sub>. 
             <br/>The special angles are:
@@ -842,7 +876,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -850,7 +884,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/4.S4xI.D3xI.wrl">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/4.S4xI.D3xI.wrl">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -858,13 +892,13 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/8.S4xI.C3xI.mu2.wrl">2 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>2</sub></a>
+          <td class="subRow"><a href="CubeCompounds.wrl/8.S4xI.C3xI.mu2.wrl">2 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>2</sub></a>
             <br/>
-            (<a href="CubeCompounds/8.S4xI.C3xI.mu2.alt1.wrl">alternative colour arrangement</a>,
+            (<a href="CubeCompounds.wrl/8.S4xI.C3xI.mu2.alt1.wrl">alternative colour arrangement</a>,
             <br/>
-            <a href="CubeCompounds/8.S4xI.C3xI.mu2.alt2.wrl">alternative colour arrangement</a>,
+            <a href="CubeCompounds.wrl/8.S4xI.C3xI.mu2.alt2.wrl">alternative colour arrangement</a>,
             <br/>
-            <a href="CubeCompounds/8.S4xI.C3xI.mu2.alt3.wrl">alternative colour arrangement</a>)
+            <a href="CubeCompounds.wrl/8.S4xI.C3xI.mu2.alt3.wrl">alternative colour arrangement</a>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -872,17 +906,17 @@
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>3</sub>
           </td>
-          <td class="lastSubRow"><a href="CubeCompounds/8.S4xI.C3xI.mu3.wrl">4 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          <td class="lastSubRow"><a href="CubeCompounds.wrl/8.S4xI.C3xI.mu3.wrl">4 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td class="lastSubRow_descr">-
           </td>
         </tr>
         <tr>
-          <td class="mainRow_r"><a name="6.S4xI.C4xI">6 | S<sub>4</sub> x I / C<sub>4</sub> x I | &mu;</a>
+          <td class="mainRow_r"><a id="6.S4xI.C4xI">6 | S<sub>4</sub> x I / C<sub>4</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
           </td>
-          <td class="mainRow"><a href="CubeCompounds/6.S4xI.C4xI.wrl">Image</a>
-            <br/><a href="CubeCompounds/6.S4xI.C4xI.anim.wrl">Animation</a>
+          <td class="mainRow"><a href="CubeCompounds.wrl/6.S4xI.C4xI.wrl">Example</a>
+            <br/><a href="CubeCompounds.wrl/6.S4xI.C4xI.anim.wrl">Animation</a>
           </td>
           <td class="mainRow_descr">24 | S<sub>4</sub> x I / E x I, for which the descriptive shares an order 4 symmetry axis with a 4-fold axis of S<sub>4</sub>. 
             <br/>The special angles are:
@@ -894,7 +928,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -902,7 +936,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/3.S4xI.D4xI.wrl">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/3.S4xI.D4xI.wrl">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -910,17 +944,17 @@
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="lastSubRow"><a href="CubeCompounds/6.S4xI.C4xI.mu2.wrl">3 x 2 | D<sub>8</sub> x I / D<sub>4</sub> x I</a>
+          <td class="lastSubRow"><a href="CubeCompounds.wrl/6.S4xI.C4xI.mu2.wrl">3 x 2 | D<sub>8</sub> x I / D<sub>4</sub> x I</a>
           </td>
           <td class="lastSubRow_descr">-
           </td>
         </tr>
         <tr>
-          <td class="mainRow_r"><a name="30A.A5xI.C2xI">30A | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;</a>
+          <td class="mainRow_r"><a id="30A.A5xI.C2xI">30A | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[ &cup; ]&mu;<sub>1</sub>, &mu;<sub>2</sub>[ &cup; ]&mu;<sub>2</sub>, &mu;<sub>3</sub>[
           </td>
-          <td class="mainRow"><a href="CubeCompounds/30A.A5xI.C2xI.wrl">Image</a>
-            <br/><a href="CubeCompounds/30A.A5xI.C2xI.anim.wrl">Animation</a>
+          <td class="mainRow"><a href="CubeCompounds.wrl/30A.A5xI.C2xI.wrl">Example</a>
+            <br/><a href="CubeCompounds.wrl/30A.A5xI.C2xI.anim.wrl">Animation</a>
           </td>
           <td class="mainRow_descr">60 | A<sub>5</sub> x I / E x I, for which the descriptive shares an order 2 symmetry axis with a 2-fold axis of A<sub>5</sub>. 
             <br/>The special angles are:
@@ -940,7 +974,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/15.A5xI.D2xI.wrl">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/15.A5xI.D2xI.wrl">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -948,7 +982,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/10A.A5xI.D3xI.wrl">10A | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/10A.A5xI.D3xI.wrl">10A | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -956,7 +990,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/10B.A5xI.D3xI.wrl">10B | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/10B.A5xI.D3xI.wrl">10B | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -964,7 +998,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/15.A5xI.D2xI.wrl">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/15.A5xI.D2xI.wrl">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -972,9 +1006,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>4</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/30A.A5xI.C2xI.mu4.wrl">15 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/30A.A5xI.C2xI.mu4.wrl">15 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
             <br/>
-            (<a href="CubeCompounds/30A.A5xI.C2xI.mu4.1col.wrl">only one emphasised</a>)
+            (<a href="CubeCompounds.wrl/30A.A5xI.C2xI.mu4.1col.wrl">only one emphasised</a>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -982,9 +1016,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>5</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/30A.A5xI.C2xI.mu5.wrl">15 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/30A.A5xI.C2xI.mu5.wrl">15 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
             <br/>
-            (<a href="CubeCompounds/30A.A5xI.C2xI.mu5.1col.wrl">only one emphasised</a>)
+            (<a href="CubeCompounds.wrl/30A.A5xI.C2xI.mu5.1col.wrl">only one emphasised</a>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -992,9 +1026,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>6</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/30A.A5xI.C2xI.mu6.wrl">10 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/30A.A5xI.C2xI.mu6.wrl">10 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
             <br/>
-            (<a href="CubeCompounds/30A.A5xI.C2xI.mu6.1col.wrl">only one emphasised</a>)
+            (<a href="CubeCompounds.wrl/30A.A5xI.C2xI.mu6.1col.wrl">only one emphasised</a>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1002,9 +1036,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>7</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/30A.A5xI.C2xI.mu7.wrl">6 x 5 | D<sub>20</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/30A.A5xI.C2xI.mu7.wrl">6 x 5 | D<sub>20</sub> x I / D<sub>4</sub> x I</a>
             <br/>
-            (<a href="CubeCompounds/30A.A5xI.C2xI.mu7.1col.wrl">only one emphasised</a>)
+            (<a href="CubeCompounds.wrl/30A.A5xI.C2xI.mu7.1col.wrl">only one emphasised</a>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1012,9 +1046,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>8</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/30A.A5xI.C2xI.mu8.wrl">6 x 5 | D<sub>10</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/30A.A5xI.C2xI.mu8.wrl">6 x 5 | D<sub>10</sub> x I / D<sub>2</sub> x I</a>
             <br/>
-            (<a href="CubeCompounds/30A.A5xI.C2xI.mu8.1col.wrl">only one emphasised</a>)
+            (<a href="CubeCompounds.wrl/30A.A5xI.C2xI.mu8.1col.wrl">only one emphasised</a>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1022,9 +1056,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>9</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/30A.A5xI.C2xI.mu9.wrl">10 x 3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/30A.A5xI.C2xI.mu9.wrl">10 x 3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
             <br/>
-            (<a href="CubeCompounds/30A.A5xI.C2xI.mu9.1col.wrl">only one emphasised</a>)
+            (<a href="CubeCompounds.wrl/30A.A5xI.C2xI.mu9.1col.wrl">only one emphasised</a>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1032,19 +1066,19 @@
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>10</sub>
           </td>
-          <td class="lastSubRow"><a href="CubeCompounds/30A.A5xI.C2xI.mu10.wrl">15 x 2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          <td class="lastSubRow"><a href="CubeCompounds.wrl/30A.A5xI.C2xI.mu10.wrl">15 x 2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
             <br/>
-            (<a href="CubeCompounds/30A.A5xI.C2xI.mu10.1col.wrl">only one emphasised</a>)
+            (<a href="CubeCompounds.wrl/30A.A5xI.C2xI.mu10.1col.wrl">only one emphasised</a>)
           </td>
           <td class="lastSubRow_descr">-
           </td>
         </tr>
         <tr>
-          <td class="mainRow_r"><a name="30B.A5xI.C2xI">30B | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;</a>
+          <td class="mainRow_r"><a id="30B.A5xI.C2xI">30B | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
           </td>
-          <td class="mainRow"><a href="CubeCompounds/30B.A5xI.C2xI.wrl">Image</a>
-            <br/><a href="CubeCompounds/30B.A5xI.C2xI.anim.wrl">Animation</a>
+          <td class="mainRow"><a href="CubeCompounds.wrl/30B.A5xI.C2xI.wrl">Example</a>
+            <br/><a href="CubeCompounds.wrl/30B.A5xI.C2xI.anim.wrl">Animation</a>
           </td>
           <td class="mainRow_descr">60 | A<sub>5</sub> x I / E x I, for which the descriptive shares an order 4 symmetry axis with a 2-fold axis of A<sub>5</sub>. 
             <br/>The special angles are:
@@ -1060,7 +1094,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/5.A5xI.A4xI.wrl">5 | A<sub>5</sub> x I / A<sub>4</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/5.A5xI.A4xI.wrl">5 | A<sub>5</sub> x I / A<sub>4</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1068,7 +1102,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/15.A5xI.D2xI.wrl">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/15.A5xI.D2xI.wrl">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1076,9 +1110,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/30B.A5xI.C2xI.mu2.wrl">6 x 5 | D<sub>10</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/30B.A5xI.C2xI.mu2.wrl">6 x 5 | D<sub>10</sub> x I / D<sub>2</sub> x I</a>
             <br/>
-            (<a href="CubeCompounds/30B.A5xI.C2xI.mu2.1col.wrl">only one emphasised</a>)
+            (<a href="CubeCompounds.wrl/30B.A5xI.C2xI.mu2.1col.wrl">only one emphasised</a>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1086,9 +1120,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/30B.A5xI.C2xI.mu3.wrl">10 x 3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/30B.A5xI.C2xI.mu3.wrl">10 x 3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
             <br/>
-            (<a href="CubeCompounds/30B.A5xI.C2xI.mu3.1col.wrl">only one emphasised</a>)
+            (<a href="CubeCompounds.wrl/30B.A5xI.C2xI.mu3.1col.wrl">only one emphasised</a>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1096,9 +1130,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>4</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/30B.A5xI.C2xI.mu4.wrl">10 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/30B.A5xI.C2xI.mu4.wrl">10 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
             <br/>
-            (<a href="CubeCompounds/30B.A5xI.C2xI.mu4.1col.wrl">only one emphasised</a>)
+            (<a href="CubeCompounds.wrl/30B.A5xI.C2xI.mu4.1col.wrl">only one emphasised</a>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1106,9 +1140,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>5</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/30B.A5xI.C2xI.mu5.wrl">6 x 5 | D<sub>20</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/30B.A5xI.C2xI.mu5.wrl">6 x 5 | D<sub>20</sub> x I / D<sub>4</sub> x I</a>
             <br/>
-            (<a href="CubeCompounds/30B.A5xI.C2xI.mu5.1col.wrl">only one emphasised</a>)
+            (<a href="CubeCompounds.wrl/30B.A5xI.C2xI.mu5.1col.wrl">only one emphasised</a>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1116,19 +1150,19 @@
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>6</sub>
           </td>
-          <td class="lastSubRow"><a href="CubeCompounds/30B.A5xI.C2xI.mu6.wrl">15 x 2 | D<sub>8</sub> x I / D<sub>4</sub> x I</a>
+          <td class="lastSubRow"><a href="CubeCompounds.wrl/30B.A5xI.C2xI.mu6.wrl">15 x 2 | D<sub>8</sub> x I / D<sub>4</sub> x I</a>
             <br/>
-            (<a href="CubeCompounds/30B.A5xI.C2xI.mu6.1col.wrl">only one emphasised</a>)
+            (<a href="CubeCompounds.wrl/30B.A5xI.C2xI.mu6.1col.wrl">only one emphasised</a>)
           </td>
           <td class="lastSubRow_descr">-
           </td>
         </tr>
         <tr>
-          <td class="mainRow_r"><a name="20.A5xI.C3xI">20 | A<sub>5</sub> x I / C<sub>3</sub> x I | &mu;</a>
+          <td class="mainRow_r"><a id="20.A5xI.C3xI">20 | A<sub>5</sub> x I / C<sub>3</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>2</sub>, &mu;<sub>0</sub>[ &cup; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
           </td>
-          <td class="mainRow"><a href="CubeCompounds/20.A5xI.C3xI.wrl">Image</a>
-            <br/><a href="CubeCompounds/20.A5xI.C3xI.anim.wrl">Animation</a>
+          <td class="mainRow"><a href="CubeCompounds.wrl/20.A5xI.C3xI.wrl">Example</a>
+            <br/><a href="CubeCompounds.wrl/20.A5xI.C3xI.anim.wrl">Animation</a>
           </td>
           <td class="mainRow_descr">60 | A<sub>5</sub> x I / E x I, for which the descriptive shares an order 3 symmetry axis with a 3-fold axis of A<sub>5</sub>. 
             <br/>The special angles are:
@@ -1144,7 +1178,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/5.A5xI.A4xI.wrl">5 | A<sub>5</sub> x I / A<sub>4</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/5.A5xI.A4xI.wrl">5 | A<sub>5</sub> x I / A<sub>4</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1152,7 +1186,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/10A.A5xI.D3xI.wrl">10A | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/10A.A5xI.D3xI.wrl">10A | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1160,7 +1194,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/10B.A5xI.D3xI.wrl">10B | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/10B.A5xI.D3xI.wrl">10B | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1168,13 +1202,13 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/20.A5xI.C3xI.mu3.1.wrl">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>3</sub></a>
+          <td class="subRow"><a href="CubeCompounds.wrl/20.A5xI.C3xI.mu3.1.wrl">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>3</sub></a>
             <br/>
-            (<a href="CubeCompounds/20.A5xI.C3xI.mu3.1.1col.wrl">only one emphasised</a>) or
+            (<a href="CubeCompounds.wrl/20.A5xI.C3xI.mu3.1.1col.wrl">only one emphasised</a>) or
             <br/>
-            <a href="CubeCompounds/20.A5xI.C3xI.mu3.2.wrl">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | 2&mu;<sub>1</sub> - &mu;<sub>3</sub></a>
+            <a href="CubeCompounds.wrl/20.A5xI.C3xI.mu3.2.wrl">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | 2&mu;<sub>1</sub> - &mu;<sub>3</sub></a>
             <br/>
-            (<a href="CubeCompounds/20.A5xI.C3xI.mu3.2.1col.wrl">only one emphasised</a>)
+            (<a href="CubeCompounds.wrl/20.A5xI.C3xI.mu3.2.1col.wrl">only one emphasised</a>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1182,13 +1216,13 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>4</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/20.A5xI.C3xI.mu4.1.wrl">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>4</sub></a>
+          <td class="subRow"><a href="CubeCompounds.wrl/20.A5xI.C3xI.mu4.1.wrl">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>4</sub></a>
             <br/>
-            (<a href="CubeCompounds/20.A5xI.C3xI.mu4.1.1col.wrl">only one emphasised</a>) or
+            (<a href="CubeCompounds.wrl/20.A5xI.C3xI.mu4.1.1col.wrl">only one emphasised</a>) or
             <br/>
-            <a href="CubeCompounds/20.A5xI.C3xI.mu4.2.wrl">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | 2&mu;<sub>1</sub> - &mu;<sub>4</sub></a>
+            <a href="CubeCompounds.wrl/20.A5xI.C3xI.mu4.2.wrl">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | 2&mu;<sub>1</sub> - &mu;<sub>4</sub></a>
             <br/>
-            (<a href="CubeCompounds/20.A5xI.C3xI.mu4.2.1col.wrl">only one emphasised</a>)
+            (<a href="CubeCompounds.wrl/20.A5xI.C3xI.mu4.2.1col.wrl">only one emphasised</a>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1196,13 +1230,13 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>5</sub>
           </td>
-          <td class="subRow"><a href="CubeCompounds/20.A5xI.C3xI.mu5.1.wrl">5 x 4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><a href="CubeCompounds.wrl/20.A5xI.C3xI.mu5.1.wrl">5 x 4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
             <br/>
-            (<a href="CubeCompounds/20.A5xI.C3xI.mu5.1.1col.wrl">only one emphasised</a>) or
+            (<a href="CubeCompounds.wrl/20.A5xI.C3xI.mu5.1.1col.wrl">only one emphasised</a>) or
             <br/>
-            <a href="CubeCompounds/20.A5xI.C3xI.mu5.2.wrl">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>5</sub></a>
+            <a href="CubeCompounds.wrl/20.A5xI.C3xI.mu5.2.wrl">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>5</sub></a>
             <br/>
-            (<a href="CubeCompounds/20.A5xI.C3xI.mu5.2.1col.wrl">only one emphasised</a>)
+            (<a href="CubeCompounds.wrl/20.A5xI.C3xI.mu5.2.1col.wrl">only one emphasised</a>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1210,15 +1244,15 @@
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>6</sub>
           </td>
-          <td class="lastSubRow"><a href="CubeCompounds/20.A5xI.C3xI.mu6.wrl">10 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          <td class="lastSubRow"><a href="CubeCompounds.wrl/20.A5xI.C3xI.mu6.wrl">10 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
             <br/>
-            (<a href="CubeCompounds/20.A5xI.C3xI.mu6.1col.wrl">only one emphasised</a>)
+            (<a href="CubeCompounds.wrl/20.A5xI.C3xI.mu6.1col.wrl">only one emphasised</a>)
           </td>
           <td class="lastSubRow_descr">-
           </td>
         </tr>
       </table>
-      <h2><a name="rigid">Rigid Compounds of Cubes</a></h2>
+      <h2><a id="rigid">Rigid Compounds of Cubes</a></h2>
       <p>
         For some angles the cube compounds with rotational freedom obtain a higher
         order symmetry. These are refered to as rigid compounds of cubes. The table
@@ -1233,9 +1267,9 @@
           </td>
         </tr>
         <tr>
-          <td class="r"><a name="n.D4nxI.D4xI">n | D<sub>4n</sub> x I / D<sub>4</sub> x I, e.g.</a>
+          <td class="r"><a id="n.D4nxI.D4xI">n | D<sub>4n</sub> x I / D<sub>4</sub> x I, e.g.</a>
             <br/>
-            <a href="CubeCompounds/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+            <a href="CubeCompounds.wrl/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
           </td>
           <td>nA | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;<sub>0</sub>
             <br/>
@@ -1247,11 +1281,11 @@
           </td>
         </tr>
         <tr>
-          <td class="r"><a name="n.D3nxI.D3xI">n | D<sub>3n</sub> x I / D<sub>3</sub> x I, e.g.</a>
+          <td class="r"><a id="n.D3nxI.D3xI">n | D<sub>3n</sub> x I / D<sub>3</sub> x I, e.g.</a>
             <br/>
-            <a href="CubeCompounds/2.D6xI.D3xI.wrl">2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+            <a href="CubeCompounds.wrl/2.D6xI.D3xI.wrl">2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
             <br/>
-            <a href="CubeCompounds/3.D9xI.D3xI.wrl">3 | D<sub>9</sub> x I / D<sub>3</sub> x I</a>
+            <a href="CubeCompounds.wrl/3.D9xI.D3xI.wrl">3 | D<sub>9</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td>nA | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;<sub>1</sub>
             <br/>
@@ -1263,11 +1297,11 @@
           </td>
         </tr>
         <tr>
-          <td class="r"><a name="n.D2nxI.D2xI">n | D<sub>2n</sub> x I / D<sub>2</sub> x I, e.g.</a>
+          <td class="r"><a id="n.D2nxI.D2xI">n | D<sub>2n</sub> x I / D<sub>2</sub> x I, e.g.</a>
             <br/>
-            <a href="CubeCompounds/2.D4xI.D2xI.wrl">2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
+            <a href="CubeCompounds.wrl/2.D4xI.D2xI.wrl">2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
             <br/>
-            <a href="CubeCompounds/3.D6xI.D2xI.wrl">3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+            <a href="CubeCompounds.wrl/3.D6xI.D2xI.wrl">3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
           </td>
           <td>nA | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;<sub>2</sub>
             <br/>
@@ -1279,7 +1313,7 @@
           </td>
         </tr>
         <tr>
-          <td class="r"><a name="1.S4xI.S4xI"><a href="CubeCompounds/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a></a>
+          <td class="r"><a id="1.S4xI.S4xI"></a><a href="CubeCompounds.wrl/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
           </td>
           <td>2 | D<sub>2</sub> x I / D<sub>1</sub> x I | &mu;<sub>0</sub>
             <br/>
@@ -1293,9 +1327,7 @@
           </td>
         </tr>
         <tr>
-          <td class="r"><a name="3.S4xI.D4xI"><a href="CubeCompounds/3.S4xI.D4xI.wrl">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a></a>
-            <br/>
-            Classical Compound of 3 Cubes
+          <td class="r"><a id="3.S4xI.D4xI"></a><a href="CubeCompounds.wrl/3.S4xI.D4xI.wrl">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
           </td>
           <td>6 | A<sub>4</sub> x I / C<sub>2</sub> x I | &mu;<sub>0</sub>
             <br/>
@@ -1309,9 +1341,7 @@
           </td>
         </tr>
         <tr>
-          <td class="r"><a name="4.S4xI.D3xI"><a href="CubeCompounds/4.S4xI.D3xI.wrl">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a></a>
-            <br/>
-            Bakos' Compound of 4 Cubes
+          <td class="r"><a id="4.S4xI.D3xI"></a><a href="CubeCompounds.wrl/4.S4xI.D3xI.wrl">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td>4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>1</sub>
             <br/>
@@ -1323,7 +1353,7 @@
           </td>
         </tr>
         <tr>
-          <td class="r"><a name="6.S4xI.D2xI"><a href="CubeCompounds/6.S4xI.D2xI.wrl">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a></a>
+          <td class="r"><a id="6.S4xI.D2xI"></a><a href="CubeCompounds.wrl/6.S4xI.D2xI.wrl">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a>
           </td>
           <td>6 | A<sub>4</sub> x I / C<sub>2</sub> x I | &mu;<sub>1</sub>
             <br/>
@@ -1335,9 +1365,7 @@
           </td>
         </tr>
         <tr>
-          <td class="r"><a name="5.A5xI.A4xI"><a href="CubeCompounds/5.A5xI.A4xI.wrl">5 | A<sub>5</sub> x I / A<sub>4</sub> x I</a></a>
-            <br/>
-            Classical Compound of 5 Cubes
+          <td class="r"><a id="5.A5xI.A4xI"></a><a href="CubeCompounds.wrl/5.A5xI.A4xI.wrl">5 | A<sub>5</sub> x I / A<sub>4</sub> x I</a>
           </td>
           <td>30B | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;<sub>0</sub>
             <br/>
@@ -1345,7 +1373,7 @@
           </td>
         </tr>
         <tr>
-          <td class="r"><a name="10A.A5xI.D3xI"><a href="CubeCompounds/10A.A5xI.D3xI.wrl">10A | A<sub>5</sub> x I / D<sub>3</sub> x I</a></a>
+          <td class="r"><a id="10A.A5xI.D3xI"></a><a href="CubeCompounds.wrl/10A.A5xI.D3xI.wrl">10A | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td>30A | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;<sub>1</sub>
             <br/>
@@ -1353,7 +1381,7 @@
           </td>
         </tr>
         <tr>
-          <td class="r"><a name="10B.A5xI.D3xI"><a href="CubeCompounds/10B.A5xI.D3xI.wrl">10B | A<sub>5</sub> x I / D<sub>3</sub> x I</a></a>
+          <td class="r"><a id="10B.A5xI.D3xI"></a><a href="CubeCompounds.wrl/10B.A5xI.D3xI.wrl">10B | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
           </td>
           <td>30A | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;<sub>2</sub>
             <br/>
@@ -1361,7 +1389,7 @@
           </td>
         </tr>
         <tr>
-          <td class="r"><a name="15.A5xI.D2xI"><a href="CubeCompounds/15.A5xI.D2xI.wrl">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</a></a>
+          <td class="r"><a id="15.A5xI.D2xI"></a><a href="CubeCompounds.wrl/15.A5xI.D2xI.wrl">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</a>
           </td>
           <td>30A | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;<sub>0</sub>
             <br/>
@@ -1371,20 +1399,17 @@
           </td>
         </tr>
       </table>
-      <p>
-            In all these compounds the cubes can be replaced by any other polyhedron with
-            cube symmetry. This does not influence the properties for the whole compound.
-            For instance one can use the same constructs to summarise all <a href="./octacmps.vrml.html">compounds of Octahedra</a> or the <a href="./cubocmps.vrml.html">compounds of Cuboctahedra</a>.
-      </p>
-      <h2><a name="notes">Notes</a></h2>
-      <a name="note1"><sup>1</sup></a>The table uses the notation as used in <a href="#HVerh01">Symmetry Orbits</a>, in which the first
+      <h2><a id="notes">Notes</a></h2>
+      <a id="note1"><sup>1</sup></a>The table uses the notation as used in <a href="#HVerh01">Symmetry Orbits</a>, in which the first
       part states the amount of cubes the the middle part to which symmetry cube the
       compound belongs.
       <br/>
-      <a name="note2"><sup>2</sup></a>For available X3D / VRML plugins for your browser and OS check <a href="http://cic.nist.gov/vrml/vbdetect.html">here</a>.
-      <br/>
-      <a name="note3"><sup>3</sup></a>This special case I found myself and is not mentioned in <a href="#HVerh01">Symmetry Orbits</a>. These special cases are:
+      <a id="note2"><sup>2</sup></a>This special case I found myself and is not mentioned in <a href="#HVerh01">Symmetry Orbits</a>. These special cases are:
       <ul>
+        <li><a href="#nA.DnxI.C2xI">nA | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;<sub>1</sub></a> = 1 | S<sub>4</sub> x I / S<sub>4</sub> x I
+          <i> with n=3
+          </i>
+        </li>
         <li><a href="#nA.DnxI.C2xI">nA | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;<sub>4</sub></a> = m x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I
           <i> with n=2m
           </i>
@@ -1393,8 +1418,16 @@
           <i> with n=4m
           </i>
         </li>
+        <li><a href="#nB.DnxI.C2xI">nB | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;<sub>1</sub></a> = 1 | S<sub>4</sub> x I / S<sub>4</sub> x I
+          <i> with n=2
+          </i>
+        </li>
         <li><a href="#nB.DnxI.C2xI">nB | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;<sub>3</sub></a> = m x 3 | S<sub>4</sub> x I / D<sub>4</sub> x I
           <i> with n=3m
+          </i>
+        </li>
+        <li><a href="#nB.DnxI.C2xI">nB | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;<sub>4</sub></a> = m x 5 | A<sub>5</sub> x I / A<sub>4</sub> x I
+          <i> with n=5m
           </i>
         </li>
         <li><a href="#2n.D2nxI.D1xI">2n | D<sub>2n</sub> x I / D<sub>1</sub> x I | &mu;<sub>3</sub></a> = n x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I
@@ -1406,10 +1439,10 @@
         <li><a href="#12.S4xI.D1xI">12 | S<sub>4</sub> x I / D<sub>1</sub> x I | &mu;<sub>5</sub></a> = 3 x 4 | S<sub>4</sub> x I / D<sub>3</sub> x I
         </li>
       </ul>
-      <h2><a name="references">References</a></h2>
-      <a name="HVerh01">Verheyen, Hugo F: <b>Symmetry Orbits</b>, Birkhauser; 1 edition (January 26, 1996)
+      <h2><a id="references">References</a></h2>
+      <a id="HVerh01">Verheyen, Hugo F: <b>Symmetry Orbits</b>, Birkhauser; 1 edition (January 26, 1996)
       </a>
-      <h2><a name="links">Links</a></h2>
+      <h2><a id="links">Links</a></h2>
       <ul>
         <li>
           <a href="../index.htm">Home</a>
@@ -1420,12 +1453,9 @@
         <li>
           <a href="http://users.skynet.be/polyhedra.fleurent/Compounds/Text/Page_00_1.htm" target="new">Webpage about compounds by M. Fleurent and H. Verheyen</a>
         </li>
-        <li>
-          <a href="./CubeCompounds.Off.zip">ZIP archive</a> with .off files
-        </li>
       </ul>
-      <h2><a name="lastUpdated">Last Updated</a></h2>
-      <p>2008-02-27, 07:45
+      <h2><a id="lastUpdated">Last Updated</a></h2>
+      <p>2019-01-20, 12:18
       </p>
     </div>
   </body>
