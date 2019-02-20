@@ -2,15 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
-    <title>Compounds of Octahedra</title>
+    <title>Compounds of Cuboctahedra</title>
     <link href="/css/interactive_models.css" rel="stylesheet"/>
+    <script src="/js/show-off-bundle.js"></script>
+    <script src="/js/interactive_models.js"></script>
   </head>
   <body>
-    <div id="pagebody">
-      <h1>Compounds of Octahedra</h1>
-      <p>
+    <div id="model">
+      <canvas id="model_canvas"></canvas>
+    </div>
+    <div id="pagebody" onclick="hide()">
+      <h1>Compounds of Cuboctahedra</h1>
+      <p>For optimal experience Javascript should be enabled. 
         Click 
-        <a href="./octahedron_compounds/index.html">here</a> if you want to watch the models with JavaScript instead of a VRML player.
+        <a href="../cubocmps.vrml.html">here</a> if you want to watch the models with a VRML player instead.
       </p>
       <h2>Contents</h2>
       <ul>
@@ -21,13 +26,13 @@
           <a href="#notes">Notes</a>
         </li>
         <li>
-          <a href="#centralFreedom">Compounds of Octahedra with Central Freedom</a>
+          <a href="#centralFreedom">Compounds of Cuboctahedra with Central Freedom</a>
         </li>
         <li>
-          <a href="#rotationalFreedom">Compounds of Octahedra with Rotational Freedom</a>
+          <a href="#rotationalFreedom">Compounds of Cuboctahedra with Rotational Freedom</a>
         </li>
         <li>
-          <a href="#rigid">Rigid Compounds of Octahedra</a>
+          <a href="#rigid">Rigid Compounds of Cuboctahedra</a>
         </li>
         <li>
           <a href="#references">References</a>
@@ -43,15 +48,15 @@
       <p>
         In the book <a href="#HVerh01">Symmetry Orbits</a> Mr. Verheyen derives all
         possible groups of cube compounds. This page is based on his book.
-        A rough description of a method to obtain a certain octahedron compound can be as
+        A rough description of a method to obtain a certain cuboctahedron compound can be as
         follows:
         Choose one of the finite groups of isometries, define an orientation for this
-        group and define a position of a octahedron (referred to as the descriptive).
-        Then by using the operators of the isometry group on this octahedron, a
-        compound of octahedra belonging to that group is obtained.
+        group and define a position of a cuboctahedron (referred to as the descriptive).
+        Then by using the operators of the isometry group on this cuboctahedron, a
+        compound of cuboctahedra belonging to that group is obtained.
       </p>
       <p>
-        For example one can obtain a compound of octahedra belonging to the symmetry group
+        For example one can obtain a compound of cuboctahedra belonging to the symmetry group
         S<sub>4</sub> x I (the symmetry group of the cube and the octahedron).
         Choose the orientation of the S<sub>4</sub> in such a way that the
         order 4 symmetry axes are formed by the Euclidean coordinate axes.
@@ -66,15 +71,15 @@
         <li>and 1 half turn for each of the 6 order 2 axes.</li>
       </ul>
       <p>
-        to obtain 1 + 3*3 + 2*4 + 6 = 24 octahedra. Since the central inversion leaves all
-        these octahedra invariant, the compound of these octahedra will belong to the symmetry
+        to obtain 1 + 3*3 + 2*4 + 6 = 24 cuboctahedra. Since the central inversion leaves all
+        these cuboctahedra invariant, the compound of these cuboctahedra will belong to the symmetry
         group S<sub>4</sub> x I.
-        It is however possible that some of the octahedra end up in the same position,
-        leading to a compound of less than 24 octahedra. For instance if the descriptive
+        It is however possible that some of the cuboctahedra end up in the same position,
+        leading to a compound of less than 24 cuboctahedra. For instance if the descriptive
         would have been positioned in such a way that the order 4 symmetry axes of
-        the octahedron would have been formed by the axes of the coordinate system, then all
-        the isometries leave the octahedron invariant, thus leading to the trivial compound of
-        1 octahedron.
+        the cuboctahedron would have been formed by the axes of the coordinate system, then all
+        the isometries leave the cuboctahedron invariant, thus leading to the trivial compound of
+        1 cuboctahedron.
       </p>
       <p>
         The set symmetry operations of the final symmetry that map the descriptive on
@@ -83,74 +88,57 @@
         with a '/'. Algebra can be used to obtain which operations are needed to map
         the descriptive onto a cube that isn't the descriptive.
       </p>
-      <p>
-        To be able to view and investigate the 3D models you need a VRML player.
-      </p>
-      <h2><a id="centralFreedom">Compounds of Octahedra with Central Freedom</a></h2>
+      <h2><a id="centralFreedom">Compounds of Cuboctahedra with Central Freedom</a></h2>
       <p>
         Using the above method for the finite groups of isometries one can get a first
-        list of possible compounds of octahedra, as shown in the following table.
+        list of possible compounds of cuboctahedra, as shown in the following table.
       </p>
       <table>
         <tr class="header">
           <td class="header_r">Compound<a href="#note1"><sup>1</sup></a>
           </td>
-          <td class="header">VRML image
-          </td>
-          <td class="header_last">VRML animation
+          <td class="header">3D image
           </td>
         </tr>
         <tr>
           <td class="r"><a id="n.CnxI.ExI">n | C<sub>n</sub> x I / E x I
               <br/>n &ge; 2</a>
           </td>
-          <td><a href="OctahedraCompounds.off/3.C3xI.ExI.wrl">for n=3</a>
-          </td>
-          <td><a href="OctahedraCompounds.off/3.C3xI.ExI.anim.wrl">for n=3</a>
+          <td><button onclick="show('off/3.C3xI.ExI.off')">for n=3</button>
           </td>
         </tr>
         <tr>
           <td class="r"><a id="2n.DnxI.ExI">2n | D<sub>n</sub> x I / E x I
               <br/>n &ge; 1</a>
           </td>
-          <td><a href="OctahedraCompounds.off/6.D3xI.ExI.wrl">for n=3</a>
-          </td>
-          <td><a href="OctahedraCompounds.off/4.D2xI.ExI.anim.wrl">for n=2</a>
+          <td><button onclick="show('off/6.D3xI.ExI.off')">for n=3</button>
           </td>
         </tr>
         <tr>
           <td class="r"><a id="12.A4xI.ExI">12 | A<sub>4</sub> x I / E x I</a>
           </td>
-          <td><a href="OctahedraCompounds.off/12.A4xI.ExI.wrl">Image</a>
-          </td>
-          <td><a href="OctahedraCompounds.off/12.A4xI.ExI.anim.wrl">Animation</a>
+          <td><button onclick="show('off/12.A4xI.ExI.off')">Image</button>
           </td>
         </tr>
         <tr>
           <td class="r"><a id="24.S4xI.ExI">24 | S<sub>4</sub> x I / E x I</a>
           </td>
-          <td><a href="OctahedraCompounds.off/24.S4xI.ExI.wrl">Image</a>
-          </td>
-          <td><a href="OctahedraCompounds.off/24.S4xI.ExI.anim.wrl">Animation</a>
+          <td><button onclick="show('off/24.S4xI.ExI.off')">Image</button>
           </td>
         </tr>
         <tr>
           <td class="r"><a id="60.A5xI.ExI">60 | A<sub>5</sub> x I / E x I</a>
           </td>
-          <td><a href="OctahedraCompounds.off/60.A5xI.ExI.wrl">Image</a>
-          </td>
-          <td><a href="OctahedraCompounds.off/60.A5xI.ExI.anim.wrl">Animation</a>
+          <td><button onclick="show('off/60.A5xI.ExI.off')">Image</button>
           </td>
         </tr>
       </table>
       <p>
-        This basic list of octahedron compounds is the list of compounds with central
+        This basic list of cuboctahedron compounds is the list of compounds with central
         freedom; i.e. after having specified the centre of the descriptive, its
         position can be chosen freely, except for some special cases.
-        In the animations in the table above the descriptive is rotated around 2
-        distinct axes in a linear way.
       </p>
-      <h2><a id="rotationalFreedom">Compounds of Octahedra with Rotational Freedom</a></h2>
+      <h2><a id="rotationalFreedom">Compounds of Cuboctahedra with Rotational Freedom</a></h2>
       <p>
         The list in the previous section is far from complete, but all the remaining
         compounds can be derived from the compounds in the above list, by using special
@@ -161,13 +149,12 @@
         a group of compounds with rotational freedom.
       </p>
       <p>In the table below these are summarised.
-        The animations stop at the special angles as mentioned in <a href="#HVerh01">Symmetry Orbits</a>.
       </p>
       <table>
         <tr class="header">
           <td class="header_r">Compound<a href="#note1"><sup>1</sup></a>
           </td>
-          <td class="header">VRML model
+          <td class="header">X3D model
           </td>
           <td class="header_descr">Description
           </td>
@@ -179,13 +166,9 @@
           </td>
           <td class="mainRow">
             Examples:
-            <br/><a href="OctahedraCompounds.off/3A.D3xI.C2xI.wrl">for n=3</a>
-            <br/><a href="OctahedraCompounds.off/4A.D4xI.C2xI.wrl">for n=4</a>
-            <br/><a href="OctahedraCompounds.off/6A.D6xI.C2xI.wrl">for n=6</a>
-            <br/>Animations:
-            <br/><a href="OctahedraCompounds.off/3A.D3xI.C2xI.anim.wrl">for n=3</a>
-            <br/><a href="OctahedraCompounds.off/4A.D4xI.C2xI.anim.wrl">for n=4</a>
-            <br/><a href="OctahedraCompounds.off/6A.D6xI.C2xI.anim.wrl">for n=6</a>
+            <br/><button onclick="show('off/3A.D3xI.C2xI.off')">for n=3</button>
+            <br/><button onclick="show('off/4A.D4xI.C2xI.off')">for n=4</button>
+            <br/><button onclick="show('off/6A.D6xI.C2xI.off')">for n=6</button>
           </td>
           <td class="mainRow_descr">n | C<sub>n</sub> x I / E x I, for which the descriptive shares a mirror with a mirror in D<sub>n</sub>. The mirror contains 2 opposite edges of the descriptive.
             <br/>The special angles are:
@@ -201,7 +184,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n is odd
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I (n=3)</a>
+          <td class="subRow"> <button onclick="show('off/3.D12xI.D4xI.off')">3 | D<sub>12</sub> x I / D<sub>4</sub> x I (n=3)</button>
           </td>
           <td class="subRow_descr">n | D<sub>4n</sub> x I / D<sub>4</sub> x I
           </td>
@@ -210,7 +193,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n=2m, m is odd
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I (n=6)</a>
+          <td class="subRow"> <button onclick="show('off/3.D12xI.D4xI.off')">3 | D<sub>12</sub> x I / D<sub>4</sub> x I (n=6)</button>
           </td>
           <td class="subRow_descr">m | D<sub>4m</sub> x I / D<sub>4</sub> x I
           </td>
@@ -219,7 +202,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n=4m
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I (n=12)</a>
+          <td class="subRow"> <button onclick="show('off/3.D12xI.D4xI.off')">3 | D<sub>12</sub> x I / D<sub>4</sub> x I (n=12)</button>
           </td>
           <td class="subRow_descr">m | D<sub>4m</sub> x I / D<sub>4</sub> x I
           </td>
@@ -228,7 +211,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub><a href="#note2"><sup>2</sup></a>
             <br/>and n=3
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/1.S4xI.S4xI.off')">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -237,7 +220,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
             <br/>and n is coprime with 3
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/2.D6xI.D3xI.wrl">2 | D<sub>6</sub> x I / D<sub>3</sub> x I (n=2)</a>
+          <td class="subRow"> <button onclick="show('off/2.D6xI.D3xI.off')">2 | D<sub>6</sub> x I / D<sub>3</sub> x I (n=2)</button>
           </td>
           <td class="subRow_descr">n | D<sub>3n</sub> x I / D<sub>3</sub> x I
           </td>
@@ -246,7 +229,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
             <br/>and n=3m (m>1)
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/3.D9xI.D3xI.wrl">3 | D<sub>9</sub> x I / D<sub>3</sub> x I (n=9)</a>
+          <td class="subRow"> <button onclick="show('off/3.D9xI.D3xI.off')">3 | D<sub>9</sub> x I / D<sub>3</sub> x I (n=9)</button>
           </td>
           <td class="subRow_descr">m | D<sub>3m</sub> x I / D<sub>3</sub> x I
           </td>
@@ -255,7 +238,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
             <br/>and n is odd
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/3.D6xI.D2xI.wrl">3 | D<sub>6</sub> x I / D<sub>2</sub> x I (n=3)</a>
+          <td class="subRow"> <button onclick="show('off/3.D6xI.D2xI.off')">3 | D<sub>6</sub> x I / D<sub>2</sub> x I (n=3)</button>
           </td>
           <td class="subRow_descr">n | D<sub>2n</sub> x I / D<sub>2</sub> x I
           </td>
@@ -264,8 +247,8 @@
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
             <br/>and n=2m
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/2.D4xI.D2xI.wrl">2 | D<sub>4</sub> x I / D<sub>2</sub> x I (n=4)</a>
-            <br/> <a href="OctahedraCompounds.off/3.D6xI.D2xI.wrl">3 | D<sub>6</sub> x I / D<sub>2</sub> x I (n=6)</a>
+          <td class="subRow"> <button onclick="show('off/2.D4xI.D2xI.off')">2 | D<sub>4</sub> x I / D<sub>2</sub> x I (n=4)</button>
+            <br/> <button onclick="show('off/3.D6xI.D2xI.off')">3 | D<sub>6</sub> x I / D<sub>2</sub> x I (n=6)</button>
           </td>
           <td class="subRow_descr">m | D<sub>2m</sub> x I / D<sub>2</sub> x I
           </td>
@@ -274,8 +257,8 @@
           <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
             <br/>and n=2m
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/4A.D4xI.C2xI.mu3.wrl">for n = 4</a>
-            <br/> <a href="OctahedraCompounds.off/6A.D6xI.C2xI.mu3.wrl">for n = 6</a> (<a href="OctahedraCompounds.off/6A.D6xI.C2xI.mu3.1col.wrl">only one emphasised</a>)
+          <td class="subRow"> <button onclick="show('off/4A.D4xI.C2xI.mu3.off')">for n = 4</button>
+            <br/> <button onclick="show('off/6A.D6xI.C2xI.mu3.off')">for n = 6</button> (<button onclick="show('off/6A.D6xI.C2xI.mu3.1col.off')">only one emphasised</button>)
           </td>
           <td class="subRow_descr">m x 2 | D<sub>4</sub> x I / D<sub>2</sub> x I
           </td>
@@ -284,8 +267,8 @@
           <td class="subRow_r">with &mu; = &mu;<sub>4</sub><a href="#note2"><sup>2</sup></a>
             <br/>and n=2m
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/4A.D4xI.C2xI.mu4.wrl">for n = 4</a>
-            <br/> <a href="OctahedraCompounds.off/6A.D6xI.C2xI.mu4.wrl">for n = 6</a>
+          <td class="subRow"> <button onclick="show('off/4A.D4xI.C2xI.mu4.off')">for n = 4</button>
+            <br/> <button onclick="show('off/6A.D6xI.C2xI.mu4.off')">for n = 6</button>
           </td>
           <td class="subRow_descr">m x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I
           </td>
@@ -294,9 +277,9 @@
           <td class="lastSubRow_r">with &mu; = &mu;<sub>5</sub><a href="#note2"><sup>2</sup></a>
             <br/>and n=4m
           </td>
-          <td class="lastSubRow"> <a href="OctahedraCompounds.off/4A.D4xI.C2xI.mu5.wrl">for n = 4</a>
-            <br/> <a href="OctahedraCompounds.off/8A.D8xI.C2xI.mu5.wrl">for n = 8</a>
-            <br/> <a href="OctahedraCompounds.off/12A.D12xI.C2xI.mu5.wrl">for n = 12</a> (<a href="OctahedraCompounds.off/12A.D12xI.C2xI.mu5.1col.wrl">only one emphasised</a>)
+          <td class="lastSubRow"> <button onclick="show('off/4A.D4xI.C2xI.mu5.off')">for n = 4</button>
+            <br/> <button onclick="show('off/8A.D8xI.C2xI.mu5.off')">for n = 8</button>
+            <br/> <button onclick="show('off/12A.D12xI.C2xI.mu5.off')">for n = 12</button> (<button onclick="show('off/12A.D12xI.C2xI.mu5.1col.off')">only one emphasised</button>)
           </td>
           <td class="lastSubRow_descr">m x 4 | S<sub>4</sub> x I / D<sub>3</sub> x I
           </td>
@@ -308,13 +291,9 @@
           </td>
           <td class="mainRow">
             Examples:
-            <br/><a href="OctahedraCompounds.off/3B.D3xI.C2xI.wrl">for n=3</a>
-            <br/><a href="OctahedraCompounds.off/4B.D4xI.C2xI.wrl">for n=4</a>
-            <br/><a href="OctahedraCompounds.off/6B.D6xI.C2xI.wrl">for n=6</a>
-            <br/>Animations:
-            <br/><a href="OctahedraCompounds.off/3B.D3xI.C2xI.anim.wrl">for n=3</a>
-            <br/><a href="OctahedraCompounds.off/4B.D4xI.C2xI.anim.wrl">for n=4</a>
-            <br/><a href="OctahedraCompounds.off/6B.D6xI.C2xI.anim.wrl">for n=6</a>
+            <br/><button onclick="show('off/3B.D3xI.C2xI.off')">for n=3</button>
+            <br/><button onclick="show('off/4B.D4xI.C2xI.off')">for n=4</button>
+            <br/><button onclick="show('off/6B.D6xI.C2xI.off')">for n=6</button>
           </td>
           <td class="mainRow_descr">n | C<sub>n</sub> x I / E x I, for which the descriptive shares a mirror with a mirror in D<sub>n</sub>. The mirror contains a ring of four face centres of the descriptive.
             <br/>The special angles are:
@@ -332,7 +311,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n is odd
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I (n=3)</a>
+          <td class="subRow"> <button onclick="show('off/3.D12xI.D4xI.off')">3 | D<sub>12</sub> x I / D<sub>4</sub> x I (n=3)</button>
           </td>
           <td class="subRow_descr">n | D<sub>4n</sub> x I / D<sub>4</sub> x I
           </td>
@@ -341,7 +320,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n=2m, m is odd
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I (n=6)</a>
+          <td class="subRow"> <button onclick="show('off/3.D12xI.D4xI.off')">3 | D<sub>12</sub> x I / D<sub>4</sub> x I (n=6)</button>
           </td>
           <td class="subRow_descr">m | D<sub>4m</sub> x I / D<sub>4</sub> x I
           </td>
@@ -350,7 +329,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n=4m
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I (n=12)</a>
+          <td class="subRow"> <button onclick="show('off/3.D12xI.D4xI.off')">3 | D<sub>12</sub> x I / D<sub>4</sub> x I (n=12)</button>
           </td>
           <td class="subRow_descr">m | D<sub>4m</sub> x I / D<sub>4</sub> x I
           </td>
@@ -359,7 +338,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
             <br/>and n is odd
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/3.D6xI.D2xI.wrl">3 | D<sub>6</sub> x I / D<sub>2</sub> x I (n=3)</a>
+          <td class="subRow"> <button onclick="show('off/3.D6xI.D2xI.off')">3 | D<sub>6</sub> x I / D<sub>2</sub> x I (n=3)</button>
           </td>
           <td class="subRow_descr">n | D<sub>2n</sub> x I / D<sub>2</sub> x I
           </td>
@@ -368,7 +347,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub><a href="#note2"><sup>2</sup></a>
             <br/>and n=2
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/1.S4xI.S4xI.off')">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -377,8 +356,8 @@
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
             <br/>and n=2m (m>1)
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/2.D4xI.D2xI.wrl">2 | D<sub>4</sub> x I / D<sub>2</sub> x I (n=4)</a>
-            <br/> <a href="OctahedraCompounds.off/3.D6xI.D2xI.wrl">3 | D<sub>6</sub> x I / D<sub>2</sub> x I (n=6)</a>
+          <td class="subRow"> <button onclick="show('off/2.D4xI.D2xI.off')">2 | D<sub>4</sub> x I / D<sub>2</sub> x I (n=4)</button>
+            <br/> <button onclick="show('off/3.D6xI.D2xI.off')">3 | D<sub>6</sub> x I / D<sub>2</sub> x I (n=6)</button>
           </td>
           <td class="subRow_descr">m | D<sub>2m</sub> x I / D<sub>2</sub> x I
           </td>
@@ -387,8 +366,8 @@
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
             <br/>and n=2m
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/4B.D4xI.C2xI.mu2.wrl">for n = 4</a>
-            <br/> <a href="OctahedraCompounds.off/6B.D6xI.C2xI.mu2.wrl">for n = 6</a>
+          <td class="subRow"> <button onclick="show('off/4B.D4xI.C2xI.mu2.off')">for n = 4</button>
+            <br/> <button onclick="show('off/6B.D6xI.C2xI.mu2.off')">for n = 6</button>
           </td>
           <td class="subRow_descr">m x 2 | D<sub>8</sub> x I / D<sub>4</sub> x I
           </td>
@@ -397,9 +376,9 @@
           <td class="subRow_r">with &mu; = &mu;<sub>3</sub><a href="#note2"><sup>2</sup></a>
             <br/>and n=3m
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/3B.D3xI.C2xI.mu3.wrl">for n = 3</a>
-            <br/> <a href="OctahedraCompounds.off/6B.D6xI.C2xI.mu3.wrl">for n = 6</a>
-            <br/> <a href="OctahedraCompounds.off/9B.D9xI.C2xI.mu3.wrl">for n = 9</a> (<a href="OctahedraCompounds.off/9B.D9xI.C2xI.mu3.1col.wrl">only one emphasised</a>)
+          <td class="subRow"> <button onclick="show('off/3B.D3xI.C2xI.mu3.off')">for n = 3</button>
+            <br/> <button onclick="show('off/6B.D6xI.C2xI.mu3.off')">for n = 6</button>
+            <br/> <button onclick="show('off/9B.D9xI.C2xI.mu3.off')">for n = 9</button> (<button onclick="show('off/9B.D9xI.C2xI.mu3.1col.off')">only one emphasised</button>)
           </td>
           <td class="subRow_descr">m x 3 | S<sub>4</sub> x I / D<sub>4</sub> x I
           </td>
@@ -408,8 +387,8 @@
           <td class="lastSubRow_r">with &mu; = &mu;<sub>4</sub><a href="#note2"><sup>2</sup></a>
             <br/>and n=5m
           </td>
-          <td class="lastSubRow"> <a href="OctahedraCompounds.off/5B.D5xI.C2xI.mu4.wrl">for n = 5</a>
-            <br/> <a href="OctahedraCompounds.off/10B.D10xI.C2xI.mu4.wrl">for n = 10</a>
+          <td class="lastSubRow"> <button onclick="show('off/5B.D5xI.C2xI.mu4.off')">for n = 5</button>
+            <br/> <button onclick="show('off/10B.D10xI.C2xI.mu4.off')">for n = 10</button>
           </td>
           <td class="lastSubRow_descr">m x 5 | A<sub>5</sub> x I / A<sub>4</sub> x I
           </td>
@@ -422,13 +401,10 @@
           </td>
           <td class="mainRow">
             Examples:
-            <br/><a href="OctahedraCompounds.off/4.D4xI.D1xI.wrl">for n=2</a>
-            <br/><a href="OctahedraCompounds.off/6.D6xI.D1xI.wrl">for n=3</a>
-            <br/>Animations:
-            <br/><a href="OctahedraCompounds.off/4.D4xI.D1xI.anim.wrl">for n=2</a>
-            <br/><a href="OctahedraCompounds.off/6.D6xI.D1xI.anim.wrl">for n=3</a>
+            <br/><button onclick="show('off/4.D4xI.D1xI.off')">for n=2</button>
+            <br/><button onclick="show('off/6.D6xI.D1xI.off')">for n=3</button>
           </td>
-          <td class="mainRow_descr">2n | D<sub>n</sub> x I / E x I, for which the descriptive shares an order 2 symmetry axis with the n-fold axis of D<sub>n</sub>. The compound consists of pairs of n | D<sub>2n</sub> x I / D<sub>2</sub> x I, which rotate in opposite directions. See for instance <a href="OctahedraCompounds.off/4.D4xI.D1xI.anim.1.wrl">for n=2</a> or <a href="OctahedraCompounds.off/6.D6xI.D1xI.anim.1.wrl">for n=3</a>s
+          <td class="mainRow_descr">2n | D<sub>n</sub> x I / E x I, for which the descriptive shares an order 2 symmetry axis with the n-fold axis of D<sub>n</sub>. The compound consists of pairs of n | D<sub>2n</sub> x I / D<sub>2</sub> x I, which rotate in opposite directions.
             <br/>The special angles are:
             <br/>&mu;<sub>0</sub> = 0
             <br/>&mu;<sub>1</sub> = asin(<sup>1</sup>/<sub>&radic;3</sub>)
@@ -440,7 +416,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n = 1
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/1.S4xI.S4xI.off')">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -449,7 +425,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n &ge; 2
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/2.D4xI.D2xI.wrl">2 | D<sub>4</sub> x I / D<sub>2</sub> x I (n=2)</a>
+          <td class="subRow"> <button onclick="show('off/2.D4xI.D2xI.off')">2 | D<sub>4</sub> x I / D<sub>2</sub> x I (n=2)</button>
           </td>
           <td class="subRow_descr">n | D<sub>2n</sub> x I / D<sub>2</sub> x I
           </td>
@@ -458,7 +434,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
             <br/>and n = 1
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/2.D6xI.D3xI.wrl">2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"> <button onclick="show('off/2.D6xI.D3xI.off')">2 | D<sub>6</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td class="subRow_descr">2 | D<sub>6</sub> x I / D<sub>3</sub> x I
           </td>
@@ -467,8 +443,8 @@
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
             <br/>and m = 2n
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/2.D4xI.D2xI.wrl">2 | D<sub>4</sub> x I / D<sub>2</sub> x I (n=1)</a>
-            <br/> <a href="OctahedraCompounds.off/4.D8xI.D2xI.wrl">4 | D<sub>8</sub> x I / D<sub>2</sub> x I (n=2)</a>
+          <td class="subRow"> <button onclick="show('off/2.D4xI.D2xI.off')">2 | D<sub>4</sub> x I / D<sub>2</sub> x I (n=1)</button>
+            <br/> <button onclick="show('off/4.D8xI.D2xI.off')">4 | D<sub>8</sub> x I / D<sub>2</sub> x I (n=2)</button>
           </td>
           <td class="subRow_descr">m | D<sub>2m</sub> x I / D<sub>2</sub> x I
           </td>
@@ -477,8 +453,8 @@
           <td class="lastSubRow_r">with &mu; = &mu;<sub>3</sub><a href="#note2"><sup>2</sup></a>
             <br/>and n &ge; 2
           </td>
-          <td class="lastSubRow"> <a href="OctahedraCompounds.off/4.D4xI.D1xI.mu3.wrl">for n = 2</a>
-            <br/> <a href="OctahedraCompounds.off/6.D6xI.D1xI.mu3.wrl">for n = 3</a>
+          <td class="lastSubRow"> <button onclick="show('off/4.D4xI.D1xI.mu3.off')">for n = 2</button>
+            <br/> <button onclick="show('off/6.D6xI.D1xI.mu3.off')">for n = 3</button>
           </td>
           <td class="lastSubRow_descr">n x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I
           </td>
@@ -490,14 +466,10 @@
           </td>
           <td class="mainRow">
             Examples:
-            <br/><a href="OctahedraCompounds.off/2.D3xI.C3xI.wrl">for n=1</a>
-            <br/><a href="OctahedraCompounds.off/4.D6xI.C3xI.wrl">for n=2</a>
-            <br/>Animations:
-            <br/><a href="OctahedraCompounds.off/2.D3xI.C3xI.anim.wrl">for n=1</a>
-            <br/><a href="OctahedraCompounds.off/4.D6xI.C3xI.anim.wrl">for n=2</a>
-            <br/><a href="OctahedraCompounds.off/6.D9xI.C3xI.anim.wrl">for n=3</a>
+            <br/><button onclick="show('off/2.D3xI.C3xI.off')">for n=1</button>
+            <br/><button onclick="show('off/4.D6xI.C3xI.off')">for n=2</button>
           </td>
-          <td class="mainRow_descr">2n | D<sub>n</sub> x I / E x I, for which the descriptive shares an order 3 symmetry axis with the n-fold axis of D<sub>n</sub>. The compound consists of pairs of n | D<sub>3n</sub> x I / D<sub>3</sub> x I, which rotate in opposite directions. See for instance <a href="OctahedraCompounds.off/4.D6xI.C3xI.anim.1.wrl">for n=2</a> or <a href="OctahedraCompounds.off/6.D9xI.C3xI.anim.1.wrl">for n=3</a>s
+          <td class="mainRow_descr">2n | D<sub>n</sub> x I / E x I, for which the descriptive shares an order 3 symmetry axis with the n-fold axis of D<sub>n</sub>. The compound consists of pairs of n | D<sub>3n</sub> x I / D<sub>3</sub> x I, which rotate in opposite directions.
             <br/>The special angles are:
             <br/>&mu;<sub>0</sub> = 0
             <br/>&mu;<sub>1</sub> = <sup>&pi;</sup>/<sub>6n</sub>
@@ -507,7 +479,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n = 1
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/1.S4xI.S4xI.off')">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -516,7 +488,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n &ge; 2
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/3.D9xI.D3xI.wrl">3 | D<sub>9</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"> <button onclick="show('off/3.D9xI.D3xI.off')">3 | D<sub>9</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td class="subRow_descr">n | D<sub>3n</sub> x I / D<sub>3</sub> x I
           </td>
@@ -525,7 +497,7 @@
           <td class="lastSubRow_r">with &mu; = &mu;<sub>1</sub>
             <br/>and m = 2n
           </td>
-          <td class="lastSubRow"> <a href="OctahedraCompounds.off/2.D6xI.D3xI.wrl">2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          <td class="lastSubRow"> <button onclick="show('off/2.D6xI.D3xI.off')">2 | D<sub>6</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td class="lastSubRow_descr">m | D<sub>3m</sub> x I / D<sub>3</sub> x I
           </td>
@@ -537,13 +509,10 @@
           </td>
           <td class="mainRow">
             Examples:
-            <br/><a href="OctahedraCompounds.off/4.D8xI.C4xI.wrl">for n=2</a>
-            <br/><a href="OctahedraCompounds.off/6.D12xI.C4xI.wrl">for n=3</a>
-            <br/>Animations:
-            <br/><a href="OctahedraCompounds.off/4.D8xI.C4xI.anim.wrl">for n=2</a>
-            <br/><a href="OctahedraCompounds.off/6.D12xI.C4xI.anim.wrl">for n=3</a>
+            <br/><button onclick="show('off/4.D8xI.C4xI.off')">for n=2</button>
+            <br/><button onclick="show('off/6.D12xI.C4xI.off')">for n=3</button>
           </td>
-          <td class="mainRow_descr">2n | D<sub>n</sub> x I / E x I, for which the descriptive shares an order 4 symmetry axis with the n-fold axis of D<sub>n</sub>. The compound consists of pairs of n | D<sub>4n</sub> x I / D<sub>4</sub> x I, which rotate in opposite directions. See for instance <a href="OctahedraCompounds.off/4.D8xI.C4xI.anim.1.wrl">for n=2</a>s
+          <td class="mainRow_descr">2n | D<sub>n</sub> x I / E x I, for which the descriptive shares an order 4 symmetry axis with the n-fold axis of D<sub>n</sub>. The compound consists of pairs of n | D<sub>4n</sub> x I / D<sub>4</sub> x I, which rotate in opposite directions.
             <br/>The special angles are:
             <br/>&mu;<sub>0</sub> = 0
             <br/>&mu;<sub>1</sub> = <sup>&pi;</sup>/<sub>8n</sub>
@@ -553,7 +522,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n = 1
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/1.S4xI.S4xI.off')">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -562,7 +531,7 @@
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
             <br/>and n &ge; 2
           </td>
-          <td class="subRow"> <a href="OctahedraCompounds.off/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"> <button onclick="show('off/3.D12xI.D4xI.off')">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</button>
           </td>
           <td class="subRow_descr">n | D<sub>4n</sub> x I / D<sub>4</sub> x I
           </td>
@@ -571,7 +540,7 @@
           <td class="lastSubRow_r">with &mu; = &mu;<sub>1</sub>
             <br/>and m = 2n
           </td>
-          <td class="lastSubRow"> <a href="OctahedraCompounds.off/4.D16xI.D4xI.wrl">4 | D<sub>16</sub> x I / D<sub>4</sub> x I</a>
+          <td class="lastSubRow"> <button onclick="show('off/4.D16xI.D4xI.off')">4 | D<sub>16</sub> x I / D<sub>4</sub> x I</button>
           </td>
           <td class="lastSubRow_descr">m | D<sub>4m</sub> x I / D<sub>4</sub> x I
           </td>
@@ -580,8 +549,7 @@
           <td class="mainRow_r"><a id="6.A4xI.C2xI">6 | A<sub>4</sub> x I / C<sub>2</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
           </td>
-          <td class="mainRow"><a href="OctahedraCompounds.off/6.A4xI.C2xI.wrl">Example</a>
-            <br/><a href="OctahedraCompounds.off/6.A4xI.C2xI.anim.wrl">Animation</a>
+          <td class="mainRow"><button onclick="show('off/6.A4xI.C2xI.off')">Example</button>
           </td>
           <td class="mainRow_descr">12 | A<sub>4</sub> x I / E x I, for which the descriptive shares an order 2 symmetry axis with a 2-fold axis of A<sub>4</sub>. 
             <br/>The special angles are:
@@ -593,7 +561,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/3.S4xI.D4xI.wrl">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/3.S4xI.D4xI.off')">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -601,7 +569,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/6.S4xI.D2xI.wrl">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/6.S4xI.D2xI.off')">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -609,7 +577,7 @@
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="lastSubRow"><a href="OctahedraCompounds.off/6.A4xI.C2xI.mu2.wrl">3 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          <td class="lastSubRow"><button onclick="show('off/6.A4xI.C2xI.mu2.off')">3 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td class="lastSubRow_descr">-
           </td>
@@ -618,8 +586,7 @@
           <td class="mainRow_r"><a id="4.A4xI.C3xI">4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
           </td>
-          <td class="mainRow"><a href="OctahedraCompounds.off/4.A4xI.C3xI.wrl">Example</a>
-            <br/><a href="OctahedraCompounds.off/4.A4xI.C3xI.anim.wrl">Animation</a>
+          <td class="mainRow"><button onclick="show('off/4.A4xI.C3xI.off')">Example</button>
           </td>
           <td class="mainRow_descr">12 | A<sub>4</sub> x I / E x I, for which the descriptive shares an order 3 symmetry axis with a 3-fold axis of A<sub>4</sub>. 
             <br/>The special angles are:
@@ -631,7 +598,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/1.S4xI.S4xI.off')">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -639,7 +606,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/4.S4xI.D3xI.wrl">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/4.S4xI.D3xI.off')">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -647,7 +614,7 @@
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="lastSubRow"><a href="OctahedraCompounds.off/4.A4xI.C3xI.mu2.wrl">2 x 2 | D<sub>3</sub> x I / C<sub>3</sub> x I | &frac12;&mu;<sub>2</sub></a>
+          <td class="lastSubRow"><button onclick="show('off/4.A4xI.C3xI.mu2.off')">2 x 2 | D<sub>3</sub> x I / C<sub>3</sub> x I | &frac12;&mu;<sub>2</sub></button>
           </td>
           <td class="lastSubRow_descr">-
           </td>
@@ -656,8 +623,7 @@
           <td class="mainRow_r"><a id="12A.S4xI.C2xI">12A | S<sub>4</sub> x I / C<sub>2</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[ &cup; ]&mu;<sub>1</sub>, &mu;<sub>2</sub>[
           </td>
-          <td class="mainRow"><a href="OctahedraCompounds.off/12A.S4xI.C2xI.wrl">Example</a>
-            <br/><a href="OctahedraCompounds.off/12A.S4xI.C2xI.anim.wrl">Animation</a>
+          <td class="mainRow"><button onclick="show('off/12A.S4xI.C2xI.off')">Example</button>
           </td>
           <td class="mainRow_descr">24 | S<sub>4</sub> x I / E x I, for which the descriptive shares an order 2 symmetry axis with a 2-fold axis of S<sub>4</sub>. 
             <br/>The special angles are:
@@ -672,7 +638,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/1.S4xI.S4xI.off')">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -680,7 +646,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/4.S4xI.D3xI.wrl">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/4.S4xI.D3xI.off')">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -688,7 +654,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/6.S4xI.D2xI.wrl">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/6.S4xI.D2xI.off')">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -696,9 +662,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/12A.S4xI.C2xI.mu3.1.wrl">4 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a> or
+          <td class="subRow"><button onclick="show('off/12A.S4xI.C2xI.mu3.1.off')">4 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</button> or
             <br/>
-            <a href="OctahedraCompounds.off/12A.S4xI.C2xI.mu3.2.wrl">6 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+            <button onclick="show('off/12A.S4xI.C2xI.mu3.2.off')">6 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -706,9 +672,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>4</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/12A.S4xI.C2xI.mu4.1.wrl">3 x 4 | D<sub>12</sub> x I / D<sub>3</sub> x I</a> or
+          <td class="subRow"><button onclick="show('off/12A.S4xI.C2xI.mu4.1.off')">3 x 4 | D<sub>12</sub> x I / D<sub>3</sub> x I</button> or
             <br/>
-            <a href="OctahedraCompounds.off/12A.S4xI.C2xI.mu4.2.wrl">4 x 3 | D<sub>9</sub> x I / D<sub>3</sub> x I</a>
+            <button onclick="show('off/12A.S4xI.C2xI.mu4.2.off')">4 x 3 | D<sub>9</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -716,7 +682,7 @@
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>5</sub>
           </td>
-          <td class="lastSubRow"><a href="OctahedraCompounds.off/12A.S4xI.C2xI.mu5.wrl">6 x 2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          <td class="lastSubRow"><button onclick="show('off/12A.S4xI.C2xI.mu5.off')">6 x 2 | D<sub>4</sub> x I / D<sub>2</sub> x I</button>
           </td>
           <td class="lastSubRow_descr">-
           </td>
@@ -725,8 +691,7 @@
           <td class="mainRow_r"><a id="12B.S4xI.C2xI">12B | S<sub>4</sub> x I / C<sub>2</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
           </td>
-          <td class="mainRow"><a href="OctahedraCompounds.off/12B.S4xI.C2xI.wrl">Example</a>
-            <br/><a href="OctahedraCompounds.off/12B.S4xI.C2xI.anim.wrl">Animation</a>
+          <td class="mainRow"><button onclick="show('off/12B.S4xI.C2xI.off')">Example</button>
           </td>
           <td class="mainRow_descr">24 | S<sub>4</sub> x I / E x I, for which the descriptive shares an order 4 symmetry axis with a 2-fold axis of S<sub>4</sub>. 
             <br/>The special angles are:
@@ -741,7 +706,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/3.S4xI.D4xI.wrl">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/3.S4xI.D4xI.off')">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -749,7 +714,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/6.S4xI.D2xI.wrl">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/6.S4xI.D2xI.off')">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -757,7 +722,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/12B.S4xI.C2xI.mu2.wrl">4 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/12B.S4xI.C2xI.mu2.off')">4 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -765,7 +730,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/12B.S4xI.C2xI.mu3.wrl">4 x 3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/12B.S4xI.C2xI.mu3.off')">4 x 3 | D<sub>12</sub> x I / D<sub>4</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -773,7 +738,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>4</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/12B.S4xI.C2xI.mu4.wrl">6 x 2 | D<sub>8</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/12B.S4xI.C2xI.mu4.off')">6 x 2 | D<sub>8</sub> x I / D<sub>4</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -781,9 +746,9 @@
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>5</sub><a href="#note2"><sup>2</sup></a>
           </td>
-          <td class="lastSubRow"><a href="OctahedraCompounds.off/12B.S4xI.C2xI.mu5.wrl">4 x 3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
+          <td class="lastSubRow"><button onclick="show('off/12B.S4xI.C2xI.mu5.off')">4 x 3 | S<sub>4</sub> x I / D<sub>4</sub> x I</button>
             <br/>
-            (<a href="OctahedraCompounds.off/12B.S4xI.C2xI.mu5.1col.wrl">only one emphasised</a>)
+            (<button onclick="show('off/12B.S4xI.C2xI.mu5.1col.off')">only one emphasised</button>)
           </td>
           <td class="lastSubRow_descr">-
           </td>
@@ -792,13 +757,11 @@
           <td class="mainRow_r"><a id="12.S4xI.D1xI">12 | S<sub>4</sub> x I / D<sub>1</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
           </td>
-          <td class="mainRow"><a href="OctahedraCompounds.off/12.S4xI.D1xI.wrl">Example</a>
-            <br/><a href="OctahedraCompounds.off/12.S4xI.D1xI.anim.wrl">Animation</a>
+          <td class="mainRow"><button onclick="show('off/12.S4xI.D1xI.off')">Example</button>
           </td>
           <td class="mainRow_descr">24 | S<sub>4</sub> x I / E x I, for which the descriptive shares an order 2 symmetry axis with a 4-fold axis of S<sub>4</sub>. One order 4 axis of the compound is shared with the 2-fold axis of 4 elements. Hence there are 2 different ways to make pairs of these.
-            By its colour arrangement the animation emphasises the case where the 4
-            elements consist of a pair of 2 | D<sub>2</sub> x I / D<sub>1</sub> x I | &mu;. There is an alternative way, for which
-            the compound consists of pairs of 2 | D<sub>4</sub> x I / D<sub>2</sub> x I, which rotate in opposite directions. See for instance <a href="OctahedraCompounds.off/12.S4xI.D1xI.anim.1.wrl">this animation</a>s
+            One way is where the 4 elements consist of a pair if 2 | D<sub>2</sub> x I / D<sub>1</sub> x I | &mu;. For the other way
+            the compound consists of pairs of 2 | D<sub>4</sub> x I / D<sub>2</sub> x I, which rotate in opposite directions.
             <br/>The special angles are:
             <br/>&mu;<sub>0</sub> = 0
             <br/>&mu;<sub>1</sub> = <sup>&pi;</sup>/<sub>4</sub>
@@ -811,7 +774,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/3.S4xI.D4xI.wrl">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/3.S4xI.D4xI.off')">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -819,7 +782,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/6.S4xI.D2xI.wrl">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/6.S4xI.D2xI.off')">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -827,7 +790,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/12.S4xI.D1xI.mu2.wrl">6 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/12.S4xI.D1xI.mu2.off')">6 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -835,7 +798,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/12.S4xI.D1xI.mu3.wrl">3 x 4 | D<sub>12</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/12.S4xI.D1xI.mu3.off')">3 x 4 | D<sub>12</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -843,7 +806,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>4</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/12.S4xI.D1xI.mu4.wrl">3 x 4 | D<sub>8</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/12.S4xI.D1xI.mu4.off')">3 x 4 | D<sub>8</sub> x I / D<sub>2</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -851,9 +814,9 @@
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>5</sub><a href="#note2"><sup>2</sup></a>
           </td>
-          <td class="lastSubRow"><a href="OctahedraCompounds.off/12.S4xI.D1xI.mu5.wrl">3 x 4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
+          <td class="lastSubRow"><button onclick="show('off/12.S4xI.D1xI.mu5.off')">3 x 4 | S<sub>4</sub> x I / D<sub>3</sub> x I</button>
             <br/>
-            (<a href="OctahedraCompounds.off/12.S4xI.D1xI.mu5.1col.wrl">only one emphasised</a>)
+            (<button onclick="show('off/12.S4xI.D1xI.mu5.1col.off')">only one emphasised</button>)
           </td>
           <td class="lastSubRow_descr">-
           </td>
@@ -862,8 +825,7 @@
           <td class="mainRow_r"><a id="8.S4xI.C3xI">8 | S<sub>4</sub> x I / C<sub>3</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
           </td>
-          <td class="mainRow"><a href="OctahedraCompounds.off/8.S4xI.C3xI.wrl">Example</a>
-            <br/><a href="OctahedraCompounds.off/8.S4xI.C3xI.anim.wrl">Animation</a>
+          <td class="mainRow"><button onclick="show('off/8.S4xI.C3xI.off')">Example</button>
           </td>
           <td class="mainRow_descr">24 | S<sub>4</sub> x I / E x I, for which the descriptive shares an order 3 symmetry axis with a 3-fold axis of S<sub>4</sub>. 
             <br/>The special angles are:
@@ -876,7 +838,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/1.S4xI.S4xI.off')">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -884,7 +846,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/4.S4xI.D3xI.wrl">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/4.S4xI.D3xI.off')">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -892,13 +854,13 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/8.S4xI.C3xI.mu2.wrl">2 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>2</sub></a>
+          <td class="subRow"><button onclick="show('off/8.S4xI.C3xI.mu2.off')">2 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>2</sub></button>
             <br/>
-            (<a href="OctahedraCompounds.off/8.S4xI.C3xI.mu2.alt1.wrl">alternative colour arrangement</a>,
+            (<button onclick="show('off/8.S4xI.C3xI.mu2.alt1.off')">alternative colour arrangement</button>,
             <br/>
-            <a href="OctahedraCompounds.off/8.S4xI.C3xI.mu2.alt2.wrl">alternative colour arrangement</a>,
+            <button onclick="show('off/8.S4xI.C3xI.mu2.alt2.off')">alternative colour arrangement</button>,
             <br/>
-            <a href="OctahedraCompounds.off/8.S4xI.C3xI.mu2.alt3.wrl">alternative colour arrangement</a>)
+            <button onclick="show('off/8.S4xI.C3xI.mu2.alt3.off')">alternative colour arrangement</button>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -906,7 +868,7 @@
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>3</sub>
           </td>
-          <td class="lastSubRow"><a href="OctahedraCompounds.off/8.S4xI.C3xI.mu3.wrl">4 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          <td class="lastSubRow"><button onclick="show('off/8.S4xI.C3xI.mu3.off')">4 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td class="lastSubRow_descr">-
           </td>
@@ -915,8 +877,7 @@
           <td class="mainRow_r"><a id="6.S4xI.C4xI">6 | S<sub>4</sub> x I / C<sub>4</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
           </td>
-          <td class="mainRow"><a href="OctahedraCompounds.off/6.S4xI.C4xI.wrl">Example</a>
-            <br/><a href="OctahedraCompounds.off/6.S4xI.C4xI.anim.wrl">Animation</a>
+          <td class="mainRow"><button onclick="show('off/6.S4xI.C4xI.off')">Example</button>
           </td>
           <td class="mainRow_descr">24 | S<sub>4</sub> x I / E x I, for which the descriptive shares an order 4 symmetry axis with a 4-fold axis of S<sub>4</sub>. 
             <br/>The special angles are:
@@ -928,7 +889,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/1.S4xI.S4xI.off')">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -936,7 +897,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/3.S4xI.D4xI.wrl">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/3.S4xI.D4xI.off')">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -944,7 +905,7 @@
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="lastSubRow"><a href="OctahedraCompounds.off/6.S4xI.C4xI.mu2.wrl">3 x 2 | D<sub>8</sub> x I / D<sub>4</sub> x I</a>
+          <td class="lastSubRow"><button onclick="show('off/6.S4xI.C4xI.mu2.off')">3 x 2 | D<sub>8</sub> x I / D<sub>4</sub> x I</button>
           </td>
           <td class="lastSubRow_descr">-
           </td>
@@ -953,8 +914,7 @@
           <td class="mainRow_r"><a id="30A.A5xI.C2xI">30A | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[ &cup; ]&mu;<sub>1</sub>, &mu;<sub>2</sub>[ &cup; ]&mu;<sub>2</sub>, &mu;<sub>3</sub>[
           </td>
-          <td class="mainRow"><a href="OctahedraCompounds.off/30A.A5xI.C2xI.wrl">Example</a>
-            <br/><a href="OctahedraCompounds.off/30A.A5xI.C2xI.anim.wrl">Animation</a>
+          <td class="mainRow"><button onclick="show('off/30A.A5xI.C2xI.off')">Example</button>
           </td>
           <td class="mainRow_descr">60 | A<sub>5</sub> x I / E x I, for which the descriptive shares an order 2 symmetry axis with a 2-fold axis of A<sub>5</sub>. 
             <br/>The special angles are:
@@ -974,7 +934,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/15.A5xI.D2xI.wrl">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/15.A5xI.D2xI.off')">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -982,7 +942,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/10A.A5xI.D3xI.wrl">10A | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/10A.A5xI.D3xI.off')">10A | A<sub>5</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -990,7 +950,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/10B.A5xI.D3xI.wrl">10B | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/10B.A5xI.D3xI.off')">10B | A<sub>5</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -998,7 +958,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/15.A5xI.D2xI.wrl">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/15.A5xI.D2xI.off')">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1006,9 +966,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>4</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/30A.A5xI.C2xI.mu4.wrl">15 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/30A.A5xI.C2xI.mu4.off')">15 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</button>
             <br/>
-            (<a href="OctahedraCompounds.off/30A.A5xI.C2xI.mu4.1col.wrl">only one emphasised</a>)
+            (<button onclick="show('off/30A.A5xI.C2xI.mu4.1col.off')">only one emphasised</button>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1016,9 +976,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>5</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/30A.A5xI.C2xI.mu5.wrl">15 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/30A.A5xI.C2xI.mu5.off')">15 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</button>
             <br/>
-            (<a href="OctahedraCompounds.off/30A.A5xI.C2xI.mu5.1col.wrl">only one emphasised</a>)
+            (<button onclick="show('off/30A.A5xI.C2xI.mu5.1col.off')">only one emphasised</button>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1026,9 +986,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>6</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/30A.A5xI.C2xI.mu6.wrl">10 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/30A.A5xI.C2xI.mu6.off')">10 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</button>
             <br/>
-            (<a href="OctahedraCompounds.off/30A.A5xI.C2xI.mu6.1col.wrl">only one emphasised</a>)
+            (<button onclick="show('off/30A.A5xI.C2xI.mu6.1col.off')">only one emphasised</button>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1036,9 +996,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>7</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/30A.A5xI.C2xI.mu7.wrl">6 x 5 | D<sub>20</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/30A.A5xI.C2xI.mu7.off')">6 x 5 | D<sub>20</sub> x I / D<sub>4</sub> x I</button>
             <br/>
-            (<a href="OctahedraCompounds.off/30A.A5xI.C2xI.mu7.1col.wrl">only one emphasised</a>)
+            (<button onclick="show('off/30A.A5xI.C2xI.mu7.1col.off')">only one emphasised</button>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1046,9 +1006,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>8</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/30A.A5xI.C2xI.mu8.wrl">6 x 5 | D<sub>10</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/30A.A5xI.C2xI.mu8.off')">6 x 5 | D<sub>10</sub> x I / D<sub>2</sub> x I</button>
             <br/>
-            (<a href="OctahedraCompounds.off/30A.A5xI.C2xI.mu8.1col.wrl">only one emphasised</a>)
+            (<button onclick="show('off/30A.A5xI.C2xI.mu8.1col.off')">only one emphasised</button>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1056,9 +1016,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>9</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/30A.A5xI.C2xI.mu9.wrl">10 x 3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/30A.A5xI.C2xI.mu9.off')">10 x 3 | D<sub>12</sub> x I / D<sub>4</sub> x I</button>
             <br/>
-            (<a href="OctahedraCompounds.off/30A.A5xI.C2xI.mu9.1col.wrl">only one emphasised</a>)
+            (<button onclick="show('off/30A.A5xI.C2xI.mu9.1col.off')">only one emphasised</button>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1066,9 +1026,9 @@
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>10</sub>
           </td>
-          <td class="lastSubRow"><a href="OctahedraCompounds.off/30A.A5xI.C2xI.mu10.wrl">15 x 2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          <td class="lastSubRow"><button onclick="show('off/30A.A5xI.C2xI.mu10.off')">15 x 2 | D<sub>4</sub> x I / D<sub>2</sub> x I</button>
             <br/>
-            (<a href="OctahedraCompounds.off/30A.A5xI.C2xI.mu10.1col.wrl">only one emphasised</a>)
+            (<button onclick="show('off/30A.A5xI.C2xI.mu10.1col.off')">only one emphasised</button>)
           </td>
           <td class="lastSubRow_descr">-
           </td>
@@ -1077,8 +1037,7 @@
           <td class="mainRow_r"><a id="30B.A5xI.C2xI">30B | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
           </td>
-          <td class="mainRow"><a href="OctahedraCompounds.off/30B.A5xI.C2xI.wrl">Example</a>
-            <br/><a href="OctahedraCompounds.off/30B.A5xI.C2xI.anim.wrl">Animation</a>
+          <td class="mainRow"><button onclick="show('off/30B.A5xI.C2xI.off')">Example</button>
           </td>
           <td class="mainRow_descr">60 | A<sub>5</sub> x I / E x I, for which the descriptive shares an order 4 symmetry axis with a 2-fold axis of A<sub>5</sub>. 
             <br/>The special angles are:
@@ -1094,7 +1053,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/5.A5xI.A4xI.wrl">5 | A<sub>5</sub> x I / A<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/5.A5xI.A4xI.off')">5 | A<sub>5</sub> x I / A<sub>4</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1102,7 +1061,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/15.A5xI.D2xI.wrl">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/15.A5xI.D2xI.off')">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1110,9 +1069,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/30B.A5xI.C2xI.mu2.wrl">6 x 5 | D<sub>10</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/30B.A5xI.C2xI.mu2.off')">6 x 5 | D<sub>10</sub> x I / D<sub>2</sub> x I</button>
             <br/>
-            (<a href="OctahedraCompounds.off/30B.A5xI.C2xI.mu2.1col.wrl">only one emphasised</a>)
+            (<button onclick="show('off/30B.A5xI.C2xI.mu2.1col.off')">only one emphasised</button>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1120,9 +1079,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/30B.A5xI.C2xI.mu3.wrl">10 x 3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/30B.A5xI.C2xI.mu3.off')">10 x 3 | D<sub>12</sub> x I / D<sub>4</sub> x I</button>
             <br/>
-            (<a href="OctahedraCompounds.off/30B.A5xI.C2xI.mu3.1col.wrl">only one emphasised</a>)
+            (<button onclick="show('off/30B.A5xI.C2xI.mu3.1col.off')">only one emphasised</button>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1130,9 +1089,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>4</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/30B.A5xI.C2xI.mu4.wrl">10 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/30B.A5xI.C2xI.mu4.off')">10 x 3 | D<sub>6</sub> x I / D<sub>2</sub> x I</button>
             <br/>
-            (<a href="OctahedraCompounds.off/30B.A5xI.C2xI.mu4.1col.wrl">only one emphasised</a>)
+            (<button onclick="show('off/30B.A5xI.C2xI.mu4.1col.off')">only one emphasised</button>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1140,9 +1099,9 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>5</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/30B.A5xI.C2xI.mu5.wrl">6 x 5 | D<sub>20</sub> x I / D<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/30B.A5xI.C2xI.mu5.off')">6 x 5 | D<sub>20</sub> x I / D<sub>4</sub> x I</button>
             <br/>
-            (<a href="OctahedraCompounds.off/30B.A5xI.C2xI.mu5.1col.wrl">only one emphasised</a>)
+            (<button onclick="show('off/30B.A5xI.C2xI.mu5.1col.off')">only one emphasised</button>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1150,9 +1109,9 @@
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>6</sub>
           </td>
-          <td class="lastSubRow"><a href="OctahedraCompounds.off/30B.A5xI.C2xI.mu6.wrl">15 x 2 | D<sub>8</sub> x I / D<sub>4</sub> x I</a>
+          <td class="lastSubRow"><button onclick="show('off/30B.A5xI.C2xI.mu6.off')">15 x 2 | D<sub>8</sub> x I / D<sub>4</sub> x I</button>
             <br/>
-            (<a href="OctahedraCompounds.off/30B.A5xI.C2xI.mu6.1col.wrl">only one emphasised</a>)
+            (<button onclick="show('off/30B.A5xI.C2xI.mu6.1col.off')">only one emphasised</button>)
           </td>
           <td class="lastSubRow_descr">-
           </td>
@@ -1161,8 +1120,7 @@
           <td class="mainRow_r"><a id="20.A5xI.C3xI">20 | A<sub>5</sub> x I / C<sub>3</sub> x I | &mu;</a>
             <br/>&mu; &isin; ]&mu;<sub>2</sub>, &mu;<sub>0</sub>[ &cup; ]&mu;<sub>0</sub>, &mu;<sub>1</sub>[
           </td>
-          <td class="mainRow"><a href="OctahedraCompounds.off/20.A5xI.C3xI.wrl">Example</a>
-            <br/><a href="OctahedraCompounds.off/20.A5xI.C3xI.anim.wrl">Animation</a>
+          <td class="mainRow"><button onclick="show('off/20.A5xI.C3xI.off')">Example</button>
           </td>
           <td class="mainRow_descr">60 | A<sub>5</sub> x I / E x I, for which the descriptive shares an order 3 symmetry axis with a 3-fold axis of A<sub>5</sub>. 
             <br/>The special angles are:
@@ -1178,7 +1136,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>0</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/5.A5xI.A4xI.wrl">5 | A<sub>5</sub> x I / A<sub>4</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/5.A5xI.A4xI.off')">5 | A<sub>5</sub> x I / A<sub>4</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1186,7 +1144,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>1</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/10A.A5xI.D3xI.wrl">10A | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/10A.A5xI.D3xI.off')">10A | A<sub>5</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1194,7 +1152,7 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>2</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/10B.A5xI.D3xI.wrl">10B | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/10B.A5xI.D3xI.off')">10B | A<sub>5</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1202,13 +1160,13 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>3</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/20.A5xI.C3xI.mu3.1.wrl">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>3</sub></a>
+          <td class="subRow"><button onclick="show('off/20.A5xI.C3xI.mu3.1.off')">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>3</sub></button>
             <br/>
-            (<a href="OctahedraCompounds.off/20.A5xI.C3xI.mu3.1.1col.wrl">only one emphasised</a>) or
+            (<button onclick="show('off/20.A5xI.C3xI.mu3.1.1col.off')">only one emphasised</button>) or
             <br/>
-            <a href="OctahedraCompounds.off/20.A5xI.C3xI.mu3.2.wrl">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | 2&mu;<sub>1</sub> - &mu;<sub>3</sub></a>
+            <button onclick="show('off/20.A5xI.C3xI.mu3.2.off')">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | 2&mu;<sub>1</sub> - &mu;<sub>3</sub></button>
             <br/>
-            (<a href="OctahedraCompounds.off/20.A5xI.C3xI.mu3.2.1col.wrl">only one emphasised</a>)
+            (<button onclick="show('off/20.A5xI.C3xI.mu3.2.1col.off')">only one emphasised</button>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1216,13 +1174,13 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>4</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/20.A5xI.C3xI.mu4.1.wrl">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>4</sub></a>
+          <td class="subRow"><button onclick="show('off/20.A5xI.C3xI.mu4.1.off')">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>4</sub></button>
             <br/>
-            (<a href="OctahedraCompounds.off/20.A5xI.C3xI.mu4.1.1col.wrl">only one emphasised</a>) or
+            (<button onclick="show('off/20.A5xI.C3xI.mu4.1.1col.off')">only one emphasised</button>) or
             <br/>
-            <a href="OctahedraCompounds.off/20.A5xI.C3xI.mu4.2.wrl">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | 2&mu;<sub>1</sub> - &mu;<sub>4</sub></a>
+            <button onclick="show('off/20.A5xI.C3xI.mu4.2.off')">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | 2&mu;<sub>1</sub> - &mu;<sub>4</sub></button>
             <br/>
-            (<a href="OctahedraCompounds.off/20.A5xI.C3xI.mu4.2.1col.wrl">only one emphasised</a>)
+            (<button onclick="show('off/20.A5xI.C3xI.mu4.2.1col.off')">only one emphasised</button>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1230,13 +1188,13 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>5</sub>
           </td>
-          <td class="subRow"><a href="OctahedraCompounds.off/20.A5xI.C3xI.mu5.1.wrl">5 x 4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
+          <td class="subRow"><button onclick="show('off/20.A5xI.C3xI.mu5.1.off')">5 x 4 | S<sub>4</sub> x I / D<sub>3</sub> x I</button>
             <br/>
-            (<a href="OctahedraCompounds.off/20.A5xI.C3xI.mu5.1.1col.wrl">only one emphasised</a>) or
+            (<button onclick="show('off/20.A5xI.C3xI.mu5.1.1col.off')">only one emphasised</button>) or
             <br/>
-            <a href="OctahedraCompounds.off/20.A5xI.C3xI.mu5.2.wrl">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>5</sub></a>
+            <button onclick="show('off/20.A5xI.C3xI.mu5.2.off')">5 x 4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>5</sub></button>
             <br/>
-            (<a href="OctahedraCompounds.off/20.A5xI.C3xI.mu5.2.1col.wrl">only one emphasised</a>)
+            (<button onclick="show('off/20.A5xI.C3xI.mu5.2.1col.off')">only one emphasised</button>)
           </td>
           <td class="subRow_descr">-
           </td>
@@ -1244,15 +1202,15 @@
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>6</sub>
           </td>
-          <td class="lastSubRow"><a href="OctahedraCompounds.off/20.A5xI.C3xI.mu6.wrl">10 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+          <td class="lastSubRow"><button onclick="show('off/20.A5xI.C3xI.mu6.off')">10 x 2 | D<sub>6</sub> x I / D<sub>3</sub> x I</button>
             <br/>
-            (<a href="OctahedraCompounds.off/20.A5xI.C3xI.mu6.1col.wrl">only one emphasised</a>)
+            (<button onclick="show('off/20.A5xI.C3xI.mu6.1col.off')">only one emphasised</button>)
           </td>
           <td class="lastSubRow_descr">-
           </td>
         </tr>
       </table>
-      <h2><a id="rigid">Rigid Compounds of Octahedra</a></h2>
+      <h2><a id="rigid">Rigid Compounds of Cuboctahedra</a></h2>
       <p>
         For some angles the cube compounds with rotational freedom obtain a higher
         order symmetry. These are refered to as rigid compounds of cubes. The table
@@ -1269,7 +1227,7 @@
         <tr>
           <td class="r"><a id="n.D4nxI.D4xI">n | D<sub>4n</sub> x I / D<sub>4</sub> x I, e.g.</a>
             <br/>
-            <a href="OctahedraCompounds.off/3.D12xI.D4xI.wrl">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</a>
+            <button onclick="show('off/3.D12xI.D4xI.off')">3 | D<sub>12</sub> x I / D<sub>4</sub> x I</button>
           </td>
           <td>nA | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;<sub>0</sub>
             <br/>
@@ -1283,9 +1241,9 @@
         <tr>
           <td class="r"><a id="n.D3nxI.D3xI">n | D<sub>3n</sub> x I / D<sub>3</sub> x I, e.g.</a>
             <br/>
-            <a href="OctahedraCompounds.off/2.D6xI.D3xI.wrl">2 | D<sub>6</sub> x I / D<sub>3</sub> x I</a>
+            <button onclick="show('off/2.D6xI.D3xI.off')">2 | D<sub>6</sub> x I / D<sub>3</sub> x I</button>
             <br/>
-            <a href="OctahedraCompounds.off/3.D9xI.D3xI.wrl">3 | D<sub>9</sub> x I / D<sub>3</sub> x I</a>
+            <button onclick="show('off/3.D9xI.D3xI.off')">3 | D<sub>9</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td>nA | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;<sub>1</sub>
             <br/>
@@ -1299,9 +1257,9 @@
         <tr>
           <td class="r"><a id="n.D2nxI.D2xI">n | D<sub>2n</sub> x I / D<sub>2</sub> x I, e.g.</a>
             <br/>
-            <a href="OctahedraCompounds.off/2.D4xI.D2xI.wrl">2 | D<sub>4</sub> x I / D<sub>2</sub> x I</a>
+            <button onclick="show('off/2.D4xI.D2xI.off')">2 | D<sub>4</sub> x I / D<sub>2</sub> x I</button>
             <br/>
-            <a href="OctahedraCompounds.off/3.D6xI.D2xI.wrl">3 | D<sub>6</sub> x I / D<sub>2</sub> x I</a>
+            <button onclick="show('off/3.D6xI.D2xI.off')">3 | D<sub>6</sub> x I / D<sub>2</sub> x I</button>
           </td>
           <td>nA | D<sub>n</sub> x I / C<sub>2</sub> x I | &mu;<sub>2</sub>
             <br/>
@@ -1313,7 +1271,7 @@
           </td>
         </tr>
         <tr>
-          <td class="r"><a id="1.S4xI.S4xI"></a><a href="OctahedraCompounds.off/1.S4xI.S4xI.wrl">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</a>
+          <td class="r"><a id="1.S4xI.S4xI"></a><button onclick="show('off/1.S4xI.S4xI.off')">1 | S<sub>4</sub> x I / S<sub>4</sub> x I</button>
           </td>
           <td>2 | D<sub>2</sub> x I / D<sub>1</sub> x I | &mu;<sub>0</sub>
             <br/>
@@ -1327,7 +1285,7 @@
           </td>
         </tr>
         <tr>
-          <td class="r"><a id="3.S4xI.D4xI"></a><a href="OctahedraCompounds.off/3.S4xI.D4xI.wrl">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</a>
+          <td class="r"><a id="3.S4xI.D4xI"></a><button onclick="show('off/3.S4xI.D4xI.off')">3 | S<sub>4</sub> x I / D<sub>4</sub> x I</button>
           </td>
           <td>6 | A<sub>4</sub> x I / C<sub>2</sub> x I | &mu;<sub>0</sub>
             <br/>
@@ -1341,7 +1299,7 @@
           </td>
         </tr>
         <tr>
-          <td class="r"><a id="4.S4xI.D3xI"></a><a href="OctahedraCompounds.off/4.S4xI.D3xI.wrl">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</a>
+          <td class="r"><a id="4.S4xI.D3xI"></a><button onclick="show('off/4.S4xI.D3xI.off')">4 | S<sub>4</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td>4 | A<sub>4</sub> x I / C<sub>3</sub> x I | &mu;<sub>1</sub>
             <br/>
@@ -1353,7 +1311,7 @@
           </td>
         </tr>
         <tr>
-          <td class="r"><a id="6.S4xI.D2xI"></a><a href="OctahedraCompounds.off/6.S4xI.D2xI.wrl">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</a>
+          <td class="r"><a id="6.S4xI.D2xI"></a><button onclick="show('off/6.S4xI.D2xI.off')">6 | S<sub>4</sub> x I / D<sub>2</sub> x I</button>
           </td>
           <td>6 | A<sub>4</sub> x I / C<sub>2</sub> x I | &mu;<sub>1</sub>
             <br/>
@@ -1365,7 +1323,7 @@
           </td>
         </tr>
         <tr>
-          <td class="r"><a id="5.A5xI.A4xI"></a><a href="OctahedraCompounds.off/5.A5xI.A4xI.wrl">5 | A<sub>5</sub> x I / A<sub>4</sub> x I</a>
+          <td class="r"><a id="5.A5xI.A4xI"></a><button onclick="show('off/5.A5xI.A4xI.off')">5 | A<sub>5</sub> x I / A<sub>4</sub> x I</button>
           </td>
           <td>30B | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;<sub>0</sub>
             <br/>
@@ -1373,7 +1331,7 @@
           </td>
         </tr>
         <tr>
-          <td class="r"><a id="10A.A5xI.D3xI"></a><a href="OctahedraCompounds.off/10A.A5xI.D3xI.wrl">10A | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
+          <td class="r"><a id="10A.A5xI.D3xI"></a><button onclick="show('off/10A.A5xI.D3xI.off')">10A | A<sub>5</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td>30A | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;<sub>1</sub>
             <br/>
@@ -1381,7 +1339,7 @@
           </td>
         </tr>
         <tr>
-          <td class="r"><a id="10B.A5xI.D3xI"></a><a href="OctahedraCompounds.off/10B.A5xI.D3xI.wrl">10B | A<sub>5</sub> x I / D<sub>3</sub> x I</a>
+          <td class="r"><a id="10B.A5xI.D3xI"></a><button onclick="show('off/10B.A5xI.D3xI.off')">10B | A<sub>5</sub> x I / D<sub>3</sub> x I</button>
           </td>
           <td>30A | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;<sub>2</sub>
             <br/>
@@ -1389,7 +1347,7 @@
           </td>
         </tr>
         <tr>
-          <td class="r"><a id="15.A5xI.D2xI"></a><a href="OctahedraCompounds.off/15.A5xI.D2xI.wrl">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</a>
+          <td class="r"><a id="15.A5xI.D2xI"></a><button onclick="show('off/15.A5xI.D2xI.off')">15 | A<sub>5</sub> x I / D<sub>2</sub> x I</button>
           </td>
           <td>30A | A<sub>5</sub> x I / C<sub>2</sub> x I | &mu;<sub>0</sub>
             <br/>
@@ -1445,17 +1403,17 @@
       <h2><a id="links">Links</a></h2>
       <ul>
         <li>
-          <a href="../index.htm">Home</a>
+          <a href="../../index.htm">Home</a>
         </li>
         <li>
-          <a href="./index.htm">My models</a>
+          <a href=".././index.htm">My models</a>
         </li>
         <li>
           <a href="http://users.skynet.be/polyhedra.fleurent/Compounds/Text/Page_00_1.htm" target="new">Webpage about compounds by M. Fleurent and H. Verheyen</a>
         </li>
       </ul>
       <h2><a id="lastUpdated">Last Updated</a></h2>
-      <p>2019-02-10, 12:25 CET
+      <p>2019-02-20, 22:06 CET
       </p>
     </div>
   </body>
