@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Play Local off-file</title>
+  <title>Show off-file</title>
 
   <script src="/js/show-off-bundle.js"></script>
 </head>
@@ -10,7 +10,7 @@
 
 <body>
 <div style="width:610px;">
-  <h1>Play a Local OFF file </h1>
+  <h1>Show a Local OFF file </h1>
   <input type="file" id="files" name="files[]" accept=".off" />
   <div style="float:left; width:600px">
     <canvas id="doek" style="border: none;" width="500" height="500"></canvas>
@@ -20,7 +20,7 @@
     function on_file(evt) {
       var files = evt.target.files;
       for (var i = 0, f; f = files[i]; i++) {
-        draw_local_shape(f, 'doek', 5, true);
+        draw_local_shape(f, 'doek', 10, {has_concave_faces: true});
       }
     }
     document.getElementById('files').addEventListener('change', on_file,
