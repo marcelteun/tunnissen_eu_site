@@ -8,7 +8,7 @@
 </head>
 
 
-<body>
+<body onload="show_off_in_url();">
 <div style="width:610px;">
   <h1>Show a Local OFF file </h1>
   <input type="file" id="files" name="files[]" accept=".off" />
@@ -17,16 +17,100 @@
   </div>
   <div>
   <script>
+    var dist = 10;
     function on_file(evt) {
       var files = evt.target.files;
       for (var i = 0, f; f = files[i]; i++) {
-        draw_local_shape(f, 'doek', 10, {has_concave_faces: true});
+        draw_local_shape(f, 'doek', dist, {has_concave_faces: true});
+      }
+    }
+    function show_off_in_url(evt) {
+      var params = new URLSearchParams(window.location.search);
+      var dist_par = params.get('distance');
+      if (dist_par) {
+        dist = dist_par;
+      }
+      var off_file = params.get('off_file');
+      if (off_file) {
+        draw_url_shape(off_file, 'doek', dist);
       }
     }
     document.getElementById('files').addEventListener('change', on_file,
   false);
   </script>
   </div>
+  <h2>Navigation by Mouse and Keyboard</h2>
+  <p>
+  Left click a mouse and move it to rotate the object, normally in an intuitive
+  way: it is as if you touch a ball an spin it. This way isn't implemented all
+  the way through though, since I also wanted that if you return to your
+  starting point and release the object should have its original orientation.
+  It is also possible to rotate the object around an axis that sticks out of the
+  canvas. This can be done by clicking and dragging along the edges of the
+  canvas.
+  </p><p>
+  Because I also wanted the object to get back to its initial position
+  when releasing it at the same spot, some strange effects can be seen when
+  taking up the object in the centre of the canvas (by clicking) move it to a
+  side, rotate it 180 degrees around an axis orthogonal to the canvas and then
+  drag it back to the centre of the canvas.
+  </p><p>
+  Zooming can be done by pressing the shift and using the main mouse-click.
+  Other actions:
+  </p>
+  <ul>
+    <li>
+      Undo zoom and rotate (original position): '5'.
+    </li><li>
+      Undo zoom only: shift-5.
+    </li><li>
+      Undo rotate only: alt-5.
+    </li><li>
+      The mouse wheel works for zooming as well, but the speed might be low.
+    </li>
+  </ul>
+  <p>
+  By default concave polygons are supported by means of a stencil buffer. This
+  means that two passes are required and all faces need to be considered
+  separately.  This isn't very efficient, so there is a way to optimise this for
+  objects that only have convex faces: The key 'c' is used to toggle support for
+  concave and convex faces.
+  </p>
+  <h2>Navigation by Touch Screen</h2>
+  <p>
+  The following actions are support for touch screen:
+  </p>
+  <ul>
+    <li>
+      Rotate: single touch and drag. The rotation axis is defined in the same
+      way as for the mouse. See previous section.
+    </li><li>
+      Zoom in: double touch and increase distance between the two fingers.
+    </li><li>
+      Zoom out: double touch and decrease distance between the two fingers.
+    </li><li>
+      Jump back to original orientation: triple touch.
+    </li>
+  </ul>
+  <h2>Show an Off-File from this Website</h2>
+  To show any off-file that is part of this domain add to the URL the string
+  "?off_file=&lt;URL&gt;", where &lt;URL&gt; is the complete URL to the
+  off-file, e.g. add
+  ?off_file=http://tunnissen.eu/polyh/CubeCompounds.off/10A.A5xI.D3xI.off. For
+  security reasons cross-origin requests are blocked, meaning that you only can
+  do this for off-files with the exact same domain name as the base URL.
+  <h2>Set the Default Camera Distance</h2>
+  The default camera distance is set to 10. If you want another distance, e.g.
+  7, then you can specify this on the URL by adding "?distance=7" to the URL. If
+  you use more then one parameter, then you will need to split them by '&amp;'
+  (and only use the '?' at the start of the parameters), try for instance:
+  <a href="http://www.tunnissen.eu/polyh/local_off.html?off_file=http://www.tunnissen.eu/polyh/uniform_compounds/2xW41-UC52.off&distance=6.2">this
+    link</a>
+  <h2>Reference</h2>
+  <p>
+  The source code to the javascript that shows the off-files can be found
+  <a href="https://github.com/marcelteun/show-off"> here</a>.
+  </p>
 </div>
 </body>
 </html>
