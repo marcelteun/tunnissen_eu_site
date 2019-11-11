@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Nemesis - a Heptatwister with A5 symmetry</title>
+  <title>Nemesis - a Hepta Twister with A5 symmetry</title>
 
   <link rel="stylesheet" href="/css/built_models.css">
   <script src="/js/show-off-bundle.js"></script>
@@ -11,7 +11,7 @@
 <body onload="draw_shape('hepta-twister-A5.off', 'model_canvas', 18, {bg_col: [0.9, 0.9, 0.9]});">
 <div id="content">
 <h1>
-  Nemesis - a Heptatwister with A5 symmetry
+  Nemesis - a Hepta Twister with A5 symmetry
 </h1>
 <div id="descr">
 
@@ -88,7 +88,22 @@ Here is the same model looking into an order three symmetry axis.
 </div>
 
 <div id="model">
+  <p>
   <canvas id="model_canvas"></canvas>
+  </p>
+  <p>
+  <select id="mySelect" onchange="on_select()">
+    <option value="hepta-twister-A5.off">Built
+    <option value="hepta-twister-var-A5.off">Variant
+  </select>
+  <script>
+    function on_select() {
+      var x = document.getElementById("mySelect").value;
+      var pars = x.split(":");
+      draw_shape(pars[0], 'model_canvas', 18, {bg_col: [0.9, 0.9, 0.9]});
+    }
+  </script>
+  </p>
 </div>
 
 </div>
