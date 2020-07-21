@@ -6,11 +6,12 @@
     <link href="/css/interactive_models.css" rel="stylesheet"/>
     <script src="/js/show-off-bundle.js"></script>
     <script src="/js/interactive_models.js"></script>
+    <script src="CubeCompounds.off/cubecompounds.js"></script>
   </head>
   <body>
     <div id="model">
       <canvas id="model_canvas"></canvas>
-      <input type="range" id="rot_angle">
+      <input type="range" id="rot_angle"/>
     </div>
     <div id="pagebody" onclick="hide()">
       <h1>Compounds of Cubes</h1>
@@ -94,11 +95,17 @@
         Using the above method for the finite groups of isometries one can get a first
         list of possible compounds of cubes, as shown in the following table.
       </p>
+      <p>
+        In the interactive scenes in the table below the descriptive is rotated around 1
+        axis where in fact any combination of axes could be used.
+      </p>
       <table>
         <tr class="header">
           <td class="header_r">Compound<a href="#note1"><sup>1</sup></a>
           </td>
-          <td class="header">3D image
+          <td class="header">3D example
+          </td>
+          <td class="header">interactive 3D
           </td>
         </tr>
         <tr>
@@ -107,6 +114,8 @@
           </td>
           <td><button onclick="show('CubeCompounds.off/3.C3xI.ExI.off')">for n=3</button>
           </td>
+          <td><button onclick="ishow(n3_C3xI_ExI, [1, 2, 3], -3.14, 3.14, 0.01)">for n=3</button>
+          </td>
         </tr>
         <tr>
           <td class="r"><a id="2n.DnxI.ExI">2n | D<sub>n</sub> x I / E x I
@@ -114,23 +123,31 @@
           </td>
           <td><button onclick="show('CubeCompounds.off/6.D3xI.ExI.off')">for n=3</button>
           </td>
+          <td><button onclick="ishow(n4_D2xI_ExI, [1, 2, 3], -3.14, 3.14, 0.01)">for n=2</button>
+          </td>
         </tr>
         <tr>
           <td class="r"><a id="12.A4xI.ExI">12 | A<sub>4</sub> x I / E x I</a>
           </td>
-          <td><button onclick="show('CubeCompounds.off/12.A4xI.ExI.off')">Image</button>
+          <td><button onclick="show('CubeCompounds.off/12.A4xI.ExI.off')">Static</button>
+          </td>
+          <td><button onclick="ishow(n12_A4xI_ExI, [1, 2, 3], -3.14, 3.14, 0.01)">Interactive</button>
           </td>
         </tr>
         <tr>
           <td class="r"><a id="24.S4xI.ExI">24 | S<sub>4</sub> x I / E x I</a>
           </td>
-          <td><button onclick="show('CubeCompounds.off/24.S4xI.ExI.off')">Image</button>
+          <td><button onclick="show('CubeCompounds.off/24.S4xI.ExI.off')">Static</button>
+          </td>
+          <td><button onclick="ishow(n24_S4xI_ExI, [1, 2, 3], -3.14, 3.14, 0.01)">Interactive</button>
           </td>
         </tr>
         <tr>
           <td class="r"><a id="60.A5xI.ExI">60 | A<sub>5</sub> x I / E x I</a>
           </td>
-          <td><button onclick="show('CubeCompounds.off/60.A5xI.ExI.off')">Image</button>
+          <td><button onclick="show('CubeCompounds.off/60.A5xI.ExI.off')">Static</button>
+          </td>
+          <td><button onclick="ishow(n60_A5xI_ExI, [1, 2, 3], -3.14, 3.14, 0.01)">Interactive</button>
           </td>
         </tr>
       </table>
@@ -1414,7 +1431,7 @@
         </li>
       </ul>
       <h2><a id="lastUpdated">Last Updated</a></h2>
-      <p>2019-01-20, 12:14
+      <p>2020-07-21, 20:32 CET
       </p>
     </div>
   </body>
