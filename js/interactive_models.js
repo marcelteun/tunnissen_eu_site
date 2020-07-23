@@ -10,7 +10,6 @@ function ishow(model, axis, rmin, rmax, rstep, cam_dist) {
   document.getElementById("model").style.initialised = false;
   var slider = document.getElementById("rot_angle");
   slider.hidden = false;
-  slider.value = 0;
   slider.min = rmin;
   slider.max = rmax;
   slider.step = rstep;
@@ -19,6 +18,7 @@ function ishow(model, axis, rmin, rmax, rstep, cam_dist) {
   slider.oninput = function() {
     shape.rotate_descriptive(axis, this.value);
   }
+  slider.value = 0;
 }
 function hide() {
   if (document.getElementById("model").style.initialised) {
