@@ -1,7 +1,10 @@
 function show(model, cam_dist) {
   document.getElementById("model").style.display = "block";
   document.getElementById("model").style.initialised = false;
-  document.getElementById("rot_angle").hidden = true;
+  slider = document.getElementById("rot_angle")
+  if (slider != null) {
+    slider.hidden = true;
+  }
   if (!cam_dist) {cam_dist = 10;}
   draw_shape(model, 'model_canvas', cam_dist);
 }
