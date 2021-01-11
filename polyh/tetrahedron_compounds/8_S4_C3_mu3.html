@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Compound of Eight Octahedra</title>
+
+  <link rel="stylesheet" href="/css/built_models.css">
+  <script src="/js/show-off-bundle.js"></script>
+</head>
+
+<body onload="draw_shape('8_S4_C3_mu3.off', 'model_canvas', 9);">
+<div id="content">
+<h1>
+  Compound of Eight Octahedra
+</h1>
+<div id="descr">
+
+<!--
+	Compound of Eight Tetrahedra
+	Compound polyhedra
+-->
+
+<p>
+<img id="mod_img" src="8_S4_C3_mu3_o4.jpg" alt="picture">
+</p>
+
+<p><b>
+This is a compound of 8 tetrahedra that has all the rotational symmetries
+of a cube where the 3-fold axis of the cube is shared with a pair of
+opposite tetrahedra.
+One can vary the angle of rotation around the 3-fold axes and therefore many of
+such compounds exist. This is however a special angle (&mu;<sub>3</sub>) but
+when I decided to build this model I didn't know that yet. I was just attracted
+by it. One of the reasons was that it was hard to recognise the tetrahedron
+vertices that are the ones that are shared with the 3-fold axes. There are other
+vertices that are easily confused with them.
+</b></p>
+
+<p><b>
+Then I discovered that this compound is special since all the tetrahedron
+vertices not sharing a 3-fold axis with the final compound do share a 3-fold
+axis with another tetrahedron, which isn't the case for any other compounds with
+this symmetry. The colours of the constructed model pair up the tetrahedra that
+share a 3-fold axis with the compound. If you choose "alternative colouring"
+then it shows how other tetrahedron vertices share 3-fold axes that aren't
+3-fold symmetry axes in the compound.
+</b></p>
+
+<p><b>
+After I had posted the finished model on Instagram Piotr Pawlikowski contacted
+me to ask me more about this compound. I gave him the link to the OFF-file and
+he was amazed to see that the list of vertex coordinates was stuffed with the
+golden ratio! They are all permutations of [&plusmn;1, &plusmn;1, &plusmn;1] and
+[0, &plusmn;&phi;, &plusmn;<sup>1</sup>/<sub>&phi;</sub>], where &phi; is the
+number of the golden ratio.
+This was truly a big surprise to me as well: you would expect the
+number 5 to pop up somewhere, but this was 8 tetrahedra and no 5-fold symmetry
+axis.
+</b></p>
+
+<p><b>
+Before I could respond he came back to me telling me that the vertices of
+this compound are the same vertices as the vertices of the compound of two
+dodecahedra! And indeed one can easily recognise the pentagons in this model,
+see the black and blue lines in the picture below. Another way of seeing this
+compound is that this is a compound of two compounds of 4 tetrahedra, where the
+compound of 4 tetrahedra is a classical compound of 5 tetrahedra with one
+tetrahedron removed and has the rotational symmetries of a tetrahedron.
+</b></p>
+
+<p>
+<img id="mod_img" src="8_S4_C3_mu3_with_pentagons.jpg" alt="picture">
+</p>
+
+<p><b>
+Later Piotr noticed that the angle &mu;<sub>3</sub> is exactly the (smallest)
+angle between two cubes in the classical compound of five cubes. Once knowing
+the relationship with a dodecahedron, it can be reasoned, i.e. without
+calculating the actualy angle, that this must be the case. Still it is wonderful
+that once the golden ratio pops up, everything turns to gold!
+</b></p>
+
+<p><b>
+Note, the off file that is shown on this page is a bit rotated to the adjust to
+the same perspective as the picture of the real model, which isn't exactly
+looking straight into the 4-fold axis. That means that it won't show the golden
+ratio as it did for Piotr. The generated off-file I sent him can be found
+<a href="../compounds/tetrahedra/off/8_S4_C3_mu3.off"> here</a>
+</b></p>
+
+<p><b>
+The pictures are copyrighted by
+<a target="_blank" href="http://www.photoartstudio.se/">PhotoArt Studio Hörby</a>
+</b></p>
+
+<h2>Links</h2>
+<ul>
+  <li>
+    <a href="./index.html">Thumbnails</a>
+  </li><li>
+    <a href="compounds/tetrahedra/">Page</a> with interactive models of compounds of Tetrahedra
+  </li><li>
+    <a href="../index.htm">Teun's Polyhedra</a>
+  </li><li>
+    <a href="../../index.htm">Home</a>
+  </li>
+</ul>
+
+<h2><a id="lastUpdated">Last Updated</a></h2>
+<p>2021-01-11
+</p>
+
+</div>
+
+<div id="model">
+  <p>
+  <canvas id="model_canvas"></canvas>
+</p>
+  <p>
+  <select id="mySelect" onchange="on_select()">
+    <option value="8_S4_C3_mu3.off">Same colours as built model
+    <option value="8_S4_C3_mu3_alt_col.off">Alternative colouring
+  </select>
+  <script>
+    function on_select() {
+      var x = document.getElementById("mySelect").value;
+      var pars = x.split(":");
+      draw_shape(pars[0], 'model_canvas', 9);
+    }
+  </script>
+  </p>
+</div>
+
+</div>
+</body>
+</html>
