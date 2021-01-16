@@ -2711,6 +2711,7 @@ A5_C2.isoms[27].col = [0.863281, 0.625, 0.863281];
 A5_C2.isoms[28].col = [0.253906, 0.410156, 0.878906];
 A5_C2.isoms[29].col = [0.996094, 0.839844, 0.0];
 A5_C2.rot_axis = [0, 0, 1];
+A5_C2.angle_domain = [0.000, 0.785];
 var A5xI_E = new Object();
 A5xI_E.descr = new Object();
 A5xI_E.descr.Vs = [
