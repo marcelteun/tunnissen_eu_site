@@ -31,9 +31,16 @@
       if (dist_par) {
         dist = dist_par;
       }
-      var stencil_par = params.get('stencil');
-      if (stencil_par) {
-        opt["has_concave_faces"] = stencil_par == "on" || stencil_par == "1" || stencil_par == "true";
+      var stencil = params.get('stencil');
+      if (stencil) {
+        opt["has_concave_faces"] = stencil == "on" || stencil == "1" || stencil == "true";
+      }
+      var bg_col = params.get('bg_col');
+      if (bg_col && bg_col.length == 8) {
+        var r = parseInt(bg_col.slice(2, 4), 16);
+        var g = parseInt(bg_col.slice(4, 6), 16);
+        var b = parseInt(bg_col.slice(6, 8), 16);
+        opt["bg_col"] = [r * 1.0 / 255, g * 1.0 / 255, b * 1.0 / 255];
       }
       var off_file = params.get('off_file');
       if (off_file) {
@@ -114,8 +121,12 @@
   Non-concave faces should be drawn by using the a stencil buffer. By default
   this is turned of when loading objects through URL. This can be enabled by
   adding "&stencil=true", e.g. for
+  <h2>Set Background Colour</h2>
+  You can set the background colour by setting the parameter "&bg_col=0xrrggbb"
+  where 0xrrggbb is a hexidecimal number for the red (rr), green (gg) and blue
+  (bb) chanals. E.g. for
   <a
-    href="https://tunnissen.eu/polyh/local_off.html?off_file=etc/off/crosso/crosso-A5xI-o2_to_o5-faceted_o5.off&distance=60&stencil=on">this model</a>
+    href="https://tunnissen.eu/polyh/local_off.html?off_file=compounds/cubes/C15.off&bg_col=0xffdddd">this model</a>
   <h2>Reference</h2>
   <p>
   The source code to the javascript that shows the off-files can be found
