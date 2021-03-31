@@ -48,7 +48,8 @@
   The colours were chosen to show the resemblence with a 3D Swiss flag.
   For that reason the name "Swissohedron" was coined. However the cross in the
   official Swiss flag doesn't consist of squares. There are rectangles on the sides
-  with a ratio of 6:7.
+  with a ratio of 6:7. I polyhedron with that cross exists as well, you can
+  choose it in the drop-down meu below the 3D model.
 </b></p>
 
 <p><b>
@@ -76,6 +77,20 @@ Copyright of picture by
 <div id="model">
   <p>
   <canvas id="model_canvas"></canvas>
+  </p>
+  <p>
+  <select id="mySelect" onchange="on_select()">
+    <option value="swissohedron.off:16">Original model
+    <option value="swissohedron-official.off:150">Model with official cross from Swiss flag
+  </select>
+  <script>
+    function on_select() {
+      var x = document.getElementById("mySelect").value;
+      var pars = x.split(":");
+      var cam_d = parseInt(pars[1]);
+      draw_shape(pars[0], 'model_canvas', cam_d, {bg_col: [0.2, 0.2, 0.2]});
+    }
+  </script>
   </p>
 </div>
 
