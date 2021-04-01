@@ -1,11 +1,11 @@
-function show_with_title(model_name, model, cam_dist) {
-  show(model, cam_dist);
+function show_with_title(model_name, model, cam_dist, opt) {
+  show(model, cam_dist, opt);
   var title = document.getElementById("canvas_title");
   if (title) {
     title.innerHTML = model_name;
   }
 }
-function show(model, cam_dist) {
+function show(model, cam_dist, opt) {
   // static show: off file and no slide-bar
   document.getElementById("model").style.display = "block";
   document.getElementById("model").style.initialised = false;
@@ -18,7 +18,7 @@ function show(model, cam_dist) {
     slider.hidden = true;
   }
   if (!cam_dist) {cam_dist = 10;}
-  draw_shape(model, 'model_canvas', cam_dist);
+  draw_shape(model, 'model_canvas', cam_dist, opt);
   var title = document.getElementById("canvas_title");
   if (title) {
     title.innerHTML = "";
