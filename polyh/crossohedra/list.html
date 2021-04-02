@@ -557,24 +557,60 @@
         <tr class="mainRow">
           <td class="mainRow_fc">There exists an infinite series of Crossohedra
             with prism symmetry and crosses on 2-fold axes where the shorter
-            edges intersect. If any {n/m} is considered with n &ge; 5 where n is
-            odd and m &eq; (n+1)/2, then the longer edges can be extended so
-            that one can use squares at the end. For any valid values of m &lt;
-            (n+1)/2 the length of those edges can be adjusted to a {n/k} with
-            k &gt; m. Valid values for m and k are 2 &ge; k &ge; (n+1)/2.
+            edges intersect.
+            If any {<sup>n</sup>/<sub>m</sub>} is considered with n &ge; 5 and
+            m = m<sub>max</sub>
+            where m<sub>max</sub> = <sup>n+1</sup>/<sub>2</sub> if n odd
+            or m<sub>max</sub> = <sup>n-2</sup>/<sub>2</sub> if n even.
+            If n is odd then the longer edges can be extended so
+            that one can use squares at the end.
+            If n is even then the faces are parallal and the extra faces will
+            not change.
+            For any valid values of m &lt; m<sub>max</sub>
+            the length of those edges can be adjusted to a
+            {<sup>n</sup>/<sub>k</sub>} with
+            k &gt; m.
+            Valid values for m and k are 2 &ge; k &ge; m<sub>max</sub>.
+            Examples are given below.
           </td>
           <td class="mainRow">
           </td>
         </tr>
         <tr class="subRow">
           <td class="subRow_fc">{5/2} short-connected crosses with intersections
+            (i.e. n is odd and m = m<sub>max</sub>)
           </td>
           <td class="subRow">
             <button onclick="show_with_title('{5/2}-based', 'off/elongated_crosso-D10D5_2_top-o2.off', 25, {has_concave_faces:true})">Show</button>
           </td>
         </tr>
         <tr class="subRow">
-          <td class="lastSubRow_fc">This process can be continued for any n &ge; 5 and n odd.
+          <td class="subRow_fc">{6/2} short-connected crosses with intersections
+            (i.e. n is even and m = m<sub>max</sub>). Note that the crosses have
+            equal lengths and strictly this one belongs in the table above.
+          </td>
+          <td class="subRow">
+            <button onclick="show_with_title('{6/2}-based', 'off/elongated_crosso-D6xI_2_top-o2.off', 20, {has_concave_faces:true})">Show</button>
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_fc">{7/2} short-connected crosses with intersections
+            (i.e. n is odd and m < m<sub>max</sub>).
+          </td>
+          <td class="subRow">
+            TODO
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_fc">{8/2} short-connected crosses with intersections
+            (i.e. n is even and m < m<sub>max</sub>).
+          </td>
+          <td class="subRow">
+            TODO
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="lastSubRow_fc">This process can be continued for any n &ge; 5
           </td>
           <td class="lastSubRow">
           </td>
