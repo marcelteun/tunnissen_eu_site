@@ -562,14 +562,17 @@
             m = m<sub>max</sub>
             where m<sub>max</sub> = <sup>n+1</sup>/<sub>2</sub> if n odd
             or m<sub>max</sub> = <sup>n-2</sup>/<sub>2</sub> if n even.
-            If n is odd then the longer edges can be extended so
-            that one can use squares at the end.
-            If n is even then the faces are parallal and the extra faces will
+            If n is odd then the length of one pair of the longer edges can be
+            adjusted so that one can use squares at the end.
+            If n is even then the faces are parallel and the extra faces will
             not change.
             For any valid values of m &lt; m<sub>max</sub>
             the length of those edges can be adjusted to a
             {<sup>n</sup>/<sub>k</sub>} with
             k &gt; m.
+            Exceptions are cases where the opposite legs of the crosses need to
+            be shortened to length 0 or less, e.g. in case of
+            {<sup>8</sup>/<sub>3</sub>}.
             Valid values for m and k are 2 &ge; k &ge; m<sub>max</sub>.
             Examples are given below.
           </td>
@@ -598,7 +601,7 @@
             (i.e. n is odd and m < m<sub>max</sub>).
           </td>
           <td class="subRow">
-            TODO
+            <button onclick="show_with_title('{6/2}-based', 'off/elongated_crosso-D14D7_2_top-o2.off', 20, {has_concave_faces:true})">Show</button>
           </td>
         </tr>
         <tr class="subRow">
@@ -606,7 +609,7 @@
             (i.e. n is even and m < m<sub>max</sub>).
           </td>
           <td class="subRow">
-            TODO
+            <button onclick="show_with_title('{6/2}-based', 'off/elongated_crosso-D8xI_2_top-o2.off', 20, {has_concave_faces:true})">Show</button>
           </td>
         </tr>
         <tr class="subRow">
