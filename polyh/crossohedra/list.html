@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="model">
-      <h3 id="canvas_title"> </h3>
+      <h3 id="canvas_title">Model Name</h3>
       <canvas id="model_canvas"></canvas>
       <input type="range" id="rot_angle" class="slider"/>
     </div>
@@ -58,7 +58,7 @@
       </p>
 
       <p>
-        <img align=middle border=0 src="sharperhedron.png"></img>
+        <img src="sharperhedron.png" alt="image of compound of two Sharpohedra">
       </p>
 
       <p>
@@ -110,7 +110,6 @@
       The table below show Crossohedra consisting of crosses that consist of
       five squares.
       </p>
-      <p>
       <table>
         <tr class="header">
           <td class="header_fc">Description
@@ -123,9 +122,9 @@
             Totally deflated as is two opposite crosses come together.
           </td>
           <td><button onclick="show('off/crosso-S4A4-o2_to_o3-total_deflated.off', 13)">Show</button>
+          </td>
         </tr>
       </table>
-      </p>
 
       <p>
       The table below show Crossohedra consisting of elongated crosses. Only one
@@ -134,7 +133,6 @@
       congruent rectangles.
       </p>
 
-      <p>
       <table>
         <tr class="header">
           <td class="header_fc">Description
@@ -152,9 +150,9 @@
             rectangles.
           </td>
           <td><button onclick="show('off/elongated_crosso-S4A4-o2.off', 25)">Show</button>
+          </td>
         </tr>
       </table>
-      </p>
 
       <h2><a id="S4">Crossohedra with Octahedral Symmetry</a></h2>
       <p>
@@ -162,7 +160,6 @@
       five squares.
       </p>
 
-      <p>
       <table>
         <tr class="header">
           <td class="header_fc">More Info
@@ -175,6 +172,7 @@
           </td>
           <td><button
               onclick="show_with_title('Trivial Crossohedron', 'off/crosso-S4xI-o4_to_o4.off', 25)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">
@@ -183,6 +181,7 @@
           </td>
           <td><button
               onclick="show_with_title('Deflated Trivial Crosshedron', 'off/crosso-S4xI-o4_to_o4-deflated.off', 18)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">
@@ -190,6 +189,7 @@
           </td>
           <td><button
               onclick="show_with_title('Inflated Trivial Crosshedron', 'off/crosso-S4xI-o4_to_o4-inflated_faceted_1.off', 30)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">A Swissohedron. Also listed by Jamnitzer, Wenzel 1568. A similar
@@ -198,12 +198,14 @@
             rotated fashion as compared to the previous trivial crossohedra.
           </td>
           <td><button onclick="show_with_title('Swissohedron', 'off/crosso-S4xI-o4_to_o3.off', 15)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">A faceted version of the Swissohedron. Note that this one is based
             on a Stella Octangula.
           </td>
           <td><button onclick="show_with_title('Faceted Swissohedron', 'off/crosso-S4xI-o4_to_o3-faceted.off', 15)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">A partly faceted version of the Swissohedron. To be a valid
@@ -211,6 +213,7 @@
             self-intersecting hexagons, not to leave any loose edges.
           </td>
           <td><button onclick="show_with_title('A Partly Faceted Swissohedron ', 'off/crosso-S4xI-o4_to_o3-a_partly_faceted.off', 15)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">Another partly faceted version of the Swissohedron. To be a valid
@@ -218,6 +221,7 @@
             self-intersecting hexagons, not to leave any loose edges.
           </td>
           <td><button onclick="show_with_title('B Partly Faceted Swissohedron', 'off/crosso-S4xI-o4_to_o3-b_partly_faceted.off', 15)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">Totally faceted Swissohedron, so much that all crosses are gone.
@@ -225,6 +229,7 @@
             place.
           </td>
           <td><button onclick="show_with_title('Totally Faceted Swissohedron', 'off/crosso-S4xI-o4_to_o3-faceted_2.off', 15)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">
@@ -234,6 +239,7 @@
             folded hexagons.
           </td>
           <td><button onclick="show_with_title('Inflated Swissohedron', 'off/crosso-S4xI-o4_to_o3-inflated.off', 20)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">
@@ -243,28 +249,33 @@
           </td>
           <td><button
               onclick="show_with_title('Toxihedron', 'off/crosso-S4xI-o4_to_o3-faceted_inflated.off', 20, {has_concave_faces:true})">Show</button>
+          </td>
         <tr>
           <td class="fc">
             Deflated Swissohedron. If this one is totally deflated, then tetrahedral symmetry is obtained.
           </td>
           <td><button
               onclick="show_with_title('Deflated Swissohedron', 'off/crosso-S4xI-o4_to_o3-deflated.off', 13)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">Snub version of the Swissohedron.
           </td>
           <td><button onclick="show_with_title('Snub Swissohedron', 'off/crosso-S4-o4.off', 25)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">A Crossohedron with crosses on 2-fold axes connecting to the 3-fold axes.
           </td>
           <td><button onclick="show_with_title('Cubical 2-to-3 Croosohedron', 'off/crosso-S4xI-o2_to_o3.off', 33)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">A faceted crossohedron with crosses on 2-fold axes
             connecting to the 3-fold axes. Faceting is only done at 3-fold axes.
           </td>
           <td><button onclick="show_with_title('Faceted Cubical 2-to-3 Crossohedron', 'off/crosso-S4xI-o2_to_o3-faceted_o3.off', 33)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">Another faceted crossohedron with crosses on 2-fold
@@ -272,6 +283,7 @@
             axes.
           </td>
           <td><button onclick="show_with_title('Faceted Cubical 2-to-3 Crossohedron', 'off/crosso-S4xI-o2_to_o3-faceted_o4.off', 33)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">Another faceted crossohedron with crosses on 2-fold
@@ -279,35 +291,40 @@
             and 4-fold axes.
           </td>
           <td><button onclick="show_with_title('Faceted Cubical 2-to-3 Crossohedron', 'off/crosso-S4xI-o2_to_o3-faceted_o3_o4.off', 33)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">A faceted Crossohedron with crosses on 2-fold axes connecting to the 4-fold axes.
           </td>
           <td><button onclick="show_with_title('Cubical 2-to-3 Croosohedron',
               'off/crosso-S4xI-o2_to_o4_faceted_o4.off', 15, {has_concave_faces:true})">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">A Crossohedron with crosses on 2-fold axes in rotated fashion.
           </td>
           <td><button onclick="show('off/crosso-S4-o2_rot.off', 20)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">A Crossohedron with crosses on 2-fold and 4-fold axes.
           </td>
           <td><button onclick="show('off/crosso-S4xI-o2_and_o4.off', 45)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">A faceted Crossohedron with crosses on 2-fold and 4-fold axes.
           </td>
           <td><button onclick="show('off/crosso-S4xI-o2_and_o4-faceted.off', 45, {has_concave_faces:true})">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">A Faceted Augmented Truncted Cuboctahedron
           </td>
           <td><button onclick="show('off/Faceted_Augmented_Trunc_Cubocta_2.off', 40, {has_concave_faces:true})">Show</button>
+          </td>
         </tr>
       </table>
-      </p>
 
       <p>
       The table below show Crossohedra consisting of elongated crosses. Only one
@@ -316,7 +333,6 @@
       congruent rectangles.
       </p>
 
-      <p>
       <table>
         <tr class="header">
           <td class="header_fc">Description
@@ -328,14 +344,15 @@
           <td class="fc">Elongated Crossohedron with crosses on 2-fold axes.
           </td>
           <td><button onclick="show_with_title('Elongated Crossohedron on 2', 'off/elongated_crosso-S4xI-o2_to_o3.off', 35)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">Elongated Crossohedron with crosses on 2-fold axes and 4-fold axes.
           </td>
           <td><button onclick="show_with_title('Elongated Crossohedron on 2 and 4', 'off/elongated_crosso-S4xI-o2_and_o4.off', 45)">Show</button>
+          </td>
         </tr>
       </table>
-      </p>
 
       <h2><a id="A5">Crossohedra with Icosahedral Symmetry</a></h2>
       <p>
@@ -343,7 +360,6 @@
       five squares.
       </p>
 
-      <p>
       <table>
         <tr class="header">
           <td class="header_fc">More Info
@@ -357,6 +373,7 @@
             5-fold so that isosceles decagons are obtained.
           </td>
           <td><button onclick="show_with_title('Name', 'off/crosso-A5xI-o2_to_o5-faceted_o3.off', 90)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc"> Faceted Crosohedron with crosses connected to the
@@ -365,6 +382,7 @@
             decagons are obtained.
           </td>
           <td><button onclick="show_with_title('Name', 'off/crosso-A5xI-o2_to_o3-faceted.off', 28)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc"> Faceted Crosohedron with crosses connected to the
@@ -375,15 +393,16 @@
             hexagons are obtained.
           </td>
           <td><button onclick="show_with_title('Name', 'off/crosso-A5xI-o2_to_o5-faceted_o5.off', 60, {has_concave_faces:true})">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">Inflated Crossohedron with crosses connected to the
             3-fold axes.
           </td>
           <td><button onclick="show_with_title('Name', 'off/crosso-A5xI-o2_to_o3_inflated.off', 70)">Show</button>
+          </td>
         </tr>
       </table>
-      </p>
 
       <h2><a id="Dn">Crossohedra with Prism Symmetry</a></h2>
       <p>
@@ -391,7 +410,6 @@
       five squares.
       </p>
 
-      <p>
       <table>
         <tr class="header">
           <td class="header_fc">More Info
@@ -409,37 +427,58 @@
             into squares.
           </td>
           <td><button onclick="show_with_title('3D Plus Sign', 'off/crosso-D4xI-o4.off', 20)">Show</button>
+          </td>
         </tr>
         <tr>
           <td class="fc">Crossed crossohedron with crosses on the 4-fold axis.
             This is an isogonal polyhedron with 2 different edge length.
           </td>
           <td><button onclick="show_with_title('Crossed 3D Plus Sign', 'off/crosso-D4xI-o4-crossed.off', 20)">Show</button>
-        </tr>
-        <tr>
-          <td class="fc">3 long-connected crosses.
           </td>
-          <td><button onclick="show_with_title('{3}-based', 'off/crosso-D6D3-o2.off', 20)">Show</button>
         </tr>
-        <tr>
-          <td class="fc">4 long-connected crosses.
+        <tr class="mainRow">
+          <td class="mainRow_fc">There exists an infinite series of Crossohedra
+            with prism symmetry and crosses on 2-fold axes.
           </td>
-          <td><button onclick="show_with_title('{4}-based', 'off/crosso-D4xI-o2.off', 23)">Show</button>
+          <td class="mainRow">
+          </td>
         </tr>
-        <tr>
-          <td class="fc">5 long-connected crosses. This process can be continued for
-            any n &ge; 3.
+        <tr class="subRow">
+          <td class="subRow_fc">
+            3 long-connected crosses.
           </td>
-          <td><button onclick="show_with_title('{5}-based', 'off/crosso-D10D5-o2.off', 27)">Show</button>
+          <td class="subRow">
+            <button onclick="show_with_title('{3}-based', 'off/crosso-D6D3-o2.off', 20)">Show</button>
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_fc">4 long-connected crosses.
+          </td>
+          <td class="subRow">
+            <button onclick="show_with_title('{4}-based', 'off/crosso-D4xI-o2.off', 23)">Show</button>
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_fc">5 long-connected crosses.
+          </td>
+          <td class="subRow">
+            <button onclick="show_with_title('{5}-based', 'off/crosso-D10D5-o2.off', 27)">Show</button>
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="lastSubRow_fc">This process can be continued for any n &ge; 3.
+          </td>
+          <td class="lastSubRow">
+          </td>
         </tr>
         <tr>
           <td class="fc">{6/2} long-connected crosses with intersections (or compound of
             3 connected)
           </td>
           <td><button onclick="show_with_title('{6/2}-based', 'off/crosso-D6xI-o2.off', 20)">Show</button>
+          </td>
         </tr>
       </table>
-      </p>
 
       <p>
       The table below show Crossohedra consisting of elongated crosses. Only one
@@ -454,7 +493,6 @@
       instead
       </p>
 
-      <p>
       <table>
         <tr class="header">
           <td class="header_fc">Description
@@ -462,23 +500,42 @@
           <td class="header">Model
           </td>
         </tr>
-        <tr>
-          <td class="fc">{5/2} long-connected crosses with intersections
+        <tr class="mainRow">
+          <td class="mainRow_fc">There exists an infinite series of Crossohedra
+            with prism symmetry and intersecting crosses on 2-fold axes.
           </td>
-          <td><button onclick="show_with_title('{5/2}-based', 'off/elongated_crosso-D10D5_2-o2.off', 25, {has_concave_faces:true})">Show</button>
+          <td class="mainRow">
+          </td>
         </tr>
-        <tr>
-          <td class="fc">{7/2} long-connected crosses with intersections
+        <tr class="subRow">
+          <td class="subRow_fc">{5/2} long-connected crosses with intersections
           </td>
-          <td><button onclick="show_with_title('{7/2}-based', 'off/elongated_crosso-D14D7_2-o2.off', 25, {has_concave_faces:true})">Show</button>
+          <td class="subRow">
+            <button onclick="show_with_title('{5/2}-based', 'off/elongated_crosso-D10D5_2-o2.off', 25, {has_concave_faces:true})">Show</button>
+          </td>
         </tr>
-        <tr>
-          <td class="fc">{7/3} long-connected crosses with intersections
+        <tr class="subRow">
+          <td class="subRow_fc">{7/2} long-connected crosses with intersections
           </td>
-          <td><button onclick="show_with_title('{7/3}-based', 'off/elongated_crosso-D14D7_3-o2.off', 50, {has_concave_faces:true})">Show</button>
+          <td class="subRow">
+            <button onclick="show_with_title('{7/2}-based', 'off/elongated_crosso-D14D7_2-o2.off', 25, {has_concave_faces:true})">Show</button>
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="subRow_fc">{7/3} long-connected crosses with intersections
+          </td>
+          <td class="subRow">
+            <button onclick="show_with_title('{7/3}-based', 'off/elongated_crosso-D14D7_3-o2.off', 50, {has_concave_faces:true})">Show</button>
+          </td>
+        </tr>
+        <tr class="subRow">
+          <td class="lastSubRow_fc">This process can be continued for any n &ge;
+            5 and n odd.
+          </td>
+          <td class="lastSubRow">
+          </td>
         </tr>
       </table>
-      </p>
 
       <h2><a id="links">Links</a></h2>
       <ul>
@@ -495,7 +552,7 @@
       <h2><a id="first">First Version</a></h2>
       <p>2021-04-01
       <h2><a id="lastUpdated">Last Updated</a></h2>
-      <p>2021-04-01
+      <p>2021-04-02
       </p>
     </div>
   </body>

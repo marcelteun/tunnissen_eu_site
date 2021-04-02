@@ -89,6 +89,10 @@ body {
 #model_button {
 	font-size: 16px;
 }
+img {
+	align: middle;
+	border: 0px;
+}
 table {
 	border-spacing: 0px
 	/* padding: 2px 4px 2px 4px; */
@@ -165,6 +169,12 @@ td.mainRow {
 	border-left: 1px none #660000;
 	border-right: 1px solid #660000;
 }
+td.mainRow_fc {
+	border-bottom: 1px none #660000;
+	border-top: 1px none #660000;
+	border-left: 1px solid #660000;
+	border-right: 1px solid #660000;
+}
 td.mainRow_r {
 	border-bottom: 1px none #660000;
 	border-top: 1px none #660000;
@@ -188,6 +198,12 @@ td.subRow {
 	border-left: 1px none #660000;
 	border-right: 1px solid #660000;
 }
+td.subRow_fc {
+	border-bottom: 1px none #660000;
+	border-top: 1px none #660000;
+	border-left: 1px solid #660000;
+	border-right: 1px solid #660000;
+}
 td.subRow_r {
 	border-bottom: 1px none #660000;
 	border-top: 1px none #660000;
@@ -206,6 +222,12 @@ td.lastSubRow {
 	border-bottom: 1px solid #660000;
 	border-top: 1px none #660000;
 	border-left: 1px none #660000;
+	border-right: 1px solid #660000;
+}
+td.lastSubRow_fc {
+	border-bottom: 1px solid #660000;
+	border-top: 1px none #660000;
+	border-left: 1px solid #660000;
 	border-right: 1px solid #660000;
 }
 td.lastSubRow_r {
