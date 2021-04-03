@@ -516,26 +516,61 @@
           <td class="lastSubRow">
           </td>
         </tr>
-        <tr>
-          <td class="fc">{6/2} long-connected crosses with intersections (or compound of
-            3 connected)
-          </td>
-          <td><button onclick="show_with_title('{6/2}-based', 'off/crosso-D6xI-o2.off', 20)">Show</button>
-          </td>
-        </tr>
       </table>
 
       <p>
-      The table below shows Crossohedra consisting of elongated crosses. Only one
-      kind is accepted: there where two opposite legs constist of square that
-      are congruent to the one in the centre and the other opposite legs are
-      congruent rectangles. Note that one could extend all the other legs to the
-      same length as the other legs instead.
+      There exists an infinite series of Crossohedra
+      with prism symmetry and crosses on 2-fold axes where the shorter
+      edges meet in a {<sup>n</sup>/<sub>m</sub>} while the longer edges
+      meet in a {<sup>n</sup>/<sub>k</sub>},
+      while for m and k hold 1 &ge; k, m &ge; m<sub>max</sub>,
+      k &gt; m and n &ge; 5. Note that {<sup>n</sup>/<sub>1</sub>} = {n}
+      </p>
+       
+      <p>
+      If any {<sup>n</sup>/<sub>m</sub>} is considered with n &ge; 5 and
+      m = m<sub>max</sub>
+      where m<sub>max</sub> = <sup>n+1</sup>/<sub>2</sub> if n odd
+      or m<sub>max</sub> = <sup>n-2</sup>/<sub>2</sub> if n even.
+      If n is even then the faces are parallel and the extra faces will
+      not change.
+      </p>
+       
+      <p>
+      If n is odd then the length of one pair of the longer edges can be
+      adjusted so that one can use squares at the end.
+      For any valid values of m &lt; m<sub>max</sub>
+      the length of those edges can be adjusted to a
+      {<sup>n</sup>/<sub>k</sub>} with
+      k &gt; m.
+      </p>
+       
+      <p>
+      Exceptions are cases where the opposite legs of the crosses need to
+      be shortened to length 0 or less, e.g. in case of
+      {<sup>8</sup>/<sub>3</sub>}.
+      </p>
+       
+      <p>
+      Examples are given below. The name
+      {<sup>n</sup>/<sub>m</sub>}-to-{<sup>n</sup>/<sub>k</sub>}
+      is used the the former specifies how the short edges meet and the
+      latter how the long edges meet.
+      </p>
+
+      <p>
+      The other legs of the crosses could also be extend, or one could allow for
+      different widths, but only one kind is accepted:
+      there where two opposite legs constist of
+      square that are congruent to the one in the centre and the other opposite
+      legs are congruent rectangles. Note that one could extend all the other
+      legs to the same length as the other legs instead.
       I choose to keep those squares however.
-      For instance the first one could look like
+      For instance a "{5}-to-{<sup>5</sup>/<sub>2</sub>} could also be presented
+      like
       <button onclick="show_with_title('{5/2}-based',
         'off/crosso-D10D5_2-o2.off', 25, {has_concave_faces:true})">this</button>
-      instead
+      instead.
       </p>
 
       <table>
@@ -546,121 +581,100 @@
           </td>
         </tr>
         <tr class="mainRow">
-          <td class="mainRow_fc">There exists an infinite series of Crossohedra
-            with prism symmetry and intersecting crosses on 2-fold axes.
+          <td class="mainRow_fc">
+            {5}-to-{<sup>5</sup>/<sub>2</sub>}
           </td>
           <td class="mainRow">
-          </td>
-        </tr>
-        <tr class="subRow">
-          <td class="subRow_fc">{5/2} long-connected crosses with intersections
-          </td>
-          <td class="subRow">
             <button onclick="show_with_title(
-              '{5} to {<sup>5</sup>/<sub>2</sub>}',
+              '{5}-to-{<sup>5</sup>/<sub>2</sub>}',
               'off/elongated_crosso-D10D5_2-o2.off', 25, {has_concave_faces:true})">Show
             </button>
           </td>
         </tr>
-        <tr class="subRow">
-          <td class="subRow_fc">{7/2} long-connected crosses with intersections
-          </td>
-          <td class="subRow">
-            <button onclick="show_with_title(
-              '{7} to {<sup>7</sup>/<sub>2</sub>}',
-              'off/elongated_crosso-D14D7_2-o2.off', 25, {has_concave_faces:true})">Show
-            </button>
-          </td>
-        </tr>
-        <tr class="subRow">
-          <td class="subRow_fc">{7/3} long-connected crosses with intersections
-          </td>
-          <td class="subRow">
-            <button onclick="show_with_title(
-              '{7} to {<sup>7</sup>/<sub>3</sub>}',
-              'off/elongated_crosso-D14D7_3-o2.off', 50, {has_concave_faces:true})">Show
-            </button>
-          </td>
-        </tr>
-        <tr class="subRow">
-          <td class="lastSubRow_fc">This process can be continued for any n &ge; 5 and n odd.
-          </td>
-          <td class="lastSubRow">
-          </td>
-        </tr>
         <tr class="mainRow">
-          <td class="mainRow_fc">There exists an infinite series of Crossohedra
-            with prism symmetry and crosses on 2-fold axes where the shorter
-            edges intersect.
-            If any {<sup>n</sup>/<sub>m</sub>} is considered with n &ge; 5 and
-            m = m<sub>max</sub>
-            where m<sub>max</sub> = <sup>n+1</sup>/<sub>2</sub> if n odd
-            or m<sub>max</sub> = <sup>n-2</sup>/<sub>2</sub> if n even.
-            If n is odd then the length of one pair of the longer edges can be
-            adjusted so that one can use squares at the end.
-            If n is even then the faces are parallel and the extra faces will
-            not change.
-            For any valid values of m &lt; m<sub>max</sub>
-            the length of those edges can be adjusted to a
-            {<sup>n</sup>/<sub>k</sub>} with
-            k &gt; m.
-            Exceptions are cases where the opposite legs of the crosses need to
-            be shortened to length 0 or less, e.g. in case of
-            {<sup>8</sup>/<sub>3</sub>}.
-            Valid values for m and k are 2 &ge; k &ge; m<sub>max</sub>.
-            Examples are given below.
-          </td>
-          <td class="mainRow">
-          </td>
-        </tr>
-        <tr class="subRow">
-          <td class="subRow_fc">{5/2} short-connected crosses with intersections
+          <td class="mainRow_fc">
+            {<sup>5</sup>/<sub>2</sub>} expanded
             (i.e. n is odd and m = m<sub>max</sub>)
           </td>
-          <td class="subRow">
+          <td class="mainRow">
             <button onclick="show_with_title(
               '{<sup>5</sup>/<sub>2</sub>} expanded',
               'off/elongated_crosso-D10D5_2_top-o2.off', 25, {has_concave_faces:true})">Show
             </button>
           </td>
         </tr>
-        <tr class="subRow">
-          <td class="subRow_fc">{6/2} short-connected crosses with intersections
-            (i.e. n is even and m = m<sub>max</sub>). Note that the crosses have
-            equal lengths and strictly this one belongs in the table above.
+        <tr class="mainRow">
+          <td class="mainRow_fc">
+            {6}-to-{<sup>6</sup>/<sub>2</sub>}.
+            Note that the crosses aren't elongated.
+            (also a compound of 3 long connected crosses)
           </td>
-          <td class="subRow">
+          <td class="mainRow">
+            <button onclick="show_with_title(
+              '{6}-to-{<sup>6</sup>/<sub>2</sub>}',
+              'off/crosso-D6xI-o2.off', 20)">Show
+            </button>
+          </td>
+        </tr>
+        <tr class="mainRow">
+          <td class="mainRow_fc">
+            {6</sub>/2} expanded
+            (i.e. n is even and m = m<sub>max</sub>).
+            Note that the crosses aren't elongated.
+          </td>
+          <td class="mainRow">
             <button onclick="show_with_title(
               '{<sup>6</sup>/<sub>2</sub>} expanded',
               'off/elongated_crosso-D6xI_2_top-o2.off', 20, {has_concave_faces:true})">Show
             </button>
           </td>
         </tr>
-        <tr class="subRow">
-          <td class="subRow_fc">{7/2} short-connected crosses with intersections
-            (i.e. n is odd and m < m<sub>max</sub>).
+        <tr class="mainRow">
+          <td class="mainRow_fc">
+            {7}-to-{<sup>7</sup>/<sub>2</sub>}
           </td>
-          <td class="subRow">
+          <td class="mainRow">
             <button onclick="show_with_title(
-              '{<sup>7</sup>/<sub>2</sub>} to {<sup>7</sup>/<sub>3</sub>}',
+              '{7}-to-{<sup>7</sup>/<sub>2</sub>}',
+              'off/elongated_crosso-D14D7_2-o2.off', 25, {has_concave_faces:true})">Show
+            </button>
+          </td>
+        </tr>
+        <tr class="mainRow">
+          <td class="mainRow_fc">
+            {7}-to-{<sup>7</sup>/<sub>3</sub>}
+          </td>
+          <td class="mainRow">
+            <button onclick="show_with_title(
+              '{7}-to-{<sup>7</sup>/<sub>3</sub>}',
+              'off/elongated_crosso-D14D7_3-o2.off', 50, {has_concave_faces:true})">Show
+            </button>
+          </td>
+        </tr>
+        <tr class="mainRow">
+          <td class="mainRow_fc">
+            {<sup>7</sup>/<sub>2</sub>}-to-{<sup>7</sup>/<sub>3</sub>}
+          </td>
+          <td class="mainRow">
+            <button onclick="show_with_title(
+              '{<sup>7</sup>/<sub>2</sub>}-to-{<sup>7</sup>/<sub>3</sub>}',
               'off/elongated_crosso-D14D7_2_top-o2.off', 20, {has_concave_faces:true})">Show
             </button>
           </td>
         </tr>
-        <tr class="subRow">
-          <td class="subRow_fc">{8/2} short-connected crosses with intersections
-            (i.e. n is even and m < m<sub>max</sub>).
+        <tr class="mainRow">
+          <td class="mainRow_fc">
+            {<sup>8</sup>/<sub>2</sub>}-to-{<sup>8</sup>/<sub>3</sub>}
           </td>
-          <td class="subRow">
+          <td class="mainRow">
             <button onclick="show_with_title(
-                    '{<sup>8</sup>/<sub>2</sub>} to {<sup>8</sup>/<sub>3</sub>}',
+                    '{<sup>8</sup>/<sub>2</sub>}-to-{<sup>8</sup>/<sub>3</sub>}',
                     'off/elongated_crosso-D8xI_2_top-o2.off', 20, {has_concave_faces:true})">Show
             </button>
           </td>
         </tr>
-        <tr class="subRow">
-          <td class="lastSubRow_fc">This process can be continued for any n &ge; 5
-          </td>
+        <tr class="mainRow">
+          <td class="lastSubRow_fc">Etcetera</td>
           <td class="lastSubRow">
           </td>
         </tr>
