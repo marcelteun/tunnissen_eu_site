@@ -452,7 +452,7 @@
       <h2><a id="Dn">Crossohedra with Prism Symmetry</a></h2>
       <p>
       The table below shows Crossohedra consisting of crosses that consist of
-      five squares.
+      five squares with crosses on 4-fold axes
       </p>
 
       <table>
@@ -481,41 +481,6 @@
           <td><button onclick="show_with_title(
               'Crossed 3D Plus Sign', 'off/crosso-D4xI-o4-crossed.off', 22)">Show
             </button>
-          </td>
-        </tr>
-        <tr class="mainRow">
-          <td class="mainRow_fc">There exists an infinite series of Crossohedra
-            with prism symmetry and crosses on 2-fold axes.
-          </td>
-          <td class="mainRow">
-          </td>
-        </tr>
-        <tr class="subRow">
-          <td class="subRow_fc">
-            3 long-connected crosses.
-          </td>
-          <td class="subRow">
-            <button onclick="show_with_title('{3}-based', 'off/crosso-D6D3-o2.off', 20)">Show</button>
-          </td>
-        </tr>
-        <tr class="subRow">
-          <td class="subRow_fc">4 long-connected crosses.
-          </td>
-          <td class="subRow">
-            <button onclick="show_with_title('{4}-based', 'off/crosso-D4xI-o2.off', 23)">Show</button>
-          </td>
-        </tr>
-        <tr class="subRow">
-          <td class="subRow_fc">5 long-connected crosses.
-          </td>
-          <td class="subRow">
-            <button onclick="show_with_title('{5}-based', 'off/crosso-D10D5-o2.off', 27)">Show</button>
-          </td>
-        </tr>
-        <tr class="subRow">
-          <td class="lastSubRow_fc">This process can be continued for any n &ge; 3.
-          </td>
-          <td class="lastSubRow">
           </td>
         </tr>
       </table>
@@ -690,6 +655,73 @@
             <button onclick="show_with_title(
               '{4} with Crosess on Reflections', 'off/crosso-D4xI-r.off', 150)">Show
             </button>
+          </td>
+        </tr>
+      </table>
+
+      <p>
+      It is also possible to connect the long edges in the mid-section of the prisms
+      and form {<sup>n</sup>/<sub>m</sub>} and then adjust the top and bottom part.
+      There isosceles {2n/k} polygons are obtained and an additional n
+      rectangles are needed to fill the gaps.
+      One can use crosses consisting of 5 squares,
+      or one can choose to adjust the length of the two
+      opposite legs of the cross to fill the gaps at the top and the bottom with
+      squares instead.
+      Compare
+      <button onclick="show_with_title(
+        'regular cross', 'off/crosso-D4xI-o2.off', 23)">this
+      </button>
+      with
+      <button onclick="show_with_title(
+        'elongated cross', 'off/elongated_crosso-D4xI-o2.off', 27)">this
+      </button>
+      for example.
+      We choose to keep the crosses regular.
+      </p>
+
+      <table>
+        <tr class="header">
+          <td class="header_fc">Description
+          </td>
+          <td class="header">Model
+          </td>
+        </tr>
+        <tr class="mainRow">
+          <td class="mainRow_fc">
+            {3} long-connected crosses.
+          </td>
+          <td class="mainRow">
+            <button onclick="show_with_title('{3}-based', 'off/crosso-D6D3-o2.off', 20)">Show</button>
+          </td>
+        </tr>
+        <tr class="mainRow">
+          <td class="mainRow_fc">{4} long-connected crosses.
+          </td>
+          <td class="mainRow">
+            <button onclick="show_with_title('{4}-based', 'off/crosso-D4xI-o2.off', 23)">Show</button>
+          </td>
+        </tr>
+        <tr class="mainRow">
+          <td class="mainRow_fc">{5} long-connected crosses.
+          </td>
+          <td class="mainRow">
+            <button onclick="show_with_title('{5}-based', 'off/crosso-D10D5-o2.off', 27)">Show</button>
+          </td>
+        </tr>
+        <tr class="mainRow">
+          <td class="mainRow_fc">{<sup>5</sup>/<sub>2</sub>}</sub> long-connected crosses.
+          </td>
+          <td class="mainRow">
+            <button onclick="show_with_title(
+              '{5}-based',
+              'off/crosso-D10D5-o2_mid_5_2.off', 27, {has_concave_faces:true})">Show</button>
+          </td>
+        </tr>
+        <tr class="mainRow">
+          <td class="lastSubRow_fc">This process can be continued for any n &ge; 3.
+          </td>
+          <td class="lastSubRow">
           </td>
         </tr>
       </table>
