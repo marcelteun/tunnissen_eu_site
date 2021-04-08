@@ -144,8 +144,8 @@
 	  </td>
 	</tr>
 	<tr>
-	  <td class="fc">Totally deflated version of a crossohedron with cube symmetry.
-	    Totally deflated as is two opposite crosses come together.
+	  <td class="fc">Totally deflated version of a Swissohedron, where two
+	    crosses are merged into one.
 	  </td>
 	  <td><button onclick="show('off/crosso-S4A4-o2_to_o3-total_deflated.off', 13)">Show</button>
 	  </td>
@@ -167,22 +167,42 @@
 	  </td>
 	</tr>
 	<tr>
-	  <td class="fc">Inflated Swissohedron with one pair of legs of the
-	    crosses elongated.
-	    One could also think of starting with a
-	    Swissohedron and truncating four 3-fold corners (organised as a
-	    tetrahedron) in such a way the cut is a regular hexagon.
+	  <td class="mainRow_fc"><i>Partly elongated inflated Swissohedron</i></td>
+	  <td class="mainRow"/>
+	</tr>
+	<tr>
+	  <td class="subRow_fc">Standard version, where
+	    one pair of legs for each cross of the inflated Swissohedron is
+	    extended until the hexagon becomes a triangle.
 	  </td>
-	  <td><button onclick="show('off/elongated_crosso-S4A4-o2.off', 25)">Show</button>
+	  <td class="subRow">
+	    <button onclick="show('off/elongated_crosso-S4A4-o2.off', 25)">Show</button>
 	  </td>
 	</tr>
 	<tr>
-	  <td class="fc">Faceted inflated Swissohedron with one pair of legs of the
-	    crosses elongated, or the semi-toxihedron.
+	  <td class="subRow_fc">'A' partly faceted version (at triangles)
 	  </td>
-	  <td><button onclick="show(
-		      'off/faceted_elongated_crosso-S4A4-o2.off',
-		      25, {has_concave_faces:true})">Show</button>
+	  <td class="subRow">
+	    <button onclick="show('off/partly_a_faceted_elongated_crosso-S4A4-o2.off', 25)">Show</button>
+	  </td>
+	</tr>
+	<tr>
+	  <td class="subRow_fc">'B' partly faceted version (at hexagons)
+	  </td>
+	  <td class="subRow">
+	    <button
+	      onclick="show(
+		'off/partly_b_faceted_elongated_crosso-S4A4-o2.off',
+		25, {has_concave_faces:true})">Show</button>
+	  </td>
+	</tr>
+	<tr>
+	  <td class="lastSubRow_fc">Faceted version (both at triangles and hexagons), Semi-Toxihedron
+	  </td>
+	  <td class="lastSubRow">
+	    <button onclick="show(
+		    'off/faceted_elongated_crosso-S4A4-o2.off',
+		    25, {has_concave_faces:true})">Show</button>
 	  </td>
 	</tr>
       </table>
@@ -201,27 +221,129 @@
 	  </td>
 	</tr>
 	<tr>
-	  <td class="fc"> A trivial crossohedron with crosses on 4-fold axes.
+	  <td class="mainRow_fc"><i>Crosses connected to 2-fold axes</i></td>
+	  <td class="mainRow"></td>
+	</tr>
+	<tr>
+	  <td class="subRow_fc"> A standard version
 	  </td>
-	  <td><button
+	  <td class="subRow">
+	    <button
 	      onclick="show_with_title('Trivial Crossohedron', 'off/crosso-S4xI-o4_to_o4.off', 25)">Show</button>
 	  </td>
 	</tr>
 	<tr>
-	  <td class="fc">
-	    Another trivial one, which is the deflated version of the previous one.
+	  <td class="subRow_fc">Trivial deflated version.
 	    A similar one can be found in Brückner 1900, Plate VII, Figure 29.
 	  </td>
-	  <td><button
+	  <td class="subRow">
+	    <button
 	      onclick="show_with_title('Deflated Trivial Crosshedron', 'off/crosso-S4xI-o4_to_o4-deflated.off', 18)">Show</button>
 	  </td>
 	</tr>
 	<tr>
-	  <td class="fc">
-	    Inflated version of that trivial crossohedron.
+	  <td class="lastSubRow_fc">
+	    Inflated version.
 	  </td>
-	  <td><button
+	  <td class="lastSubRow">
+	    <button
 	      onclick="show_with_title('Inflated Trivial Crosshedron', 'off/crosso-S4xI-o4_to_o4-inflated_faceted_1.off', 30)">Show</button>
+	  </td>
+	</tr>
+	<tr>
+	  <td class="mainRow_fc"><i>Crosses connected to 3-fold axes (Swissohedron Family)</i></td>
+	  <td class="mainRow"></td>
+	</tr>
+	<tr>
+	  <td class="subRow_fc">Swissohedron. Also listed by Jamnitzer, Wenzel 1568. A similar
+	    model can be made with the cross officialy used for the Swiss flag.
+	  </td>
+	  <td class="subRow">
+	    <button onclick="show_with_title('Swissohedron', 'off/crosso-S4xI-o4_to_o3.off', 15)">Show</button>
+	  </td>
+	</tr>
+	<tr>
+	  <td class="subRow_fc">A faceted version of the Swissohedron. Note that
+	    the kernel is a Stella Octangula.
+	  </td>
+	  <td class="subRow">
+	    <button onclick="show_with_title('Faceted Swissohedron', 'off/crosso-S4xI-o4_to_o3-faceted.off', 15)">Show</button>
+	  </td>
+	</tr>
+	<tr>
+	  <td class="subRow_fc">'A' partly faceted version of the Swissohedron.
+	    To be a valid polyhedron with intersecting hexagons
+	    the hexagons should be self-intersecting hexagons, 
+	    not to leave any loose edges,
+	  </td>
+	  <td class="subRow">
+	    <button onclick="show_with_title(
+	      'A Partly Faceted Swissohedron ',
+	      'off/crosso-S4xI-o4_to_o3-a_partly_faceted.off', 15)">Show</button>
+	  </td>
+	</tr>
+	<tr>
+	  <td class="subRow_fc">'B' partly faceted version of the Swissohedron.
+	    Another partly faceted version of the Swissohedron. To be a valid
+	    polyhedron with intersecting hexagons, the hexagons should be
+	    self-intersecting hexagons, not to leave any loose edges.
+	  </td>
+	  <td class="subRow">
+	    <button onclick="show_with_title(
+	      'B Partly Faceted Swissohedron',
+	      'off/crosso-S4xI-o4_to_o3-b_partly_faceted.off', 15)">Show</button>
+	  </td>
+	</tr>
+	<tr>
+	  <td class="subRow_fc">Totally faceted Swissohedron, so much that all crosses are gone.
+	    Technically this isn't a Crossohedron.
+	    It is only added to give this intesting one a place.
+	  </td>
+	  <td class="subRow">
+	    <button onclick="show_with_title(
+	      'Totally Faceted Swissohedron',
+	      'off/crosso-S4xI-o4_to_o3-faceted_2.off', 15)">Show</button>
+	  </td>
+	</tr>
+	<tr>
+	  <td class="subRow_fc">
+	    Inflated Swissohedron. The blue intersecting faces are
+	    isosceles hexagons, however you can also interprete the polyhedron as
+	    consisting of concave dodecagons (the crosses) and regular hexagons,
+	    where the blue ones are folded hexagons.
+	  </td>
+	  <td class="subRow">
+	    <button onclick="show_with_title(
+	      'Inflated Swissohedron',
+	      'off/crosso-S4xI-o4_to_o3-inflated.off', 20)">Show</button>
+	  </td>
+	</tr>
+	<tr>
+	  <td class="subRow_fc">
+	    Faceted inflated Swissohedron; aka Toxihedron,
+	    because it reminds me of the radioactivity warning when you look
+	    into a 3-fold axis.
+	  </td>
+	  <td class="subRow">
+	    <button onclick="show_with_title(
+	      'Toxihedron',
+	      'off/crosso-S4xI-o4_to_o3-faceted_inflated.off', 20,
+	      {has_concave_faces:true})">Show</button>
+	  </td>
+	<tr>
+	  <td class="lastSubRow_fc">
+	    Deflated Swissohedron.
+	  </td>
+	  <td class="lastSubRow">
+	    <button onclick="show_with_title(
+	      'Deflated Swissohedron',
+	      'off/crosso-S4xI-o4_to_o3-deflated.off', 13)">Show</button>
+	  </td>
+	</tr>
+	<tr>
+	  <td class="fc">Snub version of the Swissohedron.
+	  </td>
+	  <td><button onclick="show_with_title('Snub Swissohedron', 'off/crosso-S4-o4.off', 25)">Show</button>
 	  </td>
 	</tr>
       </table>
@@ -233,113 +355,52 @@
 	  </td>
 	  <td class="header">Model
 	  </td>
-	</tr>
-	<tr>
-	  <td class="fc">A Swissohedron. Also listed by Jamnitzer, Wenzel 1568. A similar
-	    model can be made with the cross officialy used for the Swiss flag.
-	    In this Crossohedron the crosses are placed on the 4-fold axes in a
-	    rotated fashion as compared to the previous trivial crossohedra.
+	</tr><tr>
+	  <td class="mainRow_fc"><i>Crosses connected to the 3-fold axes</i></td>
+	  <td class="mainRow"></td>
+	</tr><tr>
+	  <td class="subRow_fc">Basic version
 	  </td>
-	  <td><button onclick="show_with_title('Swissohedron', 'off/crosso-S4xI-o4_to_o3.off', 15)">Show</button>
+	  <td class="subRow">
+	    <button onclick="show_with_title(
+	      'Cubical 2-to-3 Croosohedron',
+	      'off/crosso-S4xI-o2_to_o3.off', 33)">Show</button>
 	  </td>
-	</tr>
-	<tr>
-	  <td class="fc">A faceted version of the Swissohedron. Note that this one is based
-	    on a Stella Octangula.
+	</tr><tr>
+	  <td class="subRow_fc">Faceted at 3-fold axes.
 	  </td>
-	  <td><button onclick="show_with_title('Faceted Swissohedron', 'off/crosso-S4xI-o4_to_o3-faceted.off', 15)">Show</button>
+	  <td class="subRow">
+	    <button onclick="show_with_title(
+	      'Faceted Cubical 2-to-3 Crossohedron',
+	      'off/crosso-S4xI-o2_to_o3-faceted_o3.off', 33)">Show</button>
 	  </td>
-	</tr>
-	<tr>
-	  <td class="fc">A partly faceted version of the Swissohedron. To be a valid
-	    polyhedron with intersecting hexagons, the hexagons should be
-	    self-intersecting hexagons, not to leave any loose edges.
+	</tr><tr>
+	  <td class="subRow_fc">Faceted at 4-fold axes.
 	  </td>
-	  <td><button onclick="show_with_title('A Partly Faceted Swissohedron ', 'off/crosso-S4xI-o4_to_o3-a_partly_faceted.off', 15)">Show</button>
-	  </td>
-	</tr>
-	<tr>
-	  <td class="fc">Another partly faceted version of the Swissohedron. To be a valid
-	    polyhedron with intersecting hexagons, the hexagons should be
-	    self-intersecting hexagons, not to leave any loose edges.
-	  </td>
-	  <td><button onclick="show_with_title('B Partly Faceted Swissohedron', 'off/crosso-S4xI-o4_to_o3-b_partly_faceted.off', 15)">Show</button>
+	  <td class="subRow">
+	    <button onclick="show_with_title(
+	      'Faceted Cubical 2-to-3 Crossohedron',
+	      'off/crosso-S4xI-o2_to_o3-faceted_o4.off', 33)">Show</button>
 	  </td>
 	</tr>
 	<tr>
-	  <td class="fc">Totally faceted Swissohedron, so much that all crosses are gone.
-	    Technically this isn't a Crossohedron. It is only added to give it a
-	    place.
+	  <td class="lastSubRow_fc">Faceted at both 3-fold and 4-fold axes.
 	  </td>
-	  <td><button onclick="show_with_title('Totally Faceted Swissohedron', 'off/crosso-S4xI-o4_to_o3-faceted_2.off', 15)">Show</button>
-	  </td>
-	</tr>
-	<tr>
-	  <td class="fc">
-	    Inflated version of the Swissohedron. The blue intersections are
-	    isosceles hexagons, however you can also see the polyhedron as
-	    consisting of crosses and regular hexagons, where the blue ones are
-	    folded hexagons.
-	  </td>
-	  <td><button onclick="show_with_title('Inflated Swissohedron', 'off/crosso-S4xI-o4_to_o3-inflated.off', 20)">Show</button>
+	  <td class="lastSubRow">
+	    <button onclick="show_with_title(
+	      'Faceted Cubical 2-to-3 Crossohedron',
+	      'off/crosso-S4xI-o2_to_o3-faceted_o3_o4.off', 33)">Show</button>
 	  </td>
 	</tr>
+	</tr><tr>
+	  <td class="mainRow_fc"><i>Crosses connected to the 4-fold axes</i></td>
+	  <td class="mainRow"></td>
+	</tr><tr>
 	<tr>
-	  <td class="fc">
-	    Faceted inflated Swissohedron, alse referred to as Toxihedron,
-	    because it reminds me of the radioactivity warning when you look
-	    into a 3-fold axis.
+	  <td class="lastSubRow_fc">A faceted version
 	  </td>
-	  <td><button
-	      onclick="show_with_title('Toxihedron', 'off/crosso-S4xI-o4_to_o3-faceted_inflated.off', 20, {has_concave_faces:true})">Show</button>
-	  </td>
-	<tr>
-	  <td class="fc">
-	    Deflated Swissohedron. If this one is totally deflated, then tetrahedral symmetry is obtained.
-	  </td>
-	  <td><button
-	      onclick="show_with_title('Deflated Swissohedron', 'off/crosso-S4xI-o4_to_o3-deflated.off', 13)">Show</button>
-	  </td>
-	</tr>
-	<tr>
-	  <td class="fc">Snub version of the Swissohedron.
-	  </td>
-	  <td><button onclick="show_with_title('Snub Swissohedron', 'off/crosso-S4-o4.off', 25)">Show</button>
-	  </td>
-	</tr>
-	<tr>
-	  <td class="fc">A Crossohedron with crosses on 2-fold axes connecting to the 3-fold axes.
-	  </td>
-	  <td><button onclick="show_with_title('Cubical 2-to-3 Croosohedron', 'off/crosso-S4xI-o2_to_o3.off', 33)">Show</button>
-	  </td>
-	</tr>
-	<tr>
-	  <td class="fc">A faceted crossohedron with crosses on 2-fold axes
-	    connecting to the 3-fold axes. Faceting is only done at 3-fold axes.
-	  </td>
-	  <td><button onclick="show_with_title('Faceted Cubical 2-to-3 Crossohedron', 'off/crosso-S4xI-o2_to_o3-faceted_o3.off', 33)">Show</button>
-	  </td>
-	</tr>
-	<tr>
-	  <td class="fc">Another faceted crossohedron with crosses on 2-fold
-	    axes connecting to the 3-fold axes. Faceting is only done at 4-fold
-	    axes.
-	  </td>
-	  <td><button onclick="show_with_title('Faceted Cubical 2-to-3 Crossohedron', 'off/crosso-S4xI-o2_to_o3-faceted_o4.off', 33)">Show</button>
-	  </td>
-	</tr>
-	<tr>
-	  <td class="fc">Another faceted crossohedron with crosses on 2-fold
-	    axes connecting to the 3-fold axes. Faceting is done at both 3-fold
-	    and 4-fold axes.
-	  </td>
-	  <td><button onclick="show_with_title('Faceted Cubical 2-to-3 Crossohedron', 'off/crosso-S4xI-o2_to_o3-faceted_o3_o4.off', 33)">Show</button>
-	  </td>
-	</tr>
-	<tr>
-	  <td class="fc">A faceted Crossohedron with crosses on 2-fold axes connecting to the 4-fold axes.
-	  </td>
-	  <td><button onclick="show_with_title('Cubical 2-to-3 Croosohedron',
+	  <td class="lastSubRow">
+	    <button onclick="show_with_title('Cubical 2-to-3 Croosohedron',
 	      'off/crosso-S4xI-o2_to_o4_faceted_o4.off', 15, {has_concave_faces:true})">Show</button>
 	  </td>
 	</tr>
@@ -904,7 +965,7 @@
       <h2><a id="first">First Version</a></h2>
       <p>2021-04-01</p>
       <h2><a id="lastUpdated">Last Updated</a></h2>
-      <p>2021-04-07</p>
+      <p>2021-04-08</p>
     </div>
   </body>
 </html>
