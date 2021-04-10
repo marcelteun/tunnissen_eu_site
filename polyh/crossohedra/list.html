@@ -38,10 +38,16 @@
 	  <a href="#Cn">Crossohedra with Pyramid Symmetry</a>
 	</li>
 	<li>
+	  <a href="#TC">"Toro Crosso"</a>
+	</li>
+	<li>
 	  <a href="#links">Links</a>
 	</li>
 	<li>
 	  <a href="#ack">Acknowledgements</a>
+	</li>
+	<li>
+	  <a href="#ref">References</a>
 	</li>
 	<li>
 	  <a href="#lastUpdated">Last Updated</a>
@@ -155,7 +161,9 @@
 	</tr>
 	<tr>
 	  <td class="fc">Totally deflated version of a Swissohedron, where two
-	    crosses are merged into one.
+	    crosses are merged into one. This is Steward's 4Q<sub>3</sub>(S<sub>3</sub>)
+	    used in Chapter VI of
+	    <a href="#BStew01">[BStew01]</a>
 	  </td>
 	  <td><button onclick="show('off/crosso-S4A4-o2_to_o3-total_deflated.off', 13)">Show</button>
 	  </td>
@@ -953,6 +961,73 @@
 	</tr>
       </table>
 
+      <h2><a id="TC">Toro Crosso</a></h2>
+      <p>
+      Some of the polyhedra can be turned into toroids.
+      No serious effort to explore this area has been taken here and the listing
+      here just holds some examples that looked interesting.
+      So far no toroids were found that only consisted of regular faces, i.e.
+      that might belong to Steward's toroids (<a href="#BStew01">[BStew01]</a>),
+      with the exception of the aplanar rule for the crosses only
+      (i.e. a cross is considered to consist of five co-planar squares).
+      </p>
+
+      <p>
+      The table below shows some toroids. Variants of these with different genus
+      can be made. The toroids below have irregular parts. One can choose where
+      to place this irregularity. For instance one can put it in the kernel, the
+      tunnels, or at the outside (the crosses). Here it was chosen to put it in
+      the tunnels.
+      </p>
+
+      <table>
+	<tr class="header">
+	  <td class="header_fc">Description
+	  </td>
+	  <td class="header">Model
+	  </td>
+	</tr>
+	<tr>
+	  <td class="mainRow_fc">
+	    <i>Toroidal Swissohedra</i>
+	  </td>
+	  <td class="mainRow"/>
+	</tr>
+	<tr>
+	  <td class="subRow_fc">
+	    Octahedron kernel and genus 7.
+	  </td>
+	  <td class="subRow">
+	    no model (yet)
+	  </td>
+	</tr>
+	<tr>
+	  <td class="subRow_fc">
+	    Cuboctahedron kernel and genus 7.
+	    <br/>The tunnels are made of triangular prisms with a
+	    edge ratio 1:&radic;3.
+	  </td>
+	  <td class="subRow">
+	    <button onclick="show_with_title(
+	      'B4 Toroidal Swissohedron',
+	      'off/toroidal_crosso-S4xI-o4_to_o3-kern_b4.off', 15)">Show</button>
+	  </td>
+	</tr>
+	<tr>
+	  <td class="lastSubRow_fc">
+	    Rhombicuboctahedron kernel and genus 7.
+	    <br/>The tunnels are made of octahedra with a
+	    edge ratio of
+	    1:2/&radic;(15-8&radic;2) ~= 1:1.04.
+	  </td>
+	  <td class="lastSubRow">
+	    <button onclick="show_with_title(
+	      'E4 Toroidal Swissohedron',
+	      'off/toroidal_crosso-S4xI-o4_to_o3-kern_e4.off', 15)">Show</button>
+	  </td>
+	</tr>
+      </table>
+
       <h2><a id="links">Links</a></h2>
       <ul>
 	<li>
@@ -972,6 +1047,10 @@
       out and providing some OFF files. Thanks to Robert Webb for Stella, which
       Ulrich used to derive his OFF models.
       </p>
+
+      <h2><a id="ref">References</a></h2>
+      <a id="BStew01">Steward, B. M: <b>Adventures among the Toroids</b>,
+	Malloy Lithographing, Inc.; 2nd edition 1964
       <h2><a id="first">First Version</a></h2>
       <p>2021-04-01</p>
       <h2><a id="lastUpdated">Last Updated</a></h2>
