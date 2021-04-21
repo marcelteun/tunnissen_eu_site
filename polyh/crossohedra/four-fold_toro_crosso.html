@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Four-Fold Toro Crosso</title>
+
+  <link rel="stylesheet" href="/css/built_models.css">
+  <script src="/js/show-off-bundle.js"></script>
+</head>
+
+<body onload="draw_shape('four-fold_toro_crosso.off', 'model_canvas', 16, {bg_col: [0.2, 0.2, 0.2]});">
+<div id="content">
+<h1>Four-Fold Toro Crosso</h1>
+<div id="descr">
+
+<!--
+	Crossohedron
+	Polyhedron
+	Toroid
+-->
+
+<p>
+<img id="mod_img" src="four-fold_toro_crosso.png" alt="picture">
+</p>
+
+<p><b>
+  This polyhedron is a toroidal <a href="./list.html#TC">crossohedron</a>.
+  It consists of four crosses that can be seen as 5 edge-to-edge connected
+  squares,
+  16 equilateral triangles and 16 rhombs.
+  The rhombs consist of 2 edge-to-edge connected equilateral triangles,
+  which means that this toroid would have been part of Steward's toroids 
+  <a href="#BStew01">[BStew01]</a>
+  if not for the aplanar (A) rule.
+  This polyhedron was found by Don Romano in 2021.
+</b></p>
+
+<p><b>
+  The model was built in 2021 and the smaller edge length is 2.5 cm (1 inch),
+  which gives it a height of 7 cm (2.8 inch).
+  It surprised me that it is very rigid,
+  but the rhombs prevent the square shaped tunnel to be deformed, of course.
+  I started to build the tunnel first and because of that it felt I had to
+  finish the model four times.
+</b></p>
+
+<p><b>
+  As the picture below shows the model seems to exist of 'M's and 'W's. One
+  could use it to honour Magnus Wenninger with a crown.
+</b></p>
+
+<p>
+<img id="mod_img" src="four-fold_toro_crosso_alt.png" alt="picture">
+</p>
+
+<p><b>
+Copyright of pictures by
+<a target="_blank" href="http://www.photoartstudio.se/">PhotoArt Studio Hörby</a>
+</b></p>
+
+<h2>Links</h2>
+<ul>
+  <li>
+    <a href="./index.html">Thumbnails</a>
+  </li><li>
+    <a href="../index.htm">Teun's Polyhedra</a>
+  </li><li>
+    <a href="../../index.htm">Home</a>
+  </li>
+</ul>
+
+<h2><a id="ref">References</a></h2>
+<a id="BStew01"><b>[BStew01]</b> Steward, B. M: <b>Adventures among the Toroids</b>,
+  Malloy Lithographing, Inc.; 2nd edition 1964
+
+<h2><a id="lastUpdated">Last Updated</a></h2>
+<p>2021-04-21
+</p>
+
+</div>
+
+<div id="model">
+  <p>
+  <canvas id="model_canvas"></canvas>
+  </p>
+</div>
+
+</div>
+</body>
+</html>
