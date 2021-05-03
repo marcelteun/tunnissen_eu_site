@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Totally Deflated Swissohedron</title>
+
+  <link rel="stylesheet" href="/css/built_models.css">
+  <script src="/js/show-off-bundle.js"></script>
+</head>
+
+<body onload="draw_shape('totally_deflated_swissohedron.off', 'model_canvas', 16,
+  {bg_col: [0.16, 0.23, 0.28]});">
+<div id="content">
+<h1>
+  Deflated Swissohedron
+</h1>
+<div id="descr">
+
+<!--
+	Crossohedron
+	Totally Deflated Swissohedron
+-->
+
+<p>
+<img id="mod_img" src="totally_deflated_swissohedron.png" alt="picture">
+</p>
+
+<p><b>
+  This is a variant of the Swissohedron where the crosses are moved towards each
+  other so that two opposite crosses meet.
+  Then only half of the other faces are used and these are organised in a
+  tetrahedral fashion. See more about corossohedra
+  <a href="./list.html">here</a>.
+</b></p>
+
+<p><b>
+  The model was built in 2021 and the smallest edge length is 2.5 cm (1 inch).
+  The height of the model is 6 cm (~2.4 inch).
+</b></p>
+
+<p><b>
+  This crossohedron is closely related to Steward's
+  4Q<sub>3</sub>(S<sub>3</sub>) used in Chapter VI of <a href="#BStew01">[BStew01]</a>
+  It is a bit hard to recognise the crosses in this one since one pair of the
+  legs can be seen from one direction, while the other pair is only seen from
+  the opposite direction.
+  In the picture below a half-finished version of this model is shown. Here you
+  can recognise one cross.
+</b></p>
+
+<p>
+<img id="mod_img" src="totally_deflated_swissohedron_stage.png" alt="picture">
+</p>
+
+<p><b>
+  The picture below shows the complete series of Swissohedra from totally
+  deflated to inflated with crosses of the same size.
+</b></p>
+
+<p>
+<img id="mod_img" src="series-of-swissohedra.png" alt="picture">
+</p>
+
+<p><b>
+Copyright of pictures by
+<a target="_blank" href="http://www.photoartstudio.se/">PhotoArt Studio Hörby</a>
+</b></p>
+
+<h2>Links</h2>
+<ul>
+  <li>
+    <a href="./index.html">Thumbnails</a>
+  </li><li>
+    <a href="../index.htm">Teun's Polyhedra</a>
+  </li><li>
+    <a href="../../index.htm">Home</a>
+  </li>
+</ul>
+
+<h2><a id="lastUpdated">Last Updated</a></h2>
+<p>2021-05-02
+</p>
+
+<h2><a id="ref">References</a></h2>
+<a id="BStew01"><b>[BStew01]</b> Steward, B. M: <b>Adventures among the Toroids</b>,
+  Malloy Lithographing, Inc.; 2nd edition 1964
+</a>
+
+</div>
+
+<div id="model">
+  <p>
+  <canvas id="model_canvas"></canvas>
+  </p>
+</div>
+
+</div>
+</body>
+</html>
