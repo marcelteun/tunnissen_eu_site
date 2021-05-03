@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inflated Swissohedron</title>
+
+  <link rel="stylesheet" href="/css/built_models.css">
+  <script src="/js/show-off-bundle.js"></script>
+</head>
+
+<body onload="draw_shape('inflated_swissohedron.off', 'model_canvas', 24,
+  {bg_col: [0.13, 0.18, 0.24]});">
+<div id="content">
+<h1>
+  Deflated Swissohedron
+</h1>
+<div id="descr">
+
+<!--
+	Crossohedron
+	inflated Swissohedron
+-->
+
+<p>
+<img id="mod_img" src="inflated_swissohedron.png" alt="picture">
+</p>
+
+<p><b>
+  This is a variant of the Swissohedron where the crosses are moved outwards
+  until the triangles at the 3-fold axes become regular hexagons.
+  The blue faces can either be seen as intersecting isosceles hexagons 
+  or as folded regular hexagons.
+  In case of the latter the whole polyhedron is equilateral.
+  However you interpret this the polyhedron is isogonal.
+  See more about corossohedra <a href="./list.html">here</a>.
+</b></p>
+
+<p><b>
+  The model was built in 2021 and the edge length is 2.5 cm (1 inch)
+  and the diameter of the model is 13 cm (~5.1 inch).
+</b></p>
+
+<p><b>
+  The picture below shows the complete series of Swissohedra from totally
+  deflated to inflated with crosses of the same size.
+</b></p>
+
+<p>
+<img id="mod_img" src="series-of-swissohedra.png" alt="picture">
+</p>
+
+<p><b>
+Copyright of pictures by
+<a target="_blank" href="http://www.photoartstudio.se/">PhotoArt Studio Hörby</a>
+</b></p>
+
+<h2>Links</h2>
+<ul>
+  <li>
+    <a href="./index.html">Thumbnails</a>
+  </li><li>
+    <a href="../index.htm">Teun's Polyhedra</a>
+  </li><li>
+    <a href="../../index.htm">Home</a>
+  </li>
+</ul>
+
+<h2><a id="lastUpdated">Last Updated</a></h2>
+<p>2021-05-02
+</p>
+
+<h2><a id="ref">References</a></h2>
+<a id="BStew01"><b>[BStew01]</b> Steward, B. M: <b>Adventures among the Toroids</b>,
+  Malloy Lithographing, Inc.; 2nd edition 1964
+</a>
+
+</div>
+
+<div id="model">
+  <p>
+  <canvas id="model_canvas"></canvas>
+  <br/>Interactive 3D model
+  </p>
+</div>
+
+</div>
+</body>
+</html>
