@@ -138,6 +138,8 @@
 	  The other pair consists of two congruent rectangles.
 	</li><li>
 	  All crosses in the polyhedron are congruent.
+	</li><li>
+	  Crosses that share an edge shall be a-planar.
 	</li>
       </ul>
 
@@ -651,16 +653,6 @@
 	  </td>
 	</tr>
 	<tr>
-	  <td class="fc">Double crossed crossohedron with crosses on the 4-fold
-	    axis (isogonal polyhedron with D<sub>4</sub>C<sub>4</sub> symmetry)
-	  </td>
-	  <td><button onclick="show_with_title(
-	      'Double Crossed 3D Plus Sign',
-	      'off/crosso-D4C4-o4-crossed.off', 25, {has_concave_faces:true})">Show
-	    </button>
-	  </td>
-	</tr>
-	<tr>
 	  <td class="fc">Crossed crossohedron with crosses on the 4-fold axis.
 	    This is an isogonal polyhedron with 2 different edge lengths.
 	  </td>
@@ -670,6 +662,36 @@
 	  </td>
 	</tr>
 	<tr>
+	<tr>
+	  <td class="mainRow_fc">
+	    <i>Anti-prism based crossohedron with pair of crosses with
+	    D<sub>8</sub>D<sub>4</sub> symmetry, where the height can be adjusted
+	    </i>
+	  </td>
+	  <td class="mainRow"></td>
+	</tr>
+	<tr>
+	  <td class="subRow_fc">
+	    An example for which both kinds of triangles become isosceles.
+	  </td>
+	  <td class="subRow">
+	    <button onclick="show_with_title(
+	      'Anti-prism crosohedron (isosceles)',
+	      'off/crosso-D8D4-o4_isosceles_3gons.off', 18)">Show
+	    </button>
+	  </td>
+	</tr>
+	<tr>
+	  <td class="lastSubRow_fc">
+	    An example for which both one kind of triangle becomes regular.
+	  </td>
+	  <td class="lastSubRow">
+	    <button onclick="show_with_title(
+	      'Anti-prism crosohedron (equilateral)',
+	      'off/crosso-D8D4-o4_equilateral_3gons.off', 18)">Show
+	    </button>
+	  </td>
+	</tr>
 	  <td class="fc">Crossolated gyrobifastigium; derived from Johnson solid
 	    J26.
 	    It has D<sub>4</sub>D<sub>2</sub> symmetry with
@@ -1099,6 +1121,16 @@
 	  </td>
 	</tr>
 	<tr>
+	  <td class="fc">Double crossed crossohedron with crosses on the 4-fold
+	    axis (isogonal polyhedron with D<sub>4</sub>C<sub>4</sub> symmetry)
+	  </td>
+	  <td><button onclick="show_with_title(
+	      'Double Crossed 3D Plus Sign',
+	      'off/crosso-D4C4-o4-crossed.off', 25, {has_concave_faces:true})">Show
+	    </button>
+	  </td>
+	</tr>
+	<tr>
 	  <td class="mainRow_fc">
 	    <i>Finite series with crosses on reflection planes</i>
 	  </td>
@@ -1419,7 +1451,7 @@
       <h2><a id="first">First Version</a></h2>
       <p>2021-04-01</p>
       <h2><a id="lastUpdated">Last Updated</a></h2>
-      <p>2021-05-08</p>
+      <p>2021-05-10</p>
     </div>
   </body>
 </html>
