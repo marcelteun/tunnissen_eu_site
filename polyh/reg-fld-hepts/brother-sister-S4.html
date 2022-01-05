@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Brother and Sister S4</title>
+
+  <link rel="stylesheet" href="/css/built_models.css">
+  <script src="/js/show-off-bundle.js"></script>
+</head>
+
+<body onload="draw_shape('brother-s4.off', 'model_canvas', 15, {bg_col: [0.9, 0.9, 0.9]});">
+<div id="content">
+<h1>
+  Brother and Sister S4
+</h1>
+<div id="descr">
+
+<!--
+	polyhedron regular heptagons
+-->
+
+<p>
+<img id="mod_img" src="brother-sister-S4.png" alt="picture">
+</p>
+
+<p><b>
+Picture copyright by
+<a target="_blank" href="http://www.photoartstudio.se/">PhotoArt Studio Hörby</a>
+</b></p>
+
+<p><b>
+These models were built in 2013 and their maximum dimensions are 8.5 cm x 8.5 cm x 8.5 cm.
+</b></p>
+
+<p><b>
+These polyhedra consist of regular heptagons that are allowed to be folded over 
+diagonals. There are different ways in which you can fold a regular heptagon and
+for these polyhedra the folding is done in a 'W' shape.
+</b></p>
+
+<p><b>
+Both polyhedra are quite similar and quite different at the same time.
+Around one type of symmetry axis the heptagons are arranged around the regular
+squares or triangles as a dish, while for the other type of symmetry axis they
+are aranged as a propeller. In both the models the role of the axes are
+exchanged.
+</b></p>
+
+<p><b>
+I think they both have a pleasing shape and they form a nice pair. They same
+combination can be found for the dodecahedron symmetry.
+The choice of which one is brother and which one sister is based on the
+following:
+the propeller with three blades reminds me of a Y chromosome (brother) while the
+one with four reminds me of an X chromosome (sister).
+</b></p>
+
+<p><b>
+  <a href="./index.html">Thumbnails</a>
+</b></p>
+<p>
+  <b><a href="../index.htm">Teun's Polyhedra</a>
+</b></p>
+<p>
+  <b><a href="../../index.htm">Home</a>
+</b></p>
+
+<h2><a id="lastUpdated">Last Updated</a></h2>
+<p>2022-01-05
+</p>
+
+</div>
+
+<div id="model">
+  <p>
+  <canvas id="model_canvas"></canvas>
+  </p>
+  <p>
+  <select id="mySelect" onchange="on_select()">
+    <option value="brother-s4.off">Brother
+    <option value="sister-s4.off">Sister
+  </select>
+  <script>
+    function on_select() {
+      var x = document.getElementById("mySelect").value;
+      var pars = x.split(":");
+      draw_shape(pars[0], 'model_canvas', 15, {bg_col: [0.9, 0.9, 0.9]});
+    }
+  </script>
+  </p>
+</div>
+
+</div>
+</body>
+</html>
