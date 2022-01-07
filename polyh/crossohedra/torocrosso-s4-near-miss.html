@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toro Crosso: Swissohedron with Cuboctahedron Kernel</title>
+
+  <link rel="stylesheet" href="/css/built_models.css">
+  <script src="/js/show-off-bundle.js"></script>
+</head>
+
+<body onload="draw_shape('torocrosso-s4-near-miss.off', 'model_canvas', 16, {bg_col: [0.9, 0.9, 0.9]});">
+<div id="content">
+<h1>Toro Crosso: Swissohedron with Cuboctahedron Kernel</h1>
+<div id="descr">
+
+<!--
+	Crossohedron
+	Toro-Crosso
+	Polyhedron
+	Toroid
+-->
+
+<p>
+<img id="mod_img" src="torocrosso-s4-near-miss.png" alt="picture">
+</p>
+
+<p><b>
+  This polyhedron is a toroidal <a href="./list.html#TC">crossohedron</a>.
+  It consists of a cuboctahedron centre with a swissohedron on the outside.
+  The tunnels are made of eight octahedra connecting the triangles of the
+  cuboctahedron and the swissohedron.
+  The octahedra give the appearance to be regular, but ther aren't; the edge
+  ratio is 1:2/&radic;(15-8&radic;2) which is around 1:1.04
+  The model was found and built in 2021.
+</b></p>
+
+<p><b>
+  It is hard to show the final result with a single picture.
+  I shared a video taken with my telephone
+  <a target="_blank" href="https://www.youtube.com/watch?v=keXBhkgSZZk">on Youtube</a>
+  where are try to show the inside.
+  With the 3D model on the right it is possible to remove the swissohedron so
+  that you can see the inner structure of cuboctahedron with the eight
+  octahedra.
+  What you cannot see here (neither in the film) is the beautiful effect of a
+  kaleidoscope, when you put your eye in the triangular opening of a tunnel and
+  play with the reflections of the light coming from the other openings.
+</b></p>
+
+<p><b>
+Copyright of pictures by
+<a target="_blank" href="http://www.photoartstudio.se/">PhotoArt Studio Hörby</a>
+</b></p>
+
+<h2>Links</h2>
+<ul>
+  <li>
+    <a href="./index.html">Thumbnails</a>
+  </li><li>
+    <a href="../index.htm">Teun's Polyhedra</a>
+  </li><li>
+    <a href="../../index.htm">Home</a>
+  </li>
+</ul>
+
+<h2><a id="ref">References</a></h2>
+<a id="BStew01"><b>[BStew01]</b> Steward, B. M: <b>Adventures among the Toroids</b>,
+  Malloy Lithographing, Inc.; 2nd edition 1964
+
+<h2><a id="lastUpdated">Last Updated</a></h2>
+<p>2022-01-07
+</p>
+
+</div>
+
+<div id="model">
+  <p>
+  <canvas id="model_canvas"></canvas>
+  </p>
+  <p>
+  <select id="mySelect" onchange="on_select()">
+    <option value="torocrosso-s4-near-miss.off">Whole model
+    <option value="torocrosso-s4-near-miss-inside.off">Inner structure
+  </select>
+  <script>
+    function on_select() {
+      var x = document.getElementById("mySelect").value;
+      var pars = x.split(":");
+      draw_shape(pars[0], 'model_canvas', 16, {bg_col: [0.9, 0.9, 0.9]});
+    }
+  </script>
+  </p>
+</div>
+
+</div>
+</body>
+</html>
