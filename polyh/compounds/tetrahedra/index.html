@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8"/>
     <title>Compounds of Tetrahedra for Platonic Symmetries</title>
-    <link href="/css/interactive_models.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/interactive_models.css"/>
     <script src="/js/show-off-bundle.js"></script>
     <script src="/js/interactive_models.js"></script>
     <script src="off/tetrahedron_compounds.js"></script>
@@ -12,7 +12,7 @@
     <div id="model">
       <h3 id="canvas_title"> </h3>
       <canvas id="model_canvas"> </canvas>
-      <input type="range" id="rot_angle" class="slider"/>
+      <input id="rot_angle" type="range" class="slider"/>
       <p id="angle_text">With &mu; = <span id="angle"></span> degrees
       </p>
     </div>
@@ -465,13 +465,7 @@
           </td>
           <td class="lastSubRow"><button onclick="show_with_title('4 x 2 | D<sub>3</sub> /  C<sub>3</sub>', 'off/8_S4_C3_mu3.off', 10)">4 x 2 | D<sub>3</sub> /  C<sub>3</sub></button>
           </td>
-          <td class="lastSubRow_descr">For the each angle holds already that it consists of 4 x 2 | D<sub>3</sub> /  C<sub>3</sub>,
-                        where order 3 axes are shared as indicated by the colouring of the
-                        standard model, but for this angle there are also
-                        4 x 2 | D<sub>3</sub> /  C<sub>3</sub> for which the order 3 axes are shared (in different ways) as
-                        shown in the example. All vertices are organised in regular
-                        pentagons; more specifically the vertices of this compound are the
-                        same as the vertices of two dodecahedra: 2 | S<sub>4</sub> x I /  A<sub>4</sub> x I
+          <td class="lastSubRow_descr">For the each angle holds already that it consists of 4 x 2 | D<sub>3</sub> /  C<sub>3</sub>, where order 3 axes are shared as indicated by the colouring of the standard model, but for this angle there are also 4 x 2 | D<sub>3</sub> /  C<sub>3</sub> for which the order 3 axes are shared (in different ways) as shown in the example. All vertices are organised in regular pentagons; more specifically the vertices of this compound are the same as the vertices of a classic compound of two dodecahedra 2 | S<sub>4</sub> x I /  A<sub>4</sub> x I, where one dodecahedron is rotated 45 degrees around a 2-fold axis.
           </td>
         </tr>
         <tr>
@@ -531,25 +525,25 @@
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>4</sub>
           </td>
-          <td class="subRow"><button onclick="show_with_title('4 x 2 | D<sub>2</sub>C<sub>2</sub> /  C<sub>2</sub>C<sub>1</sub>', 'off/12_S4_C2_mu4.off', 10)">4 x 2 | D<sub>2</sub>C<sub>2</sub> /  C<sub>2</sub>C<sub>1</sub></button>
+          <td class="subRow"><button onclick="show_with_title('n x 2 | D<sub>2</sub>C<sub>2</sub> /  C<sub>2</sub>C<sub>1</sub>', 'off/12_S4_C2_mu4.off', 10)">n x 2 | D<sub>2</sub>C<sub>2</sub> /  C<sub>2</sub>C<sub>1</sub></button>
           </td>
-          <td class="subRow_descr">A halfturn of the final compound ends up in a reflection plane of the descriptor. For each of the 4 non-fundamental compounds 3 | D<sub>2</sub> /  C<sub>2</sub> one can choose any pair which will ba a 2 | D<sub>2</sub>C<sub>2</sub> /  C<sub>2</sub>C<sub>1</sub>. I.e. this sub-compound contains a reflection whereas the final symmetry lacks any opposite symmetries.
+          <td class="subRow_descr">A halfturn of the final compound ends up in a reflection plane of the descriptor. For each of the 4 non-fundamental compounds 3 | D<sub>3</sub> /  C<sub>2</sub> one can choose any pair which will be a 2 | D<sub>2</sub>C<sub>2</sub> /  C<sub>2</sub>C<sub>1</sub>. I.e. this sub-compound contains a reflection whereas the final symmetry lacks any opposite symmetries.It isn't possible to find 6 separate pairs and the static model on the left shows 4 pairs emphasised with colours that aren't gray.
           </td>
         </tr>
         <tr class="subRow">
           <td class="subRow_r">with &mu; = &mu;<sub>5</sub>
           </td>
-          <td class="subRow"><button onclick="show_with_title('4 x 2 | D<sub>3</sub> /  C<sub>3</sub>', 'off/12_S4_C2_mu5.off', 10)">4 x 2 | D<sub>3</sub> /  C<sub>3</sub></button>
+          <td class="subRow"><button onclick="show_with_title('n x 2 | D<sub>3</sub> /  C<sub>3</sub>', 'off/12_S4_C2_mu5.off', 10)">n x 2 | D<sub>3</sub> /  C<sub>3</sub></button>
           </td>
-          <td class="subRow_descr">The 3 fold axes of two elements coincide. For each of the 4 non-fundamental compounds 3 | D<sub>2</sub> /  C<sub>2</sub> one can choose any pair which will be a 2 | D<sub>3</sub> /  C<sub>3</sub>.
+          <td class="subRow_descr">The 3 fold axes of two elements coincide. For each of the 4 non-fundamental compounds 3 | D<sub>3</sub> /  C<sub>2</sub> one can choose any pair which will be a 2 | D<sub>3</sub> /  C<sub>3</sub>. It isn't possible to find 6 separate pairs and the static model on the left shows 4 pairs emphasised with colours that aren't gray.
           </td>
         </tr>
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>6</sub>
           </td>
-          <td class="lastSubRow"><button onclick="show_with_title('4 x 2 | D<sub>3</sub> /  C<sub>3</sub>', 'off/12_S4_C2_mu6.off', 10)">4 x 2 | D<sub>3</sub> /  C<sub>3</sub></button>
+          <td class="lastSubRow"><button onclick="show_with_title('n x 2 | D<sub>3</sub> /  C<sub>3</sub>', 'off/12_S4_C2_mu6.off', 10)">n x 2 | D<sub>3</sub> /  C<sub>3</sub></button>
           </td>
-          <td class="lastSubRow_descr">The 3 fold axes of two elements coincide. For each of the 4 non-fundamental compounds 3 | D<sub>2</sub> /  C<sub>2</sub> one can choose any pair which will be a 2 | D<sub>3</sub> /  C<sub>3</sub>.
+          <td class="lastSubRow_descr">The 3 fold axes of two elements coincide. For each of the 4 non-fundamental compounds 3 | D<sub>3</sub> /  C<sub>2</sub> one can choose any pair which will be a 2 | D<sub>3</sub> /  C<sub>3</sub>.It isn't possible to find 6 separate pairs and the static model on the left shows 4 pairs emphasised with colours that aren't gray.
           </td>
         </tr>
         <tr>
@@ -588,7 +582,7 @@
           </td>
           <td class="lastSubRow"><button onclick="show_with_title('3 x 4 | D<sub>8</sub> x I /  D<sub>4</sub>D<sub>2</sub>', 'off/12_S4xI_C4C2_mu2.off', 10)">3 x 4 | D<sub>8</sub> x I /  D<sub>4</sub>D<sub>2</sub></button>
           </td>
-          <td class="lastSubRow_descr">-
+          <td class="lastSubRow_descr">Each sub-compound 4 | D<sub>4</sub> x I /  C<sub>4</sub>C<sub>2</sub> reaches its special angle and becomes a 4 | D<sub>8</sub> x I /  D<sub>4</sub>D<sub>2</sub>.
           </td>
         </tr>
         <tr>
@@ -628,15 +622,15 @@
           </td>
           <td class="subRow"><button onclick="show_with_title('4 x 4 | D<sub>12</sub>D<sub>6</sub> /  D<sub>3</sub>C<sub>3</sub>', 'off/16_S4xI_C3_mu2.off', 10)">4 x 4 | D<sub>12</sub>D<sub>6</sub> /  D<sub>3</sub>C<sub>3</sub></button>
           </td>
-          <td class="subRow_descr">-
+          <td class="subRow_descr">Each sub-compound 4 | D<sub>3</sub> x I /  C<sub>3</sub> reaches its special angle and becomes a 4 | D<sub>6</sub> x I /  D<sub>3</sub>C<sub>3</sub>.
           </td>
         </tr>
         <tr class="subRow">
           <td class="lastSubRow_r">with &mu; = &mu;<sub>3</sub>
           </td>
-          <td class="lastSubRow"><button onclick="show_with_title('10 | A<sub>5</sub> x I /  A<sub>4</sub>', 'off/10_A5xI_A4.off', 10)">10 | A<sub>5</sub> x I /  A<sub>4</sub></button>
+          <td class="lastSubRow"><button onclick="show_with_title('2 x 8 | A<sub>4</sub> x I /  C<sub>3</sub>', 'off/16_S4xI_C3_mu3.off', 10)">2 x 8 | A<sub>4</sub> x I /  C<sub>3</sub></button>
           </td>
-          <td class="lastSubRow_descr">-
+          <td class="lastSubRow_descr">This occurs when a 3-fold axis of the descriptive ends up in a reflection plane of S<sub>4</sub> x I. Then it becomes a compound of two 8 | A<sub>4</sub> x I /  C<sub>3</sub> | &mu;<sub>2</sub>, which is a classic compound of ten tetrahedra with on Stella Octangula removed. These are put together by rotating one 45 degrees around a 2-fold axis. It is also a compound of two 8 | S<sub>4</sub> /  C<sub>3</sub> | &mu;<sub>3</sub> where one is inverted.
           </td>
         </tr>
         <tr>
@@ -1121,11 +1115,11 @@
           <a href="/polyh/index.htm">My polyhedra</a>
         </li>
         <li>
-          <a href="http://users.skynet.be/polyhedra.fleurent/Compounds/Text/Page_00_1.htm" target="new">Webpage about compounds by M. Fleurent and H. Verheyen</a>
+          <a target="new" href="http://users.skynet.be/polyhedra.fleurent/Compounds/Text/Page_00_1.htm">Webpage about compounds by M. Fleurent and H. Verheyen</a>
         </li>
       </ul>
       <h2><a id="lastUpdated">Last Updated</a></h2>
-      <p>2021-01-16, 16:46 CET
+      <p>2022-07-04, 19:55 CET
       </p>
     </div>
   </body>
