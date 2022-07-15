@@ -68,6 +68,7 @@ function ishow(model, cam_dist, axis, rmin, rmax, rstep) {
       angle.innerText = Math.round((angle_deg + Number.EPSILON) * 10) / 10;
     }
   }
+  slider.oninput()
   var title = document.getElementById("canvas_title");
   if (title) {
     title.innerText = "";
