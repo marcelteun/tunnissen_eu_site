@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Big Brother and Sister</title>
+
+  <link rel="stylesheet" href="/css/built_models.css">
+  <script src="/js/show-off-bundle.js"></script>
+</head>
+
+<body onload="draw_shape('brother-a5.off', 'model_canvas', 22, {bg_col: [0.9, 0.9, 0.9]});">
+<div id="content">
+<h1>
+  Big Brother and Sister
+</h1>
+<div id="descr">
+
+<!--
+	polyhedron regular heptagons
+-->
+
+<p>
+<img id="mod_img" src="brother-sister-A5.jpg" alt="picture">
+</p>
+
+<p><b>
+Picture copyright by
+<a target="_blank" href="http://www.photoartstudio.se/">PhotoArt Studio Hörby</a>
+</b></p>
+
+<p><b>
+These models were built in 2022 and their maximum dimensions are 13.5 cm x 13.5
+cm x 13.5 cm for big brother and 13 cm x 13 cm x 13 cm for big sister.
+</b></p>
+
+<p><b>
+These polyhedra consist of regular heptagons that are allowed to be folded over 
+diagonals. There are different ways in which you can fold a regular heptagon and
+for these polyhedra the folding is done in a 'W' shape.
+</b></p>
+
+<p><b>
+Both polyhedra are quite similar and quite different at the same time.
+Around one type of symmetry axis the heptagons are arranged around the regular
+pentagons or triangles as a dish, while for the other type of symmetry axis they
+are aranged as a propeller. In both the models the role of the axes are
+exchanged.
+These models have the rotational symmetries from a dodecahedron (or icosahedron).
+A same kind of pair can be found for the cube (or octahedron) symmetry.
+Models of those can be found
+<a target="_blank" href="brother-sister-S4.html">here</a>.
+</b></p>
+
+<p><b>
+These models were quite hard to glue together. I built big sister first. Halfway
+it was already getting hard and I thought that it would be even harder to
+finish, but closer to the end it became easier instead. Big brother went a lot
+easier when I was halfway and I thought it would be the easier model, but
+towards the end there was quite some tension that made the model collapse a bit
+and it became really hard in the end. To solve the problem I prepared a pentagon
+with five triangles attached already while leaving gaps for the last five
+isosceles triangles. This way I could straighten out the model through those 5
+gaps, while gluing on the part with six pieces. That turned out to be a good
+strategy. In the end this was one of the hardest models models I built.
+</b></p>
+
+<p><b>
+I think they both have a pleasing shape and they form a nice pair.
+The choice of which one is brother and which one sister is based on the
+following:
+the propeller with three blades reminds me of a Y chromosome (brother) while for
+little sister there are four which reminds me of an X chromosome (sister).
+For big sister there are five, which means that big sister would be kind of a super woman.
+</b></p>
+
+<p><b>
+  <a href="./index.html">Thumbnails</a>
+</b></p>
+<p>
+  <b><a href="../index.htm">Teun's Polyhedra</a>
+</b></p>
+<p>
+  <b><a href="../../index.htm">Home</a>
+</b></p>
+
+<h2><a id="lastUpdated">Last Updated</a></h2>
+<p>2022-07-16
+</p>
+
+</div>
+
+<div id="model">
+  <p>
+  <canvas id="model_canvas"></canvas>
+  </p>
+  <p>
+  <select id="mySelect" onchange="on_select()">
+    <option value="brother-a5.off">Big brother
+    <option value="sister-a5.off">Big sister
+  </select>
+  <script>
+    function on_select() {
+      var x = document.getElementById("mySelect").value;
+      var pars = x.split(":");
+      draw_shape(pars[0], 'model_canvas', 22, {bg_col: [0.9, 0.9, 0.9]});
+    }
+  </script>
+  </p>
+</div>
+
+</div>
+</body>
+</html>
