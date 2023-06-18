@@ -66,7 +66,21 @@ which is the convex hull of this compound.
 <div id="model">
   <p>
   <canvas id="model_canvas"></canvas>
-</p>
+  </p>
+  <p>
+  <select id="mySelect" onchange="on_select()">
+    <option value="compound-of-three-stephanoids.off">Whole compound
+    <option value="one-of-three-stephanoids.off">One stephanoid
+  </select>
+  <script>
+    function on_select() {
+      var x = document.getElementById("mySelect").value;
+      var pars = x.split(":");
+      draw_shape(pars[0], 'model_canvas', 5, {has_concave_faces: true, bg_col: [0.63, 0.62, 0.6]});
+    }
+  </script>
+  </p>
+</div>
 </div>
 
 </div>
