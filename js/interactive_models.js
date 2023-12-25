@@ -74,6 +74,54 @@ function ishow(model, cam_dist, axis, rmin, rmax, rstep) {
     title.innerText = "";
   }
 }
+function morph_show(model, cam_dist, rmin, rmax, rstep) {
+  // morph vertices interactively with slide-bar
+  document.getElementById("model").style.display = "block";
+  document.getElementById("model").style.initialised = false;
+  var slider = document.getElementById("v_factor");
+  /*
+  var angle = document.getElementById("angle");
+  var angle_text = document.getElementById("angle_text");
+  */
+  slider.hidden = false;
+  slider.value = 0;
+  /*
+  if (angle_text) {
+    angle_text.style.display = "block";
+    angle.innerHTML = 0;
+  }
+  */
+  // either define one or define all
+  if (rmin === undefined || rmax === undefined) {
+    slider.min = 0
+    slider.max = 1
+  } else {
+    slider.min = rmin;
+    slider.max = rmax;
+  }
+  if (rstep === undefined) {
+    slider.step = 0.001;
+  } else {
+    slider.step = rstep;
+  }
+  if (!cam_dist) {cam_dist = 10;}
+  var shape = new MorphShape(model.descr, 'model_canvas', cam_dist, {has_concave_faces: false});
+  slider.oninput = function() {
+    shape.morph_descriptive(this.value);
+    /*
+    if (angle_text) {
+      angle.innerText = Math.round((angle_deg + Number.EPSILON) * 10) / 10;
+    }
+    */
+  }
+  slider.oninput()
+  var title = document.getElementById("canvas_title");
+  /*
+  if (title) {
+    title.innerText = "";
+  }
+  */
+}
 function hide() {
   if (document.getElementById("model").style.initialised) {
     document.getElementById("model").style.display = "none";
