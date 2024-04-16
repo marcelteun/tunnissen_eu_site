@@ -8,7 +8,7 @@
   <script src="/js/show-off-bundle.js"></script>
 </head>
 
-<body onload="draw_shape('deflated_swissohedron.off', 'model_canvas', 16, {bg_col: [0.2, 0.2, 0.2]});">
+<body onload="draw_shape('deflated_swissohedron.off', 'model_canvas', {bg_col: [0.2, 0.2, 0.2]});">
 <div id="content">
 <h1>
   Deflated Swissohedron
@@ -79,15 +79,13 @@
   </p>
   <p>
   <select id="mySelect" onchange="on_select()">
-    <option value="deflated_swissohedron.off:16">Original model
-    <option value="deflated_swissohedron_alt.off:16">Alternative model
+    <option value="deflated_swissohedron.off">Original model
+    <option value="deflated_swissohedron_alt.off">Alternative model
   </select>
   <script>
     function on_select() {
-      var x = document.getElementById("mySelect").value;
-      var pars = x.split(":");
-      var cam_d = parseInt(pars[1]);
-      draw_shape(pars[0], 'model_canvas', cam_d, {bg_col: [0.2, 0.2, 0.2]});
+      var name = document.getElementById("mySelect").value;
+      draw_shape(name, 'model_canvas', {bg_col: [0.2, 0.2, 0.2]});
     }
   </script>
   </p>

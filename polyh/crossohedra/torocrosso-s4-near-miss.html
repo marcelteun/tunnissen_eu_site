@@ -8,7 +8,7 @@
   <script src="/js/show-off-bundle.js"></script>
 </head>
 
-<body onload="draw_shape('torocrosso-s4-near-miss.off', 'model_canvas', 16, {bg_col: [0.9, 0.9, 0.9]});">
+<body onload="draw_shape('torocrosso-s4-near-miss.off', 'model_canvas', {bg_col: [0.9, 0.9, 0.9]});">
 <div id="content">
 <h1>Toro Crosso: Swissohedron with Cuboctahedron Kernel</h1>
 <div id="descr">
@@ -86,7 +86,7 @@ Copyright of pictures by
     function on_select() {
       var x = document.getElementById("mySelect").value;
       var pars = x.split(":");
-      draw_shape(pars[0], 'model_canvas', 16, {bg_col: [0.9, 0.9, 0.9]});
+      draw_shape(pars[0], 'model_canvas', {bg_col: [0.9, 0.9, 0.9]});
     }
   </script>
   </p>

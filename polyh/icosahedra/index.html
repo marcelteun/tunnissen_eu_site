@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>The Stellations of the Icosahedron</title>
+    <link rel="stylesheet" href="/css/interactive_models.css"/>
+    <script src="/js/show-off-bundle.js"></script>
+    <script src="/js/interactive_models.js"></script>
+    <script src="off/tetrahedron_compounds.js"></script>
+  </head>
+  <body>
+    <div id="model">
+      <h3 id="canvas_title"> </h3>
+      <canvas id="model_canvas"> </canvas>
+      <input id="rot_angle" type="range" class="slider"/>
+      <p id="angle_text">With &mu; = <span id="angle"></span> degrees
+      </p>
+    </div>
+    <div id="pagebody" onclick="hide()">
+      <h1>The Stellations of the Icosahedron</h1>
+      <p>Note: for optimal experience Javascript should be enabled.
+      </p>
+      <h2>Contents</h2>
+      <ul>
+        <li>
+          <a href="#introduction">Introduction</a>
+        </li>
+        <li>
+          <a href="#notes">Notes</a>
+        </li>
+        <li>
+          <a href="#stellations">Models of the Stellations</a>
+        </li>
+        <li>
+          <a href="#references">References</a>
+        </li>
+        <li>
+          <a href="#links">Links</a>
+        </li>
+        <li>
+          <a href="#lastUpdated">Last Updated</a>
+        </li>
+      </ul>
+      <h2><a name="introduction">Introduction</a></h2>
+      <p>
+        In the book <a href="#Coxeter01">The 59 Icosahedra</a> H.S.M. Coxeter presents all possible stellations of the
+        icosahedron according to a set of rules. 
+        This page presents these as 3D models so that the reader can investigate them
+        further.
+      </p>
+      <p>
+        Click on the buttons in the table to investigate the 3D model.
+      </p>
+      <h2><a name="stellations">Models of the Stellations</a></h2>
+      <table>
+        <tr class="header">
+          <td class="header_fc">Cell Name<a href="#note1"><sup>1</sup></a>
+          </td>
+          <td class="header">Edge Name<a href="#note1"><sup>1</sup></a>
+          </td>
+          <td class="header_last">X3D model
+          </td>
+          <td class="header_fc">Cell Name<a href="#note1"><sup>1</sup></a>
+          </td>
+          <td class="header">Edge Name<a href="#note1"><sup>1</sup></a>
+          </td>
+          <td class="header_last">X3D model
+          </td>
+        </tr>
+        <tr>
+          <td class="fc">
+            <b>A</b>
+          </td>
+          <td>
+            <b>0</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('Icosahedron', 'off/icosahedron00_A.off')">Icosahedron</button>
+          </td>
+          <td class="fc">
+            <b>B</b>
+          </td>
+          <td>
+            <b>1</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 1', 'off/icosahedron01_B.off')">No. 1</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc">
+            <b>C</b>
+          </td>
+          <td>
+            <b>2</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 2', 'off/icosahedron02_C.off')">No. 2</button>
+          </td>
+          <td class="fc">
+            <b>D</b>
+          </td>
+          <td>
+            <b>3 4</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 3', 'off/icosahedron03_D.off')">No. 3</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc">
+            <b>E</b>
+          </td>
+          <td>
+            <b>5 6 7</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 4', 'off/icosahedron04_E.off')">No. 4</button>
+          </td>
+          <td class="fc">
+            <b>F</b>
+          </td>
+          <td>
+            <b>8 9 10</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 5', 'off/icosahedron05_F.off')">No. 5</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc">
+            <b>G</b>
+          </td>
+          <td>
+            <b>11 12</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 6', 'off/icosahedron06_G.off')">No. 6</button>
+          </td>
+          <td class="fc">
+            <b>H</b>
+          </td>
+          <td>
+            <b>13</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 7', 'off/icosahedron07_H.off')">No. 7</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc">
+            <b>e<sub>1</sub></b>
+          </td>
+          <td>
+            <b>3' 5</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 8', 'off/icosahedron08_e1.off')">No. 8</button>
+          </td>
+          <td class="fc">
+            <b>f<sub>1</sub></b>
+          </td>
+          <td>
+            <b>5' 6' 9 10</b>
+          </td>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 9', 'off/icosahedron09_f1.off')">No. 9</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc">
+            <b>g<sub>1</sub></b>
+          </td>
+          <td>
+            <b>10' 12</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 10', 'off/icosahedron10_g1.off')">No. 10</button>
+          </td>
+          <td class="fc">
+            <b>e<sub>1</sub> f<sub>1</sub></b>
+          </td>
+          <td>
+            <b>3' 6' 9 10</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 11', 'off/icosahedron11_e1f1.off')">No. 11</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc">
+            <b>e<sub>1</sub> f<sub>1</sub> g<sub>1</sub></b>
+          </td>
+          <td>
+            <b>3' 6' 9 12</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 12', 'off/icosahedron12_e1f1g1.off', {has_concave_faces:true})">No. 12</button>
+          </td>
+          <td class="fc">
+            <b>f<sub>1</sub> g<sub>1</sub></b>
+          </td>
+          <td>
+            <b>5' 6' 9 12</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 13', 'off/icosahedron13_f1g1.off', {has_concave_faces:true})">No. 13</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc">
+            <b>e<sub>2</sub></b>
+          </td>
+          <td>
+            <b>4' 6 9</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 14', 'off/icosahedron14_e2.off')">No. 14</button>
+          </td>
+          <td class="fc">
+            <b>f<sub>2</sub></b>
+          </td>
+          <td>
+            <b>7' 8</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 15', 'off/icosahedron15_f2.off')">No. 15</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc">
+            <b>g<sub>2</sub></b>
+          </td>
+          <td>
+            <b>8' 9' 11</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 16', 'off/icosahedron16_g2.off')">No. 16</button>
+          </td>
+          <td class="fc">
+            <b>e<sub>2</sub> f<sub>2</sub></b>
+          </td>
+          <td>
+            <b>4' 6 8</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 17', 'off/icosahedron17_e2f2.off', {has_concave_faces:true})">No. 17</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc">
+            <b>e<sub>2</sub> f<sub>2</sub> g<sub>2</sub></b>
+          </td>
+          <td>
+            <b>4' 6 9' 11</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 18', 'off/icosahedron18_e2f2g2.off')">No. 18</button>
+          </td>
+          <td class="fc">
+            <b>f<sub>2</sub> g<sub>2</sub></b>
+          </td>
+          <td>
+            <b>7' 9' 11</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 19', 'off/icosahedron19_f2g2.off', {has_concave_faces:true})">No. 19</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc">
+            <b>D e></b>
+          </td>
+          <td>
+            <b>4 5</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 20', 'off/icosahedron20_De.off')">No. 20</button>
+          </td>
+          <td class="fc">
+            <b>E f<sub>1</sub></b>
+          </td>
+          <td>
+            <b>7 9 10</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 21', 'off/icosahedron21_Ef.off', {has_concave_faces:true})">No. 21</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc">
+            <b>F g</b>
+          </td>
+          <td>
+            <b>8 9 12</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 22', 'off/icosahedron22_Fg.off', {has_concave_faces:true})">No. 22</button>
+          </td>
+          <td class="fc">
+            <b>D e<sub>1</sub> f<sub>1</sub></b>
+          </td>
+          <td>
+            <b>4 6' 9 10</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 23', 'off/icosahedron23_De1f1.off')">No. 23</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc">
+            <b>D e<sub>1</sub> f<sub>1</sub> g<sub>1</sub></b>
+          </td>
+          <td>
+            <b>4 6' 9 12</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 24', 'off/icosahedron24_De1f1g1.off', {has_concave_faces:true})">No. 24</button>
+          </td>
+          <td class="fc">
+            <b>E f<sub>1</sub> g<sub>1</sub></b>
+          </td>
+          <td>
+            <b>7 9 12</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 25', 'off/icosahedron25_Ef1g1.off')">No. 25</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc">
+            <b>D e<sub>2</sub></b>
+          </td>
+          <td>
+            <b>3 6 7</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 26', 'off/icosahedron26_De2.off', {has_concave_faces:true})">No. 26</button>
+          </td>
+          <td class="fc">
+            <b>E f<sub>2</sub></b>
+          </td>
+          <td>
+            <b>5 6 8</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 27', 'off/icosahedron27_Ef2.off')">No. 27</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc">
+            <b>F g<sub>2</sub></b>
+          </td>
+          <td>
+            <b>10 11</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 28', 'off/icosahedron28_Fg2.off')">No. 28</button>
+          </td>
+          <td class="fc">
+            <b>D e<sub>2</sub> f<sub>2</sub></b>
+          </td>
+          <td>
+            <b>3 6 8</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 29', 'off/icosahedron29_De2f2.off')">No. 29</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc">
+            <b>D e<sub>2</sub> f<sub>2</sub> g<sub>2</sub></b>
+          </td>
+          <td>
+            <b>4 6 9' 11</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 30', 'off/icosahedron30_De2f2g2.off', {has_concave_faces:true})">No. 30</button>
+          </td>
+          <td class="fc">
+            <b>E f<sub>2</sub> g<sub>2</sub></b>
+          </td>
+          <td>
+            <b>5 6 9' 11</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 31', 'off/icosahedron31_Ef2g2.off')">No. 31</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc">f<sub>1</sub>
+          </td>
+          <td><i>5' 6' </i>9 10
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 32', 'off/icosahedron32_f1.off')">No. 32</button>
+          </td>
+          <td class="fc"><b>e<sub>1</sub></b>f<sub>1</sub>
+          </td>
+          <td><b>3'</b> 5 <i>6' </i>9 10
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 33', 'off/icosahedron33_e1f1.off')">No. 33</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc"><b>D e<sub>1</sub></b>f<sub>1</sub>
+          </td>
+          <td><b>4</b> 5 <i>6' </i>9 10
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 34', 'off/icosahedron34_De1f1.off', {has_concave_faces:true})">No. 34</button>
+          </td>
+          <td class="fc">f<sub>1</sub> <b>g<sub>1</sub></b>
+          </td>
+          <td><i>5' 6' </i>9 <i>10' </i><b>12</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 35', 'off/icosahedron35_f1g1.off')">No. 35</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc"><b>e<sub>1</sub></b>f<sub>1</sub> <b>g<sub>1</sub></b>
+          </td>
+          <td><b>3'</b> 5 <i>6' </i>9 <i>10' </i><b>12</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 36', 'off/icosahedron36_e1f1g1.off')">No. 36</button>
+          </td>
+          <td class="fc"><b>D e<sub>1</sub></b>f<sub>1</sub> <b>g<sub>1</sub></b>
+          </td>
+          <td><b>4</b> 5 <i>6' </i>9 <i>10' </i><b>12</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 37', 'off/icosahedron37_De1f1g1.off', {has_concave_faces:true})">No. 37</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc">f<sub>1</sub> <b>g<sub>2</sub></b>
+          </td>
+          <td><i>5' 6' </i><b>8'</b> <i>9' </i>10 <b>11</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 38', 'off/icosahedron38_f1g2.off')">No. 38</button>
+          </td>
+          <td class="fc"><b>e<sub>1</sub></b>f<sub>1</sub> <b>g<sub>2</sub></b>
+          </td>
+          <td><b>3'</b> 5 <i>6' </i><b>8'</b> <i>9' </i>10 <b>11</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 39', 'off/icosahedron39_e1f1g2.off', {has_concave_faces:true})">No. 39</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc"><b>D e<sub>1</sub></b>f<sub>1</sub> <b>g<sub>2</sub></b>
+          </td>
+          <td><b>4</b> 5 <i>6' </i><b>8'</b> <i>9' </i>10 <b>11</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 40', 'off/icosahedron40_De1f1g2.off')">No. 40</button>
+          </td>
+          <td class="fc">f<sub>1</sub> <b>f<sub>2</sub> g<sub>2</sub></b>
+          </td>
+          <td><i>5' 6' </i><b>7'</b> <i>9' </i>10 <b>11</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 41', 'off/icosahedron41_f1f2g2.off', {has_concave_faces:true})">No. 41</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc"><b>e<sub>1</sub></b>f<sub>1</sub> <b>f<sub>2</sub> g<sub>2</sub></b>
+          </td>
+          <td><b>3'</b> 5 <i>6' </i><b>7'</b> <i>9' </i>10 <b>11</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 42', 'off/icosahedron42_e1f1f2g2.off')">No. 42</button>
+          </td>
+          <td class="fc"><b>D e<sub>1</sub></b>f<sub>1</sub> <b>f<sub>2</sub> g<sub>2</sub></b>
+          </td>
+          <td><b>4</b> 5 <i>6' </i><b>7'</b> <i>9' </i>10 <b>11</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 43', 'off/icosahedron43_De1f1f2g2.off')">No. 43</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc"><b>e<sub>2</sub> </b>f<sub>1</sub>
+          </td>
+          <td><b>4'</b> <i>5' </i>6 <b>7</b> 9 10
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 44', 'off/icosahedron44_e2f1.off')">No. 44</button>
+          </td>
+          <td class="fc"><b>D e<sub>2</sub></b> f<sub>1</sub>
+          </td>
+          <td><b>3</b> <i>5' </i>6 <b>7</b> 9 10
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 45', 'off/icosahedron45_De2f1.off')">No. 45</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc"><b>E</b> f<sub>1</sub>
+          </td>
+          <td>5 6 <b>7</b> 9 10
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 46', 'off/icosahedron46_Ef1.off', {has_concave_faces:true})">No. 46</button>
+          </td>
+          <td class="fc"><b>e<sub>2</sub> </b>f<sub>1</sub> <b>g<sub>1</sub></b>
+          </td>
+          <td><b>4'</b> <i>5' </i>6 <b>7</b> 9 <i>10' </i><b>12</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 47', 'off/icosahedron47_e2f1g1.off', {has_concave_faces:true})">No. 47</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc"><b>D e<sub>2</sub></b> f<sub>1</sub> <b>g<sub>1</sub></b>
+          </td>
+          <td><b>3</b> <i>5' </i>6 <b>7</b> 9 <i>10' </i><b>12</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 48', 'off/icosahedron48_De2f1g1.off', {has_concave_faces:true})">No. 48</button>
+          </td>
+          <td class="fc"><b>E</b> f<sub>1</sub> <b>g<sub>1</sub></b>
+          </td>
+          <td>5 6 <b>7</b> 9 <i>10' </i><b>12</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 49', 'off/icosahedron49_Ef1g1.off', {has_concave_faces:true})">No. 49</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc"><b>e<sub>2</sub> </b>f<sub>1</sub> <b>f<sub>2</sub></b>
+          </td>
+          <td><b>4'</b> <i>5' </i>6 <b>8</b> 9 10
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 50', 'off/icosahedron50_e2f1f2.off', {has_concave_faces:true})">No. 50</button>
+          </td>
+          <td class="fc"><b>D e<sub>2</sub></b> f<sub>1</sub> <b>f<sub>2</sub></b>
+          </td>
+          <td><b>3</b> <i>5' </i>6 <b>8</b> 9 10
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 51', 'off/icosahedron51_De2f1f2.off', {has_concave_faces:true})">No. 51</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc"><b>E</b> f<sub>1</sub> <b>f<sub>2</sub></b>
+          </td>
+          <td>5 6 <b>8</b> 9 10
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 52', 'off/icosahedron52_Ef1f2.off', {has_concave_faces:true})">No. 52</button>
+          </td>
+          <td class="fc"><b>e<sub>2</sub> </b>f<sub>1</sub> <b>f<sub>2</sub> g<sub>1</sub></b>
+          </td>
+          <td><b>4'</b> <i>5' </i>6 <b>8</b> 9 <i>10' </i><b>12</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 53', 'off/icosahedron53_e2f1f2g1.off')">No. 53</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc"><b>D e<sub>2</sub></b> f<sub>1</sub> <b>f<sub>2</sub> g<sub>1</sub></b>
+          </td>
+          <td><b>3</b> <i>5' </i>6 <b>8</b> 9 <i>10' </i><b>12</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 54', 'off/icosahedron54_De2f1f2g1.off', {has_concave_faces:true})">No. 54</button>
+          </td>
+          <td class="fc"><b>E</b> f<sub>1</sub> <b>f<sub>2</sub> g<sub>1</sub></b>
+          </td>
+          <td>5 6 <b>8</b> 9 <i>10' </i><b>12</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 55', 'off/icosahedron55_Ef1f2g1.off')">No. 55</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc"><b>e<sub>2</sub> </b>f<sub>1</sub> <b>f<sub>2</sub> g<sub>2</sub></b>
+          </td>
+          <td><b>4'</b> <i>5' </i>6 <i>9' </i>10 <b>11</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 56', 'off/icosahedron56_e2f1f2g2.off', {has_concave_faces:true})">No. 56</button>
+          </td>
+          <td class="fc"><b>D e<sub>2</sub></b> f<sub>1</sub> <b>f<sub>2</sub> g<sub>2</sub></b>
+          </td>
+          <td><b>3</b> <i>5' </i>6 <i>9' </i>10 <b>11</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 57', 'off/icosahedron57_De2f1f2g2.off', {has_concave_faces:true})">No. 57</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="fc"><b>E</b> f<sub>1</sub> <b>f<sub>2</sub> g<sub>2</sub></b>
+          </td>
+          <td>5 6 <i>9' </i>10 <b>11</b>
+          </td>
+          <td>
+            <button onclick="show_with_title('No. 58', 'off/icosahedron58_Ef1f2g2.off', {has_concave_faces:true})">No. 58</button>
+          </td>
+        </tr>
+      </table>
+      <h2><a name="notes">Notes</a></h2>
+      <a name="note1"><sup>1</sup> See <a href="#Coxeter01">The 59 Icosahedra</a> for the cell and edge names.
+      </a>
+      <h2><a name="references">References</a></h2>
+      <a name="Coxeter01">Coxeter, H.S.M, P. du Val, H.T. Flather, J.F. Petrie: <b>The Fifty-Nine Icosahedra</b>, Springer Verlag edition (1982)
+      </a>
+      <h2><a name="links">Links</a></h2>
+      <ul>
+        <li>
+          <a href="../../index.htm">Home</a>
+        </li>
+        <li>
+          <a href="../index.htm">My models</a>
+        </li>
+      </ul>
+      <h2><a name="lastUpdated">Last Updated</a></h2>
+      <p>2024-04-16</p>
+    </div>
+  </body>
+</html>

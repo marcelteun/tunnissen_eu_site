@@ -1,11 +1,11 @@
-function show_with_title(model_name, model, cam_dist, opt) {
-  show(model, cam_dist, opt);
+function show_with_title(model_name, model, opt) {
+  show(model, opt);
   var title = document.getElementById("canvas_title");
   if (title) {
     title.innerHTML = model_name;
   }
 }
-function show(model, cam_dist, opt) {
+function show(model, opt) {
   // static show: off file and no slide-bar
   document.getElementById("model").style.display = "block";
   document.getElementById("model").style.initialised = false;
@@ -17,21 +17,20 @@ function show(model, cam_dist, opt) {
   if (slider != null) {
     slider.hidden = true;
   }
-  if (!cam_dist) {cam_dist = 10;}
-  draw_shape(model, 'model_canvas', cam_dist, opt);
+  draw_shape(model, 'model_canvas', opt);
   var title = document.getElementById("canvas_title");
   if (title) {
     title.innerHTML = "";
   }
 }
-function ishow_with_title(model_name, model, cam_dist, axis, rmin, rmax, rstep) {
-  ishow(model, cam_dist, axis, rmin, rmax, rstep)
+function ishow_with_title(model_name, model, axis, rmin, rmax, rstep) {
+  ishow(model, axis, rmin, rmax, rstep)
   var title = document.getElementById("canvas_title");
   if (title) {
     title.innerHTML = model_name;
   }
 }
-function ishow(model, cam_dist, axis, rmin, rmax, rstep) {
+function ishow(model, axis, rmin, rmax, rstep) {
   // interactive show: with slide-bar
   document.getElementById("model").style.display = "block";
   document.getElementById("model").style.initialised = false;
@@ -59,8 +58,7 @@ function ishow(model, cam_dist, axis, rmin, rmax, rstep) {
   } else {
     slider.step = rstep;
   }
-  if (!cam_dist) {cam_dist = 10;}
-  var shape = new OrbitShape(model.descr, model.isoms, 'model_canvas', cam_dist, {has_concave_faces: false});
+  var shape = new OrbitShape(model.descr, model.isoms, 'model_canvas', {has_concave_faces: false});
   slider.oninput = function() {
     shape.rotate_descriptive(this.rot_axis, this.value);
     var angle_deg = this.value * 180 / Math.PI;
@@ -74,7 +72,7 @@ function ishow(model, cam_dist, axis, rmin, rmax, rstep) {
     title.innerText = "";
   }
 }
-function morph_show(model, cam_dist, rmin, rmax, rstep) {
+function morph_show(model, rmin, rmax, rstep) {
   // morph vertices interactively with slide-bar
   document.getElementById("model").style.display = "block";
   document.getElementById("model").style.initialised = false;
@@ -104,8 +102,7 @@ function morph_show(model, cam_dist, rmin, rmax, rstep) {
   } else {
     slider.step = rstep;
   }
-  if (!cam_dist) {cam_dist = 10;}
-  var shape = new MorphShape(model.descr, 'model_canvas', cam_dist, {has_concave_faces: false});
+  var shape = new MorphShape(model.descr, 'model_canvas', {has_concave_faces: false});
   slider.oninput = function() {
     shape.morph_descriptive(this.value);
     /*

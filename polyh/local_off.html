@@ -17,20 +17,15 @@
   </div>
   <div>
   <script>
-    var dist = 10;
     function on_file(evt) {
       var files = evt.target.files;
       for (var i = 0, f; f = files[i]; i++) {
-        draw_local_shape(f, 'doek', dist, {has_concave_faces: true});
+        draw_local_shape(f, 'doek', {has_concave_faces: true});
       }
     }
     function show_off_in_url(evt) {
       var opt = {};
       var params = new URLSearchParams(window.location.search);
-      var dist_par = params.get('distance');
-      if (dist_par) {
-        dist = dist_par;
-      }
       var stencil = params.get('stencil');
       if (stencil) {
         opt["has_concave_faces"] = stencil == "on" || stencil == "1" || stencil == "true";
@@ -44,7 +39,7 @@
       }
       var off_file = params.get('off_file');
       if (off_file) {
-        draw_url_shape(off_file, 'doek', dist, opt);
+        draw_url_shape(off_file, 'doek', opt);
       }
     }
     document.getElementById('files').addEventListener('change', on_file,
@@ -111,12 +106,6 @@
   ?off_file=http://tunnissen.eu/polyh/CubeCompounds.off/10A.A5xI.D3xI.off. For
   security reasons cross-origin requests are blocked, meaning that you only can
   do this for off-files with the exact same domain name as the base URL.
-  <h2>Set the Default Camera Distance</h2>
-  The default camera distance is set to 10. If you want another distance, e.g.
-  7, then you can specify this on the URL by adding "?distance=7" to the URL. If
-  you use more then one parameter, then you will need to split them by '&amp;'
-  (and only use the '?' at the start of the parameters), try for instance:
-  <a href="http://www.tunnissen.eu/polyh/local_off.html?off_file=http://www.tunnissen.eu/polyh/uniform_compounds/2xW41-UC52.off&distance=6.2">this link</a>
   <h2>Set Whether to Use the Stencil Buffer</h2>
   Non-concave faces should be drawn by using the a stencil buffer. By default
   this is turned of when loading objects through URL. This can be enabled by

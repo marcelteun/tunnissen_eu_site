@@ -8,7 +8,7 @@
   <script src="/js/show-off-bundle.js"></script>
 </head>
 
-<body onload="draw_shape('swissohedron.off', 'model_canvas', 16, {bg_col: [0.2, 0.2, 0.2]});">
+<body onload="draw_shape('swissohedron.off', 'model_canvas', {bg_col: [0.2, 0.2, 0.2]});">
 <div id="content">
 <h1>
   Swissohedron
@@ -90,15 +90,13 @@ Copyright of pictures by
   </p>
   <p>
   <select id="mySelect" onchange="on_select()">
-    <option value="swissohedron.off:16">Original model
-    <option value="swissohedron-official.off:150">Model with official cross from Swiss flag
+    <option value="swissohedron.off">Original model
+    <option value="swissohedron-official.off">Model with official cross from Swiss flag
   </select>
   <script>
     function on_select() {
-      var x = document.getElementById("mySelect").value;
-      var pars = x.split(":");
-      var cam_d = parseInt(pars[1]);
-      draw_shape(pars[0], 'model_canvas', cam_d, {bg_col: [0.2, 0.2, 0.2]});
+      var name = document.getElementById("mySelect").value;
+      draw_shape(name, 'model_canvas', {bg_col: [0.2, 0.2, 0.2]});
     }
   </script>
   </p>

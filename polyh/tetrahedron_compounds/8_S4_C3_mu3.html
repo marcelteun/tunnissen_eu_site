@@ -8,7 +8,7 @@
   <script src="/js/show-off-bundle.js"></script>
 </head>
 
-<body onload="draw_shape('8_S4_C3_mu3.off', 'model_canvas', 9);">
+<body onload="draw_shape('8_S4_C3_mu3.off', 'model_canvas');">
 <div id="content">
 <h1>
   Compound of Eight Tetrahedra
@@ -128,7 +128,7 @@ The pictures are copyrighted by
     function on_select() {
       var x = document.getElementById("mySelect").value;
       var pars = x.split(":");
-      draw_shape(pars[0], 'model_canvas', 9);
+      draw_shape(pars[0], 'model_canvas');
     }
   </script>
   </p>

@@ -8,7 +8,7 @@
   <script src="/js/show-off-bundle.js"></script>
 </head>
 
-<body onload="draw_shape('compound-of-three-stephanoids.off', 'model_canvas', 5, {has_concave_faces: true, bg_col: [0.63, 0.62, 0.6]});">
+<body onload="draw_shape('compound-of-three-stephanoids.off', 'model_canvas', {has_concave_faces: true, bg_col: [0.63, 0.62, 0.6]});">
 <div id="content">
 <h1>
   Compound of Three Stephanoids
@@ -76,7 +76,7 @@ which is the convex hull of this compound.
     function on_select() {
       var x = document.getElementById("mySelect").value;
       var pars = x.split(":");
-      draw_shape(pars[0], 'model_canvas', 5, {has_concave_faces: true, bg_col: [0.63, 0.62, 0.6]});
+      draw_shape(pars[0], 'model_canvas', {has_concave_faces: true, bg_col: [0.63, 0.62, 0.6]});
     }
   </script>
   </p>

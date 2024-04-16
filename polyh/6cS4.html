@@ -7,7 +7,7 @@
   <script src="/js/show-off-bundle.js"></script>
 </head>
 
-<body onload="draw_shape('off/6.S4xI.D2xI.off', 'model_canvas', 10);">
+<body onload="draw_shape('off/6.S4xI.D2xI.off', 'model_canvas');">
 <div id="content">
 <h1>Rigid Compound of 6 Cubes</h1>
 <div id="descr">
@@ -65,7 +65,7 @@ or to
     function on_select() {
       var x = document.getElementById("mySelect").value;
       var pars = x.split(":");
-      draw_shape(pars[0], 'model_canvas', 10);
+      draw_shape(pars[0], 'model_canvas');
     }
   </script>
   </p>
