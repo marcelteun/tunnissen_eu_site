@@ -11,14 +11,49 @@
     <div id="model">
       <h3 id="canvas_title"> </h3>
       <canvas id="model_canvas"> </canvas>
-      <input id="rot_angle" type="range" class="slider"/>
-      <p id="angle_text">With &mu; = <span id="angle"></span> degrees
-      </p>
+      <p></p>
+      <div class="buttons-rows">
+        <div class="buttons-column">
+          <button onclick="on_prev()">Previous</button>
+        </div>
+        <div class="buttons-column">
+          <button onclick="on_next()">Next</button>
+        </div>
+      </div>
     </div>
     <div id="pagebody" onclick="hide()">
       <center>
         <h1>The Stellations of the Rhombic Triacontahedron</h1>
       </center>
+      <script>
+        var current_no = 0;
+        var max_no = 226;
+        function on_show_no(no) {
+          window.current_no = no;
+          var no_str = (no).toString()
+          var filename = 'off/st30-' + no_str.padStart(3, "0") + '.off';
+          if (no == 0) {
+            no_str = "Base";
+          } else {
+            no_str = 'No. ' + no_str;
+          }
+          show_with_title(no_str, filename);
+        }
+        function on_next() {
+          window.current_no += 1;
+          if (window.current_no > window.max_no) {
+            window.current_no = 0;
+          }
+          on_show_no(window.current_no);
+        }
+        function on_prev() {
+          window.current_no -= 1;
+          if (window.current_no < 0) {
+            window.current_no = window.max_no;
+          }
+          on_show_no(window.current_no);
+        }
+      </script>
       <p>This page is under construction in the sense that the 3D models still need to be fine tuned.
       </p>
       <h2>Contents</h2>
@@ -92,21 +127,21 @@
           <td>1a
           </td>
           <td>
-            <button onclick="show_with_title('No. 1', 'off/st30-001.off')">No. 1</button>
+            <button onclick="on_show_no(1)">No. 1</button>
           </td>
           <td>B
           </td>
           <td>2ab
           </td>
           <td>
-            <button onclick="show_with_title('No. 2', 'off/st30-002.off')">No. 2</button>
+            <button onclick="on_show_no(2)">No. 2</button>
           </td>
           <td>C
           </td>
           <td>2a, 3ac
           </td>
           <td>
-            <button onclick="show_with_title('No. 3', 'off/st30-003.off')">No. 3</button>
+            <button onclick="on_show_no(3)">No. 3</button>
           </td>
         </tr>
         <tr>
@@ -115,21 +150,21 @@
           <td>3abc
           </td>
           <td>
-            <button onclick="show_with_title('No. 4', 'off/st30-004.off')">No. 4</button>
+            <button onclick="on_show_no(4)">No. 4</button>
           </td>
           <td>D
           </td>
           <td>2b, 3b
           </td>
           <td>
-            <button onclick="show_with_title('No. 5', 'off/st30-005.off')">No. 5</button>
+            <button onclick="on_show_no(5)">No. 5</button>
           </td>
           <td>DE
           </td>
           <td>3ab, 4ad
           </td>
           <td>
-            <button onclick="show_with_title('No. 6', 'off/st30-006.off')">No. 6</button>
+            <button onclick="on_show_no(6)">No. 6</button>
           </td>
         </tr>
         <tr>
@@ -137,19 +172,22 @@
           </td>
           <td>3ab, 4a, 5a
           </td>
-          <td><button onclick="show_with_title('No. 7', 'off/st30-007.off')">No. 7</button>
+          <td>
+            <button onclick="on_show_no(7)">No. 7</button>
           </td>
           <td>E
           </td>
           <td>2a, 3a, 4ad
           </td>
-          <td><button onclick="show_with_title('No. 8', 'off/st30-008.off')">No. 8</button>
+          <td>
+            <button onclick="on_show_no(8)">No. 8</button>
           </td>
           <td>EF
           </td>
           <td>4abcd
           </td>
-          <td><button onclick="show_with_title('No. 9', 'off/st30-009.off')">No. 9</button>
+          <td>
+            <button onclick="on_show_no(9)">No. 9</button>
           </td>
         </tr>
         <tr>
@@ -157,19 +195,22 @@
           </td>
           <td>4acd, 5c
           </td>
-          <td><button onclick="show_with_title('No. 10', 'off/st30-010.off')">No. 10</button>
+          <td>
+            <button onclick="on_show_no(10)">No. 10</button>
           </td>
           <td>F
           </td>
           <td>3c, 4bc
           </td>
-          <td><button onclick="show_with_title('No. 11', 'off/st30-011.off')">No. 11</button>
+          <td>
+            <button onclick="on_show_no(11)">No. 11</button>
           </td>
           <td>FG
           </td>
           <td>4abc, 5a
           </td>
-          <td><button onclick="show_with_title('No. 12', 'off/st30-012.off')">No. 12</button>
+          <td>
+            <button onclick="on_show_no(12)">No. 12</button>
           </td>
         </tr>
         <tr>
@@ -177,19 +218,22 @@
           </td>
           <td>2a, 3a, 4a, 5a
           </td>
-          <td><button onclick="show_with_title('No. 13', 'off/st30-013.off')">No. 13</button>
+          <td>
+            <button onclick="on_show_no(13)">No. 13</button>
           </td>
           <td>GH
           </td>
           <td>4b, 5abd
           </td>
-          <td><button onclick="show_with_title('No. 14', 'off/st30-014.off')">No. 14</button>
+          <td>
+            <button onclick="on_show_no(14)">No. 14</button>
           </td>
           <td>GHI
           </td>
           <td>5abcd
           </td>
-          <td><button onclick="show_with_title('No. 15', 'off/st30-015.off')">No. 15</button>
+          <td>
+            <button onclick="on_show_no(15)">No. 15</button>
           </td>
         </tr>
         <tr>
@@ -197,19 +241,22 @@
           </td>
           <td>4ac, 5ac
           </td>
-          <td><button onclick="show_with_title('No. 16', 'off/st30-016.off')">No. 16</button>
+          <td>
+            <button onclick="on_show_no(16)">No. 16</button>
           </td>
           <td>GK
           </td>
           <td>5ad, 6bcd
           </td>
-          <td><button onclick="show_with_title('No. 17', 'off/st30-017.off')">No. 17</button>
+          <td>
+            <button onclick="on_show_no(17)">No. 17</button>
           </td>
           <td>GM
           </td>
           <td>5ad, 6bd, 7be
           </td>
-          <td><button onclick="show_with_title('No. 18', 'off/st30-018.off')">No. 18</button>
+          <td>
+            <button onclick="on_show_no(18)">No. 18</button>
           </td>
         </tr>
         <tr>
@@ -217,19 +264,22 @@
           </td>
           <td>5ad, 6d, 7bcef
           </td>
-          <td><button onclick="show_with_title('No. 19', 'off/st30-019.off')">No. 19</button>
+          <td>
+            <button onclick="on_show_no(19)">No. 19</button>
           </td>
           <td>GN
           </td>
           <td>5ad, 6cd, 7cf
           </td>
-          <td><button onclick="show_with_title('No. 20', 'off/st30-020.off')">No. 20</button>
+          <td>
+            <button onclick="on_show_no(20)">No. 20</button>
           </td>
           <td>GQ
           </td>
           <td>5ad, 6d, 7ef, 8cf
           </td>
-          <td><button onclick="show_with_title('No. 21', 'off/st30-021.off')">No. 21</button>
+          <td>
+            <button onclick="on_show_no(21)">No. 21</button>
           </td>
         </tr>
         <tr>
@@ -237,19 +287,22 @@
           </td>
           <td>5ad, 6d, 7ef, 8f, 9g
           </td>
-          <td><button onclick="show_with_title('No. 22', 'off/st30-022.off')">No. 22</button>
+          <td>
+            <button onclick="on_show_no(22)">No. 22</button>
           </td>
           <td>H
           </td>
           <td>4bd, 5bd
           </td>
-          <td><button onclick="show_with_title('No. 23', 'off/st30-023.off')">No. 23</button>
+          <td>
+            <button onclick="on_show_no(23)">No. 23</button>
           </td>
           <td>HI
           </td>
           <td>4d, 5bcd
           </td>
-          <td><button onclick="show_with_title('No. 24', 'off/st30-024.off')">No. 24</button>
+          <td>
+            <button onclick="on_show_no(24)">No. 24</button>
           </td>
         </tr>
         <tr>
@@ -257,19 +310,22 @@
           </td>
           <td>3c, 4c, 5c
           </td>
-          <td><button onclick="show_with_title('No. 25', 'off/st30-025.off')">No. 25</button>
+          <td>
+            <button onclick="on_show_no(25)">No. 25</button>
           </td>
           <td>IJ
           </td>
           <td>5bc, 6a
           </td>
-          <td><button onclick="show_with_title('No. 26', 'off/st30-026.off')">No. 26</button>
+          <td>
+            <button onclick="on_show_no(26)">No. 26</button>
           </td>
           <td>J
           </td>
           <td>4b, 5b, 6a
           </td>
-          <td><button onclick="show_with_title('No. 27', 'off/st30-027.off')">No. 27</button>
+          <td>
+            <button onclick="on_show_no(27)">No. 27</button>
           </td>
         </tr>
         <tr>
@@ -277,19 +333,22 @@
           </td>
           <td>6abcd
           </td>
-          <td><button onclick="show_with_title('No. 28', 'off/st30-028.off')">No. 28</button>
+          <td>
+            <button onclick="on_show_no(28)">No. 28</button>
           </td>
           <td>JM
           </td>
           <td>6abd, 7be
           </td>
-          <td><button onclick="show_with_title('No. 29', 'off/st30-029.off')">No. 29</button>
+          <td>
+            <button onclick="on_show_no(29)">No. 29</button>
           </td>
           <td>JMN
           </td>
           <td>6ad, 7bcef
           </td>
-          <td><button onclick="show_with_title('No. 30', 'off/st30-030.off')">No. 30</button>
+          <td>
+            <button onclick="on_show_no(30)">No. 30</button>
           </td>
         </tr>
         <tr>
@@ -297,19 +356,22 @@
           </td>
           <td>6acd, 7cf
           </td>
-          <td><button onclick="show_with_title('No. 31', 'off/st30-031.off')">No. 31</button>
+          <td>
+            <button onclick="on_show_no(31)">No. 31</button>
           </td>
           <td>JQ
           </td>
           <td>6ad, 7ef, 8cf
           </td>
-          <td><button onclick="show_with_title('No. 32', 'off/st30-032.off')">No. 32</button>
+          <td>
+            <button onclick="on_show_no(32)">No. 32</button>
           </td>
           <td>JU
           </td>
           <td>6ad, 7ef, 8f, 9g
           </td>
-          <td><button onclick="show_with_title('No. 33', 'off/st30-033.off')">No. 33</button>
+          <td>
+            <button onclick="on_show_no(33)">No. 33</button>
           </td>
         </tr>
         <tr>
@@ -317,19 +379,22 @@
           </td>
           <td>4d, 5d, 6bcd
           </td>
-          <td><button onclick="show_with_title('No. 34', 'off/st30-034.off')">No. 34</button>
+          <td>
+            <button onclick="on_show_no(34)">No. 34</button>
           </td>
           <td>L
           </td>
           <td>6bc, 7ad
           </td>
-          <td><button onclick="show_with_title('No. 35', 'off/st30-035.off')">No. 35</button>
+          <td>
+            <button onclick="on_show_no(35)">No. 35</button>
           </td>
           <td>LM
           </td>
           <td>6b, 7abde
           </td>
-          <td><button onclick="show_with_title('No. 36', 'off/st30-036.off')">No. 36</button>
+          <td>
+            <button onclick="on_show_no(36)">No. 36</button>
           </td>
         </tr>
         <tr>
@@ -337,19 +402,22 @@
           </td>
           <td>7abcdef
           </td>
-          <td><button onclick="show_with_title('No. 37', 'off/st30-037.off')">No. 37</button>
+          <td>
+            <button onclick="on_show_no(37)">No. 37</button>
           </td>
           <td>LN
           </td>
           <td>6c, 7acdf
           </td>
-          <td><button onclick="show_with_title('No. 38', 'off/st30-038.off')">No. 38</button>
+          <td>
+            <button onclick="on_show_no(38)">No. 38</button>
           </td>
           <td>LQ
           </td>
           <td>7adef, 8cf
           </td>
-          <td><button onclick="show_with_title('No. 39', 'off/st30-039.off')">No. 39</button>
+          <td>
+            <button onclick="on_show_no(39)">No. 39</button>
           </td>
         </tr>
         <tr>
@@ -357,19 +425,22 @@
           </td>
           <td>7adef, 8f, 9g
           </td>
-          <td><button onclick="show_with_title('No. 40', 'off/st30-040.off')">No. 40</button>
+          <td>
+            <button onclick="on_show_no(40)">No. 40</button>
           </td>
           <td>M
           </td>
           <td>4d, 5d, 6bd, 7be
           </td>
-          <td><button onclick="show_with_title('No. 41', 'off/st30-041.off')">No. 41</button>
+          <td>
+            <button onclick="on_show_no(41)">No. 41</button>
           </td>
           <td>MN
           </td>
           <td>4d, 5d, 6d, 7bcef
           </td>
-          <td><button onclick="show_with_title('No. 42', 'off/st30-042.off')">No. 42</button>
+          <td>
+            <button onclick="on_show_no(42)">No. 42</button>
           </td>
         </tr>
         <tr>
@@ -377,19 +448,22 @@
           </td>
           <td>7bcde, 8ad
           </td>
-          <td><button onclick="show_with_title('No. 43', 'off/st30-043.off')">No. 43</button>
+          <td>
+            <button onclick="on_show_no(43)">No. 43</button>
           </td>
           <td>MR
           </td>
           <td>7bcde, 8d, 9ae
           </td>
-          <td><button onclick="show_with_title('No. 44', 'off/st30-044.off')">No. 44</button>
+          <td>
+            <button onclick="on_show_no(44)">No. 44</button>
           </td>
           <td>N
           </td>
           <td>4d, 5d, 6cd, 7cf
           </td>
-          <td><button onclick="show_with_title('No. 45', 'off/st30-045.off')">No. 45</button>
+          <td>
+            <button onclick="on_show_no(45)">No. 45</button>
           </td>
         </tr>
         <tr>
@@ -397,19 +471,22 @@
           </td>
           <td>7abcf, 8be
           </td>
-          <td><button onclick="show_with_title('No. 46', 'off/st30-046.off')">No. 46</button>
+          <td>
+            <button onclick="on_show_no(46)">No. 46</button>
           </td>
           <td>NT
           </td>
           <td>7abcf, 8b, 9c
           </td>
-          <td><button onclick="show_with_title('No. 47', 'off/st30-047.off')">No. 47</button>
+          <td>
+            <button onclick="on_show_no(47)">No. 47</button>
           </td>
           <td>O
           </td>
           <td>6c, 7cd, 8ad
           </td>
-          <td><button onclick="show_with_title('No. 48', 'off/st30-048.off')">No. 48</button>
+          <td>
+            <button onclick="on_show_no(48)">No. 48</button>
           </td>
         </tr>
         <tr>
@@ -417,19 +494,22 @@
           </td>
           <td>7bc, 8abde
           </td>
-          <td><button onclick="show_with_title('No. 49', 'off/st30-049.off')">No. 49</button>
+          <td>
+            <button onclick="on_show_no(49)">No. 49</button>
           </td>
           <td>OPQ
           </td>
           <td>8abcdef
           </td>
-          <td><button onclick="show_with_title('No. 50', 'off/st30-050.off')">No. 50</button>
+          <td>
+            <button onclick="on_show_no(50)">No. 50</button>
           </td>
           <td>OPU
           </td>
           <td>8abdef, 9g
           </td>
-          <td><button onclick="show_with_title('No. 51', 'off/st30-051.off')">No. 51</button>
+          <td>
+            <button onclick="on_show_no(51)">No. 51</button>
           </td>
         </tr>
         <tr>
@@ -437,19 +517,22 @@
           </td>
           <td>7de, 8acdf
           </td>
-          <td><button onclick="show_with_title('No. 52', 'off/st30-052.off')">No. 52</button>
+          <td>
+            <button onclick="on_show_no(52)">No. 52</button>
           </td>
           <td>OQT
           </td>
           <td>8abcdf, 9c
           </td>
-          <td><button onclick="show_with_title('No. 53', 'off/st30-053.off')">No. 53</button>
+          <td>
+            <button onclick="on_show_no(53)">No. 53</button>
           </td>
           <td>OT
           </td>
           <td>7bc, 8abd, 9c
           </td>
-          <td><button onclick="show_with_title('No. 54', 'off/st30-054.off')">No. 54</button>
+          <td>
+            <button onclick="on_show_no(54)">No. 54</button>
           </td>
         </tr>
         <tr>
@@ -457,19 +540,22 @@
           </td>
           <td>8abdf, 9cg
           </td>
-          <td><button onclick="show_with_title('No. 55', 'off/st30-055.off')">No. 55</button>
+          <td>
+            <button onclick="on_show_no(55)">No. 55</button>
           </td>
           <td>OU
           </td>
           <td>7de, 8adf, 9g
           </td>
-          <td><button onclick="show_with_title('No. 56', 'off/st30-056.off')">No. 56</button>
+          <td>
+            <button onclick="on_show_no(56)">No. 56</button>
           </td>
           <td>P
           </td>
           <td>6b, 7ab, 8be
           </td>
-          <td><button onclick="show_with_title('No. 57', 'off/st30-057.off')">No. 57</button>
+          <td>
+            <button onclick="on_show_no(57)">No. 57</button>
           </td>
         </tr>
         <tr>
@@ -477,19 +563,22 @@
           </td>
           <td>7af, 8bcef
           </td>
-          <td><button onclick="show_with_title('No. 58', 'off/st30-058.off')">No. 58</button>
+          <td>
+            <button onclick="on_show_no(58)">No. 58</button>
           </td>
           <td>PQR
           </td>
           <td>8bcdef, 9ae
           </td>
-          <td><button onclick="show_with_title('No. 59', 'off/st30-059.off')">No. 59</button>
+          <td>
+            <button onclick="on_show_no(59)">No. 59</button>
           </td>
           <td>PR
           </td>
           <td>7bc, 8bde, 9ae
           </td>
-          <td><button onclick="show_with_title('No. 60', 'off/st30-060.off')">No. 60</button>
+          <td>
+            <button onclick="on_show_no(60)">No. 60</button>
           </td>
         </tr>
         <tr>
@@ -497,19 +586,22 @@
           </td>
           <td>8bdef, 9aeg
           </td>
-          <td><button onclick="show_with_title('No. 61', 'off/st30-061.off')">No. 61</button>
+          <td>
+            <button onclick="on_show_no(61)">No. 61</button>
           </td>
           <td>PU
           </td>
           <td>7af, 8bef, 9g
           </td>
-          <td><button onclick="show_with_title('No. 62', 'off/st30-062.off')">No. 62</button>
+          <td>
+            <button onclick="on_show_no(62)">No. 62</button>
           </td>
           <td>Q
           </td>
           <td>4d, 5d, 6d, 7ef, 8cf
           </td>
-          <td><button onclick="show_with_title('No. 63', 'off/st30-063.off')">No. 63</button>
+          <td>
+            <button onclick="on_show_no(63)">No. 63</button>
           </td>
         </tr>
         <tr>
@@ -517,19 +609,22 @@
           </td>
           <td>7de, 8cdf, 9ae
           </td>
-          <td><button onclick="show_with_title('No. 64', 'off/st30-064.off')">No. 64</button>
+          <td>
+            <button onclick="on_show_no(64)">No. 64</button>
           </td>
           <td>QRT
           </td>
           <td>8bcdf, 9ace
           </td>
-          <td><button onclick="show_with_title('No. 65', 'off/st30-065.off')">No. 65</button>
+          <td>
+            <button onclick="on_show_no(65)">No. 65</button>
           </td>
           <td>QT
           </td>
           <td>7af, 8bcf, 9c
           </td>
-          <td><button onclick="show_with_title('No. 66', 'off/st30-066.off')">No. 66</button>
+          <td>
+            <button onclick="on_show_no(66)">No. 66</button>
           </td>
         </tr>
         <tr>
@@ -537,19 +632,22 @@
           </td>
           <td>6c, 7cd, 8d, 9ae
           </td>
-          <td><button onclick="show_with_title('No. 67', 'off/st30-067.off')">No. 67</button>
+          <td>
+            <button onclick="on_show_no(67)">No. 67</button>
           </td>
           <td>RS
           </td>
           <td>8ce, 9abdef
           </td>
-          <td><button onclick="show_with_title('No. 68', 'off/st30-068.off')">No. 68</button>
+          <td>
+            <button onclick="on_show_no(68)">No. 68</button>
           </td>
           <td>RST
           </td>
           <td>8c, 9abcdef
           </td>
-          <td><button onclick="show_with_title('No. 69', 'off/st30-069.off')">No. 69</button>
+          <td>
+            <button onclick="on_show_no(69)">No. 69</button>
           </td>
         </tr>
         <tr>
@@ -557,19 +655,22 @@
           </td>
           <td>9abcdefg
           </td>
-          <td><button onclick="show_with_title('No. 70', 'off/st30-070.off')">No. 70</button>
+          <td>
+            <button onclick="on_show_no(70)">No. 70</button>
           </td>
           <td>RSU
           </td>
           <td>8e, 9abdefg
           </td>
-          <td><button onclick="show_with_title('No. 71', 'off/st30-071.off')">No. 71</button>
+          <td>
+            <button onclick="on_show_no(71)">No. 71</button>
           </td>
           <td>RT
           </td>
           <td>7bc, 8bd, 9ace
           </td>
-          <td><button onclick="show_with_title('No. 72', 'off/st30-072.off')">No. 72</button>
+          <td>
+            <button onclick="on_show_no(72)">No. 72</button>
           </td>
         </tr>
         <tr>
@@ -577,19 +678,22 @@
           </td>
           <td>8bdf, 9aceg
           </td>
-          <td><button onclick="show_with_title('No. 73', 'off/st30-073.off')">No. 73</button>
+          <td>
+            <button onclick="on_show_no(73)">No. 73</button>
           </td>
           <td>RTW
           </td>
           <td>10bg, 9abcef
           </td>
-          <td><button onclick="show_with_title('No. 74', 'off/st30-074.off')">No. 74</button>
+          <td>
+            <button onclick="on_show_no(74)">No. 74</button>
           </td>
           <td>RU
           </td>
           <td>7de, 8df, 9aeg
           </td>
-          <td><button onclick="show_with_title('No. 75', 'off/st30-075.off')">No. 75</button>
+          <td>
+            <button onclick="on_show_no(75)">No. 75</button>
           </td>
         </tr>
         <tr>
@@ -597,19 +701,22 @@
           </td>
           <td>10cd, 9abdeg
           </td>
-          <td><button onclick="show_with_title('No. 76', 'off/st30-076.off')">No. 76</button>
+          <td>
+            <button onclick="on_show_no(76)">No. 76</button>
           </td>
           <td>RW
           </td>
           <td>10bg, 8e, 9abef
           </td>
-          <td><button onclick="show_with_title('No. 77', 'off/st30-077.off')">No. 77</button>
+          <td>
+            <button onclick="on_show_no(77)">No. 77</button>
           </td>
           <td>RWX
           </td>
           <td>10bcdg, 9abe
           </td>
-          <td><button onclick="show_with_title('No. 78', 'off/st30-078.off')">No. 78</button>
+          <td>
+            <button onclick="on_show_no(78)">No. 78</button>
           </td>
         </tr>
         <tr>
@@ -617,19 +724,22 @@
           </td>
           <td>10cd, 8c, 9abde
           </td>
-          <td><button onclick="show_with_title('No. 79', 'off/st30-079.off')">No. 79</button>
+          <td>
+            <button onclick="on_show_no(79)">No. 79</button>
           </td>
           <td>R2A
           </td>
           <td>10bc, 11cf, 9abe
           </td>
-          <td><button onclick="show_with_title('No. 80', 'off/st30-080.off')">No. 80</button>
+          <td>
+            <button onclick="on_show_no(80)">No. 80</button>
           </td>
           <td>S
           </td>
           <td>8ace, 9bdf
           </td>
-          <td><button onclick="show_with_title('No. 81', 'off/st30-081.off')">No. 81</button>
+          <td>
+            <button onclick="on_show_no(81)">No. 81</button>
           </td>
         </tr>
         <tr>
@@ -637,19 +747,22 @@
           </td>
           <td>8ac, 9bcdf
           </td>
-          <td><button onclick="show_with_title('No. 82', 'off/st30-082.off')">No. 82</button>
+          <td>
+            <button onclick="on_show_no(82)">No. 82</button>
           </td>
           <td>STU
           </td>
           <td>8a, 9bcdfg
           </td>
-          <td><button onclick="show_with_title('No. 83', 'off/st30-083.off')">No. 83</button>
+          <td>
+            <button onclick="on_show_no(83)">No. 83</button>
           </td>
           <td>SU
           </td>
           <td>8ae, 9bdfg
           </td>
-          <td><button onclick="show_with_title('No. 84', 'off/st30-084.off')">No. 84</button>
+          <td>
+            <button onclick="on_show_no(84)">No. 84</button>
           </td>
         </tr>
         <tr>
@@ -657,19 +770,22 @@
           </td>
           <td>6b, 7ab, 8b, 9c
           </td>
-          <td><button onclick="show_with_title('No. 85', 'off/st30-085.off')">No. 85</button>
+          <td>
+            <button onclick="on_show_no(85)">No. 85</button>
           </td>
           <td>TU
           </td>
           <td>7af, 8bf, 9cg
           </td>
-          <td><button onclick="show_with_title('No. 86', 'off/st30-086.off')">No. 86</button>
+          <td>
+            <button onclick="on_show_no(86)">No. 86</button>
           </td>
           <td>TUV
           </td>
           <td>10aef, 9acdfg
           </td>
-          <td><button onclick="show_with_title('No. 87', 'off/st30-087.off')">No. 87</button>
+          <td>
+            <button onclick="on_show_no(87)">No. 87</button>
           </td>
         </tr>
         <tr>
@@ -677,19 +793,22 @@
           </td>
           <td>10aef, 8c, 9acdf
           </td>
-          <td><button onclick="show_with_title('No. 88', 'off/st30-088.off')">No. 88</button>
+          <td>
+            <button onclick="on_show_no(88)">No. 88</button>
           </td>
           <td>TVW
           </td>
           <td>10abefg, 9acf
           </td>
-          <td><button onclick="show_with_title('No. 89', 'off/st30-089.off')">No. 89</button>
+          <td>
+            <button onclick="on_show_no(89)">No. 89</button>
           </td>
           <td>TW
           </td>
           <td>10bg, 8a, 9bcf
           </td>
-          <td><button onclick="show_with_title('No. 90', 'off/st30-090.off')">No. 90</button>
+          <td>
+            <button onclick="on_show_no(90)">No. 90</button>
           </td>
         </tr>
         <tr>
@@ -697,19 +816,22 @@
           </td>
           <td>10afg, 11be, 9acf
           </td>
-          <td><button onclick="show_with_title('No. 91', 'off/st30-091.off')">No. 91</button>
+          <td>
+            <button onclick="on_show_no(91)">No. 91</button>
           </td>
           <td>U
           </td>
           <td>4d, 5d, 6d, 7ef, 8f, 9g
           </td>
-          <td><button onclick="show_with_title('No. 92', 'off/st30-092.off')">No. 92</button>
+          <td>
+            <button onclick="on_show_no(92)">No. 92</button>
           </td>
           <td>UV
           </td>
           <td>10aef, 8e, 9adfg
           </td>
-          <td><button onclick="show_with_title('No. 93', 'off/st30-093.off')">No. 93</button>
+          <td>
+            <button onclick="on_show_no(93)">No. 93</button>
           </td>
         </tr>
         <tr>
@@ -717,19 +839,22 @@
           </td>
           <td>10acdef, 9adg
           </td>
-          <td><button onclick="show_with_title('No. 94', 'off/st30-094.off')">No. 94</button>
+          <td>
+            <button onclick="on_show_no(94)">No. 94</button>
           </td>
           <td>UX
           </td>
           <td>10cd, 8a, 9bdg
           </td>
-          <td><button onclick="show_with_title('No. 95', 'off/st30-095.off')">No. 95</button>
+          <td>
+            <button onclick="on_show_no(95)">No. 95</button>
           </td>
           <td>UY
           </td>
           <td>10ade, 11ad, 9adg
           </td>
-          <td><button onclick="show_with_title('No. 96', 'off/st30-096.off')">No. 96</button>
+          <td>
+            <button onclick="on_show_no(96)">No. 96</button>
           </td>
         </tr>
         <tr>
@@ -737,19 +862,22 @@
           </td>
           <td>10aef, 8ce, 9adf
           </td>
-          <td><button onclick="show_with_title('No. 97', 'off/st30-097.off')">No. 97</button>
+          <td>
+            <button onclick="on_show_no(97)">No. 97</button>
           </td>
           <td>VW
           </td>
           <td>10abefg, 8e, 9af
           </td>
-          <td><button onclick="show_with_title('No. 98', 'off/st30-098.off')">No. 98</button>
+          <td>
+            <button onclick="on_show_no(98)">No. 98</button>
           </td>
           <td>VWX
           </td>
           <td>10abcdefg, 9a
           </td>
-          <td><button onclick="show_with_title('No. 99', 'off/st30-099.off')">No. 99</button>
+          <td>
+            <button onclick="on_show_no(99)">No. 99</button>
           </td>
         </tr>
         <tr>
@@ -757,19 +885,22 @@
           </td>
           <td>10acdef, 8c, 9ad
           </td>
-          <td><button onclick="show_with_title('No. 100', 'off/st30-100.off')">No. 100</button>
+          <td>
+            <button onclick="on_show_no(100)">No. 100</button>
           </td>
           <td>V2A
           </td>
           <td>10abcef, 11cf, 9a
           </td>
-          <td><button onclick="show_with_title('No. 101', 'off/st30-101.off')">No. 101</button>
+          <td>
+            <button onclick="on_show_no(101)">No. 101</button>
           </td>
           <td>W
           </td>
           <td>10bg, 8ae, 9bf
           </td>
-          <td><button onclick="show_with_title('No. 102', 'off/st30-102.off')">No. 102</button>
+          <td>
+            <button onclick="on_show_no(102)">No. 102</button>
           </td>
         </tr>
         <tr>
@@ -777,19 +908,22 @@
           </td>
           <td>10bcdg, 8a, 9b
           </td>
-          <td><button onclick="show_with_title('No. 103', 'off/st30-103.off')">No. 103</button>
+          <td>
+            <button onclick="on_show_no(103)">No. 103</button>
           </td>
           <td>WY
           </td>
           <td>10abdeg, 11ad, 9a
           </td>
-          <td><button onclick="show_with_title('No. 104', 'off/st30-104.off')">No. 104</button>
+          <td>
+            <button onclick="on_show_no(104)">No. 104</button>
           </td>
           <td>X
           </td>
           <td>10cd, 8ac, 9bd
           </td>
-          <td><button onclick="show_with_title('No. 105', 'off/st30-105.off')">No. 105</button>
+          <td>
+            <button onclick="on_show_no(105)">No. 105</button>
           </td>
         </tr>
         <tr>
@@ -797,19 +931,22 @@
           </td>
           <td>10acdfg, 11be, 9a
           </td>
-          <td><button onclick="show_with_title('No. 106', 'off/st30-106.off')">No. 106</button>
+          <td>
+            <button onclick="on_show_no(106)">No. 106</button>
           </td>
           <td>Y
           </td>
           <td>10ade, 11ad, 8c, 9ad
           </td>
-          <td><button onclick="show_with_title('No. 107', 'off/st30-107.off')">No. 107</button>
+          <td>
+            <button onclick="on_show_no(107)">No. 107</button>
           </td>
           <td>YZ
           </td>
           <td>10adg, 11abde, 9a
           </td>
-          <td><button onclick="show_with_title('No. 108', 'off/st30-108.off')">No. 108</button>
+          <td>
+            <button onclick="on_show_no(108)">No. 108</button>
           </td>
         </tr>
         <tr>
@@ -817,19 +954,22 @@
           </td>
           <td>10a, 11abcdef, 9a
           </td>
-          <td><button onclick="show_with_title('No. 109', 'off/st30-109.off')">No. 109</button>
+          <td>
+            <button onclick="on_show_no(109)">No. 109</button>
           </td>
           <td>Y2A
           </td>
           <td>10abe, 11acdf, 9a
           </td>
-          <td><button onclick="show_with_title('No. 110', 'off/st30-110.off')">No. 110</button>
+          <td>
+            <button onclick="on_show_no(110)">No. 110</button>
           </td>
           <td>Z
           </td>
           <td>10afg, 11be, 8e, 9af
           </td>
-          <td><button onclick="show_with_title('No. 111', 'off/st30-111.off')">No. 111</button>
+          <td>
+            <button onclick="on_show_no(111)">No. 111</button>
           </td>
         </tr>
         <tr>
@@ -837,19 +977,22 @@
           </td>
           <td>10acf, 11bcef, 9a
           </td>
-          <td><button onclick="show_with_title('No. 112', 'off/st30-112.off')">No. 112</button>
+          <td>
+            <button onclick="on_show_no(112)">No. 112</button>
           </td>
           <td>2A
           </td>
           <td>10bc, 11cf, 8a, 9b
           </td>
-          <td><button onclick="show_with_title('No. 113', 'off/st30-113.off')">No. 113</button>
+          <td>
+            <button onclick="on_show_no(113)">No. 113</button>
           </td>
           <td>2B
           </td>
           <td>10a, 11abf, 12abc, 9a
           </td>
-          <td><button onclick="show_with_title('No. 114', 'off/st30-114.off')">No. 114</button>
+          <td>
+            <button onclick="on_show_no(114)">No. 114</button>
           </td>
         </tr>
       </table>
@@ -876,13 +1019,15 @@
           </td>
           <td>(4ad), (4bc)r, (3ab)l
           </td>
-          <td><button onclick="show_with_title('No. 115', 'off/st30-115.off')">No. 115</button>
+          <td>
+            <button onclick="on_show_no(115)">No. 115</button>
           </td>
           <td>(F)r
           </td>
           <td>(3c), (4bc)r, (3ab)l
           </td>
-          <td><button onclick="show_with_title('No. 116', 'off/st30-116.off')">No. 116</button>
+          <td>
+            <button onclick="on_show_no(116)">No. 116</button>
           </td>
         </tr>
         <tr>
@@ -890,13 +1035,15 @@
           </td>
           <td>(4a, 5a), (4bc)r, (3ab)l
           </td>
-          <td><button onclick="show_with_title('No. 117', 'off/st30-117.off')">No. 117</button>
+          <td>
+            <button onclick="on_show_no(117)">No. 117</button>
           </td>
           <td>G, (K)r
           </td>
           <td>(5ad), (6bcd)r, (5bc)l
           </td>
-          <td><button onclick="show_with_title('No. 118', 'off/st30-118.off')">No. 118</button>
+          <td>
+            <button onclick="on_show_no(118)">No. 118</button>
           </td>
         </tr>
         <tr>
@@ -904,13 +1051,15 @@
           </td>
           <td>(5ad, 6d, 7ef), (8cf)r, (7bc)l
           </td>
-          <td><button onclick="show_with_title('No. 119', 'off/st30-119.off')">No. 119</button>
+          <td>
+            <button onclick="on_show_no(119)">No. 119</button>
           </td>
           <td>J, (K)r
           </td>
           <td>(6a), (6bcd)r, (5bc)l
           </td>
-          <td><button onclick="show_with_title('No. 120', 'off/st30-120.off')">No. 120</button>
+          <td>
+            <button onclick="on_show_no(120)">No. 120</button>
           </td>
         </tr>
         <tr>
@@ -918,13 +1067,15 @@
           </td>
           <td>(6ad, 7ef), (8cf)r, (7bc)l
           </td>
-          <td><button onclick="show_with_title('No. 121', 'off/st30-121.off')">No. 121</button>
+          <td>
+            <button onclick="on_show_no(121)">No. 121</button>
           </td>
           <td>(K)r
           </td>
           <td>(4d, 5d), (6bcd)r, (5bc)l
           </td>
-          <td><button onclick="show_with_title('No. 122', 'off/st30-122.off')">No. 122</button>
+          <td>
+            <button onclick="on_show_no(122)">No. 122</button>
           </td>
         </tr>
         <tr>
@@ -932,13 +1083,15 @@
           </td>
           <td>(7adef), (8cf)r, (7bc)l
           </td>
-          <td><button onclick="show_with_title('No. 123', 'off/st30-123.off')">No. 123</button>
+          <td>
+            <button onclick="on_show_no(123)">No. 123</button>
           </td>
           <td>N, (P)r
           </td>
           <td>(7abcf), (8be)r, (7de)l
           </td>
-          <td><button onclick="show_with_title('No. 124', 'off/st30-124.off')">No. 124</button>
+          <td>
+            <button onclick="on_show_no(124)">No. 124</button>
           </td>
         </tr>
         <tr>
@@ -946,13 +1099,15 @@
           </td>
           <td>(7bc, 8ad), (8be)r, (7de)l
           </td>
-          <td><button onclick="show_with_title('No. 125', 'off/st30-125.off')">No. 125</button>
+          <td>
+            <button onclick="on_show_no(125)">No. 125</button>
           </td>
           <td>OP, (Q)r
           </td>
           <td>(8abde), (8cf)r, (7bc)l
           </td>
-          <td><button onclick="show_with_title('No. 126', 'off/st30-126.off')">No. 126</button>
+          <td>
+            <button onclick="on_show_no(126)">No. 126</button>
           </td>
         </tr>
         <tr>
@@ -960,13 +1115,15 @@
           </td>
           <td>(8acdf), (8be)r, (7de)l
           </td>
-          <td><button onclick="show_with_title('No. 127', 'off/st30-127.off')">No. 127</button>
+          <td>
+            <button onclick="on_show_no(127)">No. 127</button>
           </td>
           <td>O, (PQ)r
           </td>
           <td>(8ad), (8bcef)r, (7bcde)l
           </td>
-          <td><button onclick="show_with_title('No. 128', 'off/st30-128.off')">No. 128</button>
+          <td>
+            <button onclick="on_show_no(128)">No. 128</button>
           </td>
         </tr>
         <tr>
@@ -974,13 +1131,15 @@
           </td>
           <td>(8ad), (7bc, 8be)r, (7de, 8cf)l
           </td>
-          <td><button onclick="show_with_title('No. 129', 'off/st30-129.off')">No. 129</button>
+          <td>
+            <button onclick="on_show_no(129)">No. 129</button>
           </td>
           <td>OU, (P)r
           </td>
           <td>(8adf, 9g), (8be)r, (7de)l
           </td>
-          <td><button onclick="show_with_title('No. 130', 'off/st30-130.off')">No. 130</button>
+          <td>
+            <button onclick="on_show_no(130)">No. 130</button>
           </td>
         </tr>
         <tr>
@@ -988,13 +1147,15 @@
           </td>
           <td>(7de, 8ad), (8cf)r, (7bc)l
           </td>
-          <td><button onclick="show_with_title('No. 131', 'off/st30-131.off')">No. 131</button>
+          <td>
+            <button onclick="on_show_no(131)">No. 131</button>
           </td>
           <td>OT, (Q)r
           </td>
           <td>(8abd, 9c), (8cf)r, (7bc)l
           </td>
-          <td><button onclick="show_with_title('No. 132', 'off/st30-132.off')">No. 132</button>
+          <td>
+            <button onclick="on_show_no(132)">No. 132</button>
           </td>
         </tr>
         <tr>
@@ -1002,13 +1163,15 @@
           </td>
           <td>(6b, 7ab), (8be)r, (7de)l
           </td>
-          <td><button onclick="show_with_title('No. 133', 'off/st30-133.off')">No. 133</button>
+          <td>
+            <button onclick="on_show_no(133)">No. 133</button>
           </td>
           <td>P, (Q)r
           </td>
           <td>(7af, 8be), (8cf)r, (7bc)l
           </td>
-          <td><button onclick="show_with_title('No. 134', 'off/st30-134.off')">No. 134</button>
+          <td>
+            <button onclick="on_show_no(134)">No. 134</button>
           </td>
         </tr>
         <tr>
@@ -1016,13 +1179,15 @@
           </td>
           <td>(7af, 8cf), (8be)r, (7de)l
           </td>
-          <td><button onclick="show_with_title('No. 135', 'off/st30-135.off')">No. 135</button>
+          <td>
+            <button onclick="on_show_no(135)">No. 135</button>
           </td>
           <td>(PQ)r
           </td>
           <td>(7af), (8bcef)r, (7bcde)l
           </td>
-          <td><button onclick="show_with_title('No. 136', 'off/st30-136.off')">No. 136</button>
+          <td>
+            <button onclick="on_show_no(136)">No. 136</button>
           </td>
         </tr>
         <tr>
@@ -1030,13 +1195,15 @@
           </td>
           <td>(7af), (7bc, 8be)r, (7de, 8cf)l
           </td>
-          <td><button onclick="show_with_title('No. 137', 'off/st30-137.off')">No. 137</button>
+          <td>
+            <button onclick="on_show_no(137)">No. 137</button>
           </td>
           <td>PR, (Q)r
           </td>
           <td>(8bde, 9ae), (8cf)r, (7bc)l
           </td>
-          <td><button onclick="show_with_title('No. 138', 'off/st30-138.off')">No. 138</button>
+          <td>
+            <button onclick="on_show_no(138)">No. 138</button>
           </td>
         </tr>
         <tr>
@@ -1044,13 +1211,15 @@
           </td>
           <td>(8cdf, 9ae), (8be)r, (7de)l
           </td>
-          <td><button onclick="show_with_title('No. 139', 'off/st30-139.off')">No. 139</button>
+          <td>
+            <button onclick="on_show_no(139)">No. 139</button>
           </td>
           <td>R, (PQ)r
           </td>
           <td>(8d, 9ae), (8bcef)r, (7bcde)l
           </td>
-          <td><button onclick="show_with_title('No. 140', 'off/st30-140.off')">No. 140</button>
+          <td>
+            <button onclick="on_show_no(140)">No. 140</button>
           </td>
         </tr>
         <tr>
@@ -1058,13 +1227,15 @@
           </td>
           <td>(8d, 9ae), (7bc, 8be)r, (7de, 8cf)l
           </td>
-          <td><button onclick="show_with_title('No. 141', 'off/st30-141.off')">No. 141</button>
+          <td>
+            <button onclick="on_show_no(141)">No. 141</button>
           </td>
           <td>R, (P)r
           </td>
           <td>(7bc, 8d, 9ae), (8be)r, (7de)l
           </td>
-          <td><button onclick="show_with_title('No. 142', 'off/st30-142.off')">No. 142</button>
+          <td>
+            <button onclick="on_show_no(142)">No. 142</button>
           </td>
         </tr>
         <tr>
@@ -1072,13 +1243,15 @@
           </td>
           <td>(8df, 9aeg), (8be)r, (7de)l
           </td>
-          <td><button onclick="show_with_title('No. 143', 'off/st30-143.off')">No. 143</button>
+          <td>
+            <button onclick="on_show_no(143)">No. 143</button>
           </td>
           <td>U, (P)r
           </td>
           <td>(7af, 8f, 9g), (8be)r, (7de)l
           </td>
-          <td><button onclick="show_with_title('No. 144', 'off/st30-144.off')">No. 144</button>
+          <td>
+            <button onclick="on_show_no(144)">No. 144</button>
           </td>
         </tr>
         <tr>
@@ -1086,13 +1259,15 @@
           </td>
           <td>(4d, 5d, 6d, 7ef), (8cf)r, (7bc)l
           </td>
-          <td><button onclick="show_with_title('No. 145', 'off/st30-145.off')">No. 145</button>
+          <td>
+            <button onclick="on_show_no(145)">No. 145</button>
           </td>
           <td>R, (Q)r
           </td>
           <td>(7de, 8d, 9ae), (8cf)r, (7bc)l
           </td>
-          <td><button onclick="show_with_title('No. 146', 'off/st30-146.off')">No. 146</button>
+          <td>
+            <button onclick="on_show_no(146)">No. 146</button>
           </td>
         </tr>
         <tr>
@@ -1100,13 +1275,15 @@
           </td>
           <td>(8bd, 9ace), (8cf)r, (7bc)l
           </td>
-          <td><button onclick="show_with_title('No. 147', 'off/st30-147.off')">No. 147</button>
+          <td>
+            <button onclick="on_show_no(147)">No. 147</button>
           </td>
           <td>T, (Q)r
           </td>
           <td>(7af, 8b, 9c), (8cf)r, (7bc)l
           </td>
-          <td><button onclick="show_with_title('No. 148', 'off/st30-148.off')">No. 148</button>
+          <td>
+            <button onclick="on_show_no(148)">No. 148</button>
           </td>
         </tr>
         <tr>
@@ -1114,13 +1291,15 @@
           </td>
           <td>(8ce, 9ae), (9bdf)r, (8bdf)l
           </td>
-          <td><button onclick="show_with_title('No. 149', 'off/st30-149.off')">No. 149</button>
+          <td>
+            <button onclick="on_show_no(149)">No. 149</button>
           </td>
           <td>R, (PS)r
           </td>
           <td>(8c, 9ae), (8e, 9bdf)r, (7de, 8df)l
           </td>
-          <td><button onclick="show_with_title('No. 150', 'off/st30-150.off')">No. 150</button>
+          <td>
+            <button onclick="on_show_no(150)">No. 150</button>
           </td>
         </tr>
         <tr>
@@ -1128,13 +1307,15 @@
           </td>
           <td>(8e, 9ae), (8c, 9bdf)r, (7bc, 8bd)l
           </td>
-          <td><button onclick="show_with_title('No. 151', 'off/st30-151.off')">No. 151</button>
+          <td>
+            <button onclick="on_show_no(151)">No. 151</button>
           </td>
           <td>R, (PQS)r
           </td>
           <td>(9ae), (8ce, 9bdf)r, (7bcde, 8d)l
           </td>
-          <td><button onclick="show_with_title('No. 152', 'off/st30-152.off')">No. 152</button>
+          <td>
+            <button onclick="on_show_no(152)">No. 152</button>
           </td>
         </tr>
         <tr>
@@ -1142,13 +1323,15 @@
           </td>
           <td>(8c, 9ace), (9bdf)r, (8bdf)l
           </td>
-          <td><button onclick="show_with_title('No. 153', 'off/st30-153.off')">No. 153</button>
+          <td>
+            <button onclick="on_show_no(153)">No. 153</button>
           </td>
           <td>RT, (QS)r
           </td>
           <td>(9ace), (8c, 9bdf)r, (7bc, 8bd)l
           </td>
-          <td><button onclick="show_with_title('No. 154', 'off/st30-154.off')">No. 154</button>
+          <td>
+            <button onclick="on_show_no(154)">No. 154</button>
           </td>
         </tr>
         <tr>
@@ -1156,13 +1339,15 @@
           </td>
           <td>(9aceg), (9bdf)r, (8bdf)l
           </td>
-          <td><button onclick="show_with_title('No. 155', 'off/st30-155.off')">No. 155</button>
+          <td>
+            <button onclick="on_show_no(155)">No. 155</button>
           </td>
           <td>RU, (S)r
           </td>
           <td>(8e, 9aeg), (9bdf)r, (8bdf)l
           </td>
-          <td><button onclick="show_with_title('No. 156', 'off/st30-156.off')">No. 156</button>
+          <td>
+            <button onclick="on_show_no(156)">No. 156</button>
           </td>
         </tr>
         <tr>
@@ -1170,13 +1355,15 @@
           </td>
           <td>(9aeg), (8e, 9bdf)r, (7de, 8df)l
           </td>
-          <td><button onclick="show_with_title('No. 157', 'off/st30-157.off')">No. 157</button>
+          <td>
+            <button onclick="on_show_no(157)">No. 157</button>
           </td>
           <td>RU, (X)r
           </td>
           <td>(9abdeg), (10cd)r, (9cf)l
           </td>
-          <td><button onclick="show_with_title('No. 158', 'off/st30-158.off')">No. 158</button>
+          <td>
+            <button onclick="on_show_no(158)">No. 158</button>
           </td>
         </tr>
         <tr>
@@ -1184,13 +1371,15 @@
           </td>
           <td>(9aeg), (10cd, 9bd)r, (8bdf, 9c)l
           </td>
-          <td><button onclick="show_with_title('No. 159', 'off/st30-159.off')">No. 159</button>
+          <td>
+            <button onclick="on_show_no(159)">No. 159</button>
           </td>
           <td>RW, (X)r
           </td>
           <td>(10bg, 9abe), (10cd)r, (9cf)l
           </td>
-          <td><button onclick="show_with_title('No. 160', 'off/st30-160.off')">No. 160</button>
+          <td>
+            <button onclick="on_show_no(160)">No. 160</button>
           </td>
         </tr>
         <tr>
@@ -1198,13 +1387,15 @@
           </td>
           <td>(8c, 9abde), (10cd)r, (9cf)l
           </td>
-          <td><button onclick="show_with_title('No. 161', 'off/st30-161.off')">No. 161</button>
+          <td>
+            <button onclick="on_show_no(161)">No. 161</button>
           </td>
           <td>R, (SX)r
           </td>
           <td>(8c, 9ae), (10cd, 9bd)r, (8bdf, 9c)l
           </td>
-          <td><button onclick="show_with_title('No. 162', 'off/st30-162.off')">No. 162</button>
+          <td>
+            <button onclick="on_show_no(162)">No. 162</button>
           </td>
         </tr>
         <tr>
@@ -1212,13 +1403,15 @@
           </td>
           <td>(9ae), (10cd, 8c, 9bd)r, (7bc, 8bd, 9c)l
           </td>
-          <td><button onclick="show_with_title('No. 163', 'off/st30-163.off')">No. 163</button>
+          <td>
+            <button onclick="on_show_no(163)">No. 163</button>
           </td>
           <td>(S)r
           </td>
           <td>(8ace), (9bdf)r, (8bdf)l
           </td>
-          <td><button onclick="show_with_title('No. 164', 'off/st30-164.off')">No. 164</button>
+          <td>
+            <button onclick="on_show_no(164)">No. 164</button>
           </td>
         </tr>
         <tr>
@@ -1226,13 +1419,15 @@
           </td>
           <td>(8ac), (8e, 9bdf)r, (7de, 8df)l
           </td>
-          <td><button onclick="show_with_title('No. 165', 'off/st30-165.off')">No. 165</button>
+          <td>
+            <button onclick="on_show_no(165)">No. 165</button>
           </td>
           <td>(QS)r
           </td>
           <td>(8ae), (8c, 9bdf)r, (7bc, 8bd)l
           </td>
-          <td><button onclick="show_with_title('No. 166', 'off/st30-166.off')">No. 166</button>
+          <td>
+            <button onclick="on_show_no(166)">No. 166</button>
           </td>
         </tr>
         <tr>
@@ -1240,13 +1435,15 @@
           </td>
           <td>(8a), (8ce, 9bdf)r, (7bcde, 8d)l
           </td>
-          <td><button onclick="show_with_title('No. 167', 'off/st30-167.off')">No. 167</button>
+          <td>
+            <button onclick="on_show_no(167)">No. 167</button>
           </td>
           <td>T, (S)r
           </td>
           <td>(8ac, 9c), (9bdf)r, (8bdf)l
           </td>
-          <td><button onclick="show_with_title('No. 168', 'off/st30-168.off')">No. 168</button>
+          <td>
+            <button onclick="on_show_no(168)">No. 168</button>
           </td>
         </tr>
         <tr>
@@ -1254,13 +1451,15 @@
           </td>
           <td>(8a, 9c), (8c, 9bdf)r, (7bc, 8bd)l
           </td>
-          <td><button onclick="show_with_title('No. 169', 'off/st30-169.off')">No. 169</button>
+          <td>
+            <button onclick="on_show_no(169)">No. 169</button>
           </td>
           <td>TU, (S)r
           </td>
           <td>(8a, 9cg), (9bdf)r, (8bdf)l
           </td>
-          <td><button onclick="show_with_title('No. 170', 'off/st30-170.off')">No. 170</button>
+          <td>
+            <button onclick="on_show_no(170)">No. 170</button>
           </td>
         </tr>
         <tr>
@@ -1268,13 +1467,15 @@
           </td>
           <td>(8ae, 9g), (9bdf)r, (8bdf)l
           </td>
-          <td><button onclick="show_with_title('No. 171', 'off/st30-171.off')">No. 171</button>
+          <td>
+            <button onclick="on_show_no(171)">No. 171</button>
           </td>
           <td>U, (PS)r
           </td>
           <td>(8a, 9g), (8e, 9bdf)r, (7de, 8df)l
           </td>
-          <td><button onclick="show_with_title('No. 172', 'off/st30-172.off')">No. 172</button>
+          <td>
+            <button onclick="on_show_no(172)">No. 172</button>
           </td>
         </tr>
         <tr>
@@ -1282,13 +1483,15 @@
           </td>
           <td>(9acdfg), (10aef)r, (9be)l
           </td>
-          <td><button onclick="show_with_title('No. 173', 'off/st30-173.off')">No. 173</button>
+          <td>
+            <button onclick="on_show_no(173)">No. 173</button>
           </td>
           <td>TU, (SV)r
           </td>
           <td>(9acg), (10aef, 9df)r, (8bdf, 9e)l
           </td>
-          <td><button onclick="show_with_title('No. 174', 'off/st30-174.off')">No. 174</button>
+          <td>
+            <button onclick="on_show_no(174)">No. 174</button>
           </td>
         </tr>
         <tr>
@@ -1296,13 +1499,15 @@
           </td>
           <td>(8c, 9acdf), (10aef)r, (9be)l
           </td>
-          <td><button onclick="show_with_title('No. 175', 'off/st30-175.off')">No. 175</button>
+          <td>
+            <button onclick="on_show_no(175)">No. 175</button>
           </td>
           <td>T, (SV)r
           </td>
           <td>(8c, 9ac), (10aef, 9df)r, (8bdf, 9e)l
           </td>
-          <td><button onclick="show_with_title('No. 176', 'off/st30-176.off')">No. 176</button>
+          <td>
+            <button onclick="on_show_no(176)">No. 176</button>
           </td>
         </tr>
         <tr>
@@ -1310,13 +1515,15 @@
           </td>
           <td>(9ac), (10aef, 8c, 9df)r, (7bc, 8bd, 9e)l
           </td>
-          <td><button onclick="show_with_title('No. 177', 'off/st30-177.off')">No. 177</button>
+          <td>
+            <button onclick="on_show_no(177)">No. 177</button>
           </td>
           <td>TW, (V)r
           </td>
           <td>(10bg, 9acf), (10aef)r, (9be)l
           </td>
-          <td><button onclick="show_with_title('No. 178', 'off/st30-178.off')">No. 178</button>
+          <td>
+            <button onclick="on_show_no(178)">No. 178</button>
           </td>
         </tr>
         <tr>
@@ -1324,13 +1531,15 @@
           </td>
           <td>(10afg, 9acf), (11be)r, (10be)l
           </td>
-          <td><button onclick="show_with_title('No. 179', 'off/st30-179.off')">No. 179</button>
+          <td>
+            <button onclick="on_show_no(179)">No. 179</button>
           </td>
           <td>T, (VZ)r
           </td>
           <td>(10g, 9acf), (10af, 11be)r, (10b, 9be)l
           </td>
-          <td><button onclick="show_with_title('No. 180', 'off/st30-180.off')">No. 180</button>
+          <td>
+            <button onclick="on_show_no(180)">No. 180</button>
           </td>
         </tr>
         <tr>
@@ -1338,13 +1547,15 @@
           </td>
           <td>(8e, 9adfg), (10aef)r, (9be)l
           </td>
-          <td><button onclick="show_with_title('No. 181', 'off/st30-181.off')">No. 181</button>
+          <td>
+            <button onclick="on_show_no(181)">No. 181</button>
           </td>
           <td>U, (SV)r
           </td>
           <td>(8e, 9ag), (10aef, 9df)r, (8bdf, 9e)l
           </td>
-          <td><button onclick="show_with_title('No. 182', 'off/st30-182.off')">No. 182</button>
+          <td>
+            <button onclick="on_show_no(182)">No. 182</button>
           </td>
         </tr>
         <tr>
@@ -1352,13 +1563,15 @@
           </td>
           <td>(9ag), (10aef, 8e, 9df)r, (7de, 8df, 9e)l
           </td>
-          <td><button onclick="show_with_title('No. 183', 'off/st30-183.off')">No. 183</button>
+          <td>
+            <button onclick="on_show_no(183)">No. 183</button>
           </td>
           <td>UV, (X)r
           </td>
           <td>(10aef, 9adg), (10cd)r, (9cf)l
           </td>
-          <td><button onclick="show_with_title('No. 184', 'off/st30-184.off')">No. 184</button>
+          <td>
+            <button onclick="on_show_no(184)">No. 184</button>
           </td>
         </tr>
         <tr>
@@ -1366,13 +1579,15 @@
           </td>
           <td>(10cd, 9adg), (10aef)r, (9be)l
           </td>
-          <td><button onclick="show_with_title('No. 185', 'off/st30-185.off')">No. 185</button>
+          <td>
+            <button onclick="on_show_no(185)">No. 185</button>
           </td>
           <td>U, (VX)r
           </td>
           <td>(9adg), (10acdef)r, (9bcef)l
           </td>
-          <td><button onclick="show_with_title('No. 186', 'off/st30-186.off')">No. 186</button>
+          <td>
+            <button onclick="on_show_no(186)">No. 186</button>
           </td>
         </tr>
         <tr>
@@ -1380,13 +1595,15 @@
           </td>
           <td>(9adg), (10aef, 9cf)r, (10cd, 9be)l
           </td>
-          <td><button onclick="show_with_title('No. 187', 'off/st30-187.off')">No. 187</button>
+          <td>
+            <button onclick="on_show_no(187)">No. 187</button>
           </td>
           <td>U, (SVX)r
           </td>
           <td>(9ag), (10acdef, 9d)r, (8bdf, 9ce)l
           </td>
-          <td><button onclick="show_with_title('No. 188', 'off/st30-188.off')">No. 188</button>
+          <td>
+            <button onclick="on_show_no(188)">No. 188</button>
           </td>
         </tr>
         <tr>
@@ -1394,13 +1611,15 @@
           </td>
           <td>(8a, 9bdg), (10cd)r, (9cf)l
           </td>
-          <td><button onclick="show_with_title('No. 189', 'off/st30-189.off')">No. 189</button>
+          <td>
+            <button onclick="on_show_no(189)">No. 189</button>
           </td>
           <td>U, (SX)r
           </td>
           <td>(8a, 9g), (10cd, 9bd)r, (8bdf, 9c)l
           </td>
-          <td><button onclick="show_with_title('No. 190', 'off/st30-190.off')">No. 190</button>
+          <td>
+            <button onclick="on_show_no(190)">No. 190</button>
           </td>
         </tr>
         <tr>
@@ -1408,13 +1627,15 @@
           </td>
           <td>(8ce, 9adf), (10aef)r, (9be)l
           </td>
-          <td><button onclick="show_with_title('No. 191', 'off/st30-191.off')">No. 191</button>
+          <td>
+            <button onclick="on_show_no(191)">No. 191</button>
           </td>
           <td>(SV)r
           </td>
           <td>(8ce, 9a), (10aef, 9df)r, (8bdf, 9e)l
           </td>
-          <td><button onclick="show_with_title('No. 192', 'off/st30-192.off')">No. 192</button>
+          <td>
+            <button onclick="on_show_no(192)">No. 192</button>
           </td>
         </tr>
         <tr>
@@ -1422,13 +1643,15 @@
           </td>
           <td>(8c, 9a), (10aef, 8e, 9df)r, (7de, 8df, 9e)l
           </td>
-          <td><button onclick="show_with_title('No. 193', 'off/st30-193.off')">No. 193</button>
+          <td>
+            <button onclick="on_show_no(193)">No. 193</button>
           </td>
           <td>(QSV)r
           </td>
           <td>(8e, 9a), (10aef, 8c, 9df)r, (7bc, 8bd, 9e)l
           </td>
-          <td><button onclick="show_with_title('No. 194', 'off/st30-194.off')">No. 194</button>
+          <td>
+            <button onclick="on_show_no(194)">No. 194</button>
           </td>
         </tr>
         <tr>
@@ -1436,13 +1659,15 @@
           </td>
           <td>(9a), (10aef, 8ce, 9df)r, (7bcde, 8d, 9e)l
           </td>
-          <td><button onclick="show_with_title('No. 195', 'off/st30-195.off')">No. 195</button>
+          <td>
+            <button onclick="on_show_no(195)">No. 195</button>
           </td>
           <td>W, (V)r
           </td>
           <td>(10bg, 8e, 9af), (10aef)r, (9be)l
           </td>
-          <td><button onclick="show_with_title('No. 196', 'off/st30-196.off')">No. 196</button>
+          <td>
+            <button onclick="on_show_no(196)">No. 196</button>
           </td>
         </tr>
         <tr>
@@ -1450,13 +1675,15 @@
           </td>
           <td>(10abefg, 9a), (10cd)r, (9cf)l
           </td>
-          <td><button onclick="show_with_title('No. 197', 'off/st30-197.off')">No. 197</button>
+          <td>
+            <button onclick="on_show_no(197)">No. 197</button>
           </td>
           <td>WX, (V)r
           </td>
           <td>(10bcdg, 9a), (10aef)r, (9be)l
           </td>
-          <td><button onclick="show_with_title('No. 198', 'off/st30-198.off')">No. 198</button>
+          <td>
+            <button onclick="on_show_no(198)">No. 198</button>
           </td>
         </tr>
         <tr>
@@ -1464,13 +1691,15 @@
           </td>
           <td>(10bg, 9a), (10acdef)r, (9bcef)l
           </td>
-          <td><button onclick="show_with_title('No. 199', 'off/st30-199.off')">No. 199</button>
+          <td>
+            <button onclick="on_show_no(199)">No. 199</button>
           </td>
           <td>W, (X)l, (V)r
           </td>
           <td>(10bg, 9a), (10aef, 9cf)r, (10cd, 9be)l
           </td>
-          <td><button onclick="show_with_title('No. 200', 'off/st30-200.off')">No. 200</button>
+          <td>
+            <button onclick="on_show_no(200)">No. 200</button>
           </td>
         </tr>
         <tr>
@@ -1478,13 +1707,15 @@
           </td>
           <td>(10aef, 8c, 9ad), (10cd)r, (9cf)l
           </td>
-          <td><button onclick="show_with_title('No. 201', 'off/st30-201.off')">No. 201</button>
+          <td>
+            <button onclick="on_show_no(201)">No. 201</button>
           </td>
           <td>X, (V)r
           </td>
           <td>(10cd, 8c, 9ad), (10aef)r, (9be)l
           </td>
-          <td><button onclick="show_with_title('No. 202', 'off/st30-202.off')">No. 202</button>
+          <td>
+            <button onclick="on_show_no(202)">No. 202</button>
           </td>
         </tr>
         <tr>
@@ -1492,13 +1723,15 @@
           </td>
           <td>(8c, 9ad), (10acdef)r, (9bcef)l
           </td>
-          <td><button onclick="show_with_title('No. 203', 'off/st30-203.off')">No. 203</button>
+          <td>
+            <button onclick="on_show_no(203)">No. 203</button>
           </td>
           <td>(X)l, (V)r
           </td>
           <td>(8c, 9ad), (10aef, 9cf)r, (10cd, 9be)l
           </td>
-          <td><button onclick="show_with_title('No. 204', 'off/st30-204.off')">No. 204</button>
+          <td>
+            <button onclick="on_show_no(204)">No. 204</button>
           </td>
         </tr>
         <tr>
@@ -1506,13 +1739,15 @@
           </td>
           <td>(8c, 9a), (10acdef, 9d)r, (8bdf, 9ce)l
           </td>
-          <td><button onclick="show_with_title('No. 205', 'off/st30-205.off')">No. 205</button>
+          <td>
+            <button onclick="on_show_no(205)">No. 205</button>
           </td>
           <td>(QSVX)r
           </td>
           <td>(9a), (10acdef, 8c, 9d)r, (7bc, 8bd, 9ce)l
           </td>
-          <td><button onclick="show_with_title('No. 206', 'off/st30-206.off')">No. 206</button>
+          <td>
+            <button onclick="on_show_no(206)">No. 206</button>
           </td>
         </tr>
         <tr>
@@ -1520,13 +1755,15 @@
           </td>
           <td>(10bc, 11cf, 9a), (10aef)r, (9be)l
           </td>
-          <td><button onclick="show_with_title('No. 207', 'off/st30-207.off')">No. 207</button>
+          <td>
+            <button onclick="on_show_no(207)">No. 207</button>
           </td>
           <td>W, (X)r
           </td>
           <td>(10bg, 8a, 9b), (10cd)r, (9cf)l
           </td>
-          <td><button onclick="show_with_title('No. 208', 'off/st30-208.off')">No. 208</button>
+          <td>
+            <button onclick="on_show_no(208)">No. 208</button>
           </td>
         </tr>
         <tr>
@@ -1534,13 +1771,15 @@
           </td>
           <td>(8ac, 9bd), (10cd)r, (9cf)l
           </td>
-          <td><button onclick="show_with_title('No. 209', 'off/st30-209.off')">No. 209</button>
+          <td>
+            <button onclick="on_show_no(209)">No. 209</button>
           </td>
           <td>(SX)r
           </td>
           <td>(8ac), (10cd, 9bd)r, (8bdf, 9c)l
           </td>
-          <td><button onclick="show_with_title('No. 210', 'off/st30-210.off')">No. 210</button>
+          <td>
+            <button onclick="on_show_no(210)">No. 210</button>
           </td>
         </tr>
         <tr>
@@ -1548,13 +1787,15 @@
           </td>
           <td>(8a), (10cd, 8c, 9bd)r, (7bc, 8bd, 9c)l
           </td>
-          <td><button onclick="show_with_title('No. 211', 'off/st30-211.off')">No. 211</button>
+          <td>
+            <button onclick="on_show_no(211)">No. 211</button>
           </td>
           <td>X, (Z)r
           </td>
           <td>(10acdfg, 9a), (11be)r, (10be)l
           </td>
-          <td><button onclick="show_with_title('No. 212', 'off/st30-212.off')">No. 212</button>
+          <td>
+            <button onclick="on_show_no(212)">No. 212</button>
           </td>
         </tr>
         <tr>
@@ -1562,13 +1803,15 @@
           </td>
           <td>(10afg, 11be, 9a), (10cd)r, (9cf)l
           </td>
-          <td><button onclick="show_with_title('No. 213', 'off/st30-213.off')">No. 213</button>
+          <td>
+            <button onclick="on_show_no(213)">No. 213</button>
           </td>
           <td>(XZ)r
           </td>
           <td>(10afg, 9a), (10cd, 11be)r, (10be, 9cf)l
           </td>
-          <td><button onclick="show_with_title('No. 214', 'off/st30-214.off')">No. 214</button>
+          <td>
+            <button onclick="on_show_no(214)">No. 214</button>
           </td>
         </tr>
         <tr>
@@ -1576,13 +1819,15 @@
           </td>
           <td>(10afg, 9a), (10bcde)r, (11be, 9cf)l
           </td>
-          <td><button onclick="show_with_title('No. 215', 'off/st30-215.off')">No. 215</button>
+          <td>
+            <button onclick="on_show_no(215)">No. 215</button>
           </td>
           <td>X, (VZ)r
           </td>
           <td>(10cdg, 9a), (10af, 11be)r, (10b, 9be)l
           </td>
-          <td><button onclick="show_with_title('No. 216', 'off/st30-216.off')">No. 216</button>
+          <td>
+            <button onclick="on_show_no(216)">No. 216</button>
           </td>
         </tr>
         <tr>
@@ -1590,13 +1835,15 @@
           </td>
           <td>(10g, 9a), (10acdf, 11be)r, (10b, 9bcef)l
           </td>
-          <td><button onclick="show_with_title('No. 217', 'off/st30-217.off')">No. 217</button>
+          <td>
+            <button onclick="on_show_no(217)">No. 217</button>
           </td>
           <td>(VZ)l, (X)r
           </td>
           <td>(10g, 9a), (10bcd, 9be)r, (10af, 11be, 9cf)l
           </td>
-          <td><button onclick="show_with_title('No. 218', 'off/st30-218.off')">No. 218</button>
+          <td>
+            <button onclick="on_show_no(218)">No. 218</button>
           </td>
         </tr>
         <tr>
@@ -1604,13 +1851,15 @@
           </td>
           <td>(10adg, 11ad, 9a), (11be)r, (10be)l
           </td>
-          <td><button onclick="show_with_title('No. 219', 'off/st30-219.off')">No. 219</button>
+          <td>
+            <button onclick="on_show_no(219)">No. 219</button>
           </td>
           <td>Y2A, (Z)r
           </td>
           <td>(10a, 11acdf, 9a), (11be)r, (10be)l
           </td>
-          <td><button onclick="show_with_title('No. 220', 'off/st30-220.off')">No. 220</button>
+          <td>
+            <button onclick="on_show_no(220)">No. 220</button>
           </td>
         </tr>
         <tr>
@@ -1618,13 +1867,15 @@
           </td>
           <td>(10afg, 8e, 9af), (11be)r, (10be)l
           </td>
-          <td><button onclick="show_with_title('No. 221', 'off/st30-221.off')">No. 221</button>
+          <td>
+            <button onclick="on_show_no(221)">No. 221</button>
           </td>
           <td>(VZ)r
           </td>
           <td>(10g, 8e, 9af), (10af, 11be)r, (10b, 9be)l
           </td>
-          <td><button onclick="show_with_title('No. 222', 'off/st30-222.off')">No. 222</button>
+          <td>
+            <button onclick="on_show_no(222)">No. 222</button>
           </td>
         </tr>
         <tr>
@@ -1632,13 +1883,15 @@
           </td>
           <td>(10acf, 11cf, 9a), (11be)r, (10be)l
           </td>
-          <td><button onclick="show_with_title('No. 223', 'off/st30-223.off')">No. 223</button>
+          <td>
+            <button onclick="on_show_no(223)">No. 223</button>
           </td>
           <td>2A, (VZ)r
           </td>
           <td>(10c, 11cf, 9a), (10af, 11be)r, (10b, 9be)l
           </td>
-          <td><button onclick="show_with_title('No. 224', 'off/st30-224.off')">No. 224</button>
+          <td>
+            <button onclick="on_show_no(224)">No. 224</button>
           </td>
         </tr>
         <tr>
@@ -1646,13 +1899,15 @@
           </td>
           <td>(10a, 11abf, 9a), (12abc)r, (11cde)l
           </td>
-          <td><button onclick="show_with_title('No. 225', 'off/st30-225.off')">No. 225</button>
+          <td>
+            <button onclick="on_show_no(225)">No. 225</button>
           </td>
           <td>(Z2B)r
           </td>
           <td>(10a, 11af, 9a), (11b, 12abc)r, (10be, 11cd)l
           </td>
-          <td><button onclick="show_with_title('No. 226', 'off/st30-226.off')">No. 226</button>
+          <td>
+            <button onclick="on_show_no(226)">No. 226</button>
           </td>
         </tr>
       </table>

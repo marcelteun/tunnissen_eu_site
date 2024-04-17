@@ -89,6 +89,16 @@ body {
 #model_button {
 	font-size: 16px;
 }
+.buttons-rows {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.buttons-column {
+  display: flex;
+  flex-direction: column;
+}
 canvas.model {
 	width: 50vmin;
 	height: 50vmin;
