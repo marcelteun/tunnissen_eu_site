@@ -7,12 +7,12 @@
   <script src="/js/show-off-bundle.js"></script>
 </head>
 
-<body onload="draw_shape('off/6.S4xI.D2xI.off', 'model_canvas');">
+<body onload="draw_shape('off/6.S4xI.D2xI.off', 'model_canvas', {bg_col: [0.47, 0.45, 0.45]});">
 <div id="content">
 <h1>Rigid Compound of 6 Cubes</h1>
 <div id="descr">
 <p><b>
-<img style="vertical-align:top;" src="pics/6cS4_0.jpg" alt="picture">
+<img style="vertical-align:top;" src="pics/6.S4xI.D2xI_0.jpg" alt="picture">
 </b></p>
 <p><b>
 This is the rigid compound of 6 cubes with cube symmetry.
@@ -36,20 +36,19 @@ selecting in the drop down list.
 </b></p>
 <p><b>
 Follow the links to
-<a href="pics/6cS4_1.jpg">look into an order 2-axis</a>
+<a href="pics/6.S4xI.D2xI_1.jpg">look into an order 2-axis</a>
 or to
-<a href="pics/6cS4_2.jpg">look into an order 3-axis</a>
+<a href="pics/6.S4xI.D2xI_2.jpg">look into an order 3-axis</a>
 </b></p>
 <p></p>
 <p><b>
-  <a href="http://www.tum.dds.nl/polyh/ccmodels.html">Thumbnails</a>
+  <a href="./">Thumbnails</a>
 </b></p>
 <p><b>
-  <a href="http://www.tum.dds.nl/index.htm">Home</a>
+  <a href="/">Home</a>
 </b></p>
 <h2><a id="lastUpdated">Last Updated</a></h2>
-<p>2018-05-14
-</p>
+<p>2018-05-14</p>
 </div>
 
 <div id="model">
@@ -65,7 +64,7 @@ or to
     function on_select() {
       var x = document.getElementById("mySelect").value;
       var pars = x.split(":");
-      draw_shape(pars[0], 'model_canvas');
+      draw_shape(pars[0], 'model_canvas', {bg_col: [0.47, 0.45, 0.45]});
     }
   </script>
   </p>
