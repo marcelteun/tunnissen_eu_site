@@ -1,0 +1,26 @@
+OFF
+#
+# S4xI_S4xI
+#
+# file generated with python script by Marcel Tunnissen
+# Vertices Faces Edges
+8 6 12
+# Vertices
+1 1 -1
+1 -1 -1
+-1 -1 -1
+-1 1 -1
+1 1 1
+-1 1 1
+-1 -1 1
+1 -1 1
+# Sides and colours
+4  0 1 2 3  64 104 224
+4  4 5 6 7  64 104 224
+4  4 7 1 0  64 104 224
+4  5 4 0 3  64 104 224
+4  6 5 3 2  64 104 224
+4  7 6 2 1  64 104 224
+# END
+# Color alternative based on S4xI
+# Used colour alternative 0 (max 0)
