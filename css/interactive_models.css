@@ -43,6 +43,9 @@ body {
 	margin-right: auto;
 	display: block;
 }
+#incl_object {
+	width: 60ch;
+}
 /* for Chrome, Opera, Safari, Edge */
 .slider {
 	-webkit-appearance: none;

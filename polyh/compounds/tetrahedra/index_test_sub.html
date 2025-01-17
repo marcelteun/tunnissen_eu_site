@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Compounds of Tetrahedra</title>
+    <link rel="stylesheet" href="/css/interactive_models.css"/>
+    <script src="/js/show-off-bundle.js"></script>
+    <script src="/js/interactive_models_1.js"></script>
+    <script src="off/tetrahedron_compounds.js"></script>
+  </head>
+  <body onload="player.hide()">
+    <script>
+      var parent_doc = this.parent.document;
+      var player = new ModelPlay(parent_doc, "model");
+    </script>
+    <div id="pagebody" onclick="player.hide()">
+      <h2>Platonic Symmetries</h2>
+      <p>Note: for optimal experience Javascript should be enabled.
+      </p>
+      <table>
+        <tr class="header">
+          <td class="header_r">Compound
+          </td>
+          <td class="header">Static Model
+          </td>
+          <td class="header">Interactive Model
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a id="12_A4_E.off">12 | A<sub>4</sub> /  E<sub></sub></a>
+          </td>
+          <td><button onclick="player.show('off/12_A4_E.off', title='12 | A<sub>4</sub> /  E<sub></sub>')">Show</button>
+          </td>
+          <td><button onclick="player.ishow(n12_A4_E, [1, 2, 3], -3.142, 3.142, title='12 | A<sub>4</sub> /  E<sub></sub> | &mu;')">Interact</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a id="24_A4xI_E.off">24 | A<sub>4</sub> x I /  E<sub></sub></a>
+          </td>
+          <td><button onclick="player.show('off/24_A4xI_E.off')">Show</button>
+          </td>
+          <td><button onclick="player.ishow(n24_A4xI_E, [1, 2, 3], -3.142, 3.142, title='24 | A<sub>4</sub> x I /  E<sub></sub> | &mu;')">Interact</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a id="48_S4xI_E.off">48 | S<sub>4</sub> x I /  E<sub></sub></a>
+          </td>
+          <td><button onclick="player.show('off/48_S4xI_E.off', title='48 | S<sub>4</sub> x I /  E<sub></sub>')">Show</button>
+          </td>
+          <td><button onclick="player.ishow(n48_S4xI_E, [2, 1, 0], -3.142, 3.142, title='48 | S<sub>4</sub> x I /  E<sub></sub> | &mu;')">Interact</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a id="60_A5_E.off">60 | A<sub>5</sub> /  E<sub></sub></a>
+          </td>
+          <td><button onclick="player.show('off/60_A5_E.off', title='60 | A<sub>5</sub> /  E<sub></sub>')">Show</button>
+          </td>
+          <td><button onclick="player.ishow(n60_A5_E, [1, 2, 0], -3.142, 3.142, title='60 | A<sub>5</sub> /  E<sub></sub> | &mu;')">Interact</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a id="120_A5xI_E.off">120 | A<sub>5</sub> x I /  E<sub></sub></a>
+          </td>
+          <td><button onclick="player.show('off/120_A5xI_E.off', title='120 | A<sub>5</sub> x I /  E<sub></sub>')">Show</button>
+          </td>
+          <td><button onclick="player.ishow(n120_A5xI_E, [1, 2, 0], -3.142, 3.142, title='120 | A<sub>5</sub> x I /  E<sub></sub> | &mu;')">Interact</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

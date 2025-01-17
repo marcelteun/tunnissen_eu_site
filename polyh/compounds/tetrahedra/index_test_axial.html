@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Compounds of Tetrahedra</title>
+    <link rel="stylesheet" href="/css/interactive_models.css"/>
+    <script src="/js/show-off-bundle.js"></script>
+    <script src="/js/interactive_models_1.js"></script>
+    <script src="off/tetrahedron_compounds.js"></script>
+  </head>
+  <body onload="player.hide()">
+    <script>
+      var parent_doc = this.parent.document;
+      var player = new ModelPlay(parent_doc, "model");
+    </script>
+    <div id="pagebody" onclick="player.hide()">
+      <h2>Axial Symmetries</h2>
+      </p>
+      <table>
+        <tr class="header">
+          <td class="header_r">Compound
+          </td>
+          <td class="header">Static Model
+          </td>
+          <td class="header">Interactive Model
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a id="n_Cn_E.off">n | C<sub>n</sub> /  E<sub></sub>
+              <br/>n &ge; 2</a>
+          </td>
+</td>
+          <td><button onclick="player.show('off/2_C2_E.off', title='2 | C<sub>2</sub> /  E<sub></sub>')">for n=2</button>
+            <br/><button onclick="player.show('off/3_C3_E.off', title='3 | C<sub>3</sub> /  E<sub></sub>')">for n=3</button>
+          
+            <br/><button onclick="player.show('off/4_C4_E.off', title='4 | C<sub>4</sub> /  E<sub></sub>')">for n=4</button>
+            <br/><button onclick="player.show('off/5_C5_E.off', title='5 | C<sub>5</sub> /  E<sub></sub>')">for n=5</button>
+          </td>
+          <td><button onclick="player.ishow(n2_C2_E, [-1, 2, -3], -3.142, 3.142, title='2 | C<sub>2</sub> /  E<sub></sub> | &mu;')">for n=2</button>
+            <br/><button onclick="player.ishow(n3_C3_E, [-1, 2, -3], -3.142, 3.142, title='3 | C<sub>3</sub> /  E<sub></sub> | &mu;')">for n=3</button>
+            <br/><button onclick="player.ishow(n4_C4_E, [-1, 2, -3], -3.142, 3.142, title='4 | C<sub>4</sub> /  E<sub></sub> | &mu;')">for n=4</button>
+            <br/><button onclick="player.ishow(n5_C5_E, [-1, 2, -3], -3.142, 3.142, title='5 | C<sub>5</sub> /  E<sub></sub> | &mu;')">for n=5</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a id="2n_CnxI_E.off">2n | C<sub>n</sub> x I /  E<sub></sub>
+              <br/>n &ge; 2</a>
+          </td>
+          <td><button onclick="player.show('off/4_C2xI_E.off', title='4 | C<sub>2</sub> x I /  E<sub></sub>')">for n=2</button>
+            <br/><button onclick="player.show('off/6_C3xI_E.off', title='6 | C<sub>3</sub> x I /  E<sub></sub>')">for n=3</button>
+            <br/><button onclick="player.show('off/8_C4xI_E.off', title='8 | C<sub>4</sub> x I /  E<sub></sub>')">for n=4</button>
+            <br/><button onclick="player.show('off/10_C5xI_E.off', title='10 | C<sub>5</sub> x I /  E<sub></sub>')">for n=5</button>
+          </td>
+          <td><button onclick="player.ishow(n4_C2xI_E, [-1, 2, -3], -3.142, 3.142, title='4 | C<sub>2</sub> x I /  E<sub></sub> | &mu;')">for n=2</button>
+            <br/><button onclick="player.ishow(n6_C3xI_E, [-1, 2, -3], -3.142, 3.142, title='6 | C<sub>3</sub> x I /  E<sub></sub> | &mu;')">for n=3</button>
+            <br/><button onclick="player.ishow(n8_C4xI_E, [-1, 2, -3], -3.142, 3.142, title='8 | C<sub>4</sub> x I /  E<sub></sub> | &mu;')">for n=4</button>
+            <br/><button onclick="player.ishow(n10_C5xI_E, [-1, 2, -3], -3.142, 3.142, title='10 | C<sub>5</sub> x I /  E<sub></sub> | &mu;')">for n=5</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a id="2n_C2nCn_E.off">2n | C<sub>2n</sub>C<sub>n</sub> /  E<sub></sub>
+              <br/>n &ge; 1</a>
+          </td>
+          <td><button onclick="player.show('off/2_C2C1_E.off', title='2 | C<sub>2</sub>C<sub>1</sub> /  E<sub></sub>')">for n=1</button>
+            <br/><button onclick="player.show('off/4_C4C2_E.off', title='4 | C<sub>4</sub>C<sub>2</sub> /  E<sub></sub>')">for n=2</button>
+            <br/><button onclick="player.show('off/6_C6C3_E.off', title='6 | C<sub>6</sub>C<sub>3</sub> /  E<sub></sub>')">for n=3</button>
+            <br/><button onclick="player.show('off/8_C8C4_E.off', title='8 | C<sub>8</sub>C<sub>4</sub> /  E<sub></sub>')">for n=4</button>
+          </td>
+          <td><button onclick="player.ishow(n2_C2C1_E, [-1, 2, -3], -3.142, 3.142, title='2 | C<sub>2</sub>C<sub>1</sub> /  E<sub></sub> | &mu;')">for n=1</button>
+            <br/><button onclick="player.ishow(n4_C4C2_E, [-1, 2, -3], -3.142, 3.142, title='4 | C<sub>4</sub>C<sub>2</sub> /  E<sub></sub> | &mu;')">for n=2</button>
+            <br/><button onclick="player.ishow(n6_C6C3_E, [-1, 2, -3], -3.142, 3.142, title='6 | C<sub>6</sub>C<sub>3</sub> /  E<sub></sub> | &mu;')">for n=3</button>
+            <br/><button onclick="player.ishow(n8_C8C4_E, [-1, 2, -3], -3.142, 3.142, title='8 | C<sub>8</sub>C<sub>4</sub> /  E<sub></sub> | &mu;')">for n=4</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a id="2n_DnCn_E.off">2n | D<sub>n</sub>C<sub>n</sub> /  E<sub></sub>
+              <br/>n &ge; 2</a>
+          </td>
+          <td><button onclick="player.show('off/4_D2C2_E.off', title='4 | D<sub>2</sub>C<sub>2</sub> /  E<sub></sub>')">for n=2</button>
+            <br/><button onclick="player.show('off/6_D3C3_E.off', title='6 | D<sub>3</sub>C<sub>3</sub> /  E<sub></sub>')">for n=3</button>
+            <br/><button onclick="player.show('off/8_D4C4_E.off', title='8 | D<sub>4</sub>C<sub>4</sub> /  E<sub></sub>')">for n=4</button>
+            <br/><button onclick="player.show('off/10_D5C5_E.off', title='10 | D<sub>5</sub>C<sub>5</sub> /  E<sub></sub>')">for n=5</button>
+          </td>
+          <td><button onclick="player.ishow(n4_D2C2_E, [-1, 2, -3], -3.142, 3.142, title='4 | D<sub>2</sub>C<sub>2</sub> /  E<sub></sub> | &mu;')">for n=2</button>
+            <br/><button onclick="player.ishow(n6_D3C3_E, [-1, 2, -3], -3.142, 3.142, title='6 | D<sub>3</sub>C<sub>3</sub> /  E<sub></sub> | &mu;')">for n=3</button>
+            <br/><button onclick="player.ishow(n8_D4C4_E, [-1, 2, -3], -3.142, 3.142, title='8 | D<sub>4</sub>C<sub>4</sub> /  E<sub></sub> | &mu;')">for n=4</button>
+            <br/><button onclick="player.ishow(n10_D5C5_E, [-1, 2, -3], -3.142, 3.142, title='10 | D<sub>5</sub>C<sub>5</sub> /  E<sub></sub> | &mu;')">for n=5</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a id="2n_Dn_E.off">2n | D<sub>n</sub> /  E<sub></sub>
+              <br/>n &ge; 2</a>
+          </td>
+          <td><button onclick="player.show('off/4_D2_E.off', title='4 | D<sub>2</sub> /  E<sub></sub>')">for n=2</button>
+            <br/><button onclick="player.show('off/6_D3_E.off', title='6 | D<sub>3</sub> /  E<sub></sub>')">for n=3</button>
+            <br/><button onclick="player.show('off/8_D4_E.off', title='8 | D<sub>4</sub> /  E<sub></sub>')">for n=4</button>
+            <br/><button onclick="player.show('off/10_D5_E.off', title='10 | D<sub>5</sub> /  E<sub></sub>')">for n=5</button>
+          </td>
+          <td><button onclick="player.ishow(n4_D2_E, [-1, 2, -3], -3.142, 3.142, title='4 | D<sub>2</sub> /  E<sub></sub> | &mu;')">for n=2</button>
+            <br/><button onclick="player.ishow(n6_D3_E, [-1, 2, -3], -3.142, 3.142, title='6 | D<sub>3</sub> /  E<sub></sub> | &mu;')">for n=3</button>
+            <br/><button onclick="player.ishow(n8_D4_E, [-1, 2, -3], -3.142, 3.142, title='8 | D<sub>4</sub> /  E<sub></sub> | &mu;')">for n=4</button>
+            <br/><button onclick="player.ishow(n10_D5_E, [-1, 2, -3], -3.142, 3.142, title='10 | D<sub>5</sub> /  E<sub></sub> | &mu;')">for n=5</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a id="4n_D2nDn_E.off">4n | D<sub>2n</sub>D<sub>n</sub> /  E<sub></sub>
+              <br/>n &ge; 2</a>
+          </td>
+          <td><button onclick="player.show('off/8_D4D2_E.off', title='8 | D<sub>4</sub>D<sub>2</sub> /  E<sub></sub>')">for n=2</button>
+            <br/><button onclick="player.show('off/12_D6D3_E.off', title='12 | D<sub>6</sub>D<sub>3</sub> /  E<sub></sub>')">for n=3</button>
+            <br/><button onclick="player.show('off/16_D8D4_E.off', title='16 | D<sub>8</sub>D<sub>4</sub> /  E<sub></sub>')">for n=4</button>
+            <br/><button onclick="player.show('off/20_D10D5_E.off', title='20 | D<sub>10</sub>D<sub>5</sub> /  E<sub></sub>')">for n=5</button>
+          </td>
+          <td><button onclick="player.ishow(n8_D4D2_E, [-1, 2, -3], -3.142, 3.142, title='8 | D<sub>4</sub>D<sub>2</sub> /  E<sub></sub> | &mu;')">for n=2</button>
+            <br/><button onclick="player.ishow(n12_D6D3_E, [-1, 2, -3], -3.142, 3.142, title='12 | D<sub>6</sub>D<sub>3</sub> /  E<sub></sub> | &mu;')">for n=3</button>
+            <br/><button onclick="player.ishow(n16_D8D4_E, [-1, 2, -3], -3.142, 3.142, title='16 | D<sub>8</sub>D<sub>4</sub> /  E<sub></sub> | &mu;')">for n=4</button>
+            <br/><button onclick="player.ishow(n20_D10D5_E, [-1, 2, -3], -3.142, 3.142, title='20 | D<sub>10</sub>D<sub>5</sub> /  E<sub></sub> | &mu;')">for n=5</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="r"><a id="4n_DnxI_E.off">4n | D<sub>n</sub> x I /  E<sub></sub>
+              <br/>n &ge; 2</a>
+          </td>
+          <td><button onclick="player.show('off/8_D2xI_E.off', title='8 | D<sub>2</sub> x I /  E<sub></sub>')">for n=2</button>
+            <br/><button onclick="player.show('off/12_D3xI_E.off', title='12 | D<sub>3</sub> x I /  E<sub></sub>')">for n=3</button>
+            <br/><button onclick="player.show('off/16_D4xI_E.off', title='16 | D<sub>4</sub> x I /  E<sub></sub>')">for n=4</button>
+            <br/><button onclick="player.show('off/20_D5xI_E.off', title='20 | D<sub>5</sub> x I /  E<sub></sub>')">for n=5</button>
+          </td>
+          <td><button onclick="player.ishow(n8_D2xI_E, [-1, 2, -3], -3.142, 3.142, title='8 | D<sub>2</sub> x I /  E<sub></sub> | &mu;')">for n=2</button>
+            <br/><button onclick="player.ishow(n12_D3xI_E, [-1, 2, -3], -3.142, 3.142, title='12 | D<sub>3</sub> x I /  E<sub></sub> | &mu;')">for n=3</button>
+            <br/><button onclick="player.ishow(n16_D4xI_E, [-1, 2, -3], -3.142, 3.142, title='16 | D<sub>4</sub> x I /  E<sub></sub> | &mu;')">for n=4</button>
+            <br/><button onclick="player.ishow(n20_D5xI_E, [-1, 2, -3], -3.142, 3.142, title='20 | D<sub>5</sub> x I /  E<sub></sub> | &mu;')">for n=5</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
