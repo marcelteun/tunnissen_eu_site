@@ -35,8 +35,8 @@ body {
 	display: block;
 }
 #model_canvas {
-	width: 50vmin;
-	height: 50vmin;
+	width: 45vmin;
+	height: 45vmin;
 	padding-left: 0;
 	padding-right: 0;
 	margin-left: auto;
@@ -45,6 +45,7 @@ body {
 }
 #incl_object {
 	width: 60ch;
+	height: 50em;
 }
 /* for Chrome, Opera, Safari, Edge */
 .slider {

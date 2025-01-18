@@ -2,7 +2,6 @@ const MODEL_TITLE="model_titla";
 const MODEL_CANVAS="model_canvas";
 const ANGLE_SLIDER="angle_slider";
 const ANGLE_TEXT="angle_text";
-const THE_ANGLE="the_angle";
 
 function ModelPlay(canvas_document, model_area_id) {
   /*
@@ -39,7 +38,6 @@ ModelPlay.prototype.add_model_nodes = function() {
    * - a header with the ID specified by const MODEL_TITLE
    * - a canvas with the ID specified by const MODEL_CANVAS
    * - a slider with the ID specified by const ANGLE_SLIDER
-   * - a p with the ID ANGLE_TEXT holding a span with the ID specified by const THE_ANGLE
    * This method will make sure that these will only be created once.
    */
 
@@ -66,11 +64,7 @@ ModelPlay.prototype.add_model_nodes = function() {
 
     this.nodes.angle_text = this.canvas_doc.createElement('p');
     this.nodes.angle_text.setAttribute("id", ANGLE_TEXT);
-    this.nodes.angle_text.content = "With &mul; = ";
-    this.nodes.angle = this.canvas_doc.createElement('span');
-    this.nodes.angle.setAttribute("id", THE_ANGLE);
-    this.nodes.angle_text.appendChild(this.nodes.angle);
-    this.nodes.angle_text.content += " degrees";
+    this.nodes.angle_text.innerHTML = "";
     this.model_area.appendChild(this.nodes.angle_text);
 
     this.canvas_doc.model_area_nodes = this.nodes;
@@ -120,7 +114,6 @@ ModelPlay.prototype.ishow = function(model, axis, rmin, rmax, title="", rstep=un
   this.nodes.slider.hidden = false;
   this.nodes.slider.value = 0;
   this.nodes.angle_text.style.display = "block";
-  this.nodes.angle.innerHTML = 0;
   // either define one or define all
   if (axis === undefined || rmin === undefined || rmax === undefined) {
     this.nodes.slider.min = model.angle_domain[0];
@@ -141,7 +134,7 @@ ModelPlay.prototype.ishow = function(model, axis, rmin, rmax, title="", rstep=un
   this.nodes.slider.oninput = function() {
     shape.rotate_descriptive(this.rot_axis, this.value);
     var angle_deg = this.value * 180 / Math.PI;
-    this.player.nodes.angle.innerText = Math.round((angle_deg + Number.EPSILON) * 10) / 10;
+    this.player.nodes.angle_text.innerHTML = "With &mu; = " +  angle_deg.toFixed(2) + " &deg;";
   }
   this.nodes.slider.oninput()
   this.nodes.title.innerHTML = title;
