@@ -90,18 +90,14 @@ ModelPlay.prototype.show = function(model, title="", opt={}) {
 }
 
 ModelPlay.prototype.hide = function() {
-  console.log("hide called");
   if (this.ignore_next_hide) {
     this.ignore_next_hide = false;
-    console.log("... but ignored");
     return;
   }
   this.ignore_click = true;
   if (this.nodes.area.style.initialised) {
-    console.log("hiding");
     this.nodes.area.style.display = "none";
   } else {
-    console.log("init insteead of hiding");
     this.nodes.area.style.initialised = true;
   }
 }
