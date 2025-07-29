@@ -11,7 +11,7 @@
     <div id="model"> </div>
     <script>
       var player = new ModelPlay(document, "model");
-      const array = ['about', 'book_index', 'errata', 'conjunctive_vs_disjunctive'];
+      const array = ['about', 'book_index', 'errata', 'space_n_body', 'conjunctive_vs_disjunctive'];
       function on_select() {
           array.forEach(
               function (item) {
@@ -37,8 +37,9 @@
         <select onchange="on_select()" id="table_selection">
           <option value="about">About</option>
           <option value="book_index">Book Index</option>
-          <option value="errata">Small mistakes and Suggested Improvements</option>
-          <option value="conjunctive_vs_disjunctive">Conjunctive and Disjunctive Compounds</option>
+          <option value="errata">Mistakes and suggested improvements</option>
+          <option value="space_n_body">Example of space-(n) body / system</option>
+          <option value="conjunctive_vs_disjunctive">Example of conjunctive and disjunctive compounds</option>
         </select>
       </div>
       <div id="about">
@@ -73,6 +74,12 @@
             <td class="r">conjugate subgroups
             </td>
             <td>68
+            </td>
+          </tr>
+          <tr>
+            <td class="r">conjunct bodies
+            </td>
+            <td>72
             </td>
           </tr>
           <tr>
@@ -130,6 +137,12 @@
             </td>
           </tr>
           <tr>
+            <td class="r">disjunct bodies
+            </td>
+            <td>72
+            </td>
+          </tr>
+          <tr>
             <td class="r">disjunctive subcompounds
             </td>
             <td>161-162
@@ -160,9 +173,15 @@
             </td>
           </tr>
           <tr>
+            <td class="r">fundamental descriptive
+            </td>
+            <td>84
+            </td>
+          </tr>
+          <tr>
             <td class="r">group action (activating a set)
             </td>
-            <td>69-69
+            <td>69-71
             </td>
           </tr>
           <tr>
@@ -181,6 +200,12 @@
             <td class="r">improper subgroup
             </td>
             <td>68
+            </td>
+          </tr>
+          <tr>
+            <td class="r">level-(m) body in the system
+            </td>
+            <td>72, 74
             </td>
           </tr>
           <tr>
@@ -256,6 +281,18 @@
             </td>
           </tr>
           <tr>
+            <td class="r">space-(n) body
+            </td>
+            <td>72
+            </td>
+          </tr>
+          <tr>
+            <td class="r">space-(n) system
+            </td>
+            <td>72, 83
+            </td>
+          </tr>
+          <tr>
             <td class="r">stability
             </td>
             <td>101-102
@@ -315,19 +352,26 @@
         <p>The listing given here are suggestions of improvements in the book, including some mistakes that I found. These are not confirmed by the author and therefore they cannot be considered as any official errata. Since the author seemed to have passed away according to this <a href="https://m.nieuwsblad.be/cnt/dmf20220624_95787115">article</a> I decided to publish them here. I hope that it will help a reader to understand the book better.
         </p>
         <ul>
+          <li>Page <b>39, Figure 38</b>: Figure titles are wrong. (a) perpendicular to a 3-fold axis (10&times;); (b) perpendicular to a 5-fold axis (6&times;); (c) occurs twice for each 2-fold axis in the image (30&times;); (d) perpendicular to a 2-fold axis (30&times;); </li>
+          <li>Page <b>39, Table 16</b>: A better title would be 'Icosahedral Angles between m- and n-Fold Axis' and then use 'n' and 'n' on top of the two left-most columns. It would also be good to refer to Firgure 38 for each angle. Between 2-fold and 5-fold axis the 90&deg; angle is missing. It can both be seen in Figure 38b, where the 5-fold axis is perpedicular to the image and Figure 38d, where the 2-fold axis is perpendicular to the image.</li>
           <li>Page <b>52</b>: D<sub>4</sub>D<sub>2</sub> has 2 reflections, not 3.</li>
           <li>Page <b>53, Figure 56</b>: The text 'Number of mirrors: 3 (Fig. 56a) &plus; 1 (Fig. 56b)' could be misinterpreted. Fig. 56a itself doesn't show 3 mirrors, but there are 3 mirror planes of the type shown in Fig. 56a, where the plane contains one 3-fold and one 2-fold axis. The same improvement can be made when referring to similar images in the next symmetries. </li>
           <li>Page <b>67, Section 1.1</b>: In the first sentence '<b>C</b>' shouldn't be in bold font: it should '<i>C</i>' instead.</li>
           <li>Page <b>68, item 3</b>: It would be clearer to state that the two cosets are <b>H</b> and <b>G</b> - <b>H</b></li>
+          <li>Page <b>68, section 1.2</b>: The statement <i>A</i> &middot; <b>H</b> &middot; <b>A</b><sup>-1</sup> = <b>H</b> should be <i>A</i> &middot; <b>H</b> &middot; <i>A</i><sup>-1</sup> = <b>H</b> ('A' shouldn't be in bold font).</li>
+          <li>Page <b>69, section 1.4</b>: In the expression <i>A</i> * (<i>B</i> &middot; <b>H</b>) = (<i>A</i> &middot; <i>B</i>) &middot; <b>H</b> it is better to write <i>A</i> * (<i>C</i> &middot; <b>H</b>) = (<i>A</i> &middot; <i>C</i>) &middot; <b>H</b> so the character 'C' relates to the definition of q and q'.</li>
+          <li>Page <b>72</b>: The sentence 'The sum of these components is again a space-(n-1) body and is composed of space-(n-2) bodies.' is unclear, since the 'sum of components' is undefined. If you put these components, which are space-(n-1) bodies, back in a set, then you would get back the original space-(n) body, not a space-(n-1) body. I think the author might have meant meant the union of these components, with 'the sum of'. In that case you do get a space-(n-1) body. I don't think that the Minkowski sum is meant here.</li>
           <li>Page <b>73-74</b>: The choice of the letter <b>I</b> is a bit unfortunate, since it is also used to denote the central inversion. </li>
-          <li>Page <b>74, <b>Section 3</b></b>: The expression <i>p &isin; V(n)</i> should be <i>p &isin; V<sup>(n)</sup></i>.</li>
-          <li>Page <b>74, <b>Section 4</b></b>: The first sentence would be clearer it the word 'then' is added after the first comma.</li>
+          <li>Page <b>74, Section 3, first paragraph</b>: The expression <i>p &isin; V(n)</i> should be <i>p &isin; V<sup>(n)</sup></i>.</li>
+          <li>Page <b>74, Section 4</b>: The first sentence would be clearer it the word 'then' is added after the first comma.</li>
           <li>Page <b>75, mapping <i>t</i></b>: <b>G</b> / <b>C</b><i><sub>s</sub></i> should be <b>G</b> / <b>G</b><i><sub>s</sub></i>. It could also be helpful to mention in the line below below for <i>C</i> &middot; <b>G</b><sub>s</sub> that <i>C</i> &isin; <b>G</b></li>
           <li>Page <b>76, first paragraph</b>: <b>G</b><sub>1</sub> should be <b>G</b><sub>s</sub> and <i>p</i><sub>1</sub> should be <i>p</i><sub>s</sub>.</li>
           <li>Page <b>76, case 3</b>: The notation &#x27e8;<b>H</b>, <b>G</b><sub>s</sub> &#x27e9; &#x2282;<b>H</b> means that this set is used as a generator; i.e. the isometries are recursively combined with each other until no new isometries are found. This is to close the group. However this would never lead to case 1 as the text says, but it is meant that this new group becomes an <b>F</b><sub>s</sub>, which takes the role of <b>G</b><sub>s</sub> in case 1 since <b>H</b> &#x2282; <b>F</b><sub>s</sub>.</li>
           <li>Page <b>76, bottom of the page </b>: The symbol &#x21cb; is used. It would be good to mention what this symbol stands for. I think this symbol is meant to represent the 'equipotent' relation.</li>
           <li>Page <b>77</b>: In the figure title <b>H</b><sub>1</sub>, <b>H</b><sub>2</sub>, <b>G</b><sub>1</sub>, and <b>G</b><sub>2</sub> should be <b>H</b>, <b>H</b><sub><i>s</i></sub>, <b>G</b> and <b>G</b><sub><i>s</i></sub> respectively, I think. In that case it fits with the text as well.</li>
           <li>Page <b>78</b>: At the top of the page there is a reference to 'Diagram 2'. That should be 'the diagram below'.</li>
+          <li>Page <b>82, item 2b.</b>: The order of C<sub>5</sub> indicated by <i>h</i> = 5 not 12.</li>
+          <li>Page <b>83, Section 2.</b>: 'distinct form' should be 'distinct from'.</li>
           <li>Page <b>125, Section 4.2</b>: At item 1: Fig. 83 should be Fig. 81, and at item 2: Fig. 81 should be Fig. 82.</li>
           <li>Page <b>126</b>: At the top of the page Fig. 81 should be Fig. 83.</li>
           <li>Page <b>135, Figure 100 and 101</b>: The images show compounds of 6 cubes, not 2, i.e. 2 | A<sub>4</sub> x I / C<sub>2</sub> x I should be 6 | A<sub>4</sub> x I / C<sub>2</sub> x I (twice).</li>
@@ -350,6 +394,40 @@
           <li>Page <b>214, Section 5.5</b>: 4 | A<sub>4</sub> x I / C<sub>2</sub> x I should be 6 | A<sub>4</sub> x I / C<sub>2</sub> x I</li>
           <li>Page <b>224</b>: The year 1990 referring to Br&uuml;ckner should be 1900</li>
         </ul>
+      </div>
+      <div id="space_n_body">
+        <p>This subject is related to <b>page 71-72</b>. The scetion is quite abstract and some of the definitions are ambiguous. My interpretation is that Verheyen tried to use this in case a compound of cubes consists of subcompounds. A subcompound in its turn might consist of subcompounds, until you final end up with one cube. I also think that he needed to cover the conjunctive subcompounds with this.
+        </p>
+        <p>The part that is ambiguous is when a sum of components is used. These components are elements in a set and are themselves sets as well. It is unclear what he meant with the sum. I don't think that the Minkowski sum is meant here, neither did he mean to gather the components is a the set again, I think. It might be that he meant taking the union of these components, 
+        </p>
+        <p>Let's have a look at some example, though. Imagine a cube consisting of eight vertices v<sub>1</sub> to v<sub>8</sub>. You could describe the cube to consist of 6 faces, possibly as a result of an orbit of one square. Each square consists of 4 edges, which also might be the result of an orbit of one edge. The cube can then be described by the following space-(3) body:
+        </p>
+        <p>
+          <div>{
+          </div>
+          <div style="margin-left: 10px;">{{v<sub>1</sub>, v<sub>2</sub>}, {v<sub>2</sub>, v<sub>3</sub>}, {v<sub>3</sub>, v<sub>4</sub>}, {v<sub>4</sub>, v<sub>1</sub>}},
+          </div>
+          <div style="margin-left: 10px;">{{v<sub>1</sub>, v<sub>5</sub>}, {v<sub>5</sub>, v<sub>6</sub>}, {v<sub>6</sub>, v<sub>2</sub>}, {v<sub>2</sub>, v<sub>1</sub>}},
+          </div>
+          <div style="margin-left: 10px;">{{v<sub>2</sub>, v<sub>6</sub>}, {v<sub>6</sub>, v<sub>7</sub>}, {v<sub>7</sub>, v<sub>3</sub>}, {v<sub>3</sub>, v<sub>2</sub>}},
+          </div>
+          <div style="margin-left: 10px;">{{v<sub>3</sub>, v<sub>7</sub>}, {v<sub>7</sub>, v<sub>8</sub>}, {v<sub>8</sub>, v<sub>4</sub>}, {v<sub>4</sub>, v<sub>3</sub>}},
+          </div>
+          <div style="margin-left: 10px;">{{v<sub>4</sub>, v<sub>8</sub>}, {v<sub>8</sub>, v<sub>5</sub>}, {v<sub>5</sub>, v<sub>1</sub>}, {v<sub>1</sub>, v<sub>4</sub>}},
+          </div>
+          <div style="margin-left: 10px;">{{v<sub>5</sub>, v<sub>6</sub>}, {v<sub>6</sub>, v<sub>7</sub>}, {v<sub>7</sub>, v<sub>8</sub>}, {v<sub>8</sub>, v<sub>5</sub>}}
+          </div>}
+        </p>
+        <p>This space-(3) body consists of six space-(2) bodies, which represent the faces. Assuming that Verheyen meant a union with 'the sum of these components' then this sum would lead to the following space-(2) body:
+          <div style="margin-left: 10px;">{{v<sub>1</sub>, v<sub>2</sub>}, {v<sub>2</sub>, v<sub>3</sub>}, {v<sub>3</sub>, v<sub>4</sub>}, {v<sub>4</sub>, v<sub>1</sub>}, {v<sub>1</sub>, v<sub>5</sub>}, {v<sub>2</sub>, v<sub>6</sub>}, {v<sub>3</sub>, v<sub>7</sub>}, {v<sub>4</sub>, v<sub>8</sub>}, {v<sub>5</sub>, v<sub>6</sub>}, {v<sub>6</sub>, v<sub>7</sub>}, {v<sub>7</sub>, v<sub>8</sub>}, {v<sub>8</sub>, v<sub>5</sub>}}
+          </div>representing the twelve edges.
+        </p>
+        <p>At level one this sum would then contain all the vertices:
+          <div style="margin-left: 10px;">{v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>4</sub>, v<sub>5</sub>, v<sub>6</sub>, v<sub>7</sub>, v<sub>8</sub>}
+          </div>
+        </p>
+        <p>Now according to Verheyen the set of these two bodies increased with the space-(3) body itself is called the space-(3) system. Here that would mean that the space-(3) system consists of the set of faces, the set of edges, and the set of vertices. The set of edges is an example of the level-(2) body in the system.
+        </p>
       </div>
       <div id="conjunctive_vs_disjunctive">
         <p>On page 76 <a href="#HVerh01">[HVER01]</a> makes a distinction between disjunctive and conjunctive suborbits. This leads to the disjunctive subcompounds from Chapter 5, section 1.1.1 and the discussion of conjunctive subcompounds section 1.1.2 in the same chapter.
@@ -412,7 +490,7 @@
         </li>
       </ul>
       <h2><a id="lastUpdated">Last Updated</a></h2>
-      <p>2025-01-31, 23:03 CET
+      <p>2025-02-15, 16:51 CET
       </p>
     </div>
   </body>
