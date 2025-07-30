@@ -11,7 +11,7 @@
     <div id="model"> </div>
     <script>
       var player = new ModelPlay(document, "model");
-      const array = ['about', 'definition', 'patterns', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
+      const array = ['about', 'definition', 'patterns', 'todo', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
       function on_select() {
           array.forEach(
               function (item) {
@@ -39,6 +39,7 @@
           <option value="about">Motivation for Research</option>
           <option value="definition">General Definition</option>
           <option value="patterns">Some Observations</option>
+          <option value="todo">More to Investigate</option>
           <option value="3">PCP for n = 3</option>
           <option value="4">PCP for n = 4</option>
           <option value="5">PCP for n = 5</option>
@@ -89,14 +90,14 @@
         </ul>
         <p>When two polygon bases are present they will both be n-gons having the same n, but possibly different m's.
         </p>
-        <p>An n/m PCP has a set of 2n polygons that join the bases. Half of these joining polygons are of a type only from the following:
+        <p>An n/m PCP has a set of two types (possibly the same) of n polygons that join the bases. The two types appear in an alternatinvg way. Half of these joining polygons are of a type only from the following:
         </p>
         <ul>
           <li>Isosceles triangles (possibly equilateral)</li>
           <li>Trapezoids (possibly trisosceles)</li>
-          <li>Rectangles</li>
+          <li>Rectangles (possibly crossed)</li>
         </ul>
-        <p>This set of n polygons shares some of its edges with one or both of the PCP's bases. Furhermore the two types will occur in an alternating way. Additionally, the set of joining polygons always includes a set of n crossed-rectangles (crossed-squares by default) that form a surrounding 'belt' and which lie in the lateral faces of the circumscribing prism. These crossed-rectangles are only vertex-coincident with the two bases.
+        <p>This set of n polygons shares some of its edges with one or both of the PCP's bases. Additionally, the set of joining polygons always includes a set of n crossed-rectangles (crossed-squares by default) that form a surrounding 'belt' and which lie in the lateral faces of the circumscribing prism. These crossed-rectangles are only vertex-coincident with the two bases.
         </p>
       </div>
       <div id="patterns">
@@ -174,6 +175,14 @@
             <li><button onclick="player.show('off/pcp_8_5.off', '8/5 PCP', {'has_concave_faces': true})">8/5 PCP</button></li>
             <li><button onclick="player.show('off/pcp_12_7.off', '12/7 PCP', {'has_concave_faces': true})">12/7 PCP</button></li>
           </ul>
+        </p>
+      </div>
+      <div id="todo">
+        <h4>Compounds</h4>
+        <p>Say more about compounds, for instance when they occur. It seems they don't occur in a natural way for odd m. With 'natural way' is meant using the observation of odd m, where the PCP consists of base polygons {n/m} and {n/p}, with p = (m -2) mod n. However if you put together two 5/3, then you might want to include this into the set of PCP since they do fulfill the requirements as they are written now. If not then the definition needs to be updated to exclude compounds. Similarly two 3/1 might be considered being a PCP. 
+        </p>
+        <h4>Update Observations about Odd m</h4>
+        <p>There is an observation that states that for odd m the PCP consists of base polygons {n/m} and {n/p}, with p = (m -2) mod n, but I think this could be adjusted to p = (m - 2k) mod n, for k a natural number. In that case we would need a new notation, since just using n/m doesn't lead to one unique PCP anymore. Perhaps one that includes both base polygons. 
         </p>
       </div>
       <div id="3">
@@ -328,7 +337,7 @@
         <a href="../">All Polyhedra Pages</a></li>
     </ul>
     <h2><a id="lastUpdated">Last Updated</a></h2>
-    <p>2025-07-29, 09:55 CET
+    <p>2025-07-30, 08:42 CET
     </p>
   </body>
 </html>
