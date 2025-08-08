@@ -55,23 +55,25 @@
       <div id="about">
         <p>In an email in June 2025 my friend Don posted a riddle. He sent two pictures of polyhedra he had built and asked to name the class of polyhedra they belonging to and to name the duals of these. Ulrich was able to recreate the topological equivalent polyhedron of one of them, but the second turned out a bit different. The images that Don had posted were images of keratinoids and the duals he was asking for were the <a target="new" href="https://polytope.miraheze.org/wiki/Pentagrammic_cuploid">5/2 semicupola</a> and the <a target="new" href="https://polytope.miraheze.org/wiki/Retrograde_pentagonal_cuploid">5/4 semicupola</a>, or alternatively follow this <a target="new" href="http://www.orchidpalms.com/polyhedra/cupolas/52cuploid.html">link</a>. For the latter Ulrich's results looked a bit different and therefore Don asked him to check what its dual looks like according to Stella.
         </p>
-        <p>Ulrich sent the results and replied with the following remark: ".. BUT if you make the dual the base model you get a completely different shape as dual than the starting one." In other words if you take the dual of the dual of the 5/4 semicupola, you end up with something else (in Stella). The model he got was this one <button onclick="player.show('off/pcp_5_2_ulrich.off', 'Ulrich\'s 5/2 PCP', {'has_concave_faces': true})">Ulrich's 5/2 PCP</button>.
+        <p>Ulrich sent the results and replied with the following remark: ".. BUT if you make the dual the base model you get a completely different shape as dual than the starting one." In other words if you take the dual of the dual of the 5/4 semicupola, you end up with something else (in Stella). The model he got was this one <button onclick="player.show('off/pcp_5_2_ulrich.off', 'Ulrich\'s 5/2 ', {'has_concave_faces': true})">Ulrich's 5/2 </button>.
         </p>
         <img src="pics/dons_7_2.jpg" hspace=10 align="left"/>
-        <p>Ulrich also generated <button onclick="player.show('off/pcp_7_2_ulrich.off', 'Ulrich\'s 7/2 PCP', {'has_concave_faces': true})">Ulrich's 7/2 PCP</button> and Don used that as inspiration to build a model of a reshaped version of that one. He fit the whole thing in a heptagonal cylinder while using equilateral triangles, as shown on the left. This is a 3D model of the <button onclick="player.show('off/pcp_7_2.off', '7/2 PCP', {'has_concave_faces': true})">7/2 PCP</button>. Don suggested to name these n/m <b>pseudo-cupolaic prismatoids </b>(PCP from now on). This motivated me to dive a bit deeper into this subject, while Don provided valuable feed-back and advise.
+        <p>Ulrich also generated <button onclick="player.show('off/pcp_7_2_ulrich.off', 'Ulrich\'s 7/2 ', {'has_concave_faces': true})">Ulrich's 7/2 </button> and Don used that as inspiration to build a model of a reshaped version of that one. He fit the whole thing in a heptagonal cylinder while using equilateral triangles, as shown on the left. This is a 3D model of the model then referred to as a <button onclick="player.show('off/pcp_7_2__7_7.off', '7/2 ', {'has_concave_faces': true})">7/2 </button>. Don suggested to name these n/m <b>pseudo-cupolaic prismatoids </b>(PCP from now on). This motivated me to dive a bit deeper into this subject, while Don provided valuable feed-back and advise.
         </p>
         <br/>
-        <p>I started writing a script that would generate an OFF file for <button onclick="player.show('off/pcp_5_2.off', '5/2 PCP', {'has_concave_faces': true})">5/2 PCP</button>, which is similar to the Don's 7/2. Then I generalized the script to generate the n/2 PCPs for any value of n > 4. In a next step I generalized the script to allow for other even values of m, e.g. this <button onclick="player.show('off/pcp_7_4.off', '7/4 PCP', {'has_concave_faces': true})">7/4 PCP</button>. 
+        <p>I started writing a script that would generate an OFF file for <button onclick="player.show('off/pcp_5_2__5_5.off', '5/2 ', {'has_concave_faces': true})">5/2 </button>, which is similar to the Don's 7/2. Then I generalized the script to generate the n/2 PCPs for any value of n > 4. In a next step I generalized the script to allow for other even values of m, e.g. this <button onclick="player.show('off/pcp_7_4__7_7.off', '7/4 ', {'has_concave_faces': true})">7/4 </button>. 
         </p>
-        <p>I noticed that for some cases it wasn't possible to get equilateral triangles and instead I adjusted the height to turn the crossed rectangles into crossed squares. With crossed squares is meant crossed rectangles that fit into a square. As a consequence the triangles became isosceles, see e.g. <button onclick="player.show('off/pcp_6_4.off', '6/4 PCP', {'has_concave_faces': true})">6/4 PCP</button>. The next step was to extend the idea to odd m, for which it isn't possible to use triangles. Instead I decided to use trapezoids. A consequence to using trapezoids instead of triangles is that the extra edges lead to an {n/m'} polygon parallel to the original {n/m} polygon, see e.g. <button onclick="player.show('off/pcp_7_5.off', '7/5 PCP', {'has_concave_faces': true})">7/5 PCP</button>
+        <p>I noticed that for some cases it wasn't possible to get equilateral triangles and instead I adjusted the height to turn the crossed rectangles into crossed squares. With crossed squares is meant crossed rectangles that fit into a square. As a consequence the triangles became isosceles, see e.g. <button onclick="player.show('off/pcp_6_4__6_6.off', '6/4 ', {'has_concave_faces': true})">6/4 </button>. The next step was to extend the idea to odd m, for which it isn't possible to use triangles. Instead I decided to use trapezoids. A consequence to using trapezoids instead of triangles is that the extra edges lead to an {n/p} polygon parallel to the original {n/m} polygon, see e.g. <button onclick="player.show('off/pcp_7_5__7_4.off', '7/5 ', {'has_concave_faces': true})">7/5 </button>
         </p>
-        <p>So far the script didn't allow digons to be used, as happens e.g. in the case of {8/4}. Since digons will just degenerate into edges they wouldn't actually be a problem and hence the script was adjusted to allow those as well, see e.g. <button onclick="player.show('off/pcp_8_4.off', '8/4 PCP', {'has_concave_faces': true})">8/4 PCP</button>. Finally I allowed the script to generate the PCP for n=3, see e.g. <button onclick="player.show('off/pcp_3_2.off', '3/2 PCP', {'has_concave_faces': true})">3/2 PCP</button>, and n=4, e.g. <button onclick="player.show('off/pcp_4_2.off', '4/2 PCP', {'has_concave_faces': true})">4/2 PCP</button>.
+        <p>So far the script didn't allow digons to be used, as happens e.g. in the case of {8/4}. Since digons will just degenerate into edges they wouldn't actually be a problem and hence the script was adjusted to allow those as well, see e.g. <button onclick="player.show('off/pcp_8_4__8_8.off', '8/4 ', {'has_concave_faces': true})">8/4 </button>. Finally I allowed the script to generate the PCP for n=3, see e.g. <button onclick="player.show('off/pcp_3_2__3_3.off', '3/2 ', {'has_concave_faces': true})">3/2 </button>, and n=4, e.g. <button onclick="player.show('off/pcp_4_2__4_4.off', '4/2 ', {'has_concave_faces': true})">4/2 </button>.
         </p>
-        <p>Finally I decided to summarise our findings here with the help of Don Romano, who wrote most of the text for the general definition. Thanks, Don!
+        <p>Finally I decided to summarise our findings here with the help of Don Romano, who wrote a first draft of the text for the general definition. Thanks, Don! Later we found more PCPs and we adapted the notation from 'n/m' to 'n/m | n/p'.
         </p>
       </div>
       <div id="definition">
-        <p>An n/m pseudo-cupolaic prismatoid (PCP) is a polyhedron that can be inscribed in a right prism such that its base polygons (including star polygons henceforth) lie in the base planes of the circumscribing prism along with a set (or 'belt') of 2n joining polygons of two distinct kinds (n of each) that serve to join the two bases together. The n/m notation used here is consistent with the {n/m} notation used for designating star polygons. In two dimensions an {n/m} polygon is the same as an {n/(n-m)} polygon. For consistency reasons the cases for which m > n / 2 are used to indicate that retrograde faces occur from the {n/m} base.
+        <p>An 'n/m | n/p' pseudo-cupolaic prismatoid (PCP) is a polyhedron that can be inscribed in a right prism such that its base polygons (including star polygons henceforth) lie in the base planes of the circumscribing prism along with a set (or 'belt') of 2n joining polygons of two distinct kinds (n of each) that serve to join the two bases together. 
+        </p>
+        <p>The 'n/m | n/p' notation used here is consistent with the {n/m} notation used for designating star polygons. In two dimensions an {n/m} polygon is the same as an {n/(n-m)} polygon. A combination of both is used for PCP as explained below.
         </p>
         <p>A PCP has two parallel and opposing bases. These bases can be of three distinct types:
         </p>
@@ -88,16 +90,22 @@
           <li>A digonal base and a pseudo-base</li>
           <li>Two polygon bases.</li>
         </ul>
-        <p>When two polygon bases are present they will both be n-gons having the same n, but possibly different m's.
+        <p>When a pseudo-base is present then this will be denoted by using the value n as denominator for the second base: 'n/m | n/n'
         </p>
-        <p>An n/m PCP has a set of two types (possibly the same) of n polygons that join the bases. Half of these joining polygons are of a type only from the following:
+        <p>When two polygon bases are present they will both be n-gons having the same n, but possibly different values for m and p.
+        </p>
+        <p>Apart from the base(s) a n/m | n/p PCP has a set of in total 2n polygons. This set consists of two (possibly the same) types of polygons that join the bases. Half of these joining polygons are crossed rectangles that are only vertex-coincident with the two bases. The height of a PCP can be scaled so that these crossed rectangles become crossed squares. The other half of these joining polygons are of a type only from the following:
         </p>
         <ul>
           <li>Isosceles triangles (possibly equilateral)</li>
           <li>Trapezoids (possibly trisosceles)</li>
           <li>Rectangles (possibly crossed)</li>
         </ul>
-        <p>This set of n polygons shares some of its edges with one or both of the PCP's bases. Additionally, the set of joining polygons always includes a set of n crossed-rectangles. The height of a PCP can be scaled so that these crossed rectangles become crossed squares. These crossed-rectangles are only vertex-coincident with the two bases. The two types of polygons form one or more surrounding 'belts' in which these types appear in an alternating way.
+        <p>This set of n polygons shares some of its edges with one or both of the PCP's bases. For a base polygon {n/q} the value of q is determined as follows: If from the perspective of the base the polygon of this set points outwards, then of the two possible denominators q and n-q the highest value is used. Otherwise the lowest value is used. 
+        </p>
+        <p>As a consequence these denominators also expresses a consistent direction of rotation when following the edges of a polygon from this set. If for an n/m | n/p both m and n are either bigger than n/2 or they both aren't. then if you follow the edges of one polygon of the set the base vertices are rotated in the same direction if the smallest rotation angle is used. If either m or p is bigger than n/2 while the either isn't, then they rotate in opposite directions.
+        </p>
+        <p>The two types of polygons form one or more surrounding 'belts' in which these types appear in an alternating way.
         </p>
       </div>
       <div id="patterns">
@@ -106,74 +114,74 @@
         <h4>PCP with Odd Values of m</h4>
         <p>For odd m the PCP consists of an {n/m} polygon, an {n/p} polygon, where p = (n-2) mod n, and a 'belt' of n crossed squares and n isosceles trapezoids (trapezia). Examples are
           <ul>
-            <li><button onclick="player.show('off/pcp_7_5.off', '7/5 PCP', {'has_concave_faces': true})">7/5 PCP</button></li>
-            <li><button onclick="player.show('off/pcp_8_7.off', '8/7 PCP', {'has_concave_faces': true})">8/7 PCP</button></li>
-            <li><button onclick="player.show('off/pcp_9_5.off', '9/5 PCP', {'has_concave_faces': true})">9/5 PCP</button></li>
+            <li><button onclick="player.show('off/pcp_7_5.off', '7/5 ', {'has_concave_faces': true})">7/5 </button></li>
+            <li><button onclick="player.show('off/pcp_8_7.off', '8/7 ', {'has_concave_faces': true})">8/7 </button></li>
+            <li><button onclick="player.show('off/pcp_9_5.off', '9/5 ', {'has_concave_faces': true})">9/5 </button></li>
           </ul>
         </p>
         <h4>PCP with Even Values of m</h4>
         <p>For even m the PCP consists of an {n/m} polygon, n crossed squares and n isosceles triangles. Note that an isosceles triangle is obtained from an isosceles trapezoid if the length of one of the parallel sides gets 0. For example
           <ul>
-            <li><button onclick="player.show('off/pcp_6_2.off', '6/2 PCP', {'has_concave_faces': true})">6/2 PCP</button></li>
-            <li><button onclick="player.show('off/pcp_6_4.off', '6/4 PCP', {'has_concave_faces': true})">6/4 PCP</button></li>
-            <li><button onclick="player.show('off/pcp_9_4.off', '9/4 PCP', {'has_concave_faces': true})">9/4 PCP</button></li>
+            <li><button onclick="player.show('off/pcp_6_2.off', '6/2 ', {'has_concave_faces': true})">6/2 </button></li>
+            <li><button onclick="player.show('off/pcp_6_4.off', '6/4 ', {'has_concave_faces': true})">6/4 </button></li>
+            <li><button onclick="player.show('off/pcp_9_4.off', '9/4 ', {'has_concave_faces': true})">9/4 </button></li>
           </ul>
         </p>
         <h4>Doublets</h4>
         <p>For odd m, sometimes the same PCP occurs for two different values of m because the {n/m} polygon and the {p/m} polygon are exchanged. This is e.g. the case for
           <ul>
-            <li><button onclick="player.show('off/pcp_8_3.off', '8/3 PCP', {'has_concave_faces': true})">8/3 PCP</button> and</li>
-            <li><button onclick="player.show('off/pcp_8_7.off', '8/7 PCP', {'has_concave_faces': true})">8/7 PCP</button></li>
+            <li><button onclick="player.show('off/pcp_8_3.off', '8/3 ', {'has_concave_faces': true})">8/3 </button> and</li>
+            <li><button onclick="player.show('off/pcp_8_7.off', '8/7 ', {'has_concave_faces': true})">8/7 </button></li>
           </ul>Observe that from the perspective of the {8/3} the trapezoids are not retrograde, but from the perspective of the {8/7}, i.e. the {8}, they are.
         </p>
         <h4>PCP with m = 1</h4>
         <p>For m = 1 the PCP is a n-sided prism for which the squares are replaced by a pair of crossed squares. Note that in this case the isosceles trapezoids are self-intersecting and they become crossed squares. Examples are
           <ul>
-            <li><button onclick="player.show('off/pcp_3_1.off', '3/1 PCP', {'has_concave_faces': true})">3/1 PCP</button></li>
-            <li><button onclick="player.show('off/pcp_4_1.off', '4/1 PCP', {'has_concave_faces': true})">4/1 PCP</button></li>
+            <li><button onclick="player.show('off/pcp_3_1.off', '3/1 ', {'has_concave_faces': true})">3/1 </button></li>
+            <li><button onclick="player.show('off/pcp_4_1.off', '4/1 ', {'has_concave_faces': true})">4/1 </button></li>
           </ul>
         </p>
         <h4>PCP with Membranes</h4>
         <p>Some of the PCP have membranes, for example
           <ul>
-            <li><button onclick="player.show('off/pcp_5_2.off', '5/2 PCP', {'has_concave_faces': true})">5/2 PCP</button></li>
-            <li><button onclick="player.show('off/pcp_6_2.off', '6/2 PCP', {'has_concave_faces': true})">6/2 PCP</button></li>
-            <li><button onclick="player.show('off/pcp_9_4.off', '9/4 PCP', {'has_concave_faces': true})">9/4 PCP</button></li>
+            <li><button onclick="player.show('off/pcp_5_2.off', '5/2 ', {'has_concave_faces': true})">5/2 </button></li>
+            <li><button onclick="player.show('off/pcp_6_2.off', '6/2 ', {'has_concave_faces': true})">6/2 </button></li>
+            <li><button onclick="player.show('off/pcp_9_4.off', '9/4 ', {'has_concave_faces': true})">9/4 </button></li>
           </ul>This typically happens for even m where m < n / 2
         </p>
         <h4>PCP with Equilateral Triangles</h4>
         <p>For some even m the isosceles triangles can be transformed into equilateral triangles by scaling the height of the PCP. In this case the crossed squares become crossed rectangles. Compare for instance
           <ul>
-            <li><button onclick="player.show('off/pcp_6_2.off', '6/2 PCP with crossed squares', {'has_concave_faces': true})">6/2 PCP with crossed squares</button> and</li>
-            <li><button onclick="player.show('off/pcp_6_2_alt.off', '6/2 PCP with equilateral triangles', {'has_concave_faces': true})">6/2 PCP with equilateral triangles</button></li>
-          </ul>The PCP <button onclick="player.show('off/pcp_4_2__4_4.off', '4/2 | 4/4 ', {'has_concave_faces': true})">4/2 | 4/4 </button> is an exception though and it has both crossed squares and equilateral triangles. It is not always possible to scale the PCP with pseudo-base to get equilateral triangles, e.g. for the <button onclick="player.show('off/pcp_3_2.off', '3/2 PCP', {'has_concave_faces': true})">3/2 PCP</button> it obvious that the height will become 0 in that case.All models shown on this page will try to scale the height so that equilateral triangles are used. In all other cases the height is adapted so that crossed squares are obtained. 
+            <li><button onclick="player.show('off/pcp_6_2.off', '6/2  with crossed squares', {'has_concave_faces': true})">6/2  with crossed squares</button> and</li>
+            <li><button onclick="player.show('off/pcp_6_2_alt.off', '6/2  with equilateral triangles', {'has_concave_faces': true})">6/2  with equilateral triangles</button></li>
+          </ul>The PCP <button onclick="player.show('off/pcp_4_2__4_4.off', '4/2 | 4/4 ', {'has_concave_faces': true})">4/2 | 4/4 </button> is an exception though and it has both crossed squares and equilateral triangles. It is not always possible to scale the PCP with pseudo-base to get equilateral triangles, e.g. for the <button onclick="player.show('off/pcp_3_2.off', '3/2 ', {'has_concave_faces': true})">3/2 </button> it obvious that the height will become 0 in that case.All models shown on this page will try to scale the height so that equilateral triangles are used. In all other cases the height is adapted so that crossed squares are obtained. 
         </p>
         <h4>PCP with Digonal Base</h4>
         <p>If n is even and m = n / 2, then the PCP will have a digonal base consisting of n/m digons. These digons will just degenerate into edges. Some examples are
           <ul>
-            <li><button onclick="player.show('off/pcp_4_2.off', '4/2 PCP', {'has_concave_faces': true})">4/2 PCP</button></li>
-            <li><button onclick="player.show('off/pcp_10_5.off', '10/5 PCP', {'has_concave_faces': true})">10/5 PCP</button></li>
+            <li><button onclick="player.show('off/pcp_4_2.off', '4/2 ', {'has_concave_faces': true})">4/2 </button></li>
+            <li><button onclick="player.show('off/pcp_10_5.off', '10/5 ', {'has_concave_faces': true})">10/5 </button></li>
           </ul>Depending on whether m is even or odd the other base is either a pseudo-base or a polygon. Other occurrences with digons can appear for odd m, since odd m leads to double occurrences as stated above, e.g. for
           <ul>
-            <li><button onclick="player.show('off/pcp_6_3.off', '6/3 PCP', {'has_concave_faces': true})">6/3 PCP</button> and</li>
-            <li><button onclick="player.show('off/pcp_6_5.off', '6/5 PCP', {'has_concave_faces': true})">6/5 PCP</button></li>
+            <li><button onclick="player.show('off/pcp_6_3.off', '6/3 ', {'has_concave_faces': true})">6/3 </button> and</li>
+            <li><button onclick="player.show('off/pcp_6_5.off', '6/5 ', {'has_concave_faces': true})">6/5 </button></li>
           </ul>
         </p>
         <h4>Compound PCPs</h4>
         <p>Some of the PCP are compounds, e.g.
           <ul>
-            <li><button onclick="player.show('off/pcp_8_4.off', '8/4 PCP', {'has_concave_faces': true})">8/4 PCP</button> is a compound of two <button onclick="player.show('off/pcp_4_2.off', '4/2 PCP', {'has_concave_faces': true})">4/2 PCP</button> and</li>
-            <li><button onclick="player.show('off/pcp_12_6.off', '12/6 PCP', {'has_concave_faces': true})">12/6 PCP</button> is a compound of three of those.</li>
-            <li><button onclick="player.show('off/pcp_6_4.off', '6/4 PCP', {'has_concave_faces': true})">6/4 PCP</button> is a compound of two <button onclick="player.show('off/pcp_3_2.off', '3/2 PCP', {'has_concave_faces': true})">3/2 PCP</button> and</li>
-            <li><button onclick="player.show('off/pcp_12_4.off', '12/4 PCP', {'has_concave_faces': true})">12/4 PCP</button> is a compound of two <button onclick="player.show('off/pcp_6_2.off', '6/2 PCP', {'has_concave_faces': true})">6/2 PCP</button> and</li>
+            <li><button onclick="player.show('off/pcp_8_4.off', '8/4 ', {'has_concave_faces': true})">8/4 </button> is a compound of two <button onclick="player.show('off/pcp_4_2.off', '4/2 ', {'has_concave_faces': true})">4/2 </button> and</li>
+            <li><button onclick="player.show('off/pcp_12_6.off', '12/6 ', {'has_concave_faces': true})">12/6 </button> is a compound of three of those.</li>
+            <li><button onclick="player.show('off/pcp_6_4.off', '6/4 ', {'has_concave_faces': true})">6/4 </button> is a compound of two <button onclick="player.show('off/pcp_3_2.off', '3/2 ', {'has_concave_faces': true})">3/2 </button> and</li>
+            <li><button onclick="player.show('off/pcp_12_4.off', '12/4 ', {'has_concave_faces': true})">12/4 </button> is a compound of two <button onclick="player.show('off/pcp_6_2.off', '6/2 ', {'has_concave_faces': true})">6/2 </button> and</li>
           </ul>
         </p>
         <h4>Semi-Uniform PCPs</h4>
         <p>For some PCP the 'belt' contains <b>rectangles</b> instead trapezoids. This happens for odd m where the bases {n/m} and {n/m'} are the same polygon. Since both bases are the same these are semi-uniform, and since these rectangles also meet the at the centre these are hemi-polyhedra as well. More general this happens for n = 4k with k a natural number and m = (n/2) + 1, e.g.
           <ul>
-            <li><button onclick="player.show('off/pcp_4_3.off', '4/3 PCP', {'has_concave_faces': true})">4/3 PCP</button></li>
-            <li><button onclick="player.show('off/pcp_8_5.off', '8/5 PCP', {'has_concave_faces': true})">8/5 PCP</button></li>
-            <li><button onclick="player.show('off/pcp_12_7.off', '12/7 PCP', {'has_concave_faces': true})">12/7 PCP</button></li>
+            <li><button onclick="player.show('off/pcp_4_3.off', '4/3 ', {'has_concave_faces': true})">4/3 </button></li>
+            <li><button onclick="player.show('off/pcp_8_5.off', '8/5 ', {'has_concave_faces': true})">8/5 </button></li>
+            <li><button onclick="player.show('off/pcp_12_7.off', '12/7 ', {'has_concave_faces': true})">12/7 </button></li>
           </ul>
         </p>
       </div>
@@ -186,9 +194,6 @@
         </p>
         <h4>Update Observations about Odd m</h4>
         <p>There is an observation that states that for odd m the PCP consists of base polygons {n/m} and {n/p}, with p = (m -2) mod n, but I think this could be adjusted to p = (m - 2k) mod n, for k a natural number. Yet another reason to update the PCP notation, since just using n/m doesn't lead to one unique PCP anymore.
-        </p>
-        <h4>Add Some More Observations</h4>
-        <p>Make a comment about double digon bases, that these aren't considered here, though Grünbaum might have seen this a valid polyhedra if..
         </p>
       </div>
       <div id="3">
@@ -493,7 +498,7 @@
         <a href="../">All Polyhedra Pages</a></li>
     </ul>
     <h2><a id="lastUpdated">Last Updated</a></h2>
-    <p>2025-08-08, 09:41 CET
+    <p>2025-08-08, 13:27 CET
     </p>
   </body>
 </html>
