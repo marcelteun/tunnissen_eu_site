@@ -53,19 +53,19 @@
         </select>
       </div>
       <div id="about">
-        <p>In an email in June 2025 my friend Don posted a riddle. He sent two pictures of polyhedra he had built and asked to name the class of polyhedra they beloing to and to name the duals of these. Ulrich was able to recreate the topological equivalent polyhedron of one of them, but the second turned out a bit different. The images that Don had posted were images of keratinoids and the duals he was asking for were the <a target="new" href="https://polytope.miraheze.org/wiki/Pentagrammic_cuploid">5/2 semicupola</a> and the <a target="new" href="https://polytope.miraheze.org/wiki/Retrograde_pentagonal_cuploid">5/4 semicupola</a>, or alternatively follow this <a target="new" href="http://www.orchidpalms.com/polyhedra/cupolas/52cuploid.html">link</a>. For the latter Ulrich's results looked a bit different and therefore Don asked him to check what its dual looks like according to Stella. 
+        <p>In an email in June 2025 my friend Don posted a riddle. He sent two pictures of polyhedra he had built and asked to name the class of polyhedra they belonging to and to name the duals of these. Ulrich was able to recreate the topological equivalent polyhedron of one of them, but the second turned out a bit different. The images that Don had posted were images of keratinoids and the duals he was asking for were the <a target="new" href="https://polytope.miraheze.org/wiki/Pentagrammic_cuploid">5/2 semicupola</a> and the <a target="new" href="https://polytope.miraheze.org/wiki/Retrograde_pentagonal_cuploid">5/4 semicupola</a>, or alternatively follow this <a target="new" href="http://www.orchidpalms.com/polyhedra/cupolas/52cuploid.html">link</a>. For the latter Ulrich's results looked a bit different and therefore Don asked him to check what its dual looks like according to Stella.
         </p>
         <p>Ulrich sent the results and replied with the following remark: ".. BUT if you make the dual the base model you get a completely different shape as dual than the starting one." In other words if you take the dual of the dual of the 5/4 semicupola, you end up with something else (in Stella). The model he got was this one <button onclick="player.show('off/pcp_5_2_ulrich.off', 'Ulrich\'s 5/2 PCP', {'has_concave_faces': true})">Ulrich's 5/2 PCP</button>.
         </p>
         <img src="pics/dons_7_2.jpg" hspace=10 align="left"/>
-        <p>Ulrich also generated <button onclick="player.show('off/pcp_7_2_ulrich.off', 'Ulrich\'s 7/2 PCP', {'has_concave_faces': true})">Ulrich's 7/2 PCP</button> and Don used that as inspiration to build a model of a reshaped version of that one. He fit the whole thing in a heptagonal cylinder while using equilateral triangles, as shown on the left. This is a 3D model of the <button onclick="player.show('off/pcp_7_2.off', '7/2 PCP', {'has_concave_faces': true})">7/2 PCP</button>. Don suggested to name these n/m <b>pseudo-cupolaic primsmatoids </b>(PCP from now on). This motivated me to dive a bit deeper into this subject, while Don provided valuable feed-back and advise. 
+        <p>Ulrich also generated <button onclick="player.show('off/pcp_7_2_ulrich.off', 'Ulrich\'s 7/2 PCP', {'has_concave_faces': true})">Ulrich's 7/2 PCP</button> and Don used that as inspiration to build a model of a reshaped version of that one. He fit the whole thing in a heptagonal cylinder while using equilateral triangles, as shown on the left. This is a 3D model of the <button onclick="player.show('off/pcp_7_2.off', '7/2 PCP', {'has_concave_faces': true})">7/2 PCP</button>. Don suggested to name these n/m <b>pseudo-cupolaic prismatoids </b>(PCP from now on). This motivated me to dive a bit deeper into this subject, while Don provided valuable feed-back and advise.
         </p>
         <br/>
-        <p>I started writing a script that would generate an OFF file for <button onclick="player.show('off/pcp_5_2.off', '5/2 PCP', {'has_concave_faces': true})">5/2 PCP</button>, which is similar to the Don's 7/2. Then I generalized the script to generate the the n/2 PCPs for any value of n > 4. In a next step I generalized the script to allow for other even values of m, e.g. this <button onclick="player.show('off/pcp_7_4.off', '7/4 PCP', {'has_concave_faces': true})">7/4 PCP</button>. 
+        <p>I started writing a script that would generate an OFF file for <button onclick="player.show('off/pcp_5_2.off', '5/2 PCP', {'has_concave_faces': true})">5/2 PCP</button>, which is similar to the Don's 7/2. Then I generalized the script to generate the n/2 PCPs for any value of n > 4. In a next step I generalized the script to allow for other even values of m, e.g. this <button onclick="player.show('off/pcp_7_4.off', '7/4 PCP', {'has_concave_faces': true})">7/4 PCP</button>. 
         </p>
         <p>I noticed that for some cases it wasn't possible to get equilateral triangles and instead I adjusted the height to turn the crossed rectangles into crossed squares. As a consequence the triangles became isosceles, see e.g. <button onclick="player.show('off/pcp_6_4.off', '6/4 PCP', {'has_concave_faces': true})">6/4 PCP</button>. The next step was to extend the idea to odd m, for which it isn't possible to use triangles. Instead I decided to use trapezoids. A consequence to using trapezoids instead of triangles is that the extra edges lead to an {n/m'} polygon parallel to the original {n/m} polygon, see e.g. <button onclick="player.show('off/pcp_7_5.off', '7/5 PCP', {'has_concave_faces': true})">7/5 PCP</button>
         </p>
-        <p>So far the script didn't allow digons to be used, as happens e.g. in the case of {8/4}. Since digons will just degenerate into edges they wouldn't actually be a problem and hence the script was adjusted to allow those as well, see e.g. <button onclick="player.show('off/pcp_8_4.off', '8/4 PCP', {'has_concave_faces': true})">8/4 PCP</button>. Finally I allowed to script to generate the PCP for n=3, see e.g. <button onclick="player.show('off/pcp_3_2.off', '3/2 PCP', {'has_concave_faces': true})">3/2 PCP</button>, and n=4, e.g. <button onclick="player.show('off/pcp_4_2.off', '4/2 PCP', {'has_concave_faces': true})">4/2 PCP</button>.
+        <p>So far the script didn't allow digons to be used, as happens e.g. in the case of {8/4}. Since digons will just degenerate into edges they wouldn't actually be a problem and hence the script was adjusted to allow those as well, see e.g. <button onclick="player.show('off/pcp_8_4.off', '8/4 PCP', {'has_concave_faces': true})">8/4 PCP</button>. Finally I allowed the script to generate the PCP for n=3, see e.g. <button onclick="player.show('off/pcp_3_2.off', '3/2 PCP', {'has_concave_faces': true})">3/2 PCP</button>, and n=4, e.g. <button onclick="player.show('off/pcp_4_2.off', '4/2 PCP', {'has_concave_faces': true})">4/2 PCP</button>.
         </p>
         <p>Finally I decided to summarise our findings here with the help of Don Romano, who wrote most of the text for the general definition. Thanks, Don!
         </p>
@@ -78,26 +78,26 @@
         <ul>
           <li>A polygon</li>
           <li>A digonal base composed of n coplanar digons (degenerate) which correspond to the diametrical diagonals of an n-gon (n being even) that intersect at their mid-points in a radial arrangement</li>
-          <li>A pseudobase in which a polygon is not physically present although its base plane is clearly determined by n coplanar vertices of the PCP's joining polygons.</li>
+          <li>A pseudo-base in which a polygon is not physically present although its base plane is clearly determined by n coplanar vertices of the PCP's joining polygons.</li>
         </ul>
         <p>Of the pairings that can be made with the above three base types, only four combinations occur in a PCP:
         </p>
         <ul>
           <li>A polygon base and a digonal base</li>
-          <li>A polygon base and a psuedobase</li>
-          <li>A digonal base and a pseudobase</li>
+          <li>A polygon base and a pseudo-base</li>
+          <li>A digonal base and a pseudo-base</li>
           <li>Two polygon bases.</li>
         </ul>
         <p>When two polygon bases are present they will both be n-gons having the same n, but possibly different m's.
         </p>
-        <p>An n/m PCP has a set of two types (possibly the same) of n polygons that join the bases. The two types appear in an alternatinvg way. Half of these joining polygons are of a type only from the following:
+        <p>An n/m PCP has a set of two types (possibly the same) of n polygons that join the bases. Half of these joining polygons are of a type only from the following:
         </p>
         <ul>
           <li>Isosceles triangles (possibly equilateral)</li>
           <li>Trapezoids (possibly trisosceles)</li>
           <li>Rectangles (possibly crossed)</li>
         </ul>
-        <p>This set of n polygons shares some of its edges with one or both of the PCP's bases. Additionally, the set of joining polygons always includes a set of n crossed-rectangles (crossed-squares by default) that form a surrounding 'belt' and which lie in the lateral faces of the circumscribing prism. These crossed-rectangles are only vertex-coincident with the two bases.
+        <p>This set of n polygons shares some of its edges with one or both of the PCP's bases. Additionally, the set of joining polygons always includes a set of n crossed-rectangles (crossed-squares by default) These crossed-rectangles are only vertex-coincident with the two bases. The two types of polygons form one or more surrounding 'belts' in which these types appear in an alternating way.
         </p>
       </div>
       <div id="patterns">
@@ -119,7 +119,7 @@
             <li><button onclick="player.show('off/pcp_9_4.off', '9/4 PCP', {'has_concave_faces': true})">9/4 PCP</button></li>
           </ul>
         </p>
-        <h4>Doublettes</h4>
+        <h4>Doublets</h4>
         <p>For odd m, sometimes the same PCP occurs for two different values of m because the {n/m} polygon and the {p/m} polygon are exchanged. This is e.g. the case for
           <ul>
             <li><button onclick="player.show('off/pcp_8_3.off', '8/3 PCP', {'has_concave_faces': true})">8/3 PCP</button> and</li>
@@ -153,7 +153,7 @@
           <ul>
             <li><button onclick="player.show('off/pcp_4_2.off', '4/2 PCP', {'has_concave_faces': true})">4/2 PCP</button></li>
             <li><button onclick="player.show('off/pcp_10_5.off', '10/5 PCP', {'has_concave_faces': true})">10/5 PCP</button></li>
-          </ul>Depending on whether m is even or odd the other base is either a pseudobase or a polygon. Other occurrences with digons can appear for odd m, since odd m leads to double occurrences as stated above, e.g. for
+          </ul>Depending on whether m is even or odd the other base is either a pseudo-base or a polygon. Other occurrences with digons can appear for odd m, since odd m leads to double occurrences as stated above, e.g. for
           <ul>
             <li><button onclick="player.show('off/pcp_6_3.off', '6/3 PCP', {'has_concave_faces': true})">6/3 PCP</button> and</li>
             <li><button onclick="player.show('off/pcp_6_5.off', '6/5 PCP', {'has_concave_faces': true})">6/5 PCP</button></li>
@@ -169,7 +169,7 @@
           </ul>
         </p>
         <h4>Semi-Uniform PCPs</h4>
-        <p>For some PCP the 'belt' contains <b>rectangles</b> instead trapezoids. This happens for odd m where the bases {n/m} and {n/m'} are the same polygon. Since both bases are the same these are semi-uniform. More general this happens for n = 4k with k a natural number and m = (n/2) + 1, e.g.
+        <p>For some PCP the 'belt' contains <b>rectangles</b> instead trapezoids. This happens for odd m where the bases {n/m} and {n/m'} are the same polygon. Since both bases are the same these are semi-uniform, and since these rectangles also meet the at the centre these are hemi-polyhedra as well. More general this happens for n = 4k with k a natural number and m = (n/2) + 1, e.g.
           <ul>
             <li><button onclick="player.show('off/pcp_4_3.off', '4/3 PCP', {'has_concave_faces': true})">4/3 PCP</button></li>
             <li><button onclick="player.show('off/pcp_8_5.off', '8/5 PCP', {'has_concave_faces': true})">8/5 PCP</button></li>
@@ -179,115 +179,271 @@
       </div>
       <div id="todo">
         <h4>Compounds</h4>
-        <p>Say more about compounds, for instance when they occur. It seems they don't occur in a natural way for odd m. With 'natural way' is meant using the observation of odd m, where the PCP consists of base polygons {n/m} and {n/p}, with p = (m -2) mod n. However if you put together two 5/3, then you might want to include this into the set of PCP since they do fulfill the requirements as they are written now. If not then the definition needs to be updated to exclude compounds. Similarly two 3/1 might be considered being a PCP. 
+        <p>More needs to be said about compounds, for instance when they occur. It seems they don't occur in a natural way for odd m. With 'natural way' is meant using the observation of odd m, where the PCP consists of base polygons {n/m} and {n/p}, with p = (m -2) mod n. However if you put together two 5/3, then you might want to include this into the set of PCP since they do fulfill the requirements as they are written now. If not then the definition needs to be updated to exclude compounds. Similarly a compound of two 3/1 might be considered being a PCP.
+        </p>
+        <h4>Update Naming Scheme</h4>
+        <p>If you replace all squares in a pentagrammic prism by a pair of crossed squares, then you will get a polyhedron that fits the PCP definition. This PCP consists of two {5/2} polygon bases, but there is a 5/2 already. This means there is a need for a new notation that includes both base polygons. The fact that 8/3 and 8/7 are the same is another indication that the notation should be updated. Yet another reason is that a 7/5 includes a {7/4} polygon, and one might wonder why it is called 7/5 and not 7/4. A new notation might as well include the extra compounds mentioned above in a unique way. 
         </p>
         <h4>Update Observations about Odd m</h4>
-        <p>There is an observation that states that for odd m the PCP consists of base polygons {n/m} and {n/p}, with p = (m -2) mod n, but I think this could be adjusted to p = (m - 2k) mod n, for k a natural number. In that case we would need a new notation, since just using n/m doesn't lead to one unique PCP anymore. Perhaps one that includes both base polygons. 
+        <p>There is an observation that states that for odd m the PCP consists of base polygons {n/m} and {n/p}, with p = (m -2) mod n, but I think this could be adjusted to p = (m - 2k) mod n, for k a natural number. Yet another reason to update the PCP notation, since just using n/m doesn't lead to one unique PCP anymore.
+        </p>
+        <h4>Add Some More Observations</h4>
+        <p>Make a comment about double digon bases, that these aren't considered here, though Grünbaum might have seen this a valid polyhedra if..
         </p>
       </div>
       <div id="3">
+        <h4>With Pseudo Base</h4>
         <ul>
-          <li><button onclick="player.show('off/pcp_3_1.off', '3/1 PCP', {'has_concave_faces': true})">3/1 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_3_2.off', '3/2 PCP', {'has_concave_faces': true})">3/2 PCP</button></li>
+          <li><button onclick="player.show('off/pcp_3_2__3_3.off', '3/2 | 3/3 ', {'has_concave_faces': true})">3/2 | 3/3 </button></li>
+        </ul>
+        <h4>With Two Bases and a {3/1}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_3_1__3_1.off', '3/1 | 3/1 ', {'has_concave_faces': true})">3/1 | 3/1 </button></li>
         </ul>
       </div>
       <div id="4">
+        <h4>With Pseudo Base</h4>
         <ul>
-          <li><button onclick="player.show('off/pcp_4_1.off', '4/1 PCP', {'has_concave_faces': true})">4/1 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_4_2.off', '4/2 PCP', {'has_concave_faces': true})">4/2 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_4_3.off', '4/3 PCP', {'has_concave_faces': true})">4/3 PCP</button></li>
+          <li><button onclick="player.show('off/pcp_4_2__4_4.off', '4/2 | 4/4 ', {'has_concave_faces': true})">4/2 | 4/4 </button></li>
+        </ul>
+        <h4>With Two Bases and a {4/1}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_4_1__4_1.off', '4/1 | 4/1 ', {'has_concave_faces': true})">4/1 | 4/1 </button></li>
+          <li><button onclick="player.show('off/pcp_4_3__4_3.off', '4/3 | 4/3 ', {'has_concave_faces': true})">4/3 | 4/3 </button></li>
         </ul>
       </div>
       <div id="5">
+        <h4>With Pseudo Base</h4>
         <ul>
-          <li><button onclick="player.show('off/pcp_5_1.off', '5/1 PCP', {'has_concave_faces': true})">5/1 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_5_2.off', '5/2 PCP', {'has_concave_faces': true})">5/2 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_5_3.off', '5/3 PCP', {'has_concave_faces': true})">5/3 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_5_4.off', '5/4 PCP', {'has_concave_faces': true})">5/4 PCP</button></li>
+          <li><button onclick="player.show('off/pcp_5_2__5_5.off', '5/2 | 5/5 ', {'has_concave_faces': true})">5/2 | 5/5 </button></li>
+          <li><button onclick="player.show('off/pcp_5_4__5_5.off', '5/4 | 5/5 ', {'has_concave_faces': true})">5/4 | 5/5 </button></li>
+        </ul>
+        <h4>With Two Bases and a {5/1}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_5_1__5_1.off', '5/1 | 5/1 ', {'has_concave_faces': true})">5/1 | 5/1 </button></li>
+          <li><button onclick="player.show('off/pcp_5_4__5_3.off', '5/4 | 5/3 ', {'has_concave_faces': true})">5/4 | 5/3 </button></li>
+        </ul>
+        <h4>With Two Bases and a {5/2}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_5_2__5_2.off', '5/2 | 5/2 ', {'has_concave_faces': true})">5/2 | 5/2 </button></li>
         </ul>
       </div>
       <div id="6">
+        <h4>With Pseudo Base</h4>
         <ul>
-          <li><button onclick="player.show('off/pcp_6_1.off', '6/1 PCP', {'has_concave_faces': true})">6/1 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_6_2.off', '6/2 PCP', {'has_concave_faces': true})">6/2 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_6_3.off', '6/3 PCP', {'has_concave_faces': true})">6/3 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_6_4.off', '6/4 PCP', {'has_concave_faces': true})">6/4 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_6_5.off', '6/5 PCP', {'has_concave_faces': true})">6/5 PCP</button></li>
+          <li><button onclick="player.show('off/pcp_6_2__6_6.off', '6/2 | 6/6 ', {'has_concave_faces': true})">6/2 | 6/6 </button></li>
+          <li><button onclick="player.show('off/pcp_6_4__6_6.off', '6/4 | 6/6 ', {'has_concave_faces': true})">6/4 | 6/6 </button></li>
+        </ul>
+        <h4>With Two Bases and a {6/1}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_6_1__6_1.off', '6/1 | 6/1 ', {'has_concave_faces': true})">6/1 | 6/1 </button></li>
+          <li><button onclick="player.show('off/pcp_6_5__6_3.off', '6/5 | 6/3 ', {'has_concave_faces': true})">6/5 | 6/3 </button></li>
+          <li><button onclick="player.show('off/pcp_6_5__6_5.off', '6/5 | 6/5 ', {'has_concave_faces': true})">6/5 | 6/5 </button></li>
+        </ul>
+        <h4>With Two Bases and a {6/2}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_6_2__6_2.off', '6/2 | 6/2 ', {'has_concave_faces': true})">6/2 | 6/2 </button></li>
+          <li><button onclick="player.show('off/pcp_6_4__6_4.off', '6/4 | 6/4 ', {'has_concave_faces': true})">6/4 | 6/4 </button></li>
         </ul>
       </div>
       <div id="7">
+        <h4>With Pseudo Base</h4>
         <ul>
-          <li><button onclick="player.show('off/pcp_7_1.off', '7/1 PCP', {'has_concave_faces': true})">7/1 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_7_2.off', '7/2 PCP', {'has_concave_faces': true})">7/2 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_7_3.off', '7/3 PCP', {'has_concave_faces': true})">7/3 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_7_4.off', '7/4 PCP', {'has_concave_faces': true})">7/4 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_7_5.off', '7/5 PCP', {'has_concave_faces': true})">7/5 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_7_6.off', '7/6 PCP', {'has_concave_faces': true})">7/6 PCP</button></li>
+          <li><button onclick="player.show('off/pcp_7_2__7_7.off', '7/2 | 7/7 ', {'has_concave_faces': true})">7/2 | 7/7 </button></li>
+          <li><button onclick="player.show('off/pcp_7_4__7_7.off', '7/4 | 7/7 ', {'has_concave_faces': true})">7/4 | 7/7 </button></li>
+          <li><button onclick="player.show('off/pcp_7_6__7_7.off', '7/6 | 7/7 ', {'has_concave_faces': true})">7/6 | 7/7 </button></li>
+        </ul>
+        <h4>With Two Bases and a {7/1}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_7_1__7_1.off', '7/1 | 7/1 ', {'has_concave_faces': true})">7/1 | 7/1 </button></li>
+          <li><button onclick="player.show('off/pcp_7_6__7_3.off', '7/6 | 7/3 ', {'has_concave_faces': true})">7/6 | 7/3 </button></li>
+          <li><button onclick="player.show('off/pcp_7_6__7_5.off', '7/6 | 7/5 ', {'has_concave_faces': true})">7/6 | 7/5 </button></li>
+        </ul>
+        <h4>With Two Bases and a {7/2}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_7_2__7_2.off', '7/2 | 7/2 ', {'has_concave_faces': true})">7/2 | 7/2 </button></li>
+          <li><button onclick="player.show('off/pcp_7_5__7_4.off', '7/5 | 7/4 ', {'has_concave_faces': true})">7/5 | 7/4 </button></li>
+        </ul>
+        <h4>With Two Bases and a {7/3}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_7_3__7_3.off', '7/3 | 7/3 ', {'has_concave_faces': true})">7/3 | 7/3 </button></li>
         </ul>
       </div>
       <div id="8">
+        <h4>With Pseudo Base</h4>
         <ul>
-          <li><button onclick="player.show('off/pcp_8_1.off', '8/1 PCP', {'has_concave_faces': true})">8/1 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_8_2.off', '8/2 PCP', {'has_concave_faces': true})">8/2 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_8_3.off', '8/3 PCP', {'has_concave_faces': true})">8/3 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_8_4.off', '8/4 PCP', {'has_concave_faces': true})">8/4 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_8_5.off', '8/5 PCP', {'has_concave_faces': true})">8/5 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_8_6.off', '8/6 PCP', {'has_concave_faces': true})">8/6 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_8_7.off', '8/7 PCP', {'has_concave_faces': true})">8/7 PCP</button></li>
+          <li><button onclick="player.show('off/pcp_8_2__8_8.off', '8/2 | 8/8 ', {'has_concave_faces': true})">8/2 | 8/8 </button></li>
+          <li><button onclick="player.show('off/pcp_8_4__8_8.off', '8/4 | 8/8 ', {'has_concave_faces': true})">8/4 | 8/8 </button></li>
+          <li><button onclick="player.show('off/pcp_8_6__8_8.off', '8/6 | 8/8 ', {'has_concave_faces': true})">8/6 | 8/8 </button></li>
+        </ul>
+        <h4>With Two Bases and a {8/1}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_8_1__8_1.off', '8/1 | 8/1 ', {'has_concave_faces': true})">8/1 | 8/1 </button></li>
+          <li><button onclick="player.show('off/pcp_8_7__8_3.off', '8/7 | 8/3 ', {'has_concave_faces': true})">8/7 | 8/3 </button></li>
+          <li><button onclick="player.show('off/pcp_8_7__8_5.off', '8/7 | 8/5 ', {'has_concave_faces': true})">8/7 | 8/5 </button></li>
+          <li><button onclick="player.show('off/pcp_8_7__8_7.off', '8/7 | 8/7 ', {'has_concave_faces': true})">8/7 | 8/7 </button></li>
+        </ul>
+        <h4>With Two Bases and a {8/2}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_8_2__8_2.off', '8/2 | 8/2 ', {'has_concave_faces': true})">8/2 | 8/2 </button></li>
+          <li><button onclick="player.show('off/pcp_8_6__8_4.off', '8/6 | 8/4 ', {'has_concave_faces': true})">8/6 | 8/4 </button></li>
+          <li><button onclick="player.show('off/pcp_8_6__8_6.off', '8/6 | 8/6 ', {'has_concave_faces': true})">8/6 | 8/6 </button></li>
+        </ul>
+        <h4>With Two Bases and a {8/3}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_8_3__8_3.off', '8/3 | 8/3 ', {'has_concave_faces': true})">8/3 | 8/3 </button></li>
+          <li><button onclick="player.show('off/pcp_8_5__8_5.off', '8/5 | 8/5 ', {'has_concave_faces': true})">8/5 | 8/5 </button></li>
         </ul>
       </div>
       <div id="9">
+        <h4>With Pseudo Base</h4>
         <ul>
-          <li><button onclick="player.show('off/pcp_9_1.off', '9/1 PCP', {'has_concave_faces': true})">9/1 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_9_2.off', '9/2 PCP', {'has_concave_faces': true})">9/2 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_9_3.off', '9/3 PCP', {'has_concave_faces': true})">9/3 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_9_4.off', '9/4 PCP', {'has_concave_faces': true})">9/4 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_9_5.off', '9/5 PCP', {'has_concave_faces': true})">9/5 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_9_6.off', '9/6 PCP', {'has_concave_faces': true})">9/6 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_9_7.off', '9/7 PCP', {'has_concave_faces': true})">9/7 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_9_8.off', '9/8 PCP', {'has_concave_faces': true})">9/8 PCP</button></li>
+          <li><button onclick="player.show('off/pcp_9_2__9_9.off', '9/2 | 9/9 ', {'has_concave_faces': true})">9/2 | 9/9 </button></li>
+          <li><button onclick="player.show('off/pcp_9_4__9_9.off', '9/4 | 9/9 ', {'has_concave_faces': true})">9/4 | 9/9 </button></li>
+          <li><button onclick="player.show('off/pcp_9_6__9_9.off', '9/6 | 9/9 ', {'has_concave_faces': true})">9/6 | 9/9 </button></li>
+          <li><button onclick="player.show('off/pcp_9_8__9_9.off', '9/8 | 9/9 ', {'has_concave_faces': true})">9/8 | 9/9 </button></li>
+        </ul>
+        <h4>With Two Bases and a {9/1}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_9_1__9_1.off', '9/1 | 9/1 ', {'has_concave_faces': true})">9/1 | 9/1 </button></li>
+          <li><button onclick="player.show('off/pcp_9_8__9_3.off', '9/8 | 9/3 ', {'has_concave_faces': true})">9/8 | 9/3 </button></li>
+          <li><button onclick="player.show('off/pcp_9_8__9_5.off', '9/8 | 9/5 ', {'has_concave_faces': true})">9/8 | 9/5 </button></li>
+          <li><button onclick="player.show('off/pcp_9_8__9_7.off', '9/8 | 9/7 ', {'has_concave_faces': true})">9/8 | 9/7 </button></li>
+        </ul>
+        <h4>With Two Bases and a {9/2}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_9_2__9_2.off', '9/2 | 9/2 ', {'has_concave_faces': true})">9/2 | 9/2 </button></li>
+          <li><button onclick="player.show('off/pcp_9_7__9_4.off', '9/7 | 9/4 ', {'has_concave_faces': true})">9/7 | 9/4 </button></li>
+          <li><button onclick="player.show('off/pcp_9_7__9_6.off', '9/7 | 9/6 ', {'has_concave_faces': true})">9/7 | 9/6 </button></li>
+        </ul>
+        <h4>With Two Bases and a {9/3}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_9_3__9_3.off', '9/3 | 9/3 ', {'has_concave_faces': true})">9/3 | 9/3 </button></li>
+          <li><button onclick="player.show('off/pcp_9_6__9_5.off', '9/6 | 9/5 ', {'has_concave_faces': true})">9/6 | 9/5 </button></li>
+        </ul>
+        <h4>With Two Bases and a {9/4}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_9_4__9_4.off', '9/4 | 9/4 ', {'has_concave_faces': true})">9/4 | 9/4 </button></li>
         </ul>
       </div>
       <div id="10">
+        <h4>With Pseudo Base</h4>
         <ul>
-          <li><button onclick="player.show('off/pcp_10_1.off', '10/1 PCP', {'has_concave_faces': true})">10/1 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_10_2.off', '10/2 PCP', {'has_concave_faces': true})">10/2 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_10_3.off', '10/3 PCP', {'has_concave_faces': true})">10/3 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_10_4.off', '10/4 PCP', {'has_concave_faces': true})">10/4 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_10_5.off', '10/5 PCP', {'has_concave_faces': true})">10/5 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_10_6.off', '10/6 PCP', {'has_concave_faces': true})">10/6 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_10_7.off', '10/7 PCP', {'has_concave_faces': true})">10/7 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_10_8.off', '10/8 PCP', {'has_concave_faces': true})">10/8 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_10_9.off', '10/9 PCP', {'has_concave_faces': true})">10/9 PCP</button></li>
+          <li><button onclick="player.show('off/pcp_10_2__10_10.off', '10/2 | 10/10 ', {'has_concave_faces': true})">10/2 | 10/10 </button></li>
+          <li><button onclick="player.show('off/pcp_10_4__10_10.off', '10/4 | 10/10 ', {'has_concave_faces': true})">10/4 | 10/10 </button></li>
+          <li><button onclick="player.show('off/pcp_10_6__10_10.off', '10/6 | 10/10 ', {'has_concave_faces': true})">10/6 | 10/10 </button></li>
+          <li><button onclick="player.show('off/pcp_10_8__10_10.off', '10/8 | 10/10 ', {'has_concave_faces': true})">10/8 | 10/10 </button></li>
+        </ul>
+        <h4>With Two Bases and a {10/1}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_10_1__10_1.off', '10/1 | 10/1 ', {'has_concave_faces': true})">10/1 | 10/1 </button></li>
+          <li><button onclick="player.show('off/pcp_10_9__10_3.off', '10/9 | 10/3 ', {'has_concave_faces': true})">10/9 | 10/3 </button></li>
+          <li><button onclick="player.show('off/pcp_10_9__10_5.off', '10/9 | 10/5 ', {'has_concave_faces': true})">10/9 | 10/5 </button></li>
+          <li><button onclick="player.show('off/pcp_10_9__10_7.off', '10/9 | 10/7 ', {'has_concave_faces': true})">10/9 | 10/7 </button></li>
+          <li><button onclick="player.show('off/pcp_10_9__10_9.off', '10/9 | 10/9 ', {'has_concave_faces': true})">10/9 | 10/9 </button></li>
+        </ul>
+        <h4>With Two Bases and a {10/2}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_10_2__10_2.off', '10/2 | 10/2 ', {'has_concave_faces': true})">10/2 | 10/2 </button></li>
+          <li><button onclick="player.show('off/pcp_10_8__10_4.off', '10/8 | 10/4 ', {'has_concave_faces': true})">10/8 | 10/4 </button></li>
+          <li><button onclick="player.show('off/pcp_10_8__10_6.off', '10/8 | 10/6 ', {'has_concave_faces': true})">10/8 | 10/6 </button></li>
+          <li><button onclick="player.show('off/pcp_10_8__10_8.off', '10/8 | 10/8 ', {'has_concave_faces': true})">10/8 | 10/8 </button></li>
+        </ul>
+        <h4>With Two Bases and a {10/3}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_10_3__10_3.off', '10/3 | 10/3 ', {'has_concave_faces': true})">10/3 | 10/3 </button></li>
+          <li><button onclick="player.show('off/pcp_10_7__10_5.off', '10/7 | 10/5 ', {'has_concave_faces': true})">10/7 | 10/5 </button></li>
+          <li><button onclick="player.show('off/pcp_10_7__10_7.off', '10/7 | 10/7 ', {'has_concave_faces': true})">10/7 | 10/7 </button></li>
+        </ul>
+        <h4>With Two Bases and a {10/4}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_10_4__10_4.off', '10/4 | 10/4 ', {'has_concave_faces': true})">10/4 | 10/4 </button></li>
+          <li><button onclick="player.show('off/pcp_10_6__10_6.off', '10/6 | 10/6 ', {'has_concave_faces': true})">10/6 | 10/6 </button></li>
         </ul>
       </div>
       <div id="11">
+        <h4>With Pseudo Base</h4>
         <ul>
-          <li><button onclick="player.show('off/pcp_11_1.off', '11/1 PCP', {'has_concave_faces': true})">11/1 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_11_2.off', '11/2 PCP', {'has_concave_faces': true})">11/2 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_11_3.off', '11/3 PCP', {'has_concave_faces': true})">11/3 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_11_4.off', '11/4 PCP', {'has_concave_faces': true})">11/4 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_11_5.off', '11/5 PCP', {'has_concave_faces': true})">11/5 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_11_6.off', '11/6 PCP', {'has_concave_faces': true})">11/6 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_11_7.off', '11/7 PCP', {'has_concave_faces': true})">11/7 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_11_8.off', '11/8 PCP', {'has_concave_faces': true})">11/8 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_11_9.off', '11/9 PCP', {'has_concave_faces': true})">11/9 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_11_10.off', '11/10 PCP', {'has_concave_faces': true})">11/10 PCP</button></li>
+          <li><button onclick="player.show('off/pcp_11_2__11_11.off', '11/2 | 11/11 ', {'has_concave_faces': true})">11/2 | 11/11 </button></li>
+          <li><button onclick="player.show('off/pcp_11_4__11_11.off', '11/4 | 11/11 ', {'has_concave_faces': true})">11/4 | 11/11 </button></li>
+          <li><button onclick="player.show('off/pcp_11_6__11_11.off', '11/6 | 11/11 ', {'has_concave_faces': true})">11/6 | 11/11 </button></li>
+          <li><button onclick="player.show('off/pcp_11_8__11_11.off', '11/8 | 11/11 ', {'has_concave_faces': true})">11/8 | 11/11 </button></li>
+          <li><button onclick="player.show('off/pcp_11_10__11_11.off', '11/10 | 11/11 ', {'has_concave_faces': true})">11/10 | 11/11 </button></li>
+        </ul>
+        <h4>With Two Bases and a {11/1}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_11_1__11_1.off', '11/1 | 11/1 ', {'has_concave_faces': true})">11/1 | 11/1 </button></li>
+          <li><button onclick="player.show('off/pcp_11_10__11_3.off', '11/10 | 11/3 ', {'has_concave_faces': true})">11/10 | 11/3 </button></li>
+          <li><button onclick="player.show('off/pcp_11_10__11_5.off', '11/10 | 11/5 ', {'has_concave_faces': true})">11/10 | 11/5 </button></li>
+          <li><button onclick="player.show('off/pcp_11_10__11_7.off', '11/10 | 11/7 ', {'has_concave_faces': true})">11/10 | 11/7 </button></li>
+          <li><button onclick="player.show('off/pcp_11_10__11_9.off', '11/10 | 11/9 ', {'has_concave_faces': true})">11/10 | 11/9 </button></li>
+        </ul>
+        <h4>With Two Bases and a {11/2}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_11_2__11_2.off', '11/2 | 11/2 ', {'has_concave_faces': true})">11/2 | 11/2 </button></li>
+          <li><button onclick="player.show('off/pcp_11_9__11_4.off', '11/9 | 11/4 ', {'has_concave_faces': true})">11/9 | 11/4 </button></li>
+          <li><button onclick="player.show('off/pcp_11_9__11_6.off', '11/9 | 11/6 ', {'has_concave_faces': true})">11/9 | 11/6 </button></li>
+          <li><button onclick="player.show('off/pcp_11_9__11_8.off', '11/9 | 11/8 ', {'has_concave_faces': true})">11/9 | 11/8 </button></li>
+        </ul>
+        <h4>With Two Bases and a {11/3}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_11_3__11_3.off', '11/3 | 11/3 ', {'has_concave_faces': true})">11/3 | 11/3 </button></li>
+          <li><button onclick="player.show('off/pcp_11_8__11_5.off', '11/8 | 11/5 ', {'has_concave_faces': true})">11/8 | 11/5 </button></li>
+          <li><button onclick="player.show('off/pcp_11_8__11_7.off', '11/8 | 11/7 ', {'has_concave_faces': true})">11/8 | 11/7 </button></li>
+        </ul>
+        <h4>With Two Bases and a {11/4}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_11_4__11_4.off', '11/4 | 11/4 ', {'has_concave_faces': true})">11/4 | 11/4 </button></li>
+          <li><button onclick="player.show('off/pcp_11_7__11_6.off', '11/7 | 11/6 ', {'has_concave_faces': true})">11/7 | 11/6 </button></li>
+        </ul>
+        <h4>With Two Bases and a {11/5}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_11_5__11_5.off', '11/5 | 11/5 ', {'has_concave_faces': true})">11/5 | 11/5 </button></li>
         </ul>
       </div>
       <div id="12">
+        <h4>With Pseudo Base</h4>
         <ul>
-          <li><button onclick="player.show('off/pcp_12_1.off', '12/1 PCP', {'has_concave_faces': true})">12/1 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_12_2.off', '12/2 PCP', {'has_concave_faces': true})">12/2 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_12_3.off', '12/3 PCP', {'has_concave_faces': true})">12/3 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_12_4.off', '12/4 PCP', {'has_concave_faces': true})">12/4 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_12_5.off', '12/5 PCP', {'has_concave_faces': true})">12/5 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_12_6.off', '12/6 PCP', {'has_concave_faces': true})">12/6 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_12_7.off', '12/7 PCP', {'has_concave_faces': true})">12/7 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_12_8.off', '12/8 PCP', {'has_concave_faces': true})">12/8 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_12_9.off', '12/9 PCP', {'has_concave_faces': true})">12/9 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_12_10.off', '12/10 PCP', {'has_concave_faces': true})">12/10 PCP</button></li>
-          <li><button onclick="player.show('off/pcp_12_11.off', '12/11 PCP', {'has_concave_faces': true})">12/11 PCP</button></li>
+          <li><button onclick="player.show('off/pcp_12_2__12_12.off', '12/2 | 12/12 ', {'has_concave_faces': true})">12/2 | 12/12 </button></li>
+          <li><button onclick="player.show('off/pcp_12_4__12_12.off', '12/4 | 12/12 ', {'has_concave_faces': true})">12/4 | 12/12 </button></li>
+          <li><button onclick="player.show('off/pcp_12_6__12_12.off', '12/6 | 12/12 ', {'has_concave_faces': true})">12/6 | 12/12 </button></li>
+          <li><button onclick="player.show('off/pcp_12_8__12_12.off', '12/8 | 12/12 ', {'has_concave_faces': true})">12/8 | 12/12 </button></li>
+          <li><button onclick="player.show('off/pcp_12_10__12_12.off', '12/10 | 12/12 ', {'has_concave_faces': true})">12/10 | 12/12 </button></li>
+        </ul>
+        <h4>With Two Bases and a {12/1}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_12_1__12_1.off', '12/1 | 12/1 ', {'has_concave_faces': true})">12/1 | 12/1 </button></li>
+          <li><button onclick="player.show('off/pcp_12_11__12_3.off', '12/11 | 12/3 ', {'has_concave_faces': true})">12/11 | 12/3 </button></li>
+          <li><button onclick="player.show('off/pcp_12_11__12_5.off', '12/11 | 12/5 ', {'has_concave_faces': true})">12/11 | 12/5 </button></li>
+          <li><button onclick="player.show('off/pcp_12_11__12_7.off', '12/11 | 12/7 ', {'has_concave_faces': true})">12/11 | 12/7 </button></li>
+          <li><button onclick="player.show('off/pcp_12_11__12_9.off', '12/11 | 12/9 ', {'has_concave_faces': true})">12/11 | 12/9 </button></li>
+          <li><button onclick="player.show('off/pcp_12_11__12_11.off', '12/11 | 12/11 ', {'has_concave_faces': true})">12/11 | 12/11 </button></li>
+        </ul>
+        <h4>With Two Bases and a {12/2}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_12_2__12_2.off', '12/2 | 12/2 ', {'has_concave_faces': true})">12/2 | 12/2 </button></li>
+          <li><button onclick="player.show('off/pcp_12_10__12_4.off', '12/10 | 12/4 ', {'has_concave_faces': true})">12/10 | 12/4 </button></li>
+          <li><button onclick="player.show('off/pcp_12_10__12_6.off', '12/10 | 12/6 ', {'has_concave_faces': true})">12/10 | 12/6 </button></li>
+          <li><button onclick="player.show('off/pcp_12_10__12_8.off', '12/10 | 12/8 ', {'has_concave_faces': true})">12/10 | 12/8 </button></li>
+          <li><button onclick="player.show('off/pcp_12_10__12_10.off', '12/10 | 12/10 ', {'has_concave_faces': true})">12/10 | 12/10 </button></li>
+        </ul>
+        <h4>With Two Bases and a {12/3}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_12_3__12_3.off', '12/3 | 12/3 ', {'has_concave_faces': true})">12/3 | 12/3 </button></li>
+          <li><button onclick="player.show('off/pcp_12_9__12_5.off', '12/9 | 12/5 ', {'has_concave_faces': true})">12/9 | 12/5 </button></li>
+          <li><button onclick="player.show('off/pcp_12_9__12_7.off', '12/9 | 12/7 ', {'has_concave_faces': true})">12/9 | 12/7 </button></li>
+          <li><button onclick="player.show('off/pcp_12_9__12_9.off', '12/9 | 12/9 ', {'has_concave_faces': true})">12/9 | 12/9 </button></li>
+        </ul>
+        <h4>With Two Bases and a {12/4}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_12_4__12_4.off', '12/4 | 12/4 ', {'has_concave_faces': true})">12/4 | 12/4 </button></li>
+          <li><button onclick="player.show('off/pcp_12_8__12_6.off', '12/8 | 12/6 ', {'has_concave_faces': true})">12/8 | 12/6 </button></li>
+          <li><button onclick="player.show('off/pcp_12_8__12_8.off', '12/8 | 12/8 ', {'has_concave_faces': true})">12/8 | 12/8 </button></li>
+        </ul>
+        <h4>With Two Bases and a {12/5}</h4>
+        <ul>
+          <li><button onclick="player.show('off/pcp_12_5__12_5.off', '12/5 | 12/5 ', {'has_concave_faces': true})">12/5 | 12/5 </button></li>
+          <li><button onclick="player.show('off/pcp_12_7__12_7.off', '12/7 | 12/7 ', {'has_concave_faces': true})">12/7 | 12/7 </button></li>
         </ul>
       </div>
       <h2><a id="references">References</a></h2>
@@ -337,7 +493,7 @@
         <a href="../">All Polyhedra Pages</a></li>
     </ul>
     <h2><a id="lastUpdated">Last Updated</a></h2>
-    <p>2025-07-30, 08:42 CET
+    <p>2025-08-08, 09:17 CET
     </p>
   </body>
 </html>
