@@ -63,7 +63,7 @@
         <br/>
         <p>I started writing a script that would generate an OFF file for <button onclick="player.show('off/pcp_5_2.off', '5/2 PCP', {'has_concave_faces': true})">5/2 PCP</button>, which is similar to the Don's 7/2. Then I generalized the script to generate the n/2 PCPs for any value of n > 4. In a next step I generalized the script to allow for other even values of m, e.g. this <button onclick="player.show('off/pcp_7_4.off', '7/4 PCP', {'has_concave_faces': true})">7/4 PCP</button>. 
         </p>
-        <p>I noticed that for some cases it wasn't possible to get equilateral triangles and instead I adjusted the height to turn the crossed rectangles into crossed squares. As a consequence the triangles became isosceles, see e.g. <button onclick="player.show('off/pcp_6_4.off', '6/4 PCP', {'has_concave_faces': true})">6/4 PCP</button>. The next step was to extend the idea to odd m, for which it isn't possible to use triangles. Instead I decided to use trapezoids. A consequence to using trapezoids instead of triangles is that the extra edges lead to an {n/m'} polygon parallel to the original {n/m} polygon, see e.g. <button onclick="player.show('off/pcp_7_5.off', '7/5 PCP', {'has_concave_faces': true})">7/5 PCP</button>
+        <p>I noticed that for some cases it wasn't possible to get equilateral triangles and instead I adjusted the height to turn the crossed rectangles into crossed squares. With crossed squares is meant crossed rectangles that fit into a square. As a consequence the triangles became isosceles, see e.g. <button onclick="player.show('off/pcp_6_4.off', '6/4 PCP', {'has_concave_faces': true})">6/4 PCP</button>. The next step was to extend the idea to odd m, for which it isn't possible to use triangles. Instead I decided to use trapezoids. A consequence to using trapezoids instead of triangles is that the extra edges lead to an {n/m'} polygon parallel to the original {n/m} polygon, see e.g. <button onclick="player.show('off/pcp_7_5.off', '7/5 PCP', {'has_concave_faces': true})">7/5 PCP</button>
         </p>
         <p>So far the script didn't allow digons to be used, as happens e.g. in the case of {8/4}. Since digons will just degenerate into edges they wouldn't actually be a problem and hence the script was adjusted to allow those as well, see e.g. <button onclick="player.show('off/pcp_8_4.off', '8/4 PCP', {'has_concave_faces': true})">8/4 PCP</button>. Finally I allowed the script to generate the PCP for n=3, see e.g. <button onclick="player.show('off/pcp_3_2.off', '3/2 PCP', {'has_concave_faces': true})">3/2 PCP</button>, and n=4, e.g. <button onclick="player.show('off/pcp_4_2.off', '4/2 PCP', {'has_concave_faces': true})">4/2 PCP</button>.
         </p>
@@ -97,7 +97,7 @@
           <li>Trapezoids (possibly trisosceles)</li>
           <li>Rectangles (possibly crossed)</li>
         </ul>
-        <p>This set of n polygons shares some of its edges with one or both of the PCP's bases. Additionally, the set of joining polygons always includes a set of n crossed-rectangles (crossed-squares by default) These crossed-rectangles are only vertex-coincident with the two bases. The two types of polygons form one or more surrounding 'belts' in which these types appear in an alternating way.
+        <p>This set of n polygons shares some of its edges with one or both of the PCP's bases. Additionally, the set of joining polygons always includes a set of n crossed-rectangles. The height of a PCP can be scaled so that these crossed rectangles become crossed squares. These crossed-rectangles are only vertex-coincident with the two bases. The two types of polygons form one or more surrounding 'belts' in which these types appear in an alternating way.
         </p>
       </div>
       <div id="patterns">
@@ -142,11 +142,11 @@
           </ul>This typically happens for even m where m < n / 2
         </p>
         <h4>PCP with Equilateral Triangles</h4>
-        <p>For some even m the isosceles triangles can be transformed into equilateral triangles by adjusting the height of the PCP. In this case the crossed squares become crossed rectangles. Compare for instance
+        <p>For some even m the isosceles triangles can be transformed into equilateral triangles by scaling the height of the PCP. In this case the crossed squares become crossed rectangles. Compare for instance
           <ul>
             <li><button onclick="player.show('off/pcp_6_2.off', '6/2 PCP with crossed squares', {'has_concave_faces': true})">6/2 PCP with crossed squares</button> and</li>
             <li><button onclick="player.show('off/pcp_6_2_alt.off', '6/2 PCP with equilateral triangles', {'has_concave_faces': true})">6/2 PCP with equilateral triangles</button></li>
-          </ul>This is however not possible for all cases, e.g. for the <button onclick="player.show('off/pcp_3_2.off', '3/2 PCP', {'has_concave_faces': true})">3/2 PCP</button> it obvious that the height will become 0 in that case.
+          </ul>The PCP <button onclick="player.show('off/pcp_4_2__4_4.off', '4/2 | 4/4 ', {'has_concave_faces': true})">4/2 | 4/4 </button> is an exception though and it has both crossed squares and equilateral triangles. It is not always possible to scale the PCP with pseudo-base to get equilateral triangles, e.g. for the <button onclick="player.show('off/pcp_3_2.off', '3/2 PCP', {'has_concave_faces': true})">3/2 PCP</button> it obvious that the height will become 0 in that case.All models shown on this page will try to scale the height so that equilateral triangles are used. In all other cases the height is adapted so that crossed squares are obtained. 
         </p>
         <h4>PCP with Digonal Base</h4>
         <p>If n is even and m = n / 2, then the PCP will have a digonal base consisting of n/m digons. These digons will just degenerate into edges. Some examples are
@@ -493,7 +493,7 @@
         <a href="../">All Polyhedra Pages</a></li>
     </ul>
     <h2><a id="lastUpdated">Last Updated</a></h2>
-    <p>2025-08-08, 09:17 CET
+    <p>2025-08-08, 09:41 CET
     </p>
   </body>
 </html>
