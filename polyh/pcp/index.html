@@ -103,7 +103,9 @@
           <li>Trapezoids (possibly trisosceles)</li>
           <li>Rectangles (possibly crossed)</li>
         </ul>
-        <p>This type of n polygons shares some of its edges with one or both of the PCP's bases. For a base polygon {n/q} the value of q is determined as follows: If from the perspective of the base the polygon of this set points outwards, then of the two possible denominators q and n-q the highest value is used. Otherwise the lowest value is used. 
+        <p>This type of n polygons shares some of its edges with one or both of the PCP's bases. For a base polygon {n/q} the value of q is determined as follows: If the dihedral angle between this type of polygon and the base is smaller than 90°, then of the two possible values q and n-q the one that is bigger than n/2 is used. Otherwise the smaller value is used.
+        </p>
+        <p>As an example consider <button onclick="player.show('off/pcp_7_6__7_3_eg1.off', '7/6 | 7/3  inwards and outwards', {'has_concave_faces': true})">7/6 | 7/3  inwards and outwards</button>. This shows a 7/6 | 7/3 with some faces removed for clarity reasons. The dihedral angle between the trapezoid and the {7/3} is bigger than or equal to 90° and from the perspective of that base the trapezoid points outwards. For this reason {7/3} is written, i.e. the value p <= n/2 is used. On the other hand the dihedral angle between the trapezoid and the heptagon, a {7/1}, is less than 90° and the trapezoid points inwards here. For this reason {7/6} is used instead, i.e. m > n/2. <button onclick="player.show('off/pcp_7_5__7_4_eg2.off', '7/5 | 7/4  all inwards', {'has_concave_faces': true})">7/5 | 7/4  all inwards</button> is an example where all dihedral angles are smaller than 90°, i.e. the trapezoid point inwards for both bases. For that reason both m and p have values bigger than n/2.
         </p>
         <p>As a consequence these denominators also expresse a consistent direction of rotation when following the edges of a polygon from this set. If for an n/m | n/p both m and n are either bigger than n/2 or they both aren't. then if you follow the edges of one polygon of the set the base vertices are rotated in the same direction if the smallest rotation angle is used. If either m or p is bigger than n/2 while the either isn't, then they rotate in opposite directions.
         </p>
@@ -206,8 +208,8 @@
         <h4>Compound PCPs</h4>
         <p>The compound theorem was checked for all kn/km | kn/kp until kn = 12 manually. It would be great to add a section that proofs this.
         </p>
-        <h4>Be Clearer about 'Pointing inwards'</h4>
-        <p>In the definition section it is argued when to write n/q with q > n/2 or the opposite. Apparently this isn't so clear. Perhaps an example is needed. One that shows part of the faces. Perhaps mention the dihedral angle and a of limit 90°
+        <h4>Be Clearer about Rotation Direction</h4>
+        <p>In the definition section it is argued when to write n/q with q > n/2 or the opposite. Apparently it is not clear how this affects the direction when following the edges of the trapezoid. Besides that, this part can be moved to 'Observations'.
         </p>
         <h4>Share the OFF Files</h4>
         <p>I could share a link to the OFF files, but apparently Stella warns about the edges having an odd amount of faces. If I share this I should explain why this happens, because I am using a simple OFF file viewer that doesn't handle self-intersecting polygons well. To get around the outlines for self-intersecting polygons are used. E.g. a pentagon is defined as a concave decagon. This while trapezoids still connect to the whole self-insecting edge. The directory with off files needs a clean-up as well.
@@ -515,7 +517,7 @@
         <a href="../">All Polyhedra Pages</a></li>
     </ul>
     <h2><a id="lastUpdated">Last Updated</a></h2>
-    <p>2025-08-09, 16:30 CET
+    <p>2025-08-09, 22:30 CET
     </p>
   </body>
 </html>
