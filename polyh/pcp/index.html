@@ -11,7 +11,7 @@
     <div id="model"> </div>
     <script>
       var player = new ModelPlay(document, "model");
-      const array = ['about', 'definition', 'patterns', 'todo', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
+      const array = ['about', 'definition', 'patterns', 'off_files', 'todo', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
       function on_select() {
           array.forEach(
               function (item) {
@@ -39,6 +39,7 @@
           <option value="about">Motivation for Research</option>
           <option value="definition">General Definition</option>
           <option value="patterns">Some Observations</option>
+          <option value="off_files">PCP OFF Files</option>
           <option value="todo">More to Do</option>
           <option value="3">PCP for n = 3</option>
           <option value="4">PCP for n = 4</option>
@@ -211,6 +212,14 @@
         </p>
         <img src="svg/pcp_7_5__7_4_eg2.svg" hspace=10 height=250 align="bottom"/>
         <p>One can see that even here for both base polygons the same direction is followed. 
+        </p>
+      </div>
+      <div id="off_files">
+        <p>All OFF files that are use on this web page can be found 
+          <a href="off">here</a>. However this web site uses a simple OFF file viewer that has problems with showing self-intersecting polygons. There the OFF files are adjusted so that the outlines of the polygons are shown. As a consequence the crossed rectangles are drawn as concave hexagons and e.g. a pentagram is drawn as a concave decagon. As a consequence edges will be split. I understand that if you would like to view these in Stella then it will generate an error that edges have an odd amount of faces attached. 
+        </p>
+        <p>For these users I created 
+          <a href="pcp_n_m__n_p__4_stella.zip">this ZIP file</a>. that contains all OFF files without using the outlines. Naturally if you load this in the OFF file view on this site, then they wont show correctly, e.g. a pentagram will have a hole. 
         </p>
       </div>
       <div id="todo">
@@ -506,12 +515,12 @@
         <li>
           <b>[WEBB1]
           </b>:
-          <a id="RWebb01">Wikipedia: <a href="https://en.wikipedia.org/wiki/Polyhedron" target="new">Polyhedron<a/>
+          <a id="RWebb01">Stella: Polyhedron navigator, Robert Webb; Available <a href="https://www.software3d.com/Stella.php" target="new">here<a/>
           </a></li>
         <li>
           <b>[WIKI1]
           </b>:
-          <a id="Wiki01">Stella: Polyhedron navigator, Robert Webb; Available <a href="https://www.software3d.com/Stella.php" target="new">here<a/>
+          <a id="Wiki01">Wikipedia: <a href="https://en.wikipedia.org/wiki/Polyhedron" target="new">Polyhedron<a/>
           </a></li>
       </ul>
     </div>
@@ -523,7 +532,7 @@
         <a href="../">All Polyhedra Pages</a></li>
     </ul>
     <h2><a id="lastUpdated">Last Updated</a></h2>
-    <p>2025-08-10, 08:55 CET
+    <p>2025-08-10, 09:23 CET
     </p>
   </body>
 </html>
