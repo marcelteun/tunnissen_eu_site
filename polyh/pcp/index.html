@@ -107,8 +107,6 @@
         </p>
         <p>As an example consider <button onclick="player.show('off/pcp_7_6__7_3_eg1.off', '7/6 | 7/3  inwards and outwards', {'has_concave_faces': true})">7/6 | 7/3  inwards and outwards</button>. This shows a 7/6 | 7/3 with some faces removed for clarity reasons. The dihedral angle between the trapezoid and the {7/3} is bigger than or equal to 90° and from the perspective of that base the trapezoid points outwards. For this reason {7/3} is written, i.e. the value p <= n/2 is used. On the other hand the dihedral angle between the trapezoid and the heptagon, a {7/1}, is less than 90° and the trapezoid points inwards here. For this reason {7/6} is used instead, i.e. m > n/2. <button onclick="player.show('off/pcp_7_5__7_4_eg2.off', '7/5 | 7/4  all inwards', {'has_concave_faces': true})">7/5 | 7/4  all inwards</button> is an example where all dihedral angles are smaller than 90°, i.e. the trapezoid point inwards for both bases. For that reason both m and p have values bigger than n/2.
         </p>
-        <p>As a consequence these denominators also expresse a consistent direction of rotation when following the edges of a polygon from this set. If for an n/m | n/p both m and n are either bigger than n/2 or they both aren't. then if you follow the edges of one polygon of the set the base vertices are rotated in the same direction if the smallest rotation angle is used. If either m or p is bigger than n/2 while the either isn't, then they rotate in opposite directions.
-        </p>
         <p>The two types of polygons form one or more surrounding 'belts' in which these types appear in an alternating way.
         </p>
       </div>
@@ -203,13 +201,21 @@
           <li><button onclick="player.show('off/pcp_12_10__12_8.off', '12/10 | 12/8 ', {'has_concave_faces': true})">12/10 | 12/8 </button> isn't a compound of two 6/5 | 6/4, since a PCP 6/5 | 6/p is only valid according to the third rule in subsection "PCPs that Lack a Pseudo-Base" if 1 < p <= 5 < 6 with p = 1 + 2k, i.e. only for p = 3, or p =5; not p=4.</li>
           <li><button onclick="player.show('off/pcp_12_8__12_8.off', '12/8 | 12/8 ', {'has_concave_faces': true})">12/8 | 12/8 </button>, which isn't a compound of four 6/2 | 6/2, since that is an invalid PCP according to the second rule in subsection "PCPs that Lack a Pseudo-Base", because otherwise it would consist of two digon bases.</li>
         </ul>
+        <h4>Consistent Rotation Direction for {n/q} Notation</h4>
+        <p>In two dimensions the value q for a polygon {n/q} can be interpreted as the vertex offset for the diagonal that is followed. Take the example of <button onclick="player.show('off/pcp_7_6__7_3_eg1.off', '7/6 | 7/3  inwards and outwards', {'has_concave_faces': true})">7/6 | 7/3  inwards and outwards</button> that was given in the definition. In the image below the arrows with cyan colour follow the edges of one trapezoid. For the base polygons whether to follow the clockwise or counter-clockwise direction is determined by the denomitor q so that the correct vertex offset is obtained. 
+        </p>
+        <img src="svg/pcp_7_6__7_3_eg1.svg" hspace=10 height=250 align="bottom"/>
+        <p>One can see that for both polygons the <b>same </b>direction is used, which is counter-clockwise here. Note that if you would flip the PCP or if you would follow the trapezoid in the opposite direction, it would have been in a clockwise direction. The essence here is that the same direction is followed. By definition this is the case for all PCPs.
+        </p>
+        <p>For instance the same holds for the other example that was given, <button onclick="player.show('off/pcp_7_5__7_4_eg2.off', '7/5 | 7/4  all inwards', {'has_concave_faces': true})">7/5 | 7/4  all inwards</button>. The image below shows a similar image for that one. 
+        </p>
+        <img src="svg/pcp_7_5__7_4_eg2.svg" hspace=10 height=250 align="bottom"/>
+        <p>One can see that even here for both base polygons the same direction is followed. 
+        </p>
       </div>
       <div id="todo">
         <h4>Compound PCPs</h4>
         <p>The compound theorem was checked for all kn/km | kn/kp until kn = 12 manually. It would be great to add a section that proofs this.
-        </p>
-        <h4>Be Clearer about Rotation Direction</h4>
-        <p>In the definition section it is argued when to write n/q with q > n/2 or the opposite. Apparently it is not clear how this affects the direction when following the edges of the trapezoid. Besides that, this part can be moved to 'Observations'.
         </p>
         <h4>Share the OFF Files</h4>
         <p>I could share a link to the OFF files, but apparently Stella warns about the edges having an odd amount of faces. If I share this I should explain why this happens, because I am using a simple OFF file viewer that doesn't handle self-intersecting polygons well. To get around the outlines for self-intersecting polygons are used. E.g. a pentagon is defined as a concave decagon. This while trapezoids still connect to the whole self-insecting edge. The directory with off files needs a clean-up as well.
@@ -517,7 +523,7 @@
         <a href="../">All Polyhedra Pages</a></li>
     </ul>
     <h2><a id="lastUpdated">Last Updated</a></h2>
-    <p>2025-08-09, 22:30 CET
+    <p>2025-08-10, 08:55 CET
     </p>
   </body>
 </html>
