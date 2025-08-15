@@ -175,7 +175,7 @@
           <li><button onclick="player.show('off/pcp_8_6__8_4.off', '8/6 | 8/4 ', {'has_concave_faces': true})">8/6 | 8/4 </button></li>
         </ul>
         <h4>Semi-Uniform PCPs</h4>
-        <p>For some PCP the 'belt' contains <b>rectangles</b> instead trapezoids. This happens for PCP n/m | n/p that lack pseudo-bases and where the bases {n/m} and {n/p} are the same polygon. The case for which p = n-p is not a valid PCP with two bases, hence it must be that p = m. If p = m < n/2 then the PCP will have coplanar crossed rectangles, if p = m = n/2 then there are two digonal bases, which is not valid, which mean that a PCP becomes semi-uniform when p = m and p = m > n/2. 
+        <p>For some PCP the 'belt' contains <b>rectangles</b> instead trapezoids. This happens for PCP n/m | n/p that lack pseudo-bases and where the bases {n/m} and {n/p} are the same polygon and n is even. The case for which p = n-m and p &ne; m is not a valid PCP with two bases, hence it must be that p = m. If p = m < n/2 then the PCP will have coplanar crossed rectangles, if p = m = n/2 then there are two digonal bases, which is not valid, which means that a PCP becomes semi-uniform for <b>n/m | n/m with n = 2k and m > k</b>
         </p>
         <p>Since both bases are the same these are semi-uniform, and since these rectangles also meet the at the centre these are hemi-polyhedra as well. Here are some examples of these semi-uniform hemi-PCP that have rectangles:
         </p>
@@ -219,7 +219,7 @@
           <a href="off">here</a>. However this web site uses a simple OFF file viewer <a href="#MTun02">[MTUN2]</a> that has problems with showing self-intersecting polygons. Therefore the OFF files are adjusted so that the outlines of the polygons are shown. As a consequence the crossed rectangles are drawn as concave hexagons and e.g. a pentagram is drawn as a concave decagon. This means that edges will be split. I understand that if you would like to view these in Stella then it will generate an error that edges have an odd amount of faces attached. 
         </p>
         <p>For these users I created 
-          <a href="pcp_n_m__n_p__4_stella.zip">this ZIP file</a>. that contains all OFF files without using the outlines. Naturally if you load this in the OFF file view on this site, then they wont show correctly, e.g. a pentagram will have a hole. 
+          <a href="pcp_n_m__n_p__4_stella.zip">this ZIP file</a>. that contains all OFF files without using the outlines. It also positions the polyhedra so that the bases are in some plane with a constant Z-coordinate, which makes it easier to work with them, Naturally if you load this in the OFF file view on this site, then they wont show correctly, e.g. a pentagram will have a hole. 
         </p>
         <p>If you want to generate OFF files yourself for higher n, then you can use the Python script as mentioned in <a href="#MTun03">[MTUN3]</a>. 
         </p>
@@ -227,6 +227,22 @@
       <div id="todo">
         <h4>Compound PCPs</h4>
         <p>The compound theorem was checked for all kn/km | kn/kp until kn = 12 manually. It would be great to add a section that proofs this.
+        </p>
+        <h4>More PCP and Divide into Subcategories</h4>
+        <p>After inviting Jim McNeill to the PCP discussion he came up with more polyhedra that could be added. He also suggested to sub-divide the PCP into the following categories: 
+        </p>
+        <ol>
+          <li>PCP with prismatic hull consisting of one pseudo-base and one polygon base. The lateral faces are crossed rectangles and triangles. These can be indicated by n/m | n/n.</li>
+          <li>PCP with prismatic hull consisting of two congruent polygon bases. The lateral faces are crossed rectangles which occur in coplanar pairs rotated 90° around their centre. These PCP can be indentified by n/m | n/m, with m < n/2.</li>
+          <li>PCP with prismatic hull consisting of two distinct polygon bases. The lateral faces are crossed squares and trapezoids. These are written as n/m | n/p.</li>
+          <li>PCP with prismatic hull consisting of two congruent polygon bases. The lateral faces are crossed rectangles and triangles, of which the latter share an edge with both bases. If the 'simplified' polygon base is of type {n/m} then the polygon base of the convex hull is of type {2n/m}. (formerly the known as ACPC).</li>
+          <li>PCP with anti-prismatic hull consisting of one polygon base and a pseudo-base. The lateral faces are crossed rectangles and triangles, of which the latter share an edge with the polygon base. (formerly known as 'PCA').</li>
+          <li>Unused at present</li>
+          <li>PCP with anti-prismatic hull consisting of two distinct polygon bases. The lateral faces are crossed rectangles and trapezoids (which may or may not be crossed). </li>
+          <li>PCP with prismatic hull consisting of two pseudo-bases. The lateral faces are two sets of crossed rectangles. </li>
+          <li>PCP with prismatic hull consisting of two congruent polygon bases. The lateral faces are rectangles and crossed rectangles. These PCP can be indentified by 2n/m | 2n/m, with m > n.</li>
+        </ol>
+        <p>Category 4, 5, 7 and 8 are new and for those the definition needs to be adjusted. For category 4 at least the notation needs to be adapted as well.
         </p>
       </div>
       <div id="3">
@@ -536,7 +552,7 @@
         <a href="../">All Polyhedra Pages</a></li>
     </ul>
     <h2><a id="lastUpdated">Last Updated</a></h2>
-    <p>2025-08-10, 09:48 CET
+    <p>2025-08-15, 16:48 CET
     </p>
   </body>
 </html>
