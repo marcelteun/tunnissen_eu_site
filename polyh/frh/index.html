@@ -1,0 +1,126 @@
+Using target dir ./frh
+ang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Polyhedra only Consisting of Regular Heptagons</title>
+    <link rel="stylesheet" href="/css/interactive_models.css"/>
+  </head>
+  <body>
+    <div id="pagebody">
+      <h1>Polyhedra only Consisting of Regular Heptagons</h1>
+      <h2>Contents</h2>
+      <ul>
+        <li>
+          <a href="#introduction">Introduction</a>
+        </li>
+        <li>
+          <a href="#sym_indir">Polyhedra with Indirect Symmetries</a>
+        </li>
+        <li>
+          <a href="#sym_dir">Polyhedra with Only Direct Symmetries</a>
+        </li>
+        <li>
+          <a href="#refs">References</a>
+        </li>
+        <li>
+          <a href="#links">Links</a>
+        </li>
+        <li>
+          <a href="#todo">TODO</a>
+        </li>
+        <li>
+          <a href="#lastUpdated">Last Updated</a>
+        </li>
+      </ul>
+      <h2><a>Note: This Page is under Contruction!</a></h2>
+      <h2><a id="introduction">Introduction</a></h2>
+      <p>This page summarises which polyhedra were found that only consist of 
+        <b>only regular heptagons</b>. Of course this isn't possible just like that. To be able to fit these heptagons one has to release at least some requirement. In this case the 'flatness' requirement is released and heptagons are allowed to be folded over diagonals.
+      </p>
+      <p>The polyhedra can be divided in different categories. First of all the polyhedra can be divided by there symmetries. Here we will only consider non-cyclic and non-dihedral based symmetries. Follow the links to see models of the respective symmetries. 
+      </p>
+      <p>On these pages the polyhedra are further sub-divided by how the heptagons are folded. and how they are connected; see more below. 
+      </p>
+      <p>This page and the models are generated after investigating folded regular heptagons by a Python program <a href="#MTun01">[MTUN01]</a>. Based on that program another program was written to find polyhedra numerically. Some of these polyhedra were added to the former program. All models are displayed with help of a JavaScript bundle <a href="#MTun02">[MTUN02]</a>.
+      </p>
+      <p>The tables in the links below show all the polyhedra found so far. Sometimes trivial variations exist and in those cases these are only mentioned in a comment. There is also a 'Copy' button. This will copy a link to the OFF-file viewer showing that polyhedron. 
+      </p>
+      <h2><a id="sym_indir">Polyhedra with Indirect Symmetries</a></h2>
+      <p>This section describes polyhedra with symmetries that have reflections. <a href="#MTun00">[MTUN00]</a> recognises 5 different foldings for these symmetries. The picture below shows the different fold types for pairs of heptagons. 
+      </p>
+      <img align="middle" border=0 width=720 height="auto" src="hept-folds-refl.png"/>
+      <p>Note that each pair and their reflections have a vertical and horizontal reflection and a 2-fold symmetry axis. In the polyhedron these heptagons will be placed so that these symmetries are shared with the polyhedron. Of course the angle between the the two heptagons can vary, as well as the distance from the centre of the final polyhedron. The pairs of heptagons can be folded over the diagonals freely as long as the symmetry is kept. 
+      </p>
+      <p>Follow the links below to get an overview of all polyhedra with folded regular heptagons for the specified symmetry. 
+      </p>
+      <ul>
+        <li>
+          <a href="frh-S4A4.html">S<sub>4</sub>A<sub>4</sub></a></li>
+        <li>
+          <a href="frh-A4xI.html">A<sub>4</sub> x I</a></li>
+        <li>
+          <a href="frh-S4xI.html">S<sub>4</sub> x I</a></li>
+        <li>
+          <a href="frh-A5xI.html">A<sub>5</sub> x I</a></li>
+      </ul>
+      <h2><a id="sym_dir">Polyhedra with Only Direct Symmetries</a></h2>
+      <p>For symmetries that don't have reflections, any folds can be rotated around the centre of the heptagon To keep the symmetry all heptagons shall be rotated in the same way. As a consequence the heptagons are connected with different 'kinds' of edges, where the kind of an edge is with regards to the fold. Furthermore for these symmetries the pair with a certain rotation can be rotated freely around the 2-fold axis.
+      </p>
+      <img align="middle" border=0 width=720 height="auto" src="hept-folds-no-refl.png"/>
+      <p>The picture above shows the different folds that can be used for polyhedra without reflections. There are two new folds: the 'g'-fold and the mixed fold. The triangle trapezium fold are replaced by the more general 'g'-fold. The parallel fold is just a special case of 'w'-fold (or mixed fold) 
+      </p>
+      <p>One can see that the two heptagons can be mapped onto each other by a half-turn around the centre of the common edge. The four different folds shown above can be rotated around the heptagon centre to obtain different polyhedra, which leads to many more possibilities than for the polyhedra with reflections. In the table headers these positions are numbered from 1 to 7, where 1 is the position shown here. For any increase of 1 the fold pattern is rotated one step clock-wise (for all heptagons)
+      </p>
+      <p>For instance in the picture below positions 1 to 7 are shown for the G-fold. One can see that all these lead to different compositions. 
+      </p>
+      <img align="middle" border=0 width=720 height="auto" src="hept-folds-pos-eg-g.png"/>
+      <p>That isn't the case for all folds. For the folds that have symmetry only part of the positions need to be checked. For instance for the W-fold, shown below, you can see that only position 1 - 4 need to be checked, since position 4 and 5, 3 and 6, and 2 and 7 are each other's mirror images. 
+      </p>
+      <img align="middle" border=0 width=720 height="auto" src="hept-folds-pos-eg-w.png"/>
+      <p>All these polyhedra come in pairs of different handiness. Only one of these is listed on this site, and the other one isn't mentioned further. 
+      </p>
+      <p>Follow the links below to get an overview of all polyhedra that lack reflections and consist of folded regular heptagons. 
+      </p>
+      <ul>
+        <li>
+          <a href="frh-A4.html">A<sub>4</sub></a></li>
+        <li>
+          <a href="frh-S4.html">S<sub>4</sub></a></li>
+        <li>
+          <a href="frh-A5.html">A<sub>5</sub></a></li>
+      </ul>
+      <h2><a id="references">References</a></h2>
+      <ul>
+        <li>
+          <b>[MTUN00]
+          </b>:
+          <a id="MTun00">Marcel Tünnissen: <b>Polyhedra with Folded Regular Heptagons</b> Bridges Enschede, 2013; Conference Proceedings Available <a href="https://archive.bridgesmathart.org/2013/bridges2013-183.pdf" target="new">here<a/>
+          </a></li>
+        <li>
+          <b>[MTUN01]
+          </b>:
+          <a id="MTun01">All models inspired by Python package <b>Orbitit</b>, github; Available <a href="https://github.com/marcelteun/Orbitit" target="new">here<a/>
+          </a></li>
+        <li>
+          <b>[MTUN02]
+          </b>:
+          <a id="MTun02">Interactive 3D models through JS package <b>show-off</b>, github; Available <a href="https://github.com/marcelteun/show-off" target="new">here<a/>
+          </a></li>
+      </ul>
+      <h2><a id="links">Links</a></h2>
+      <ul>
+        <li>
+          <a href="/index.htm">Home</a></li>
+        <li>
+          <a href="/polyh/index.htm">My polyhedra</a></li>
+      </ul>
+      <h2><a id="todo">TODO</a></h2>
+      <ul>
+        <li>Show example of fold positions</li>
+      </ul>
+      <h2><a id="lastUpdated">Last Updated</a></h2>
+      <p>2022-02-25, 09:41 CET
+      </p>
+    </div>
+  </body>
+</html>
