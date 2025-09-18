@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+      A Compound of Seven Cubes
+  </title>
+
+  <link rel="stylesheet" href="/css/built_models.css">
+  <script src="/js/show-off-bundle.js"></script>
+</head>
+
+<body onload="draw_shape('off/7_cubes_S4xI.off', 'model_canvas', {bg_col: [0.9, 0.9, 0.9]});">
+<div id="content">
+<h1>
+    A Compound of Seven Cubes
+</h1>
+<div id="descr">
+<p>
+<img id="mod_img" src="pics/7_cubes_S4xI.jpg" alt="picture">
+</p>
+
+<p><b>
+This compound of cubes is not a fundamental one, since not all cubes can be
+transferred into each other through a symmetry operation. This is Skilling's
+Compound of 6 Cubes with one cube added according to the
+final symmetry.
+Skilling's compound consists of three pairs of cubes and the
+angle between the cubes in each pair can be varied without loss of symmetry. In
+this case the angle is chosen in such a way that when the third cube is added
+the angles between the three cubes (two from one pair and one extra cube) are
+evenly divided.
+</b></p>
+
+<p><b>
+For this model I used three colours. Each pair has its own colour and the third
+cube is made of three colours in the classical way where one pair of parallel
+squares has the same colour.
+</b></p>
+
+<p><b>
+This compound is similar to 
+  <a href="Iris.htm">the classic compound of three cubes with one cube added</a>.
+One can continue this process indefinitely to make a compound of 3&times;n+1 cubes.
+In each sub-compound of n-cubes the cubes share their 4-fold axes and the angle
+between these cubes is chosen in such a way that if you add one extra cube then
+the cubes are divided evenly.
+Now the three sets of n-cubes are put together so that the shared axis for each
+set is one 4-fold axis in the final compound.
+Then one extra cube is added according to the cube symmetry to complete it.
+</b></p>
+
+<p><b>
+The case shown here is the case for n = 2, while the abovementioned classical
+compound of three plus one is the case for n=1. The case for n=3 would consist
+of a classical compound of three cubes, plus Skilling's compound,
+though with a different angle, plus one extra.
+</b></p>
+
+<p><b>
+  <a href="./">Thumbnails</a>
+</b></p>
+
+<p><b>
+  <a href="/">Home</a>
+</b></p>
+
+<h2><a id="lastUpdated">Last Updated</a></h2>
+<p>2025-09-18
+
+</div>
+
+<div id="model">
+  <canvas id="model_canvas"></canvas>
+</div>
+
+</div>
+</body>
+</html>
