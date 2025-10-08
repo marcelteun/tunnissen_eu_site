@@ -32,12 +32,12 @@
       <p><b>Note</b>: for optimal experience Javascript should be enabled.
       </p>
       <h2><a id="introduction">Introduction</a></h2>
-      <p>During fall 2025 the Mason Green's <button onclick="player.show('off/cupola_7_2__7_1_0.off', 'Small Supersemicupola', {'has_concave_faces': true})">Small Supersemicupola</button> and his <button onclick="player.show('off/cupola_7_3__7_2_0.off', 'Great Supersemicupola', {'has_concave_faces': true})">Great Supersemicupola</button> fascinated me and I wondered whether I could use some general rule, other than Mason's rules. to generate more of these. The polyhedra describe here I called roof top polyhedra, and they are all nn3-acrohedra, where n is a rational number.
+      <p>During fall 2025 the Mason Green's <button onclick="player.show('off/rt_7_2__7_1-s.off', 'Small Supersemicupola', {'has_concave_faces': true})">Small Supersemicupola</button> and his <button onclick="player.show('off/rt_7_3__7_2-s.off', 'Great Supersemicupola', {'has_concave_faces': true})">Great Supersemicupola</button> fascinated me and I wondered whether I could use some general rule, other than Mason's rules. to generate more of these. The polyhedra describe here I called roof top polyhedra, and they are all nn3-acrohedra, where n is a rational number.
       </p>
       <div>
         <select onchange="on_select()" id="table_selection">
           <option value="about">Motivation for Research</option>
-          <option value="definition">General Way of Working</option>
+          <option value="definition">How these Roof Top Polyhedra Are Built up</option>
           <option value="off_files">The OFF Files</option>
           <option value="thanks">Acknowledgements</option>
         </select>
@@ -49,21 +49,72 @@
         </p>
         <p>The fascinating thing is that for the Supersemicupolae everything magically fits. I wondered whether there are more cases. I wondered specifically how this looked for the enneagon, the 993 case. 
         </p>
-        <p>Obviously it doesn't work for the enneagon otherwise Mason Green would already have found it. Not surprisingly for the enneagon it just doesn't work. This is how a <button onclick="player.show('off/cupola_9_2__9_1_0.off', 'failed case for n=9', {'has_concave_faces': true})">failed case for n=9</button> can look like. Note that I only show one side of the roof. In the case of n=7 to connect to the next ones. If you add the other side, then you will end up with even more loose edges that don't fit. There are more cases where these roof tops just don't fit. This makes it all the more special that it does work for n=7. 
+        <p>Obviously it doesn't work for the enneagon otherwise Mason Green would already have found it. Not surprisingly for the enneagon it just doesn't work. This is how a <button onclick="player.show('off/rt_9_2__9_1-o.off', 'failed case for n=9', {'has_concave_faces': true})">failed case for n=9</button> can look like. Note that I only show one side of the roof. In the case of n=7 they connect edge-to-edge to the next ones. If you do add the other side here, then you will end up with even more loose edges that don't fit. There are more cases where these roof tops just don't fit. This makes it all the more special that it does work for n=7. 
         </p>
-        <p>When it does work out some surprising polyhedra can be found. My friend Don Romano quickly build one that uses pentragrams as roof top sides as shown in the image below. It is a model of this one: <button onclick="player.show('off/cupola_3_1__5_2_0.off', '3/1 base with 5/2 roofs ', {'has_concave_faces': true})">3/1 base with 5/2 roofs </button>.
+        <p>When it does work out some surprising polyhedra can be found. My friend Don Romano quickly build one that uses pentragrams as the roof top sides as shown in the image below. It is a model of this one: <button onclick="player.show('off/rt_3_1__5_2-s.off', '{3/1} base with {5/2} roofs ', {'has_concave_faces': true})">{3/1} base with {5/2} roofs </button>.
         </p>
         <img src="pics/5_2__3_1.jpg" hspace=10 align="top"/>
+        <p>The interesting effect here is that one triangle side of the roof top ends being parallel to the base polygon and all three coincide. I.e. this is an octahedron consisting of three pentagrams and 5 equilateral triangles.
+        </p>
       </div>
       <div id="definition">
-        <p>TODO
+        <h4>Initial Setup</h4>
+        <p>These roof top polyhedra have an axial symmetry and the sides consist of regular {m/q} polygons and equilaterial triangles. Two of these {m/q} polygons and two triangles form a roof top as follows. 
         </p>
+        <p>Take a pair of {m/q} polygons let them meet in one edge. Let's define that vertex number 1 of both sides coincide with each other and vertex number n of both sides as well. The dihedral angle between these two polygons is such that the distance between vertex number 2 of both polygons is one edge length and therefore one can fit exactly an equilateral triangle at vertex no. 1 and vertex number 2, and these four polygons form a roof top. For example consider the <button onclick="player.show('off/roof_top_4_1.off', 'square roof top', {'has_concave_faces': true})">square roof top</button> and the <button onclick="player.show('off/roof_top_5_2.off', 'pentagrammic roof top', {'has_concave_faces': true})">pentagrammic roof top</button>. Note that for m=3 the roof top will be a tetrahedron; therefore it makes sense to require m > 3.
+        </p>
+        <p>The side of a roof top from the {m/q} polygon can be attached to a regular base polygon {n/p}. Let's assume that it is the triangle edge that connects vertex number 2 from both of the {m/q} polygons. Also assume that vertex number 2 of side number 1 is attached to vertex number 1 of the base polygon and vertex number 2 of the side number 2 is connected to vertex number 2 of the base polygon. 
+        </p>
+        <p>The dihedral angle between the base polygon and the triangle is such that the distance between vertex 3 of side 2 and vertex 3 of the base polygon is exactly one edge length. 
+        </p>
+        <p>This means that the following three vertices are exactly one edge distance from each other:
+        </p>
+        <ul>
+          <li>Vertex number 2 from the base polygon, which is the same as vertex number 2 from side number 2.</li>
+          <li>Vertex number 3 from the base polygon.</li>
+          <li>Vertex number 3 from side number 2.</li>
+        </ul>
+        <p>This means these form an equilateral triangle, but it isn't added to the object yet. This is discussed further somewhere else. This <button onclick="player.show('off/roof_top_4_1_to_5_1.off', 'square roof top attached to a pentagon', {'has_concave_faces': true})">square roof top attached to a pentagon</button> shows an example of the right angle. For clarity reasons this example also shows the extra triangle that is not supposed to be added in turquoise.
+        </p>
+        <p>In general there are two different fold angles that lead to extra triangles that are equilateral. They can either be on the same side of the base as the roof top triangle that is attached to the base, or at the opposite side. These will be indicated by 's' for same side and 'o' for opposite side. In the example above they are on the same side.
+        </p>
+        <p>The next step is to copy the roof top to all the other edges by rotating them around the symmetry axis of the base polygon by steps of 1/n<sup>th</sup> turns. 
+        </p>
+        <h4>The Finishing Touch</h4>
+        <p>The method described above generally doesn't lead to a polyhedron, but for Mason Green's supersemicupola something remarkable happens. When rotating one side of the roof top is mapped on the other side of the roof top. Clearly this wouldn't happen for the <button onclick="player.show('off/roof_top_4_1_to_5_1.off', 'square roof top attached to a pentagon', {'has_concave_faces': true})">square roof top attached to a pentagon</button>. One can see that both triangles have different dihedral angles with the base. If however you start with an regular heptagon roof top and attach it to {7/2} the small supersemicupola is obtained. Note that only need one side of the roof top when you rotate the roof tops around the symmetry axis. The same happens for a {7/3} base with {7/2} roof tops, which generate the great supersemicupola.
+        </p>
+        <p>For most other case we are left with an object that has loose edges and it still needs to be closed. The following options exists to make a polyhedron out of the shape that is obtained when the roof tops are copied by rotating around the n-fold axis of the base.
+        </p>
+        <p>In some case to turn the shape into a polyhedron one {m/q} polygon of the roof top needs to be removed. As stated this is what happens for the <button onclick="player.show('off/rt_7_2__7_1-s.off', 'small Supersemicupola', {'has_concave_faces': true})">small Supersemicupola</button>. Sometimes even the triangles are mapped onto each other, e.g. for the <button onclick="player.show('off/rt_3_1__5_2-s.off', '{3/1} base with {5/2} roofs ', {'has_concave_faces': true})">{3/1} base with {5/2} roofs </button>, where all triangles that don't share an edge with the base polygon coincide.
+        </p>
+        <p>If there are loose edges it might help to add the extra triangles. When this is done it is often best to remove the base polygon to prevent having three faces sharing one edge. This can be done for rectangle roofs on top of an octagram {8/2} both with <button onclick="player.show('off/rt_8_2__4_1-s.off', 'triangles on the same side', {'has_concave_faces': true})">triangles on the same side</button>, and <button onclick="player.show('off/rt_8_2__4_1-o.off', 'triangles on the opposite side', {'has_concave_faces': true})">triangles on the opposite side</button>. On this page the extra triangles are shown in turquoise. 
+        </p>
+        <p>Quite often that isn't enough since the roof triangles that don't share an edge with the orignal base polygon still have loose edges. In the example above they weren't loose because these edges meet each other. When these edges are loose they can sometimes be connected by adding an alternative base. This is only possible when the value 'm' in the {m/q} polygon is even. Examples of this are the rectangle roofs on top of an octagon both with <button onclick="player.show('off/rt_8_1__4_1-s.off', 'triangles on the same side', {'has_concave_faces': true})">triangles on the same side</button>, and <button onclick="player.show('off/rt_8_1__4_1-o.off', 'triangles on the opposite side', {'has_concave_faces': true})">triangles on the opposite side</button>. Note that in both examples the alternative base isn't an octagon but a {8/2} octagram.
+        </p>
+        <p>Above it is mentioned that it is best to remove the original base polygon when the extra triangles are added, otherwise three faces share an edge. It is however possible to just add one extra base polygon that coincides with the original. Now you would have 4 faces sharing one edge, but you could split these and interpret these as seperate edges that happen to end up at the same position. This would be an acceptable way according to <a href="#bgru01">[BGRU1]</a>. 
+        </p>
+        <p>E.g. if you add the extra triangles and remove the original base and add an alternative base for square roof tops on an octagram {8/3} with the extra triangles on the same side, then it looks like <button onclick="player.show('off/rt_8_3__4_1-s.off', 'this', {'has_concave_faces': true})">this</button>. While this looks like a nice model to build it would be impractical because of the acute angles at which faces meet and pairs of squares that are almost coplanar. Instead you could add the extra triangles and add the alternative base as before, but keep the original base and add another copy. In that case the model would look like <button onclick="player.show('off/rt_8_3__4_1-s_alt.off', 'this', {'has_concave_faces': true})">this</button>, Note that in this case there is more to this model than meets the eye. The abstract polyhedron has eight triangles inside and two {8/3} octagrams that coincide, Since this is invisible the OFF file doesn't contain a definition for them.
+        </p>
+        <p>Sometimes other options exist. If for example squares roofs on a triangle, then on the inside the vertices are those of an octahedron. The extra triangles and the alternative base are faces of that octahedron. It is possible to use squares instead as well. This is how the polyhedron looks if you finish the shape in <button onclick="player.show('off/rt_3_1__4_1-s.off', 'the standard way', {'has_concave_faces': true})">the standard way</button>, as described above and this is how it looks <button onclick="player.show('off/rt_3_1__4_1-s_alt.off', 'the alternative way', {'has_concave_faces': true})">the alternative way</button>, by adding purple-blue squares instead of triangles. Note that the original base is removed, and this time no alternative base is needed.
+        </p>
+        <p>To summarise the ways to finish the shape can be recognised: 
+        </p>
+        <ul>
+          <li>Only use one side of the roof.</li>
+          <li>Only use one side of the roof and remove triangles.</li>
+          <li>Add extra triangles and remove the base polygon.</li>
+          <li>Add extra triangles and add extra base polygon.</li>
+          <li>Add extra triangles, remove the base polygon and add alternative base polygon.</li>
+          <li>Add extra triangles, add extra base polygon and add alternative base polygon.</li>
+          <li/>
+          <li/>
+        </ul>
       </div>
       <div id="off_files">
         <p>All OFF files that are use on this web page can be found 
           <a href="off">here</a>. However this web site uses a simple OFF file viewer <a href="#mtun02">[MTUN2]</a> that has problems with showing self-intersecting polygons. Therefore the OFF files are adjusted so that the outlines of the polygons are shown. This means that edges will be split. I understand that if you would like to view these in Stella then it will generate an error that edges have an odd amount of faces attached. 
         </p>
-        <p>Besides that to show the models in some interesting angle, The script that generates them uses the X-axis ase the n-fold axis. After that I rotate them 105° around the X-axis first, then -20° around the Y-axis. Here I follow the convention that the X-axis points towards the left, the Y-axis points upwards, and the Z-axis points towards the viewer.
+        <p>Besides that to show the models in some interesting angle, The script that generates them uses the X-axis as the n-fold axis. After that I rotate them 105° around the X-axis first, then -20° around the Y-axis. Here I follow the convention that the X-axis points towards the left, the Y-axis points upwards, and the Z-axis points towards the viewer. This means that the polyhedra have some odd orientation.
         </p>
       </div>
       <div id="thanks">
@@ -72,6 +123,11 @@
       </div>
       <h2><a id="references">References</a></h2>
       <ul>
+        <li>
+          <b>[BGRU1]
+          </b>:
+          <a id="bgru01">Are Your Polyhedra the Same as My Polyhedra? Branko Grünbaum; Discrete and Computational Geometry, Springer, New York 2003, pp. 461 – 488
+          </a></li>
         <li>
           <b>[MCNE1]
           </b>:
@@ -122,7 +178,7 @@
         <a href="../">All Polyhedra Pages</a></li>
     </ul>
     <h2><a id="lastUpdated">Last Updated</a></h2>
-    <p>2025-10-04, 14:52 CET
+    <p>2025-10-08, 13:31 CET
     </p>
   </body>
 </html>
