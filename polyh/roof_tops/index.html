@@ -11,7 +11,7 @@
     <div id="model"> </div>
     <script>
       var player = new ModelPlay(document, "model");
-      const array = ['about', 'definition', '4_1', 'off_files', 'thanks'];
+      const array = ['about', 'definition', '4_1', '5_1', 'off_files', 'thanks'];
       function on_select() {
           array.forEach(
               function (item) {
@@ -39,6 +39,7 @@
           <option value="about">Motivation for Research</option>
           <option value="definition">How these Roof Top Polyhedra Are Built up</option>
           <option value="4_1">Polyhedra with Square Roofs</option>
+          <option value="5_1">Polyhedra with Pentagon Roofs</option>
           <option value="off_files">The OFF Files</option>
           <option value="thanks">Acknowledgements</option>
         </select>
@@ -471,6 +472,78 @@
           </tr>
         </table>
       </div>
+      <div id="5_1">
+        <p>The table below summarises some polyhedra that were found withpentagons roof tops. The buttons in the left column will show a 3D model on this page, the buttons in the right-most column will copy a link to you clip board. This link will open the model in the OFF file viewer att this site.
+        </p>
+        <p>The addition 'same side' means that the extra triangles are on the same side of the original base as the roof triangles that are attached to the base polygon. The post-fix '- opposite' means they are on the opposite side.
+        </p>
+        <table>
+          <tr class="header">
+            <td class="header">Base Polygon
+            </td>
+            <td class="header">Steps to Turn into Polyhedron
+            </td>
+            <td class="header">Link to Model
+            </td>
+          </tr>
+          <tr class="r">
+            <td><button onclick="player.show('off/rt_3_1__5_1-s.off', 'triangle - same side', {'has_concave_faces': true})">triangle - same side</button>
+            </td>
+            <td>
+              <ul>
+                <li>Delete one roof side</li>
+                <li>Delete triangles</li>
+              </ul>
+            </td>
+            <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_3_1__5_1-s.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
+            </td>
+          </tr>
+          <tr class="r">
+            <td><button onclick="player.show('off/rt_5_1__5_1-o.off', 'pentagon - opposite side', {'has_concave_faces': true})">pentagon - opposite side</button>
+            </td>
+            <td>
+              <ul>
+                <li>Delete one roof side</li>
+              </ul>
+              <p>
+                <b>Note: </b>The shared edges between the triangles should be seen as separate from the shared edges between the pentagons that coincide. It makes more sense to use the alternative in then next row.
+              </p>
+            </td>
+            <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_5_1__5_1-o.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
+            </td>
+          </tr>
+          <tr class="r">
+            <td><button onclick="player.show('off/rt_5_1__5_1-o_alt.off', 'pentagon - opposite side', {'has_concave_faces': true})">pentagon - opposite side</button>
+            </td>
+            <td>
+              <ul>
+                <li>Delete one roof side</li>
+                <li>Delete triangles</li>
+              </ul>
+              <p>
+                <b>Note: </b>Technically not a roof top anymore. Mentioned on <a href="#mcnei01">[MCNE1]</a> as a 553-acrohedron.
+              </p>
+            </td>
+            <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_5_1__5_1-o_alt.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
+            </td>
+          </tr>
+          <tr class="r">
+            <td><button onclick="player.show('off/rt_6_2__5_1-s.off', '{6/2} hexagram - same side', {'has_concave_faces': true})">{6/2} hexagram - same side</button>
+            </td>
+            <td>
+              <ul>
+                <li>Delete one roof side</li>
+                <li>Delete triangles</li>
+              </ul>
+              <p>
+                <b>Note: </b>Compound of two with triangle base.
+              </p>
+            </td>
+            <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_6_2__5_1-s.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
+            </td>
+          </tr>
+        </table>
+      </div>
       <div id="off_files">
         <p>All OFF files that are use on this web page can be found 
           <a href="off">here</a>. However this web site uses a simple OFF file viewer <a href="#mtun02">[MTUN2]</a> that has problems with showing self-intersecting polygons. Therefore the OFF files are adjusted so that the outlines of the polygons are shown. This means that edges will be split. I understand that if you would like to view these in Stella then it will generate an error that edges have an odd amount of faces attached. 
@@ -539,7 +612,7 @@
         <a href="../">All Polyhedra Pages</a></li>
     </ul>
     <h2><a id="lastUpdated">Last Updated</a></h2>
-    <p>2025-10-09, 21:50 CET
+    <p>2025-10-11, 22:26 CET
     </p>
   </body>
 </html>
