@@ -118,6 +118,8 @@
         </p>
         <p>The addition 'same side' means that the extra triangles are on the same side of the original base as the roof triangles that are attached to the base polygon. The post-fix '- opposite' means they are on the opposite side.
         </p>
+        <p>Similarly the term 'base triangles' refers to the roof top triangles that are attached to the base, while 'opposite triangles' refers to the other roof top triangles. Remove repeated triangles means that triangles that some triangles end up at the same location and that one should delete all but one.
+        </p>
         <table>
           <tr class="header">
             <td class="header_fc">Base Polygon
@@ -479,6 +481,8 @@
         </p>
         <p>The addition 'same side' means that the extra triangles are on the same side of the original base as the roof triangles that are attached to the base polygon. The post-fix '- opposite' means they are on the opposite side.
         </p>
+        <p>Similarly the term 'base triangles' refers to the roof top triangles that are attached to the base, while 'opposite triangles' refers to the other roof top triangles. Remove repeated triangles means that triangles that some triangles end up at the same location and that one should delete all but one.
+        </p>
         <table>
           <tr class="header">
             <td class="header_fc">Base Polygon
@@ -523,7 +527,8 @@
             <td>
               <ul>
                 <li>Delete one roof side</li>
-                <li>Delete triangles</li>
+                <li>Delete all base triangles</li>
+                <li>Remove base</li>
               </ul>
               <p>
                 <b>Note: </b>Technically not a roof top anymore. Mentioned by <a href="#mcnei01">[MCNE1]</a> as a 553-acrohedron.
@@ -572,7 +577,7 @@
                 <li>Add alternative base</li>
               </ul>
               <p>
-                <b>Note: </b>The opposite triangles end up completely inside. The alternative base falls into the same plane as two extra faces. These faces look like pentagrams, but they are actually concave decagons, otherwise there will be loose edges. It makes more sense to remove the opposite triangles and the extra base. This option is added separately in the next row, but on the outside everything looks the same.
+                <b>Note: </b>The opposite triangles end up completely inside. The alternative base falls into the same plane as two extra faces. These faces look like pentagrams, but they are actually concave decagons, otherwise there will be loose edges. It means that they aren't really regular polygons anymore. It makes more sense to remove the opposite triangles and the extra base. This option is added separately in the next row, but on the outside everything looks the same.
               </p>
             </td>
             <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_10_1__5_1-o.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
@@ -584,18 +589,18 @@
             <td>
               <ul>
                 <li>Delete one roof side</li>
-                <li>Delete triangles</li>
+                <li>Delete opposite triangles</li>
                 <li>Add extra triangles</li>
               </ul>
               <p>
-                <b>Note: </b>Technically not a roof top anymore. The extra faces aren't two pentagrams they are actually concave decagons. 
+                <b>Note: </b>Technically not a roof top polyhedron anymore. The extra faces aren't two pentagrams they are actually concave decagons.It means that they aren't really regular polygons anymore.
               </p>
             </td>
             <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_10_1__5_1-o_alt.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
             </td>
           </tr>
           <tr class="r">
-            <td class="lastSubRow_fc"><button onclick="player.show('off/rt_10_2__5_1-s.off', '{10/2} decagram - same side', {'has_concave_faces': true})">{10/2} decagram - same side</button>
+            <td class="lastSubRow_fc"><button onclick="player.show('off/rt_10_2__5_1-o.off', '{10/2} decagram - opposite side', {'has_concave_faces': true})">{10/2} decagram - opposite side</button>
             </td>
             <td>
               <ul>
@@ -605,22 +610,23 @@
                 <b>Note: </b>Compound of two {5/1} roofs on {5/1} base. The same remark holds here, it make sense to remove the triangles and the base as shown in the next row 
               </p>
             </td>
-            <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_10_2__5_1-s.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
+            <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_10_2__5_1-o.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
             </td>
           </tr>
           <tr class="r">
-            <td class="lastSubRow_fc"><button onclick="player.show('off/rt_10_2__5_1-s_alt.off', '{10/2} decagram - same side', {'has_concave_faces': true})">{10/2} decagram - same side</button>
+            <td class="lastSubRow_fc"><button onclick="player.show('off/rt_10_2__5_1-o_alt.off', '{10/2} decagram - opposite side', {'has_concave_faces': true})">{10/2} decagram - opposite side</button>
             </td>
             <td>
               <ul>
                 <li>Delete one roof side</li>
-                <li>Delete triangles</li>
+                <li>Delete all base triangles</li>
+                <li>Remove base</li>
               </ul>
               <p>
-                <b>Note: </b>Technically not a roof top anymore. Compound of the two 553-acrohedron as mentioned by <a href="#mcnei01">[MCNE1]</a>.
+                <b>Note: </b>Technically not a roof top polyhedron anymore. Compound of the two 553-acrohedron as mentioned by <a href="#mcnei01">[MCNE1]</a>.
               </p>
             </td>
-            <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_10_2__5_1-s_alt.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
+            <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_10_2__5_1-o_alt.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
             </td>
           </tr>
           <tr class="r">
@@ -644,6 +650,8 @@
         <p>The table below summarises some polyhedra that were found with{5/2} pentagrams roof tops up to dodecagon / dodecagram base. The buttons in the left column will show a 3D model on this page, the buttons in the right-most column will copy a link to you clip board. This link will open the model in the OFF file viewer att this site.
         </p>
         <p>The addition 'same side' means that the extra triangles are on the same side of the original base as the roof triangles that are attached to the base polygon. The post-fix '- opposite' means they are on the opposite side.
+        </p>
+        <p>Similarly the term 'base triangles' refers to the roof top triangles that are attached to the base, while 'opposite triangles' refers to the other roof top triangles. Remove repeated triangles means that triangles that some triangles end up at the same location and that one should delete all but one.
         </p>
         <table>
           <tr class="header">
@@ -675,11 +683,11 @@
             <td>
               <ul>
                 <li>Delete one roof side</li>
-                <li>Delete triangles</li>
+                <li>Delete all base triangles</li>
                 <li>Remove base</li>
               </ul>
               <p>
-                <b>Note: </b>Technically not a roof top anymore. Mentioned in <a href="#rkli01">[RKLI1]</a>
+                <b>Note: </b>Technically not a roof top polyhedron anymore. Mentioned in <a href="#rkli01">[RKLI1]</a>
               </p>
             </td>
             <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_5_2__5_2-s.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
@@ -694,7 +702,7 @@
                 <li>Delete repeated triangles</li>
               </ul>
               <p>
-                <b>Note: </b>Compound of two roof tops with pentagram sides on a triangle base.
+                <b>Note: </b>Compound of two roof top polyhedra with pentagram sides on a triangle base.
               </p>
             </td>
             <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_6_2__5_2-s.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
@@ -709,7 +717,7 @@
                 <li>Delete repeated triangles</li>
               </ul>
               <p>
-                <b>Note: </b>Compound of three roof tops with pentagram sides on a triangle base.
+                <b>Note: </b>Compound of three roof top polyhedra with pentagram sides on a triangle base.
               </p>
             </td>
             <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_9_3__5_2-s.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
@@ -743,7 +751,7 @@
                 <li>Add (self-)intersecting decagrams</li>
               </ul>
               <p>
-                <b>Note: </b>Technically not a roof top anymore. The two faces that look like pentagrams are actually (self-)intersecting decagrams. They must be to make sure faces meet edge-to-edge.
+                <b>Note: </b>Technically not a roof top polyhedron anymore. The two faces that look like pentagrams are actually (self-)intersecting decagrams. They must be to make sure faces meet edge-to-edge.
               </p>
             </td>
             <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_10_3__5_2-s_alt.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
@@ -755,11 +763,11 @@
             <td>
               <ul>
                 <li>Delete one roof side</li>
-                <li>Delete triangles</li>
+                <li>Delete all base triangles</li>
                 <li>Remove base</li>
               </ul>
               <p>
-                <b>Note: </b>Technically not a roof top anymore. This is a compound of two polyhedra based on pentagram roof tops on a pentagram base
+                <b>Note: </b>Technically not a roof top polyhedron anymore. This is a compound of two polyhedra based on pentagram roof top polyhedra on a pentagram base
               </p>
             </td>
             <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_10_4__5_2-s.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
@@ -774,7 +782,7 @@
                 <li>Delete repeated triangles</li>
               </ul>
               <p>
-                <b>Note: </b>Compound of four roof tops with pentagram sides on a triangle base.
+                <b>Note: </b>Compound of four roof top polyhedra with pentagram sides on a triangle base.
               </p>
             </td>
             <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_12_4__5_2-s.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
@@ -855,7 +863,7 @@
         <a href="../">All Polyhedra Pages</a></li>
     </ul>
     <h2><a id="lastUpdated">Last Updated</a></h2>
-    <p>2025-10-15, 08:24 CET
+    <p>2025-10-16, 19:16 CET
     </p>
   </body>
 </html>
