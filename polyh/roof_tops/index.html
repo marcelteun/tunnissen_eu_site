@@ -11,7 +11,7 @@
     <div id="model"> </div>
     <script>
       var player = new ModelPlay(document, "model");
-      const array = ['about', 'definition', '4_1', '5_1', '5_2', 'off_files', 'thanks'];
+      const array = ['about', 'definition', '4_1', '5_1', '5_2', '7_1', 'off_files', 'thanks'];
       function on_select() {
           array.forEach(
               function (item) {
@@ -42,6 +42,7 @@
           <option value="4_1">Polyhedra with Square Roofs</option>
           <option value="5_1">Polyhedra with Pentagon Roofs</option>
           <option value="5_2">Polyhedra with Pentagram Roofs</option>
+          <option value="7_1">Polyhedra with Heptagon Roofs</option>
           <option value="off_files">The OFF Files</option>
           <option value="thanks">Acknowledgements</option>
         </select>
@@ -93,9 +94,9 @@
         </p>
         <p>If there are loose edges it might help to add the extra triangles. When this is done it is often best to remove the base polygon to prevent having three faces sharing one edge. This can be done for rectangle roofs on top of an octagram {8/2} both with <button onclick="player.show('off/rt_8_2__4_1-s.off', 'triangles on the same side', {'has_concave_faces': true})">triangles on the same side</button>, and <button onclick="player.show('off/rt_8_2__4_1-o.off', 'triangles on the opposite side', {'has_concave_faces': true})">triangles on the opposite side</button>. On this page the extra triangles are shown in turquoise. 
         </p>
-        <p>Quite often that isn't enough since the roof triangles that don't share an edge with the orignal base polygon still have loose edges. In the example above they weren't loose because these edges meet each other. When these edges are loose they can sometimes be connected by adding an alternative base. This is only possible when the value 'm' in the {m/q} polygon is even. Examples of this are the rectangle roofs on top of an octagon both with <button onclick="player.show('off/rt_8_1__4_1-s.off', 'triangles on the same side', {'has_concave_faces': true})">triangles on the same side</button>, and <button onclick="player.show('off/rt_8_1__4_1-o.off', 'triangles on the opposite side', {'has_concave_faces': true})">triangles on the opposite side</button>. Note that in both examples the alternative base isn't an octagon but a {8/2} octagram.
+        <p>Quite often that isn't enough since the roof triangles that don't share an edge with the original base polygon still have loose edges. In the example above they weren't loose because these edges meet each other. When these edges are loose they can sometimes be connected by adding an alternative base. This is only possible when the value 'm' in the {m/q} polygon is even. Examples of this are the rectangle roofs on top of an octagon both with <button onclick="player.show('off/rt_8_1__4_1-s.off', 'triangles on the same side', {'has_concave_faces': true})">triangles on the same side</button>, and <button onclick="player.show('off/rt_8_1__4_1-o.off', 'triangles on the opposite side', {'has_concave_faces': true})">triangles on the opposite side</button>. Note that in both examples the alternative base isn't an octagon but a {8/2} octagram.
         </p>
-        <p>Above it is mentioned that it is best to remove the original base polygon when the extra triangles are added, otherwise three faces share an edge. It is however possible to just add one extra base polygon that coincides with the original. Now you would have 4 faces sharing one edge, but you could split these and interpret these as seperate edges that happen to end up at the same position. This would be an acceptable way according to <a href="#bgru01">[BGRU1]</a>. 
+        <p>Above it is mentioned that it is best to remove the original base polygon when the extra triangles are added, otherwise three faces share an edge. It is however possible to just add one extra base polygon that coincides with the original. Now you would have 4 faces sharing one edge, but you could split these and interpret these as separate edges that happen to end up at the same position. This would be an acceptable way according to <a href="#bgru01">[BGRU1]</a>. 
         </p>
         <p>E.g. if you add the extra triangles and remove the original base and add an alternative base for square roof tops on an octagram {8/3} with the extra triangles on the same side, then it looks like <button onclick="player.show('off/rt_8_3__4_1-s.off', 'this', {'has_concave_faces': true})">this</button>. While this looks like a nice polyhedron it would be impractical to build a model because of the acute angles at which faces meet and pairs of squares that are almost coplanar. Instead you could add the extra triangles and add the alternative base as before, but keep the original base and add another copy. In that case the model would look like <button onclick="player.show('off/rt_8_3__4_1-s_alt.off', 'this', {'has_concave_faces': true})">this</button>, Note that in this case there is more to this model than meets the eye. The abstract polyhedron has eight triangles inside and two {8/3} octagrams that coincide, Since this is invisible the OFF file doesn't contain a definition for them.
         </p>
@@ -114,11 +115,17 @@
         </ul>
       </div>
       <div id="4_1">
-        <p>The table below summarises some polyhedra that were found withsquares roof tops up to dodecagon / dodecagram base. The buttons in the left column will show a 3D model on this page, the buttons in the right-most column will copy a link to you clip board. This link will open the model in the OFF file viewer att this site.
+        <p>The table below summarises some polyhedra that were found with square roof tops up to dodecagon / dodecagram base. The buttons in the left column will show a 3D model on this page, the buttons in the right-most column will copy a link to you clip board. This link will open the model in the OFF file viewer att this site.
         </p>
         <p>The addition 'same side' means that the extra triangles are on the same side of the original base as the roof triangles that are attached to the base polygon. The post-fix '- opposite' means they are on the opposite side.
         </p>
         <p>Similarly the term 'base triangles' refers to the roof top triangles that are attached to the base, while 'opposite triangles' refers to the other roof top triangles. Remove repeated triangles means that triangles that some triangles end up at the same location and that one should delete all but one.
+        </p>
+        <p>Note that with square roofs it is possible to add an extra square to close the roof. In that case triangular prisms are obtained and the polyhedron will be a compound of prisms instead. 
+        </p>
+        <p>As an example consider this <button onclick="player.show('off/rt_4_1__4_1-o_sq.off', 'square roofs model', {'has_concave_faces': true})">square roofs model</button>. This is really a compound of 4 triangular prisms. One where edges conincide. 
+        </p>
+        <p>The compound does look like an interesting model, but compounds aren't considered here.
         </p>
         <table>
           <tr class="header">
@@ -138,6 +145,9 @@
                 <li>Remove base</li>
                 <li>Add alternative base</li>
               </ul>
+              <p>
+                <b>Note: </b>Basically the same as the one with the extra triangles on the opposite side.
+              </p>
             </td>
             <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_3_1__4_1-s.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
             </td>
@@ -151,6 +161,9 @@
                 <li>Remove base</li>
                 <li>Add alternative base</li>
               </ul>
+              <p>
+                <b>Note: </b>Basically the same as the one with the extra triangles on the same side.
+              </p>
             </td>
             <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_3_1__4_1-o.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
             </td>
@@ -477,7 +490,7 @@
         </table>
       </div>
       <div id="5_1">
-        <p>The table below summarises some polyhedra that were found withpentagons roof tops up to dodecagon / dodecagram base. The buttons in the left column will show a 3D model on this page, the buttons in the right-most column will copy a link to you clip board. This link will open the model in the OFF file viewer att this site.
+        <p>The table below summarises some polyhedra that were found with pentagon roof tops up to dodecagon / dodecagram base. The buttons in the left column will show a 3D model on this page, the buttons in the right-most column will copy a link to you clip board. This link will open the model in the OFF file viewer att this site.
         </p>
         <p>The addition 'same side' means that the extra triangles are on the same side of the original base as the roof triangles that are attached to the base polygon. The post-fix '- opposite' means they are on the opposite side.
         </p>
@@ -647,7 +660,7 @@
         </table>
       </div>
       <div id="5_2">
-        <p>The table below summarises some polyhedra that were found with{5/2} pentagrams roof tops up to dodecagon / dodecagram base. The buttons in the left column will show a 3D model on this page, the buttons in the right-most column will copy a link to you clip board. This link will open the model in the OFF file viewer att this site.
+        <p>The table below summarises some polyhedra that were found with {5/2} pentagram roof tops up to dodecagon / dodecagram base. The buttons in the left column will show a 3D model on this page, the buttons in the right-most column will copy a link to you clip board. This link will open the model in the OFF file viewer att this site.
         </p>
         <p>The addition 'same side' means that the extra triangles are on the same side of the original base as the roof triangles that are attached to the base polygon. The post-fix '- opposite' means they are on the opposite side.
         </p>
@@ -671,7 +684,7 @@
                 <li>Delete repeated triangles</li>
               </ul>
               <p>
-                <b>Note: </b>The roof triangles not attached to the base become parallel to the base.
+                <b>Note: </b>The roof triangles not attached to the base become parallel to the base. This is a faceted great icosahedron; found earlier by Ulrich Mikloweit around 2005.
               </p>
             </td>
             <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_3_1__5_2-s.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
@@ -790,6 +803,52 @@
           </tr>
         </table>
       </div>
+      <div id="7_1">
+        <p>The table below summarises some polyhedra that were found with heptagon roof tops up to dodecagon / dodecagram base. The buttons in the left column will show a 3D model on this page, the buttons in the right-most column will copy a link to you clip board. This link will open the model in the OFF file viewer att this site.
+        </p>
+        <p>The addition 'same side' means that the extra triangles are on the same side of the original base as the roof triangles that are attached to the base polygon. The post-fix '- opposite' means they are on the opposite side.
+        </p>
+        <p>Similarly the term 'base triangles' refers to the roof top triangles that are attached to the base, while 'opposite triangles' refers to the other roof top triangles. Remove repeated triangles means that triangles that some triangles end up at the same location and that one should delete all but one.
+        </p>
+        <table>
+          <tr class="header">
+            <td class="header_fc">Base Polygon
+            </td>
+            <td class="header">Steps to Turn into Polyhedron
+            </td>
+            <td class="header">Link to Model
+            </td>
+          </tr>
+          <tr class="r">
+            <td class="lastSubRow_fc"><button onclick="player.show('off/rt_7_2__7_1-s.off', '{7/2} heptagram - same side', {'has_concave_faces': true})">{7/2} heptagram - same side</button>
+            </td>
+            <td>
+              <ul>
+                <li>Delete one roof side</li>
+              </ul>
+              <p>
+                <b>Note: </b>Mason Green's small supersemicupola.
+              </p>
+            </td>
+            <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_7_2__7_1-s.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
+            </td>
+          </tr>
+          <tr class="r">
+            <td class="lastSubRow_fc"><button onclick="player.show('off/rt_14_4__7_1-s.off', '{14/4} tetradecagram - same side', {'has_concave_faces': true})">{14/4} tetradecagram - same side</button>
+            </td>
+            <td>
+              <ul>
+                <li>Delete one roof side</li>
+              </ul>
+              <p>
+                <b>Note: </b>Compound of two Mason Green's small supersemicupolae.
+              </p>
+            </td>
+            <td><button onclick="copyTextToClipboard('https://www.tunnissen.eu/polyh/local_off.html?off_file=' + relToAbsPath('off/rt_14_4__7_1-s.off') + '&bg_col=0xd3d3d3&stencil=true')">Copy link</button>
+            </td>
+          </tr>
+        </table>
+      </div>
       <div id="off_files">
         <p>All OFF files that are use on this web page can be found 
           <a href="off">here</a>. However this web site uses a simple OFF file viewer <a href="#mtun02">[MTUN2]</a> that has problems with showing self-intersecting polygons. Therefore the OFF files are adjusted so that the outlines of the polygons are shown. This means that edges will be split. I understand that if you would like to view these in Stella then it will generate an error that edges have an odd amount of faces attached. 
@@ -863,7 +922,7 @@
         <a href="../">All Polyhedra Pages</a></li>
     </ul>
     <h2><a id="lastUpdated">Last Updated</a></h2>
-    <p>2025-10-16, 19:16 CET
+    <p>2025-11-07, 16:44 CET
     </p>
   </body>
 </html>
