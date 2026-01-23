@@ -8,13 +8,13 @@
     <script src="/js/interactive_models_1.js"></script>
     <script src="off/tetrahedron_compounds.js"></script>
   </head>
-  <body onload="on_select()">
+  <body onload="on_first_select()">
     <div id="model"> </div>
     <script>
       var player = new ModelPlay(document, "model");
-      const array = ['platonic_spherical', 'axial_spherical', 'platonic_rigid', 'axial_rigid', 'axial_rotational_freedom', 'tetrahedron_rotational_freedom', 'octahedron_rotational_freedom', 'icosahedron_rotational_freedom'];
+      const menu_options = ['platonic_spherical', 'axial_spherical', 'platonic_rigid', 'axial_rigid', 'axial_rotational_freedom', 'tetrahedron_rotational_freedom', 'octahedron_rotational_freedom', 'icosahedron_rotational_freedom'];
       function on_select() {
-          array.forEach(
+          menu_options.forEach(
               function (item) {
                   var obj = document.getElementById(item);
                   if (item === document.getElementById("table_selection").value) {
@@ -24,6 +24,18 @@
                   }
               }
           );
+      }
+      function on_first_select() {
+          var menu_item;
+          var pos = document.URL.indexOf('#');
+          if (pos <= 0) {
+              menu_item = menu_options[0];
+          } else {
+              menu_item = document.URL.substring(pos+1);
+          }
+          var menu = document.getElementById("table_selection");
+          menu.value = menu_item;
+          on_select();
       }
     </script>
     <h1>Compounds of Tetrahedra</h1>
@@ -2110,7 +2122,7 @@
         </li>
       </ul>
       <h2><a id="lastUpdated">Last Updated</a></h2>
-      <p>2025-01-31, 22:55 CET
+      <p>2026-01-23, 08:20 CET
       </p>
     </div>
   </body>
