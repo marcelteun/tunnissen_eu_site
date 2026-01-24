@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>An Alternative Compound of Five Tetrahedra</title>
+
+  <link rel="stylesheet" href="/css/built_models.css">
+  <script src="/js/show-off-bundle.js"></script>
+</head>
+
+<body onload="draw_shape('5_D10D5_D2C2.off', 'model_canvas', {bg_col: [0.59, 0.58, 0.53]});">
+<div id="content">
+<h1>
+  An Alternative Compound of Five Tetrahedra
+</h1>
+<div id="descr">
+
+<!--
+	Compound of Five Tetrahedra
+	Compound polyhedra
+-->
+
+<p>
+<img id="mod_img" src="5_D10D5_D2C2.jpg" alt="picture">
+</p>
+
+<p><b>
+This is a compound of five tetrahedra with a symmetry that has:
+  <ul>
+    <li>one 5-fold rotation axis,</li>
+    <li>five mirror planes sharing the rotation axis,</li>
+    <li>and one mirror plane orthogonal to the rotation axis.</li>
+  </ul>
+Because of the orthogonal mirror planes the symmetry also includes five half-turns,
+and combining the four rotations with the mirror planes gives four rotary inversions.
+This gives a total of 20 symmetries.
+</b></p>
+
+<p><b>
+Each tetrahedron in the compound shares a 2-fold axis and one mirror with the final compound.
+Combining the half-turn with a mirror plane gives a rotary inversion that is shared as well.
+That means a total of four symmetries of a tetrahedron is shared with the final compound.
+Dividing the the total number of symmetries with this number leads to the fact
+that this results in a compound of five tetrahedra.
+</b></p>
+
+<p><b>
+This is a rigid compound, which means you cannot rotate each tetrahedron around
+some axis in such a way that it still shares those symmetries. This is pretty
+obvious, since one tetrahedron shares a mirror plane, which won't be the case
+anymore as soon as you rotate one tetrahedron.
+</b></p>
+
+<p><b>
+I built this model quite big; each tetrahedron has an edge length of 13.5 cm (around 5.3 inches).
+This wasn't just because of the tiny pieces, but also because
+<a href="./30_A5_C2_mu2.html">this compound of thirty cubes</a>
+is also a compound of six of the compound shown above,
+which was also the main reason to build this model in the beginning of 2024.
+</b></p>
+
+<p><b>
+The image below shows both compounds next to eachother, where
+the compound on the left has the same orientation as the black subcompound of the
+model on the right.
+<img id="mod_img" src="30_A5_C2_mu2_with_subcompound.jpg" alt="picture">
+</b></p>
+
+<h2>Links</h2>
+<ul>
+  <li>
+    <a href="./index.html">Thumbnails</a>
+  </li><li>
+    <a href="../compounds/tetrahedra/#axial_rigid">Interactive models of compounds of Tetrahedra.
+    </a>
+  </li><li>
+    <a href="../index.htm">Teun's Polyhedra</a>
+  </li><li>
+    <a href="../../index.htm">Home</a>
+  </li>
+</ul>
+
+<h2><a id="lastUpdated">Last Updated</a></h2>
+<p>2024-04-09
+</p>
+
+</div>
+<div id="model">
+  <p>
+  <canvas id="model_canvas"></canvas>
+</p>
+</div>
+
+</div>
+</body>
+</html>
