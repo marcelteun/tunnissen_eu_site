@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rigid Compound of Twenty Tetrahedra (A)</title>
+
+  <link rel="stylesheet" href="/css/built_models.css">
+  <script src="/js/show-off-bundle.js"></script>
+</head>
+
+<body onload="draw_shape('20A_A5xI_D3C3.off', 'model_canvas', {bg_col: [0.83, 0.84, 0.82]});">
+<div id="content">
+<h1>
+  Compound of Twenty Tetrahedra (A)
+</h1>
+<div id="descr">
+
+<!--
+	Compound of Twenty Tetrahedra
+	Compound polyhedra
+-->
+
+<p>
+<img id="mod_img" src="20A_A5xI_D3C3.jpg" alt="picture">
+</p>
+
+<p><b>
+This is a rigid compound of twenty tetrahedra that has the same symmetry as an
+icosahedron
+Each tetrahedron shares one 3-fold axis
+and the three reflection planes sharing that axis
+with those in the compound
+The fact that this is a rigid compound means that you cannot rotate one base
+tetrahedron (called the descriptor) around an axis and then get another
+compound with the same amount of tetrahedra after applying the symmetries.
+This is obvious, since as soon as you rotate one tetrahedron,
+at least two of the mirror planes aren't shared with the final symmetry anymore.
+Usually this means that there is only one compound with these properties,
+however in this case another rigid compound of twenty tetrahedra exists
+with the same properties.
+These variants are indicated by an 'A' and 'B', of which this one is the 'A' variant.
+These compounds are defined in an unpublished book titled
+"Compound Lines of Polyhedra" by Hugo Verheyen.
+</b></p>
+
+<p><b>
+I built both variants and both have the challenge that there are tiny pieces involved.
+Both models has are of the same size
+and their diameter is around 28 cm, which is around 11 inches.
+I don't know how many hours I put into building this model, but I started building this model in September 2025 and I finished in January 2026.
+</b></p>
+
+<p><b>
+To understand why two variants exist despite the fact that there is no rotational freedon,
+consider the image below where both variants are shown next to eachother.
+For both models the camera looks straight into a 3-fold symmetry axis.
+For the left one this axis is shared with the 3-fold axis of a bordeaux-red tetrahedron and
+on the right side the same holds for a pink tetrahedron.
+For both of these there is an edge that points from the middle to the left side.
+For the left model the edge points towards a 5-fold axis, while for the right model it points towards a 2-fold axis and the 5-fold axis is located on the right side instead.
+This way one can recognise that two positions exist where the three mirror planes sharing the 3-fold axis are shared with the final symmetry.
+</b></p>
+
+<p>
+<img id="mod_img" src="20_A5xI_D3C3.jpg" alt="picture">
+</p>
+
+<h2>Links</h2>
+<ul>
+  <li>
+    <a href="./index.html">Thumbnails</a>
+  </li><li>
+    <a href="../compounds/tetrahedra/#platonic_rigid">Interactive models of compounds of Tetrahedra.
+    </a>
+  </li><li>
+    <a href="../index.htm">My Polyhedra Page</a>
+  </li><li>
+    <a href="../../index.htm">Home</a>
+  </li>
+</ul>
+
+<h2><a id="lastUpdated">Last Updated</a></h2>
+<p>2026-01-25
+</p>
+
+</div>
+<div id="model">
+  <p>
+  <canvas id="model_canvas"></canvas>
+</p>
+</div>
+
+</div>
+</body>
+</html>

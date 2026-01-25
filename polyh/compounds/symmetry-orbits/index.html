@@ -7,13 +7,13 @@
     <script src="/js/show-off-bundle.js"></script>
     <script src="/js/interactive_models_1.js"></script>
   </head>
-  <body onload="on_select()">
+  <body onload="on_first_select()">
     <div id="model"> </div>
     <script>
       var player = new ModelPlay(document, "model");
-      const array = ['about', 'book_index', 'errata', 'space_n_body', 'conjunctive_vs_disjunctive'];
+      const menu_options = ['about', 'book_index', 'errata', 'space_n_body', 'conjunctive_vs_disjunctive'];
       function on_select() {
-          array.forEach(
+          menu_options.forEach(
               function (item) {
                   var obj = document.getElementById(item);
                   if (item === document.getElementById("table_selection").value) {
@@ -23,6 +23,18 @@
                   }
               }
           );
+      }
+      function on_first_select() {
+          var menu_item;
+          var pos = document.URL.indexOf('#');
+          if (pos <= 0) {
+              menu_item = menu_options[0];
+          } else {
+              menu_item = document.URL.substring(pos+1);
+          }
+          var menu = document.getElementById("table_selection");
+          menu.value = menu_item;
+          on_select();
       }
     </script>
     <h1>Notes on Verheyen's Symmetry Orbits</h1>
@@ -490,7 +502,7 @@
         </li>
       </ul>
       <h2><a id="lastUpdated">Last Updated</a></h2>
-      <p>2025-08-05, 09:44 CET
+      <p>2026-01-25, 13:33 CET
       </p>
     </div>
   </body>
