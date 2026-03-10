@@ -11,7 +11,7 @@
     <div id="model"> </div>
     <script>
       var player = new ModelPlay(document, "model");
-      const array = ['about', 'tca'];
+      const array = ['background', 'about', 'ack', 'tca'];
       function on_select() {
           array.forEach(
               function (item) {
@@ -33,24 +33,40 @@
       <p><b>Note</b>: for optimal experience Javascript should be enabled.
       </p>
       <h2><a id="introduction">Introduction</a></h2>
-      <p>In Januari 2026 Jim McNeill sent me an email pointing out the self augmentedheptagonal antiprism that is on his website <a href="#mcnei01">[MCNE1]</a>I noticed the ring that lacked triangles was a bit wider than expected, which I thought was interesting and lead me to further investigate. Eventually it lead to a series of polyhedra that I refer to as tri-composites of antiprisms.
+      <p>In Januari 2026 Jim McNeill sent me an email pointing out the self augmented heptagonal antiprism that is on his website <a href="#mcnei01">[MCNE1]</a>I noticed the ring that lacked triangles was a bit wider than expected, which I thought was interesting and lead me to further investigate. Eventually it lead to a series of polyhedra that I refer to as tri-composites of antiprisms, or TCA in short. 
       </p>
       <div>
         <select onchange="on_select()" id="table_selection">
+          <option value="background">Background</option>
           <option value="about">Composite Construction</option>
+          <option value="ack">Acknowledgement</option>
           <option value="tca">List of Tri-Composite Antiprisms (for n>3)</option>
         </select>
       </div>
+      <div id="background">
+        <p>Since 2006 I have had an interest for polyhedra with heptagons. My fascination had to do with the fact that of the regular n-gons the heptagon is the first gap that appears for polyhedra that don't have an n-fold symmetry axis. There are, of course, some obvious examples where e.g. heptagonal prisms are used to augment polyhedra with with Platonic symmetries, e.g. the cube. This feels a bit like a cheat though. Regular heptagons don't appear in the Johnson solids either.
+        </p>
+        <p>At the 
+          <a target="new" href="https://archive.bridgesmathart.org/2006/">Bridges conference</a> in London in 2006 I met Scott Vorthmann and when I talked to Scott about this he mentioned that in higher dimensions there are polytopes belonging to Coxeter's E8 symmetry group, e.g. the 4<sub>21</sub> of the <a target="new" href="https://www.vzome.com/geometry/2005/09/18/gossets-polytopes.html">Gosset's polytopes</a>, and that the E8 Coxeter group has elements of order seven. He mentioned that perhaps by some smart projection one could find something with heptagons. That motivated me not to give up, though I am not very familiar with polytopes and higher dimensions. It seems that Scott and I share an interest, e.g. check out his <a target="new" href="https://vorth.github.io/ipython/">visualisation of heptagons math</a>.
+        </p>
+        <img src="/polyh/heptagons/pics/hepta.GD.A5xI.jpg" width="240" hspace=10 align="left"/>
+        <p>My ultimate goal was to find some polyhedron with a Platonic symmetry that involved regular heptagons. I felt that it was best to start by loosing up some requirements to be able to find at least something. Then I could search that space in the hope to find solutions where the property became exactly how I wanted. I decided to start with equilateral heptagons and see whether some of the solutions would become regular. I didn't find any such solution, though I did find the 'near' miss shown on the left.
+        </p>
+        <p>Later I tried to let go of the flatness requirement instead: I searched for any polyhedra consisting of regular heptagons that were folded over one more more diagonals. I found out that this search space was enormous and I restricted it by requiring that only regular folded heptagons were used. Obviously none of those consisted of flat regular heptagons. Note that my search was done numerically and one would still need to proof that the solutions are really regular folded heptagons. For some I could proof indirectly that solutions exist for regular heptagons. Some models of these can be found <a href="https://tunnissen.eu/polyh/reg-fld-hepts/index.html">here</a>.
+        </p>
+        <p>As stated I was concentrating on Platonic symmetries. I thought it would be obvious that heptagons would appear in polyhedra with 7-fold symmetries, but I was completely taken by surprise when I saw the arrangements of heptagons and heptagrams in Mason Green's <a target="new" href="https://polytope.miraheze.org/wiki/Small_supersemicupola">small supersemicupola</a> and <a target="new" href="https://polytope.miraheze.org/wiki/Great_supersemicupola">great supersemicupola</a>. I think those are really cool objects. 
+        </p>
+      </div>
       <div id="about">
-        <p>From Jim McNeill's self augmented heptagonal antiprism I noticed that three antiprisms share a total of six triangles. This is actually a general propery of any antiprism. For the compound of any three antiprisms based on {m/n}-gons, with a 3-fold symmetry axis through the centre of a triangle 'A' and parallel to the {m/n}-gons, the triangles sharing an edge with triangle 'A' are completely shared with one of the other antiprisms. These triangles, indicated as type 'B', occur in pairs. 
+        <p>From Jim McNeill's self augmented heptagonal antiprism I noticed that three antiprisms share a total of six triangles. This is actually a general property of any antiprism. For the compound of any three antiprisms based on {m/n}-gons, with a 3-fold symmetry axis through the centre of a triangle 'A' and parallel to the {m/n}-gons, the triangles sharing an edge with triangle 'A' are completely shared with one of the other antiprisms. These triangles, indicated as type 'B', occur in pairs. 
         </p>
         <p>Consider for example m=7 and n=1 then you get a <button onclick="player.show('off/heptagonal_antiprism_three_compound.off', 'Compound of Three Heptagon Antiprisms', {'has_concave_faces': true})">Compound of Three Heptagon Antiprisms</button>.In this compound the yellow triangles, which are of type 'A', are three triangles from different antiprisms and the red triangles, which are of type 'B' are covered by two triangles. 
         </p>
-        <p>If for triangle 'A' there is an opposite triangle parallel to triangle 'A', like for the given example above. then there are six pairs of these triangles of type 'B', and the symmetry of the compound belongs to the algebraic group <b><i>D<sub>3</sub>xI</i></b>. This means there is a 3-fold symmetry axis, three mirror planes sharing the 3-fold axis, three half-turns for which the axes ly in an equator plane, a central inversion, and two rotatary reflections. This can easily be verified in the example above for the heptagons. Since for n = 3 an octahedron is obtained, let's assume that n > 3. 
+        <p>If for triangle 'A' there is an opposite triangle parallel to triangle 'A', like for the given example above. then there are six pairs of these triangles of type 'B', and the symmetry of the compound belongs to the algebraic group <b><i>D<sub>3</sub>xI</i></b>. This means there is a 3-fold symmetry axis, three mirror planes sharing the 3-fold axis, three half-turns for which the axes ly in an equator plane, a central inversion, and two rotary reflections. This can easily be verified in the example above for the heptagons. Since for n = 3 an octahedron is obtained, let's assume that n > 3. 
         </p>
         <p>If there is only one triangle of type 'A', i.e. there is no triangle parallel to triangle 'A', then there are three pairs of triangles of type 'B'. See for example the case for m=6 and n=1: <button onclick="player.show('off/hexagonal_antiprism_three_compound.off', 'Compound of Three Hexagon Antiprisms', {'has_concave_faces': true})">Compound of Three Hexagon Antiprisms</button>. The symmetry of this compound belongs to the algebraic group <b><i>D<sub>3</sub>C<sub>3</sub></i></b>, which is a subgroup of <b><i>D<sub>3</sub>xI</i></b>. and it has the 3-fold axis and the three mirror planes sharing the axis. 
         </p>
-        <p>To understand that the triangles of type 'B' are compeletely shared between the different antiprisms, position one {m/n} antiprism in such a way that you are looking straight into the gravity point or centre of triangle 'A'. Now say that the z-axis passes that centre and that its origin is at the centre of the antiprism. In that case the following can be observed: 
+        <p>To understand that the triangles of type 'B' are completely shared between the different antiprisms, position one {m/n} antiprism in such a way that you are looking straight into the gravity point or centre of triangle 'A'. Now say that the z-axis passes that centre and that its origin is at the centre of the antiprism. In that case the following can be observed: 
         </p>
         <ol>
           <li>The z-axis is orthogonal to triangle 'A'</li>
@@ -69,6 +85,12 @@
           <li>And 3&times;(d-1) {m'/n'} antiprisms.</li>
         </ul>
         <p>For example the <button onclick="player.show('off/tca_8_2_D3xI.off', 'TCA based on {8/2}', {'has_concave_faces': true})">TCA based on {8/2}</button> and the <button onclick="player.show('off/tca_12_3_D3C3.off', 'TCA based on {12/3}', {'has_concave_faces': true})">TCA based on {12/3}</button>, both of which consist of a <button onclick="player.show('off/tca_4_1_D3C3.off', 'TCA based on {4}', {'has_concave_faces': true})">TCA based on {4}</button>with additional square antiprisms, three for the former and six for the latter.
+        </p>
+        <p>As mentioned two different symmetries can be obtained. The prismatic symmetry <b><i>D<sub>3</sub>C<sub>3</sub></i></b> occurs when 'n' is odd and 'm' even or vice versa. The higher symmetry <b><i>D<sub>3</sub>xI</i></b> occurs either when both 'm' and 'n' are odd or when both are even. Note that in the latter case the result is also a compound. 
+        </p>
+      </div>
+      <div id="ack">
+        <p>Thanks to Jim McNeill for sharing his self augmented heptagonal antiprism, which was the direct source of inspiration of this discovery. Jim also gave some feed-back and direction on these pages and he found some of these polyhedra, not knowing I had sent sent OFF files of these already. Thanks to Scott Vorthmann for fruitfull discussions. Thanks to Don Romano, Piotr Pawlikowski and Ulrich Mikloweit for feed-back and inspiration.
         </p>
       </div>
       <div id="tca">
@@ -232,6 +254,11 @@
           </b>:
           <a id="mtun02">Interactive 3D models through JS package <b>show-off</b>, github; Available <a href="https://github.com/marcelteun/show-off" target="new">here<a/>
           </a></li>
+        <li>
+          <b>[VZOME]
+          </b>:
+          <a id="vzome">vZome: virtual Zome tool, Scott Vorthmann; Available <a href="https://www.vzome.com/home/" target="new">here<a/>
+          </a></li>
       </ul>
     </div>
     <h2><a id="links">Local Links</a></h2>
@@ -242,7 +269,7 @@
         <a href="../">All Polyhedra Pages</a></li>
     </ul>
     <h2><a id="lastUpdated">Last Updated</a></h2>
-    <p>2026-03-03, 20:46 CET
+    <p>2026-03-10, 20:41 CET
     </p>
   </body>
 </html>
