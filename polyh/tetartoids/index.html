@@ -193,9 +193,11 @@
             </td>
           </tr>
         </table>
-        <p>Note the (a, b, c) = (1, 1 + ξ, 1 + ξ) is the same as (a, b, c) = (1 - ω, 1, 1) after scaling, and that for (a, b, c) = (1 + ξ, 1 + ξ, 1 + ξ) still holds that a = b = c still and that n = 0. To keep things simple I didn't try using two or three different offsets.
+        <p>Note that in the table above the faces of the tetrahedron are actually covered by three faces.
         </p>
-        <p>Note that in the table above the faces of the tetrahedron are actually coverted by three faces.
+        <p>Also note that (a, b, c) = (1, 1 + ξ, 1 + ξ) is the same as (a, b, c) = (1 - ω, 1, 1) after scaling, and that for (a, b, c) = (1 + ξ, 1 + ξ, 1 + ξ) still holds that a = b = c still and that n = 0. This means that these do not need to be investigated further. 
+        </p>
+        <p>Using two or three different offsets isn't investigated further, even though it might lead to interesting results. E.g. for (a, b, c) = (1, 1 - 1.5ξ, 1 - ξ) or (a, b, c) = (1 + 2ξ, 1 - ξ, 1) with ξ &rarr;&infin; you will get an <button onclick="player.show('off/tetraaugmented_tetrahedron.off', 'equilataral tetraaugmented tetrahedron', {'has_concave_faces': true})">equilataral tetraaugmented tetrahedron</button>. It might come as a surprise that such tiny differences can make such a big impact, but then imagine the function f(x) = 1 / x and the impact of tiny differences when you approach the singular point.
         </p>
         <h3>2. b&middot;c / a&sup2; = 1</h3>
         <p>Without loss of generality and can set a = 1, which will give b&middot;c = 1. 
@@ -798,7 +800,7 @@
         <a href="../">All Polyhedra Pages</a></li>
     </ul>
     <h2><a id="lastUpdated">Last Updated</a></h2>
-    <p>2026-04-12, 14:16 CET
+    <p>2026-04-13, 15:45 CET
     </p>
   </body>
 </html>
