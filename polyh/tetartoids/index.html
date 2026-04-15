@@ -11,7 +11,7 @@
     <div id="model"> </div>
     <script>
       var player = new ModelPlay(document, "model");
-      const array = ['background', 'limit_n', 'limit_d', 'uniform', 'bilateral'];
+      const array = ['background', 'limit_n', 'limit_d', 'uniform', 'bilateral', 'equilateral'];
       function on_select() {
           array.forEach(
               function (item) {
@@ -44,6 +44,7 @@
           <option value="limit_d">When d<sub>1</sub> or d<sub>2</sub> approaches 0</option>
           <option value="uniform">Uniform</option>
           <option value="bilateral">Pyritohedra</option>
+          <option value="equilateral">Equilateral</option>
         </select>
       </div>
       <div id="background">
@@ -193,7 +194,7 @@
             </td>
           </tr>
         </table>
-        <p>Note that in the table above the faces of the tetrahedron are actually covered by three faces.
+        <p>Note that in the table above the faces of the tetrahedron are actually covered by three faces. It is as if this is a dodecahedron that is folded onto itselt in such a way that a tetrahedron appears. The form in the column left of it hints on how it is folded onto inself. 
         </p>
         <p>Also note that (a, b, c) = (1, 1 + ξ, 1 + ξ) is the same as (a, b, c) = (1 - ω, 1, 1) after scaling, and that for (a, b, c) = (1 + ξ, 1 + ξ, 1 + ξ) still holds that a = b = c still and that n = 0. This means that these do not need to be investigated further. 
         </p>
@@ -768,6 +769,71 @@
           </tr>
         </table>
       </div>
+      <div id="equilateral">
+        <p>The table below shows some tetartoids that have equal edge lengths. Incuded are the ones that occur as singularity. For cases where edges get a length of zero it is assumed that this edge must be removed altogether. The value of τ in the table is the golden ratio, i.e. τ = &radic;(V5 + 1) / 2. 
+        </p>
+        <table>
+          <tr class="header">
+            <td class="header_fc">a
+            </td>
+            <td class="header">b
+            </td>
+            <td class="header">c
+            </td>
+            <td class="header">Model
+            </td>
+            <td class="header">Remark
+            </td>
+          </tr>
+          <tr class="r">
+            <td class="lastSubRow_fc">0
+            </td>
+            <td>ξ
+            </td>
+            <td>1
+            </td>
+            <td><button onclick="player.show('off/d0_by_ab_00_0x.off', 'rhombic dodecahedron', {'has_concave_faces': true})">rhombic dodecahedron</button>
+            </td>
+            <td>With ξ &rarr;&infin;. This is a singularity where d<sub>1</sub> = d<sub>2</sub> = 0 due to a = b = 0. 
+            </td>
+          </tr>
+          <tr class="r">
+            <td class="lastSubRow_fc">0
+            </td>
+            <td>+1
+            </td>
+            <td>-τ
+            </td>
+            <td><button onclick="player.show('off/extended_regular_dodecahedron.off', 'extended regular dodecahedron', {'has_concave_faces': true})">extended regular dodecahedron</button>
+            </td>
+            <td/>
+          </tr>
+          <tr class="r">
+            <td class="lastSubRow_fc">1 + 2ξ
+            </td>
+            <td>1 - ξ
+            </td>
+            <td>1
+            </td>
+            <td><button onclick="player.show('off/tetraaugmented_tetrahedron.off', 'tetraaugmented tetrahedron', {'has_concave_faces': true})">tetraaugmented tetrahedron</button>
+            </td>
+            <td>With ξ &rarr;&infin;. This is a singularity where n = 0 due to a = b = c. 
+            </td>
+          </tr>
+          <tr class="r">
+            <td class="lastSubRow_fc">0
+            </td>
+            <td>τ + 1
+            </td>
+            <td>τ
+            </td>
+            <td><button onclick="player.show('off/endododecahedron.off', 'Endododecahedron', {'has_concave_faces': true})">Endododecahedron</button>
+            </td>
+            <td>This is a pyritohedron which has a higher symmetry than normal: A<sub>4</sub>&times;I. 
+            </td>
+          </tr>
+        </table>
+      </div>
       <h2><a id="references">References</a></h2>
       <ul>
         <li>
@@ -800,7 +866,7 @@
         <a href="../">All Polyhedra Pages</a></li>
     </ul>
     <h2><a id="lastUpdated">Last Updated</a></h2>
-    <p>2026-04-13, 15:45 CET
+    <p>2026-04-15, 08:40 CET
     </p>
   </body>
 </html>
