@@ -67,7 +67,9 @@
           <li>d<sub>2</sub> = a&sup2; + a&middot;b + b&sup2; − a&middot;c − 2&middot;b&middot;c</li>
           <li>n&middot;d<sub>1</sub>&middot;d<sub>2</sub> &ne; 0</li>
         </ol>
-        <p>With this page I want to investigate what happens for certain values of 'a', 'b', and 'c'. I think the first requirement is mainly to keep the tetartoids convex. It is definitely possible to have values that don't fulfill the requirement. During this investigation I am not keeping this requirement strictly. Note that for any triplet (a, b, c) the triplet (xa, xb, xc) leads to a congruent tetartoid if x &ne; 0. On this page I will refer to all these polyhedra as tetartoids, although the ones with concave faces are no tetartoids according to the definition above.
+        <p>With this page I want to investigate what happens for certain values of 'a', 'b', and 'c'. I think the first requirement is mainly to keep the tetartoids convex. It is definitely possible to have values that don't fulfill the requirement. During this investigation I am not keeping this requirement strictly. Note that for any triplet (a, b, c) the triplet (xa, xb, xc) leads to a congruent tetartoid if x &ne; 0. On this page I will refer to all these polyhedra as tetartoids, although the ones with concave faces are no tetartoids according to the definition above. 
+        </p>
+        <p>In general tetartoids are isogonal and the pentagons have three different edge lengths. This is easy to understand since two pairs of different sides of pentagons meet in one edge while the fifth side meets its own kind in opposite directions. The pentagon of a generatl tetartoid has five different angles at the vertices. 
         </p>
         <p>For the OFF file models of the tetartoids that are shown here holds that the value of 'a' was scaled to 1 unless a = 0. In that case my script would try scaling the value of 'b' in the same way, and then use 'c' instead if also b = 0. In some tables I might show values that are scaled to get nicer looking numbers.
         </p>
@@ -770,7 +772,7 @@
         </table>
       </div>
       <div id="equilateral">
-        <p>The table below shows some tetartoids that have equal edge lengths. Incuded are the ones that occur as singularity. For cases where edges get a length of zero it is assumed that this edge must be removed altogether. The value of τ in the table is the golden ratio, i.e. τ = &radic;(V5 + 1) / 2. 
+        <p>The table below shows some tetartoids that have equal edge lengths, but that aren't mentioned in the section 'Uniform'. Incuded are the ones that occur as singularity. For cases where edges get a length of zero it is assumed that this edge must be removed altogether. The value of τ in the table is the golden ratio, i.e. τ = &radic;(V5 + 1) / 2. 
         </p>
         <table>
           <tr class="header">
@@ -794,7 +796,7 @@
             </td>
             <td><button onclick="player.show('off/d0_by_ab_00_0x.off', 'rhombic dodecahedron', {'has_concave_faces': true})">rhombic dodecahedron</button>
             </td>
-            <td>With ξ &rarr;&infin;. This is a singularity where d<sub>1</sub> = d<sub>2</sub> = 0 due to a = b = 0. 
+            <td>With ξ &rarr;&infin;. This is a singularity where d<sub>1</sub> = d<sub>2</sub> = 0 due to a = b = 0. This polyhedron has a higher symmetry S<sub>4</sub>&times;I and with regards to this symmetry it is still isohedral. 
             </td>
           </tr>
           <tr class="r">
@@ -806,7 +808,8 @@
             </td>
             <td><button onclick="player.show('off/extended_regular_dodecahedron.off', 'extended regular dodecahedron', {'has_concave_faces': true})">extended regular dodecahedron</button>
             </td>
-            <td/>
+            <td>This polyhedron has a higher symmetry A<sub>4</sub>&times;I and with regards to this symmetry it is still isohedral. 
+            </td>
           </tr>
           <tr class="r">
             <td class="lastSubRow_fc">1 + 2ξ
@@ -817,7 +820,7 @@
             </td>
             <td><button onclick="player.show('off/tetraaugmented_tetrahedron.off', 'tetraaugmented tetrahedron', {'has_concave_faces': true})">tetraaugmented tetrahedron</button>
             </td>
-            <td>With ξ &rarr;&infin;. This is a singularity where n = 0 due to a = b = c. 
+            <td>With ξ &rarr;&infin;. This is a singularity where n = 0 due to a = b = c. This polyhedron has a higher symmetry S<sub>4</sub>A<sub>4</sub> and with regards to this symmetry it is still isohedral. 
             </td>
           </tr>
           <tr class="r">
@@ -829,7 +832,7 @@
             </td>
             <td><button onclick="player.show('off/endododecahedron.off', 'Endododecahedron', {'has_concave_faces': true})">Endododecahedron</button>
             </td>
-            <td>This is a pyritohedron which has a higher symmetry than normal: A<sub>4</sub>&times;I. 
+            <td>This is a pyritohedron which has a higher symmetry than normal: A<sub>4</sub>&times;I and with regards to this symmetry it is still isohedral. 
             </td>
           </tr>
         </table>
@@ -866,7 +869,7 @@
         <a href="../">All Polyhedra Pages</a></li>
     </ul>
     <h2><a id="lastUpdated">Last Updated</a></h2>
-    <p>2026-04-15, 08:40 CET
+    <p>2026-04-16, 09:24 CET
     </p>
   </body>
 </html>
