@@ -11,7 +11,7 @@
     <div id="model"> </div>
     <script>
       var player = new ModelPlay(document, "model");
-      const array = ['background', 'limit_n', 'limit_d', 'uniform', 'bilateral', 'equilateral'];
+      const array = ['background', 'limit_n', 'limit_d', 'uniform', 'bilateral', 'equilateral', 'equiangular'];
       function on_select() {
           array.forEach(
               function (item) {
@@ -45,6 +45,7 @@
           <option value="uniform">Uniform</option>
           <option value="bilateral">Pyritohedra</option>
           <option value="equilateral">Equilateral</option>
+          <option value="equiangular">Almost Equiangular</option>
         </select>
       </div>
       <div id="background">
@@ -227,11 +228,11 @@
             </td>
             <td>4/5
             </td>
-            <td><button onclick="player.show('off/n0_by_abc_1xx-1_0n0.off', 'b < 5/4', {'has_concave_faces': true})">b < 5/4</button>
+            <td><button onclick="player.show('off/n0_by_abc_1xx-1_0n0.off', 'b &lt; 5/4', {'has_concave_faces': true})">b &lt; 5/4</button>
             </td>
             <td><button onclick="player.show('off/n0_by_abc_1xx-1_0x0.off', 'degenerate', {'has_concave_faces': true})">degenerate</button>
             </td>
-            <td><button onclick="player.show('off/n0_by_abc_1xx-1_0p0.off', 'b > 5/4', {'has_concave_faces': true})">b > 5/4</button>
+            <td><button onclick="player.show('off/n0_by_abc_1xx-1_0p0.off', 'b &gt; 5/4', {'has_concave_faces': true})">b &gt; 5/4</button>
             </td>
           </tr>
           <tr class="r">
@@ -241,15 +242,15 @@
             </td>
             <td>5/4
             </td>
-            <td><button onclick="player.show('off/n0_by_abc_1x-1x_0n0.off', 'b < 4/5', {'has_concave_faces': true})">b < 4/5</button>
+            <td><button onclick="player.show('off/n0_by_abc_1x-1x_0n0.off', 'b &lt; 4/5', {'has_concave_faces': true})">b &lt; 4/5</button>
             </td>
             <td><button onclick="player.show('off/n0_by_abc_1x-1x_0x0.off', 'degenerate', {'has_concave_faces': true})">degenerate</button>
             </td>
-            <td><button onclick="player.show('off/n0_by_abc_1x-1x_0p0.off', 'b > 4/5', {'has_concave_faces': true})">b > 4/5</button>
+            <td><button onclick="player.show('off/n0_by_abc_1x-1x_0p0.off', 'b &gt; 4/5', {'has_concave_faces': true})">b &gt; 4/5</button>
             </td>
           </tr>
         </table>
-        <p>Note that the tetartoids in the column with ξ < 0 are similar to the butterfly-winged tetrahedron and the twisted butterfly-winged tetrahedron in the previous table. 
+        <p>Note that the tetartoids in the column with ξ &lt; 0 are similar to the butterfly-winged tetrahedron and the twisted butterfly-winged tetrahedron in the previous table. 
         </p>
         <p>The picture below shows how the shape of one face changes depending on the value of ξ for a (a, b, c) = (1, 5/4 + ξ, 4/5).
         </p>
@@ -637,7 +638,7 @@
             </td>
             <td><button onclick="player.show('off/pyritohedron_slim_pentagons.off', 'slim pentagons', {'has_concave_faces': true})">slim pentagons</button>
             </td>
-            <td>c > (τ + 1){SQ}
+            <td>c &gt; (τ + 1)&sup2;
             </td>
           </tr>
           <tr class="r">
@@ -660,7 +661,7 @@
             </td>
             <td><button onclick="player.show('off/pyritohedron_wide_pentagons.off', 'wide pentagons', {'has_concave_faces': true})">wide pentagons</button>
             </td>
-            <td>τ + 1 < c < (τ + 1)&sup2;
+            <td>τ + 1 &lt; c &lt; (τ + 1)&sup2;
             </td>
           </tr>
           <tr class="r">
@@ -683,7 +684,7 @@
             </td>
             <td><button onclick="player.show('off/pyritohedron_concave_obtuse.off', 'non-convex pentagons with obtuse angles', {'has_concave_faces': true})">non-convex pentagons with obtuse angles</button>
             </td>
-            <td>τ < c < τ + 1
+            <td>τ &lt; c &lt; τ + 1
             </td>
           </tr>
           <tr class="r">
@@ -707,7 +708,7 @@
             </td>
             <td><button onclick="player.show('off/pyritohedron_concave_sharp.off', 'non-convex spiky pentagons', {'has_concave_faces': true})">non-convex spiky pentagons</button>
             </td>
-            <td>(τ + 1) / 2 < c < τ
+            <td>(τ + 1) / 2 &lt; c &lt; τ
             </td>
           </tr>
           <tr class="r">
@@ -731,7 +732,7 @@
             </td>
             <td><button onclick="player.show('off/pyritohedron_pentagrams_short_single_top.off', 'pentagrams with short single top', {'has_concave_faces': true})">pentagrams with short single top</button>
             </td>
-            <td>1 < c < (τ + 1) / 2
+            <td>1 &lt; c &lt; (τ + 1) / 2
             </td>
           </tr>
           <tr class="r">
@@ -754,7 +755,7 @@
             </td>
             <td><button onclick="player.show('off/pyritohedron_pentagrams_long_single_top.off', 'pentagrams with long single top', {'has_concave_faces': true})">pentagrams with long single top</button>
             </td>
-            <td>0 < c < 1
+            <td>0 &lt; c &lt; 1
             </td>
           </tr>
           <tr class="r">
@@ -837,6 +838,36 @@
           </tr>
         </table>
       </div>
+      <div id="equiangular">
+        <p>The table below shows some tetartoids where angles in one face become the same, though the aren't completely equiangular. The value of τ in the table is the golden ratio, i.e. τ = &radic;(V5 + 1) / 2. 
+        </p>
+        <table>
+          <tr class="header">
+            <td class="header_fc">a
+            </td>
+            <td class="header">b
+            </td>
+            <td class="header">c
+            </td>
+            <td class="header">Model
+            </td>
+            <td class="header">Remark
+            </td>
+          </tr>
+          <tr class="r">
+            <td class="lastSubRow_fc">1
+            </td>
+            <td>0
+            </td>
+            <td>τ-1
+            </td>
+            <td><button onclick="player.show('off/twist.off', 'Twisted Polyhedron with Isosceles Triangles', {'has_concave_faces': true})">Twisted Polyhedron with Isosceles Triangles</button>
+            </td>
+            <td>The angles of the isosceles triangles are 36°, 36° and 108°, i.e. they are directly related to the regular pentagon. This isn't surprising when you look at the values of a, b, and c. The pentagons in this tetartoid can be seen completely; i.e. one of the vertices ends up on the long edge and it divides that edge into two parts according to the golden ratio. 
+            </td>
+          </tr>
+        </table>
+      </div>
       <h2><a id="references">References</a></h2>
       <ul>
         <li>
@@ -869,7 +900,7 @@
         <a href="../">All Polyhedra Pages</a></li>
     </ul>
     <h2><a id="lastUpdated">Last Updated</a></h2>
-    <p>2026-04-16, 09:24 CET
+    <p>2026-04-17, 22:19 CET
     </p>
   </body>
 </html>
