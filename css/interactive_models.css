@@ -163,6 +163,14 @@ td.header_fc {
 	border-left: 1px solid #660000;
 	border-right: 1px solid #660000;
 }
+td.header_fc_no_cr {
+	border-bottom: 1px solid #660000;
+	border-top: 1px solid #660000;
+	border-left: 1px solid #660000;
+	border-right: 1px solid #660000;
+	white-space: nowrap;
+}
+
 td.header_r {
 	border-bottom: 1px solid #660000;
 	border-top: 1px solid #660000;
@@ -183,7 +191,13 @@ td.header_descr {
 	border-right: 1px solid #660000;
 	width: 20em;
 }
-
+td.header_no_cr {
+	border-bottom: 1px solid #660000;
+	border-top: 1px solid #660000;
+	border-left: 1px solid #660000;
+	border-right: 1px solid #660000;
+	white-space: nowrap;
+}
 tr.mainRow {
 }
 td.mainRow {
@@ -247,11 +261,21 @@ td.lastSubRow {
 	border-left: 1px none #660000;
 	border-right: 1px solid #660000;
 }
+td.no_cr {
+	white-space: nowrap;
+}
 td.lastSubRow_fc {
 	border-bottom: 1px solid #660000;
 	border-top: 1px none #660000;
 	border-left: 1px solid #660000;
 	border-right: 1px solid #660000;
+}
+td.lastSubRow_fc_no_cr {
+	border-bottom: 1px solid #660000;
+	border-top: 1px none #660000;
+	border-left: 1px solid #660000;
+	border-right: 1px solid #660000;
+	white-space: nowrap;
 }
 td.lastSubRow_r {
 	border-bottom: 1px solid #660000;
