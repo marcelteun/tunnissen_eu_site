@@ -45,7 +45,7 @@
           <option value="equilateral">Equilateral</option>
           <option value="others">Other Interesting Tetartoids</option></select></div>
       <div id="background">
-        <p>A <button onclick="player.show('off/classic_tetartoid.off', 'tetartoid', {'has_concave_faces': true})">tetartoid</button> is a general dodecahedron consisting of pentagons.On 
+        <p>A <button onclick="player.show('off/classic_tetartoid.off', 'tetartoid', {'has_concave_faces': true})">tetartoid</button> is a general dodecahedron consisting of pentagons. On 
           <a target="new" href="https://en.wikipedia.org/wiki/Dodecahedron#Tetartoid">Wikipedia</a> the following definition is used: It uses the input values 'a', 'b' and 'c' and then one face is defined by the vertices: </p>
         <ol>
           <li>(a, b, c)</li>
@@ -60,8 +60,8 @@
           <li>d<sub>1</sub> = a&sup2; − a&middot;b + b&sup2; + a&middot;c − 2&middot;b&middot;c</li>
           <li>d<sub>2</sub> = a&sup2; + a&middot;b + b&sup2; − a&middot;c − 2&middot;b&middot;c</li>
           <li>n&middot;d<sub>1</sub>&middot;d<sub>2</sub> &ne; 0</li></ol>
-        <p>With this page I want to investigate what happens for certain values of 'a', 'b', and 'c'. I think the first requirement is mainly to keep the tetartoids convex. It is definitely possible to have values that don't fulfill the requirement. During this investigation I am not keeping this requirement strictly. Note that for any triplet (a, b, c) the triplet (xa, xb, xc) leads to a congruent tetartoid if x &ne; 0. On this page I will refer to all these polyhedra as tetartoids, although the ones with concave faces are no tetartoids according to the definition above. </p>
-        <p>In general tetartoids are isogonal and the pentagons have three different edge lengths. This is easy to understand since two pairs of different sides of pentagons meet in one edge while the fifth side meets its own kind in opposite directions. The pentagon of a generatl tetartoid has five different angles at the vertices. </p>
+        <p>With this page I want to investigate what happens for certain values of 'a', 'b', and 'c'. I think the first requirement is mainly to keep the tetartoids convex. It is definitely possible to have values that don't fulfil the requirement. During this investigation I am not keeping this requirement strictly. Note that for any triplet (a, b, c) the triplet (xa, xb, xc) leads to a congruent tetartoid if x &ne; 0. On this page I will refer to all these polyhedra as tetartoids, although the ones with concave faces are no tetartoids according to the definition above. </p>
+        <p>In general tetartoids are isogonal and the pentagons have three different edge lengths. This is easy to understand since two pairs of different sides of pentagons meet in one edge while the fifth side meets its own kind in opposite directions. The pentagon of a general tetartoid has five different angles at the vertices. </p>
         <p>For the OFF file models of the tetartoids that are shown here holds that the value of 'a' was scaled to 1 unless a = 0. In that case my script would try scaling the value of 'b' in the same way, and then use 'c' instead if also b = 0. In some tables I might show values that are scaled to get nicer looking numbers.</p>
         <p>Note that for the vertices &numero; 3 and 5 there is a divide, which automatically means that the denominator shouldn't be equal to 0, in this case 'd<sub>1</sub>' and 'd<sub>2</sub>'. Requirement &numero; 5 is related to that. It also requires that 'n &ne; 0' and that can happen e.g. when a = b = c, which is actually an interesting value to investigate, since it leads to 0 / 0. </p>
         <p>The original motivation of the investigation was to look for an example of a dodecahedron similar to the <button onclick="player.show('off/pentagonal_24_hedron.off', 'pentagonal icositetrahedron', {'has_concave_faces': true})">pentagonal icositetrahedron</button> and the <button onclick="player.show('off/pentagonal_60_hedron.off', 'pentagonal hexacontahedron', {'has_concave_faces': true})">pentagonal hexacontahedron</button>, but then with tetrahedral symmetry. I suspected early on that I would end up with a regular dodecahedron, but of course I wanted to try. </p></div>
@@ -111,7 +111,7 @@
             <td><button onclick="player.show('off/d0_by_ab_00_-+.off', 'tetrahedron of kites', {'has_concave_faces': true})">tetrahedron of kites</button></td>
             <td><button onclick="player.show('off/d0_by_ab_00_pn.off', 'tetrahedron of quadrilaterals', {'has_concave_faces': true})">tetrahedron of quadrilaterals</button></td></tr></table>
         <h3>2. b = 0 and c = -a</h3>
-        <p>If this happens, then d<sub>1</sub> = 0. The table below shows what happens when this combination of values is approached from different directions. Since there isn't much variation, more combinations weren't atempted.</p>
+        <p>If this happens, then d<sub>1</sub> = 0. The table below shows what happens when this combination of values is approached from different directions. Since there isn't much variation, more combinations weren't attempted.</p>
         <table>
           <tr class="header">
             <td class="header_fc">a</td>
@@ -240,7 +240,7 @@
             <td><button onclick="player.show('off/n0_by_abc_111_0np.off', 'butterfly-winged tetrahedron', {'has_concave_faces': true})">butterfly-winged tetrahedron</button></td>
             <td><button onclick="player.show('off/n0_by_abc_111_0-+.off', 'degenerate faceting of tetrahedron', {'has_concave_faces': true})">degenerate faceting of tetrahedron</button></td>
             <td><button onclick="player.show('off/n0_by_abc_111_0pn.off', 'twisted butterfly-winged tetrahedron', {'has_concave_faces': true})">twisted butterfly-winged tetrahedron</button></td></tr></table>
-        <p>Note that in the table above the faces of the tetrahedron are actually covered by three faces. It is as if this is a dodecahedron that is folded onto itselt in such a way that a tetrahedron appears. The form in the column left of it hints on how it is folded onto inself. </p>
+        <p>Note that in the table above the faces of the tetrahedron are actually covered by three faces. It is as if this is a dodecahedron that is folded onto itself in such a way that a tetrahedron appears. The form in the column left of it hints on how it is folded onto itself. </p>
         <p>Also note that (a, b, c) = (1, 1 + ξ, 1 + ξ) is the same as (a, b, c) = (1 - ω, 1, 1) after scaling, and that for (a, b, c) = (1 + ξ, 1 + ξ, 1 + ξ) still holds that a = b = c still and that n = 0. This means that these do not need to be investigated further. </p>
         <p>Using two or three different offsets isn't investigated further, even though it might lead to interesting results. E.g. for (a, b, c) = (1, 1 - 1.5ξ, 1 - ξ) or (a, b, c) = (1 + 2ξ, 1 - ξ, 1) with ξ &rarr;&infin; you will get an <button onclick="player.show('off/tetraaugmented_tetrahedron.off', 'equilataral tetraaugmented tetrahedron', {'has_concave_faces': true})">equilataral tetraaugmented tetrahedron</button>. It might come as a surprise that such tiny differences can make such a big impact, but then imagine the function f(x) = 1 / x and the impact of tiny differences when you approach the singular point.</p>
         <h3>2. b&middot;c / a&sup2; = 1</h3>
@@ -425,7 +425,7 @@
             <td><button onclick="player.show('off/n0_by_ac_00_0x.off', 'δ = 0.001: almost three orthogonal lines', {'has_concave_faces': true})">δ = 0.001: almost three orthogonal lines</button></td>
             <td>If δ = 0: Singular point where c = 0 (and a = 0)</td></tr></table></div>
       <div id="equilateral">
-        <p>The table below shows some tetartoids that have equal edge lengths, but that aren't mentioned in the section 'Uniform'. Incuded are the ones that occur as singularity. For cases where edges get a length of zero it is assumed that this edge must be removed altogether. The value of τ in the table is the golden ratio, i.e. τ = &radic;(V5 + 1) / 2. </p>
+        <p>The table below shows some tetartoids that have equal edge lengths, but that aren't mentioned in the section 'Uniform'. Included are the ones that occur as singularity. For cases where edges get a length of zero it is assumed that this edge must be removed altogether. The value of τ in the table is the golden ratio, i.e. τ = &radic;(V5 + 1) / 2. </p>
         <table>
           <tr class="header">
             <td class="header_fc">a</td>
@@ -472,14 +472,14 @@
               <br/>τ-1</td>
             <td><button onclick="player.show('off/twist.off', 'Twisted Polyhedron with Isosceles Triangles', {'has_concave_faces': true})">Twisted Polyhedron with Isosceles Triangles</button></td>
             <td><b>Four edge angles are the same.</b>
-              <br/>The faces in this tetartoid are completely visibile. The angles of the isosceles triangles are 36°, 36° and 108°, i.e. they are directly related to the regular pentagon. This isn't surprising when you look at the values of a, b, and c. The pentagons in this tetartoid can be seen completely; i.e. one of the vertices ends up on the long edge and it divides that edge into two parts according to the golden ratio. </td></tr>
+              <br/>The faces in this tetartoid are completely visible. The angles of the isosceles triangles are 36°, 36° and 108°, i.e. they are directly related to the regular pentagon. This isn't surprising when you look at the values of a, b, and c. The pentagons in this tetartoid can be seen completely; i.e. one of the vertices ends up on the long edge and it divides that edge into two parts according to the golden ratio. </td></tr>
           <tr class="r">
             <td class="lastSubRow_fc_no_cr">1
               <br/>0
               <br/>τ</td>
             <td><button onclick="player.show('off/twisted_extra.off', 'Partly stellated great dodecahedron', {'has_concave_faces': true})">Partly stellated great dodecahedron</button></td>
             <td><b>Two pairs of edge angles are the same.</b>
-              <br/>Also in this tetartoid one can recognise the angle from the regular pentagon. Once again, this isn't surprising if you look at the values for a, b, and c. Close examination shows that there is a great dodecahedron at the core and that this tetartoid is in fact a partly stellated great dodecahedron. Two edges of a face are completely hidden. The invisible edges are the missing edges of the pentagrams. The tetartoid in the row above is very similar. It can be obtained from this one by trunction. </td></tr>
+              <br/>Also in this tetartoid one can recognise the angle from the regular pentagon. Once again, this isn't surprising if you look at the values for a, b, and c. Close examination shows that there is a great dodecahedron at the core and that this tetartoid is in fact a partly stellated great dodecahedron. Two edges of a face are completely hidden. The invisible edges are the missing edges of the pentagrams. The tetartoid in the row above is very similar. It can be obtained from this one by truncation. </td></tr>
           <tr class="r">
             <td class="lastSubRow_fc_no_cr">1
               <br/>0.484454027365491
@@ -508,7 +508,7 @@
               <br/>1.2308212694136</td>
             <td><button onclick="player.show('off/almost_s4a4.off', 'Caltrop', {'has_concave_faces': true})">Caltrop</button></td>
             <td><b>Two edge angles are the same.</b>
-              <br/>At first one might think that this one has a higher symmetry, but this isn't the case. It can easily be seen when you look at a 3-fold axis at the core of the tetartoid. For this one holds that it is the obtuse angles that are the same and there are many variants of this. There are also variants for which it is the acute angles that are equal instead. I haven't found one for which both are pairwise equal. It seems for this to work one has to make the spikes very long and sharp. This <button onclick="player.show('off/almost_s4a4_a_3_4.off', 'alternative caltrop', {'has_concave_faces': true})">alternative caltrop</button> is an exameple of one for which the acute angles are equal up to 14 decimals, while the obtuse angle differ less than 4°. </td></tr>
+              <br/>At first one might think that this one has a higher symmetry, but this isn't the case. It can easily be seen when you look at a 3-fold axis at the core of the tetartoid. For this one holds that it is the obtuse angles that are the same and there are many variants of this. There are also variants for which it is the acute angles that are equal instead. I haven't found one for which both are pairwise equal. It seems for this to work one has to make the spikes very long and sharp. This <button onclick="player.show('off/almost_s4a4_a_3_4.off', 'alternative caltrop', {'has_concave_faces': true})">alternative caltrop</button> is an example of one for which the acute angles are equal up to 14 decimals, while the obtuse angle differ less than 4°. </td></tr>
           <tr class="r">
             <td class="lastSubRow_fc_no_cr">1
               <br/>0
@@ -516,7 +516,7 @@
             <td><button onclick="player.show('off/hats.off', 'Hats', {'has_concave_faces': true})">Hats</button></td>
             <td><b>There are two different edge lengths with three edges having the same length.</b>
               <br/><b>Two edge angles are the same.</b>
-              <br/>Three edge have an edge length of 2. The  two angles that are the same form a Z shape, which means that two eges are parallel. </td></tr></table></div>
+              <br/>Three edge have an edge length of 2. The  two angles that are the same form a Z shape, which means that two edges are parallel. </td></tr></table></div>
       <h2>
         <a id="references">References</a></h2>
       <ul>
@@ -541,4 +541,4 @@
         <a href="../">All Polyhedra Pages</a></li></ul>
     <h2>
       <a id="lastUpdated">Last Updated</a></h2>
-    <p>2026-05-02, 22:29 CET</p></body></html>
+    <p>2026-05-05, 09:59 CET</p></body></html>
