@@ -6,7 +6,8 @@
     <title>Tetartoids</title>
     <link rel="stylesheet" href="/css/interactive_models.css"/>
     <script src="/js/show-off-bundle.js"></script>
-    <script src="/js/interactive_models_1.js"></script></head>
+    <script src="/js/interactive_models_1.js"></script>
+    <script src="interactive_tetartoids.js"></script></head>
   <body onload="on_select()">
     <div id="model"> </div>
     <script>
@@ -60,7 +61,7 @@
           <li>d<sub>1</sub> = a&sup2; − a&middot;b + b&sup2; + a&middot;c − 2&middot;b&middot;c</li>
           <li>d<sub>2</sub> = a&sup2; + a&middot;b + b&sup2; − a&middot;c − 2&middot;b&middot;c</li>
           <li>n&middot;d<sub>1</sub>&middot;d<sub>2</sub> &ne; 0</li></ol>
-        <p>With this page I want to investigate what happens for certain values of 'a', 'b', and 'c'. I think the first requirement is mainly to keep the tetartoids convex. It is definitely possible to have values that don't fulfil the requirement. During this investigation I am not keeping this requirement strictly. Note that for any triplet (a, b, c) the triplet (xa, xb, xc) leads to a congruent tetartoid if x &ne; 0. On this page I will refer to all these polyhedra as tetartoids, although the ones with concave faces are no tetartoids according to the definition above. </p>
+        <p>With this page I want to investigate what happens for certain values of 'a', 'b', and 'c'. I think the first requirement is mainly to keep the tetartoids convex. It is definitely possible to have values that don't fulfil the requirement. During this investigation I am not keeping this requirement strictly. Note that for any triplet (a, b, c) the triplet (xa, xb, xc) leads to a congruent tetartoid if x &ne; 0. On this page I will refer to all these polyhedra as tetartoids, although the ones with non-convex faces are not tetartoids according to the definition above. </p>
         <p>In general tetartoids are isogonal and the pentagons have three different edge lengths. This is easy to understand since two pairs of different sides of pentagons meet in one edge while the fifth side meets its own kind in opposite directions. The pentagon of a general tetartoid has five different angles at the vertices. </p>
         <p>For the OFF file models of the tetartoids that are shown here holds that the value of 'a' was scaled to 1 unless a = 0. In that case my script would try scaling the value of 'b' in the same way, and then use 'c' instead if also b = 0. In some tables I might show values that are scaled to get nicer looking numbers.</p>
         <p>Note that for the vertices &numero; 3 and 5 there is a divide, which automatically means that the denominator shouldn't be equal to 0, in this case 'd<sub>1</sub>' and 'd<sub>2</sub>'. Requirement &numero; 5 is related to that. It also requires that 'n &ne; 0' and that can happen e.g. when a = b = c, which is actually an interesting value to investigate, since it leads to 0 / 0. </p>
@@ -71,7 +72,7 @@
           <li>d<sub>1</sub> = a&sup2; − a&middot;b + b&sup2; + a&middot;c − 2&middot;b&middot;c</li>
           <li>d<sub>2</sub> = a&sup2; + a&middot;b + b&sup2; − a&middot;c − 2&middot;b&middot;c</li></ul>
         <p>with the requirement that d<sub>1</sub> &ne; 0 and d<sub>2</sub> &ne; 0</p>
-        <p>This section investigates what happens when the value of d<sub>1</sub> and/or the value of d<sub>2</sub> approaches 0.There are different ways for which this can happen and these are divided into the following categories here.</p>
+        <p>This section investigates what happens when the value of d<sub>1</sub> and/or the value of d<sub>2</sub> approaches 0. There are different ways for which this can happen and these are divided into the following categories here.</p>
         <h3>1. a = b = 0</h3>
         <p>If c = 0 as well then n = 0 and this is investigated in the section 'When n approaches 0'. This means we can assume that n &ne; 0 here. If this is the case then both d<sub>1</sub> = 0 and d<sub>2</sub> = 0. The table below shows how the tetartoid looks like for different ways of approaching the singular point. </p>
         <table>
@@ -145,7 +146,7 @@
         <p>If this happens, then d<sub>2</sub> = 0. This situation is similar to the previous one. </p>
         <h3>4. b &ne; 0 and c = f<sub>1</sub>&times;b</h3>
         <p>With f<sub>a</sub> = a / b and f<sub>1</sub> = (f<sub>a</sub>&sup2; − f<sub>a</sub> + 1) / (2 - f<sub>a</sub>) <br>If this happens, then d<sub>1</sub> = 0</p>
-        <p>The case below is close to where n approaches 0, case 2. The offset ξ from the singular point is taken from the value 'c' below, Similar effects occur when the error ξ is use for 'a' or 'b'.</p>
+        <p>The case below is close to where n approaches 0, case 2. The offset ξ from the singular point is taken from the value 'c' below, Similar effects occur when the error ξ is used for 'a' or 'b'.</p>
         <table>
           <tr class="header">
             <td class="header_fc">a</td>
@@ -187,7 +188,7 @@
         <ul>
           <li>d<sub>1</sub> = a&sup2; − a&middot;b + b&sup2; + a&middot;c − 2&middot;b&middot;c</li>
           <li>d<sub>2</sub> = a&sup2; + a&middot;b + b&sup2; − a&middot;c − 2&middot;b&middot;c</li></ul>
-        <p>This section investigates what happens when the value of 'n' approaches 0.There are different ways for which this can happen and these are divided into three categories here.</p>
+        <p>This section investigates what happens when the value of 'n' approaches 0. There are different ways for which this can happen and these are divided into three categories here.</p>
         <h3>1. a = b = c</h3>
         <p>This is a special case where n = 0, d<sub>1</sub> = 0 and d<sub>2</sub> = 0, leading to a 0 / 0. It leads to some interesting case and it needs to be investigated separately. Without loss of generality one could strive for a = b = c = 1 and approach this from different directions, which will lead to different polyhedra. In the table below the value of ξ is a positive value the approaches 0.</p>
         <table>
@@ -299,7 +300,7 @@
             <td><button onclick="player.show('off/n0_by_ac_10_0x.off', 'Six crossing lines', {'has_concave_faces': true})">Six crossing lines</button></td>
             <td><button onclick="player.show('off/n0_by_ac_10_0p.off', 'Six spikes', {'has_concave_faces': true})">Six spikes</button></td></tr></table></div>
       <div id="uniform">
-        <p>For certain <b>valid</b> values of a, b and c polyhedra are obtained that are uniform, including results where faces of the tetartoid together form one face of a regular polyhedron. These are shown in the table below, in which τ = &radic;(V5 + 1) / 2. It is understood that for all of these hold that (a, b, c) can be multiplied by a constant. </p>
+        <p>For certain <b>valid</b> values of a, b and c polyhedra are obtained that are uniform, including results where faces of the tetartoid together form one face of a regular polyhedron. These are shown in the table below, in which τ = (&radic;5 + 1) / 2. It is understood that for all of these it holds that (a, b, c) can be multiplied by a constant. </p>
         <table>
           <tr class="header">
             <td class="header_fc">a</td>
@@ -338,7 +339,7 @@
             <td><button onclick="player.show('off/cube.off', 'cube', {'has_concave_faces': true})">cube</button></td>
             <td>Each side consists of two rectangles<br/>Similar to a scaled down version of the previous row, where x &rarr;&infin;</td></tr></table></div>
       <div id="bilateral">
-        <p>The table below shows a series of tetartoids where the faces have bilateral symmetry and the tetartoid becomes a pyritohedron, which means it has a higher symmetry. It will at least have A<sub>4</sub>&times;I symmetry. The value of τ in the table is the golden ratio, i.e. τ = &radic;(V5 + 1) / 2. For all faces hold that four sides have the same length.</p>
+        <p>The table below shows a series of tetartoids where the faces have bilateral symmetry and the tetartoid becomes a pyritohedron, which means it has a higher symmetry. It will at least have A<sub>4</sub>&times;I symmetry. The value of τ in the table is the golden ratio, i.e. τ = (&radic;5 + 1) / 2. For all faces it holds that four sides have the same length.</p>
         <table>
           <tr class="header">
             <td class="header_fc">a</td>
@@ -423,9 +424,11 @@
             <td class="no_cr">τ + 1</td>
             <td class="no_cr">δ</td>
             <td><button onclick="player.show('off/n0_by_ac_00_0x.off', 'δ = 0.001: almost three orthogonal lines', {'has_concave_faces': true})">δ = 0.001: almost three orthogonal lines</button></td>
-            <td>If δ = 0: Singular point where c = 0 (and a = 0)</td></tr></table></div>
+            <td>If δ = 0: Singular point where c = 0 (and a = 0)</td></tr></table>
+        <p>The models shown in the table above can be put into an interactive animation using a non-linear slide-bar: </p>
+        <button onclick="player.tetar_show(pyrito, 0.1, 5, title='Pyritohedron')">Interactive Pyritohedron</button></div>
       <div id="equilateral">
-        <p>The table below shows some tetartoids that have equal edge lengths, but that aren't mentioned in the section 'Uniform'. Included are the ones that occur as singularity. For cases where edges get a length of zero it is assumed that this edge must be removed altogether. The value of τ in the table is the golden ratio, i.e. τ = &radic;(V5 + 1) / 2. </p>
+        <p>The table below shows some tetartoids that have equal edge lengths, but that aren't mentioned in the section 'Uniform'. Included are the ones that occur as singularity. For cases where edges get a length of zero it is assumed that this edge must be removed altogether. The value of τ in the table is the golden ratio, i.e. τ = (&radic;5 + 1) / 2. </p>
         <table>
           <tr class="header">
             <td class="header_fc">a</td>
@@ -458,7 +461,7 @@
             <td><button onclick="player.show('off/endododecahedron.off', 'Endododecahedron', {'has_concave_faces': true})">Endododecahedron</button></td>
             <td>This is a pyritohedron which has a higher symmetry than normal: A<sub>4</sub>&times;I and with regards to this symmetry it is still isohedral. </td></tr></table></div>
       <div id="others">
-        <p>The table below shows some tetartoids that are special in some other way than mentioned in the other sections. The value of τ in the table is the golden ratio, i.e. τ = &radic;(V5 + 1) / 2. </p>
+        <p>The table below shows some tetartoids that are special in some other way than mentioned in the other sections. The value of τ in the table is the golden ratio, i.e. τ = (&radic;5 + 1) / 2. </p>
         <table>
           <tr class="header">
             <td class="header_fc">a
@@ -522,7 +525,7 @@
               <br/>2.595651659868778</td>
             <td><button onclick="player.show('off/caltrop_try_edge.off', 'Caltrop no self-intersections', {'has_concave_faces': true})">Caltrop no self-intersections</button></td>
             <td><b>Two edge angles are the same.</b>
-              <br/>In this caltrop like polyhdron has two edge it is the acute angles that are are equal. Besides that the shorter edge lengths are almost the same as well; the difference is only 0.04 (2.23 vs. 2.27). </td></tr>
+              <br/>In this caltrop-like polyhedron it is the acute angles that are are equal. Many variations of this one with the same property exist. What is a bit special with this variant is that the shorter edge lengths are almost the same as well; the difference is only 0.04 (2.23 vs. 2.27). </td></tr>
           <tr class="r">
             <td class="lastSubRow_fc_no_cr">1
               <br/>0
@@ -555,4 +558,4 @@
         <a href="../">All Polyhedra Pages</a></li></ul>
     <h2>
       <a id="lastUpdated">Last Updated</a></h2>
-    <p>2026-05-08, 21:20 CET</p></body></html>
+    <p>2026-05-10, 10:07 CET</p></body></html>
