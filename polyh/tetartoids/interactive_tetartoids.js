@@ -122,6 +122,11 @@ ModelPlay.prototype.std_tetar_show = function(a, b, c, to_abc, to_slider, rmin, 
     shape.rescale();
     shape.triangulate();
     shape.paint();
+    var decimals = 3;
+    var a_s = abc[0].toFixed(decimals);
+    var b_s = abc[1].toFixed(decimals);
+    var c_s = abc[2].toFixed(decimals);
+    this.player.nodes.angle_text.innerHTML =  "(a, b, c) = (" + a_s + ", " + b_s + ", " + c_s + ")";
   }
   this.nodes.slider.oninput();
   this.nodes.title.innerHTML = title;
@@ -155,6 +160,20 @@ ModelPlay.prototype.tetar_drill = function(b, rmin, rmax, title="", rstep=undefi
     1, b, b_to_c(b),
     function(value) {return [1, value, b_to_c(value)];},
     function(a, b, c) {return b;},
+    rmin, rmax,
+    title,
+    rstep
+  );
+}
+
+ModelPlay.prototype.cube_like = function(b, rmin, rmax, title="", rstep=undefined) {
+  this.std_tetar_show(
+    1, b, b,
+    function(value) {
+      b_new = value ** 2;
+      return [1, b_new, b_new];
+    },
+    function(a, b, c) {return Math.sqrt(b);},
     rmin, rmax,
     title,
     rstep

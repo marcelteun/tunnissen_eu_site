@@ -39,8 +39,8 @@
       <div>
         <select onchange="on_select()" id="table_selection">
           <option value="background">Background</option>
-          <option value="limit_d">When d<sub>1</sub> or d<sub>2</sub> approaches 0</option>
-          <option value="limit_n">When n approaches 0</option>
+          <option value="limit_d">When d<sub>1</sub> or d<sub>2</sub> Approaches 0</option>
+          <option value="limit_n">When n Approaches 0</option>
           <option value="uniform">Uniform</option>
           <option value="bilateral">Pyritohedra</option>
           <option value="equilateral">Equilateral</option>
@@ -75,7 +75,7 @@
         <p>with the requirement that d<sub>1</sub> &ne; 0 and d<sub>2</sub> &ne; 0</p>
         <p>This section investigates what happens when the value of d<sub>1</sub> and/or the value of d<sub>2</sub> approaches 0. There are different ways for which this can happen and these are divided into the following categories here.</p>
         <h3>1. a = b = 0</h3>
-        <p>If c = 0 as well then n = 0 and this is investigated in the section 'When n approaches 0'. This means we can assume that n &ne; 0 here. If this is the case then both d<sub>1</sub> = 0 and d<sub>2</sub> = 0. The table below shows how the tetartoid looks like for different ways of approaching the singular point. </p>
+        <p>If c = 0 as well then n = 0 and this is investigated in the section 'When n Approaches 0'. This means we can assume that n &ne; 0 here. If this is the case then both d<sub>1</sub> = 0 and d<sub>2</sub> = 0. The table below shows how the tetartoid looks like for different ways of approaching the singular point. </p>
         <table>
           <tr class="header">
             <td class="header_fc">a</td>
@@ -540,18 +540,26 @@
             <td class="header_fc">Model</td>
             <td class="header">Remark</td></tr>
           <tr class="r">
-            <td>
+            <td class="lastSubRow_fc_no_cr">
               <button onclick="player.tetar_slide_c_scaled(0, tau + 1, tau, 0.1, 5, title='Pyritohedron')">Interactive Pyritohedron</button></td>
             <td>The models shown in the section "Pyritohedra"` can be morphed into each other by using constant values for 'a' and 'b', while varying the value for 'c' from a small positive value to a very large value. </td></tr>
           <tr class="r">
-            <td>
+            <td class="lastSubRow_fc_no_cr">
+              <button onclick="player.tetar_slide_c(1, 2, 1.25, 1.01, 2, title='Caltrop Tetartoids')">From caltrop to cube</button></td>
+            <td>In the section "Other Interesting Tetartoids" there are caltrop-like tetartoids with and without self-intersections. The button on the left shows a tetartoid that can used to morph these into each other. The slide bar will vary the value 'c' from 1.01 to 2, while a = 1 and b = 2. Note at c = 1.4 there is a singular point where d<sub>2</sub> = 0. You can continue to drag the slide bar to the right until a cube is formed. One  could also have used another value for 'b'; for instance if 
+              <button onclick="player.tetar_slide_c(1, 4, 2.125, 1.86, 4, title='Caltrops for b = 4')">caltrops for b = 4</button>. </td></tr>
+          <tr class="r">
+            <td class="lastSubRow_fc_no_cr">
               <button onclick="player.tetar_drill(2, 1.001, 8, title='Tetrahedral Drills')">Tetrahedral Drills</button></td>
             <td>In the section "Other Interesting Tetartoids" there is a tetartoid "Tetrahedral drill head" where it is stated that several of these exist for a = 1, b &gt; 1 and c = (1 + b&sup2;) / 2b. For all these models it holds that the two angles in a tetartoid face are equal. It is the angles at the vertices that are shared that are equal. </td></tr>
           <tr class="r">
-            <td>
-              <button onclick="player.tetar_slide_c(1, 2, 1.25, 1.01, 2, title='Caltrop Tetartoids')">From caltrop to cube</button></td>
-            <td>In the section "Other Interesting Tetartoids" there are caltrop-like tetartoids with and without self-intersections. The button on the left shows a tetartoid that can used to morph these into each other. The slide bar will vary the value 'c' from 1.01 to 2, while a = 1 and b = 2. Note at c = 1.4 there is a singular point where d<sub>2</sub> = 0. You can continue to drag the slide bar to the right until a cube is formed. One  could also have used another value for 'b'; for instance if 
-              <button onclick="player.tetar_slide_c(1, 4, 2.125, 1.86, 4, title='Caltrops for b = 4')">caltrops for b = 4</button>. </td></tr></table></div>
+            <td class="lastSubRow_fc_no_cr">
+              <button onclick="player.tetar_drill(0.999, .001, 0.999, title='Mountain Faced')">Mountain Faced</button></td>
+            <td>Using the same relation for a, b and c as for the "Tetrahedral Drills", but with where 0 &lt; b &lt; 1, then you will get the mountaing-faced tetartoids, for which it still holds that the vertices on the 3-fold axes share the same point in space. </td></tr>
+          <tr class="r">
+            <td class="lastSubRow_fc_no_cr">
+              <button onclick="player.cube_like(1.01, 0.05, 10, title='Cube-like')">cube-like</button></td>
+            <td>For these it holds that a = 1 and b = c, where b varies from a very small positive number to a big positive number. For b = c = 0 there is a singular point for which n = 0. N also equals to 0 for a = b = c = 1. This is close to the initial position, see also the section "When n Approaches 0". In the situation where b goes towards infinity the tetartoid can be rescaled to get the shape for (a, b, c) = (0, 1, 1). </td></tr></table></div>
       <h2>
         <a id="references">References</a></h2>
       <ul>
@@ -576,4 +584,4 @@
         <a href="../">All Polyhedra Pages</a></li></ul>
     <h2>
       <a id="lastUpdated">Last Updated</a></h2>
-    <p>2026-05-11, 10:29 CET</p></body></html>
+    <p>2026-05-11, 14:27 CET</p></body></html>
