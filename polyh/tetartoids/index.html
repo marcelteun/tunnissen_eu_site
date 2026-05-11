@@ -12,7 +12,7 @@
     <div id="model"> </div>
     <script>
       var player = new ModelPlay(document, "model");
-      const array = ['background', 'limit_d', 'limit_n', 'uniform', 'bilateral', 'equilateral', 'others'];
+      const array = ['background', 'limit_d', 'limit_n', 'uniform', 'bilateral', 'equilateral', 'others', 'sliders'];
       function on_select() {
           array.forEach(
               function (item) {
@@ -44,7 +44,8 @@
           <option value="uniform">Uniform</option>
           <option value="bilateral">Pyritohedra</option>
           <option value="equilateral">Equilateral</option>
-          <option value="others">Other Interesting Tetartoids</option></select></div>
+          <option value="others">Other Interesting Tetartoids</option>
+          <option value="sliders">Tetartoids Variations Using Slide Bars</option></select></div>
       <div id="background">
         <p>A <button onclick="player.show('off/classic_tetartoid.off', 'tetartoid', {'has_concave_faces': true})">tetartoid</button> is a general dodecahedron consisting of pentagons. On 
           <a target="new" href="https://en.wikipedia.org/wiki/Dodecahedron#Tetartoid">Wikipedia</a> the following definition is used: It uses the input values 'a', 'b' and 'c' and then one face is defined by the vertices: </p>
@@ -424,9 +425,7 @@
             <td class="no_cr">τ + 1</td>
             <td class="no_cr">δ</td>
             <td><button onclick="player.show('off/n0_by_ac_00_0x.off', 'δ = 0.001: almost three orthogonal lines', {'has_concave_faces': true})">δ = 0.001: almost three orthogonal lines</button></td>
-            <td>If δ = 0: Singular point where c = 0 (and a = 0)</td></tr></table>
-        <p>The models shown in the table above can be put into an interactive animation using a non-linear slide-bar. Click the button below to experiment with that. Note that in this scene the model is scaled to fit the scene. </p>
-        <button onclick="player.tetar_slide_c_scaled(0, tau + 1, tau, 0.1, 5, title='Pyritohedron')">Interactive Pyritohedron</button></div>
+            <td>If δ = 0: Singular point where c = 0 (and a = 0)</td></tr></table></div>
       <div id="equilateral">
         <p>The table below shows some tetartoids that have equal edge lengths, but that aren't mentioned in the section 'Uniform'. Included are the ones that occur as singularity. For cases where edges get a length of zero it is assumed that this edge must be removed altogether. The value of τ in the table is the golden ratio, i.e. τ = (&radic;5 + 1) / 2. </p>
         <table>
@@ -489,8 +488,7 @@
               <br/>1.25</td>
             <td><button onclick="player.show('off/tetra_drill_head.off', 'Tetrahedral drill head', {'has_concave_faces': true})">Tetrahedral drill head</button></td>
             <td><b>Two edge angles are the same.</b>
-              <br/>Pairs of vertices end up exactly at the same point. It is the two acute angles that are equal. These are at the vertices that end up at the vertices of the virtual tetrahedron. There are many variants of this one. Using the equations one can calculate that if you use a = 1, then this occurs when c = (1 + b&sup2;) / 2b. 
-              <button onclick="player.tetar_drill(2, 1.001, 8, title='Tetartoid Drills')">Tetartoid Drills</button></td></tr>
+              <br/>Pairs of vertices end up exactly at the same point. It is the two acute angles that are equal. These are at the vertices that end up at the vertices of the virtual tetrahedron. There are many variants of this one. Using the definition of a tetartoid and solving 'd1 = d2' with 'a = 1' one can calculate that this occurs when c = (1 + b&sup2;) / 2b. </td></tr>
           <tr class="r">
             <td class="lastSubRow_fc_no_cr">1
               <br/>0.484454027365491
@@ -534,9 +532,26 @@
             <td><button onclick="player.show('off/hats.off', 'Hats', {'has_concave_faces': true})">Hats</button></td>
             <td><b>There are two different edge lengths with three edges having the same length.</b>
               <br/><b>Two edge angles are the same.</b>
-              <br/>Three edges have an edge length of 2. The  two angles that are the same form a Z shape, which means that two edges are parallel. All edges can be seen completely. </td></tr></table>
-        <p>By clicking the button below, one can see how the tetartoid varies by using constant values of a = 1 and b = 2, while c &isin; [1.01, 2] by means of a slide bar. </p>
-        <button onclick="player.tetar_slide_c(1, 2, 1.25, 1.01, 2, title='Caltrop Tetartoid')">From caltrop to cube</button></div>
+              <br/>Three edges have an edge length of 2. The  two angles that are the same form a Z shape, which means that two edges are parallel. All edges can be seen completely. </td></tr></table></div>
+      <div id="sliders">
+        <p>This sections contains some examples where the user can change a certain value through a slide-bar, while seeing how that affects the tetartoid. </p>
+        <table>
+          <tr class="header">
+            <td class="header_fc">Model</td>
+            <td class="header">Remark</td></tr>
+          <tr class="r">
+            <td>
+              <button onclick="player.tetar_slide_c_scaled(0, tau + 1, tau, 0.1, 5, title='Pyritohedron')">Interactive Pyritohedron</button></td>
+            <td>The models shown in the section "Pyritohedra"` can be morphed into each other by using constant values for 'a' and 'b', while varying the value for 'c' from a small positive value to a very large value. </td></tr>
+          <tr class="r">
+            <td>
+              <button onclick="player.tetar_drill(2, 1.001, 8, title='Tetrahedral Drills')">Tetrahedral Drills</button></td>
+            <td>In the section "Other Interesting Tetartoids" there is a tetartoid "Tetrahedral drill head" where it is stated that several of these exist for a = 1, b &gt; 1 and c = (1 + b&sup2;) / 2b. For all these models it holds that the two angles in a tetartoid face are equal. It is the angles at the vertices that are shared that are equal. </td></tr>
+          <tr class="r">
+            <td>
+              <button onclick="player.tetar_slide_c(1, 2, 1.25, 1.01, 2, title='Caltrop Tetartoids')">From caltrop to cube</button></td>
+            <td>In the section "Other Interesting Tetartoids" there are caltrop-like tetartoids with and without self-intersections. The button on the left shows a tetartoid that can used to morph these into each other. The slide bar will vary the value 'c' from 1.01 to 2, while a = 1 and b = 2. Note at c = 1.4 there is a singular point where d<sub>2</sub> = 0. You can continue to drag the slide bar to the right until a cube is formed. One  could also have used another value for 'b'; for instance if 
+              <button onclick="player.tetar_slide_c(1, 4, 2.125, 1.86, 4, title='Caltrops for b = 4')">caltrops for b = 4</button>. </td></tr></table></div>
       <h2>
         <a id="references">References</a></h2>
       <ul>
@@ -561,4 +576,4 @@
         <a href="../">All Polyhedra Pages</a></li></ul>
     <h2>
       <a id="lastUpdated">Last Updated</a></h2>
-    <p>2026-05-11, 02:41 CET</p></body></html>
+    <p>2026-05-11, 10:29 CET</p></body></html>
