@@ -426,7 +426,7 @@
             <td><button onclick="player.show('off/n0_by_ac_00_0x.off', 'δ = 0.001: almost three orthogonal lines', {'has_concave_faces': true})">δ = 0.001: almost three orthogonal lines</button></td>
             <td>If δ = 0: Singular point where c = 0 (and a = 0)</td></tr></table>
         <p>The models shown in the table above can be put into an interactive animation using a non-linear slide-bar. Click the button below to experiment with that. Note that in this scene the model is scaled to fit the scene. </p>
-        <button onclick="player.tetar_show(0, tau + 1, tau, 0.1, 5, title='Pyritohedron', scale=true)">Interactive Pyritohedron</button></div>
+        <button onclick="player.tetar_slide_c_scaled(0, tau + 1, tau, 0.1, 5, title='Pyritohedron')">Interactive Pyritohedron</button></div>
       <div id="equilateral">
         <p>The table below shows some tetartoids that have equal edge lengths, but that aren't mentioned in the section 'Uniform'. Included are the ones that occur as singularity. For cases where edges get a length of zero it is assumed that this edge must be removed altogether. The value of τ in the table is the golden ratio, i.e. τ = (&radic;5 + 1) / 2. </p>
         <table>
@@ -489,7 +489,8 @@
               <br/>1.25</td>
             <td><button onclick="player.show('off/tetra_drill_head.off', 'Tetrahedral drill head', {'has_concave_faces': true})">Tetrahedral drill head</button></td>
             <td><b>Two edge angles are the same.</b>
-              <br/>Pairs of vertices end up exactly at the same point. It is the two acute angles that are equal. These are at the vertices that end up at the vertices of the virtual tetrahedron. There are many variants of this one. Using the equations one can calculate that if you use a = 1, then this occurs when c = (1 + b&sup2;) / 2b. </td></tr>
+              <br/>Pairs of vertices end up exactly at the same point. It is the two acute angles that are equal. These are at the vertices that end up at the vertices of the virtual tetrahedron. There are many variants of this one. Using the equations one can calculate that if you use a = 1, then this occurs when c = (1 + b&sup2;) / 2b. 
+              <button onclick="player.tetar_drill(2, 1.001, 8, title='Tetartoid Drills')">Tetartoid Drills</button></td></tr>
           <tr class="r">
             <td class="lastSubRow_fc_no_cr">1
               <br/>0.484454027365491
@@ -535,7 +536,7 @@
               <br/><b>Two edge angles are the same.</b>
               <br/>Three edges have an edge length of 2. The  two angles that are the same form a Z shape, which means that two edges are parallel. All edges can be seen completely. </td></tr></table>
         <p>By clicking the button below, one can see how the tetartoid varies by using constant values of a = 1 and b = 2, while c &isin; [1.01, 2] by means of a slide bar. </p>
-        <button onclick="player.tetar_show(1, 2, 1.25, 1.01, 2, title='Caltrop Tetartoid')">From caltrop to cube</button></div>
+        <button onclick="player.tetar_slide_c(1, 2, 1.25, 1.01, 2, title='Caltrop Tetartoid')">From caltrop to cube</button></div>
       <h2>
         <a id="references">References</a></h2>
       <ul>
@@ -560,4 +561,4 @@
         <a href="../">All Polyhedra Pages</a></li></ul>
     <h2>
       <a id="lastUpdated">Last Updated</a></h2>
-    <p>2026-05-10, 21:41 CET</p></body></html>
+    <p>2026-05-11, 02:37 CET</p></body></html>

@@ -93,7 +93,7 @@ tetar.isoms[9].col = [64, 104, 224];
 tetar.isoms[10].col = [220, 159, 220];
 tetar.isoms[11].col = [254, 214, 0];
 
-ModelPlay.prototype.tetar_show = function(a, b, c, rmin, rmax, title="", scale=false, rstep=undefined) {
+ModelPlay.prototype.std_tetar_show = function(a, b, c, to_abc, to_slider, rmin, rmax, title, rstep) {
   // interactive show: with slide-bar
   tetar.a = a;
   tetar.b = b;
@@ -112,25 +112,51 @@ ModelPlay.prototype.tetar_show = function(a, b, c, rmin, rmax, title="", scale=f
   } else {
     this.nodes.slider.step = rstep;
   }
+  this.nodes.slider.value = to_slider(a, b, c);
   var shape = new OrbitShape(tetar.descr, tetar.isoms, this.nodes.canvas, {has_concave_faces: true});
-
-  this.nodes.slider.my_scale = scale;
-  if (scale) {
-    this.nodes.slider.value = Math.sqrt(Math.sqrt(c));
-  } else {
-    this.nodes.slider.value = c;
-  }
   this.nodes.slider.oninput = function() {
-    var c = parseFloat(this.value);
-    console.log("Got input value", c);
-    if (this.my_scale) {
-      c = c ** 4;
-    }
-    shape.base.Vs = tetartoid_vertices(tetar.a, tetar.b, c);
+    var slider_val = parseFloat(this.value);
+    // console.log("Got input value", slider_val);
+    var abc = to_abc(slider_val);
+    shape.base.Vs = tetartoid_vertices(abc[0], abc[1], abc[2]);
     shape.rescale();
     shape.triangulate();
     shape.paint();
   }
   this.nodes.slider.oninput();
   this.nodes.title.innerHTML = title;
+}
+
+ModelPlay.prototype.tetar_slide_c = function(a, b, c, rmin, rmax, title="", rstep=undefined) {
+  this.std_tetar_show(
+    a, b, c,
+    function(value) {return [a, b, value];},
+    function(a, b, c) {return c;},
+    rmin, rmax,
+    title,
+    rstep
+  );
+}
+
+ModelPlay.prototype.tetar_slide_c_scaled = function(a, b, c, rmin, rmax, title="", rstep=undefined) {
+  this.std_tetar_show(
+    a, b, c,
+    function(value) {return [a, b, value ** 4];},
+    function(a, b, c) {return Math.sqrt(Math.sqrt(c));},
+    rmin, rmax,
+    title,
+    rstep
+  );
+}
+
+ModelPlay.prototype.tetar_drill = function(b, rmin, rmax, title="", rstep=undefined) {
+  b_to_c = function(value) {return (1 + value ** 2) / (2 * value);}
+  this.std_tetar_show(
+    1, b, b_to_c(b),
+    function(value) {return [1, value, b_to_c(value)];},
+    function(a, b, c) {return b;},
+    rmin, rmax,
+    title,
+    rstep
+  );
 }
