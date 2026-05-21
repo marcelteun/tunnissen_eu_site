@@ -126,7 +126,10 @@ ModelPlay.prototype.std_tetar_show = function(a, b, c, to_abc, to_slider, rmin, 
     var a_s = abc[0].toFixed(decimals);
     var b_s = abc[1].toFixed(decimals);
     var c_s = abc[2].toFixed(decimals);
-    this.player.nodes.angle_text.innerHTML =  "(a, b, c) = (" + a_s + ", " + b_s + ", " + c_s + ")";
+    var x = abc[0];
+    var y = abc[1];
+    var z = abc[2];
+    this.player.nodes.angle_text.innerHTML =  "(a, b, c) = (" + a_s + ", " + b_s + ", " + c_s + ")" + "d2: " + (x * (x + y - z) + y * (y - 2 * z)).toFixed(decimals);
   }
   this.nodes.slider.oninput();
   this.nodes.title.innerHTML = title;
