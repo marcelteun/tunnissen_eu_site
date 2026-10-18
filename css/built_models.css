@@ -14,7 +14,7 @@ img {
 	border: 0px solid black;
 }
 #descr {
-	width: 80ch;
+	width: 76ch;
 	overflow: visible;
 	float: left;
 	border: 0px solid green;
@@ -22,7 +22,7 @@ img {
 }
 #mod_img {
 	vertical-align: top;
-	max-width:79ch;
+	max-width:76ch;
 }
 #model {
 	float: right;
@@ -30,7 +30,7 @@ img {
 	z-index: 2;
 }
 #model_canvas {
-	width: 39ch;
+	width: 43ch;
 	height: 39ch;
 }
 a:link {
